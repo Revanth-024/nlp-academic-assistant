@@ -1,0 +1,229 @@
+{
+  "note": "Measured instructor preflight, not application answers. Timings depend on machine/load; first model includes shared-library import. Decimal MB. Normal operation uses local files only. NER uses first aggregation.",
+  "initial_download_and_load": {
+    "python": "3.11.17",
+    "download_requested": true,
+    "versions": {
+      "transformers": "4.57.6",
+      "torch": "2.14.1",
+      "huggingface-hub": "0.36.2"
+    },
+    "models": [
+      {
+        "task": "sentiment-analysis",
+        "id": "distilbert/distilbert-base-uncased-finetuned-sst-2-english",
+        "revision": "714eb0fa89d2f80546fda750413ed43d93601a13",
+        "license": "Apache-2.0",
+        "cpu_load_or_download_seconds": 48.53565199999139,
+        "cpu_inference_seconds": 0.20101900000008754,
+        "process_cached_load_seconds": 0.0022230000176932663,
+        "cache_bytes": 268075800
+      },
+      {
+        "task": "token-classification",
+        "id": "dslim/distilbert-NER",
+        "revision": "dfa2838a127384aabb82ed7719e16dab84c42a2a",
+        "license": "Apache-2.0",
+        "cpu_load_or_download_seconds": 24.10151889998815,
+        "cpu_inference_seconds": 0.12844420000328682,
+        "process_cached_load_seconds": 0.0011866999848280102,
+        "cache_bytes": 261695309
+      },
+      {
+        "task": "question-answering",
+        "id": "distilbert/distilbert-base-uncased-distilled-squad",
+        "revision": "dfb8fa0e03905f0b6ea92133e56b6fef138015f2",
+        "license": "Apache-2.0",
+        "cpu_load_or_download_seconds": 24.85507309998502,
+        "cpu_inference_seconds": 0.16194049999467097,
+        "process_cached_load_seconds": 0.0010953000164590776,
+        "cache_bytes": 266179718
+      }
+    ],
+    "total_cache_bytes": 795950827
+  },
+  "local_preflight_python311": {
+    "python": "3.11.17",
+    "download_requested": false,
+    "versions": {
+      "transformers": "4.57.6",
+      "torch": "2.14.1",
+      "huggingface-hub": "0.36.2"
+    },
+    "models": [
+      {
+        "name": "sentiment",
+        "id": "distilbert/distilbert-base-uncased-finetuned-sst-2-english",
+        "revision": "714eb0fa89d2f80546fda750413ed43d93601a13",
+        "task": "sentiment-analysis",
+        "license": "Apache-2.0",
+        "cpu_load_or_download_seconds": 18.624428000010084,
+        "cpu_inference_seconds": 0.14809049997711554,
+        "process_cached_load_seconds": 0.0010491000139154494,
+        "cache_bytes": 268075800,
+        "output": [
+          {
+            "label": "POSITIVE",
+            "score": 0.9996873140335083
+          },
+          {
+            "label": "NEGATIVE",
+            "score": 0.9995136260986328
+          }
+        ]
+      },
+      {
+        "name": "ner",
+        "id": "dslim/distilbert-NER",
+        "revision": "dfa2838a127384aabb82ed7719e16dab84c42a2a",
+        "task": "token-classification",
+        "license": "Apache-2.0",
+        "cpu_load_or_download_seconds": 0.12205470001208596,
+        "cpu_inference_seconds": 0.08914669998921454,
+        "process_cached_load_seconds": 0.000890900002559647,
+        "cache_bytes": 261695309,
+        "output": [
+          {
+            "text": "Riya",
+            "label": "PER",
+            "score": 0.9871829748153687,
+            "start": 0,
+            "end": 4
+          },
+          {
+            "text": "Natural Language Processing",
+            "label": "MISC",
+            "score": 0.5034922361373901,
+            "start": 13,
+            "end": 40
+          },
+          {
+            "text": "Hindu College of Engineering",
+            "label": "ORG",
+            "score": 0.9851732850074768,
+            "start": 44,
+            "end": 72
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "id": "distilbert/distilbert-base-uncased-distilled-squad",
+        "revision": "dfb8fa0e03905f0b6ea92133e56b6fef138015f2",
+        "task": "question-answering",
+        "license": "Apache-2.0",
+        "cpu_load_or_download_seconds": 0.3088281999807805,
+        "cpu_inference_seconds": 0.11401080002542585,
+        "process_cached_load_seconds": 0.0008783999946899712,
+        "cache_bytes": 266179718,
+        "output": {
+          "answer": "Semester 6",
+          "score": 0.7009359002113342,
+          "start": 42,
+          "end": 52
+        }
+      }
+    ],
+    "total_cache_bytes": 795950827
+  },
+  "local_preflight_python312": {
+    "python": "3.12.14",
+    "download_requested": false,
+    "versions": {
+      "transformers": "4.57.6",
+      "torch": "2.14.1",
+      "huggingface-hub": "0.36.2"
+    },
+    "models": [
+      {
+        "name": "sentiment",
+        "id": "distilbert/distilbert-base-uncased-finetuned-sst-2-english",
+        "revision": "714eb0fa89d2f80546fda750413ed43d93601a13",
+        "task": "sentiment-analysis",
+        "license": "Apache-2.0",
+        "cpu_load_or_download_seconds": 19.629553099977784,
+        "cpu_inference_seconds": 0.18099290001555346,
+        "process_cached_load_seconds": 0.0009190999844577163,
+        "cache_bytes": 268075800,
+        "output": [
+          {
+            "label": "POSITIVE",
+            "score": 0.9996873140335083
+          },
+          {
+            "label": "NEGATIVE",
+            "score": 0.9995136260986328
+          }
+        ]
+      },
+      {
+        "name": "ner",
+        "id": "dslim/distilbert-NER",
+        "revision": "dfa2838a127384aabb82ed7719e16dab84c42a2a",
+        "task": "token-classification",
+        "license": "Apache-2.0",
+        "cpu_load_or_download_seconds": 0.09544730000197887,
+        "cpu_inference_seconds": 0.08725379998213612,
+        "process_cached_load_seconds": 0.0008292999991681427,
+        "cache_bytes": 261695309,
+        "output": [
+          {
+            "text": "Riya",
+            "label": "PER",
+            "score": 0.9871829748153687,
+            "start": 0,
+            "end": 4
+          },
+          {
+            "text": "Natural Language Processing",
+            "label": "MISC",
+            "score": 0.5034922361373901,
+            "start": 13,
+            "end": 40
+          },
+          {
+            "text": "Hindu College of Engineering",
+            "label": "ORG",
+            "score": 0.9851732850074768,
+            "start": 44,
+            "end": 72
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "id": "distilbert/distilbert-base-uncased-distilled-squad",
+        "revision": "dfb8fa0e03905f0b6ea92133e56b6fef138015f2",
+        "task": "question-answering",
+        "license": "Apache-2.0",
+        "cpu_load_or_download_seconds": 0.13753080001333728,
+        "cpu_inference_seconds": 0.16437519999453798,
+        "process_cached_load_seconds": 0.00083710000035353,
+        "cache_bytes": 266179718,
+        "output": {
+          "answer": "Semester 6",
+          "score": 0.7009359002113342,
+          "start": 42,
+          "end": 52
+        }
+      }
+    ],
+    "total_cache_bytes": 795950827
+  },
+  "unsupported_qa_example": {
+    "question": "What is the examination fee?",
+    "answer": "Natural Language Processing is offered in Semester 6",
+    "score": 0.04881798475980759,
+    "start": 0,
+    "end": 52,
+    "interpretation": "The supplied context contains no fee. This is a wrong span, not an answer."
+  },
+  "validation": {
+    "python311": "349 passed, no skips, 35.70s",
+    "python312": "349 passed, no skips, 35.80s",
+    "new_tests": 37,
+    "notebook": "All cells execute offline with actual models on both Python versions",
+    "ui": "Home/all 10 pages, editable/scaled attention, task buttons, blank input and missing-model warning verified on both",
+    "known_warning": "Transformers QA pipeline emits a NumPy __array__(copy=...) deprecation warning; inference succeeds."
+  }
+}

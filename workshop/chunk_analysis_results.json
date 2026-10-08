@@ -1,0 +1,458 @@
+{
+  "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+  "model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "token_counting": "Untruncated WordPieces including special tokens; tokenizer only",
+  "default": {
+    "chunk_size": 100,
+    "overlap": 20
+  },
+  "source_sha256": {
+    "data/academic_documents/01_student_academic_regulations.md": "5c830c32e6cbd87d99ebf8ba1bab4b67672c924f2dc0fa7817545c302e2c9fa2",
+    "data/academic_documents/02_btech_cse_curriculum.md": "090638c6063b28d1f144f372895caeb2f6233a40f79ecf5f0415a1b9e2307fee",
+    "data/academic_documents/03_semester_course_structure.md": "266aefec08e287753231d0ea5b570f6a504ae6314211d987cc27793f9b102316",
+    "data/academic_documents/04_nlp_syllabus.md": "0083a0435e17bf508799cf4d6b3a54f1f259eb904e3a45e3a0890c87cc0a787f",
+    "data/academic_documents/05_machine_learning_syllabus.md": "ff629f557b982c559b5d142a5d749b946b8897aefdf5b669b355f46727357d34",
+    "data/academic_documents/06_deep_learning_syllabus.md": "651d7a97727bbd2a07f18423c606a9a5833f16a82f621ff64740b98ee95c4333",
+    "data/academic_documents/07_academic_calendar.md": "4b6302c86d25f7ab09c039bdeec9d1314de6706da38da42ef6b8b3cf616d0b40",
+    "data/academic_documents/08_attendance_policy.md": "ab84817c4f8701a6c4beef2a3e024d40c12c9b05a35bc6ac4d011d154d901548",
+    "data/academic_documents/09_examination_regulations.md": "bf675dfc860c1b1173ac1d44f63a1c7ce8efc423a1247da82dd1df798ccf4716",
+    "data/academic_documents/10_laboratory_guidelines.md": "b3aba7fb6c6f2bd9c7910f948b5371c345965ac5436f2c6461939104863b8882",
+    "data/academic_documents/11_placement_faq.md": "29d5b352f8ec2e78e06fc99eef6ba9d2966d663b60aad35ec06e77ce06492eec",
+    "data/academic_documents/12_student_handbook.md": "d7e92c2a0440e81c373bf37fec2a40721c66bc3d4ab13d185e8666a6d30e983b",
+    "data/academic_documents/13_course_prerequisites.md": "6b873138f08d991b86e06ec8acb32b1f7e65edd28b5fe84d03a0dd6479db6eba",
+    "data/academic_documents/14_faculty_course_information.md": "fe65ebb083ebef463cf0e3a80ec199e461afdce9baa39dae4561cb7665930734"
+  },
+  "documents": [
+    {
+      "document_id": "HCE-DOC01",
+      "statistics": {
+        "document_word_count": 702,
+        "chunk_count": 9,
+        "min_words": 62,
+        "max_words": 100,
+        "average_words": 95.77777777777777,
+        "overlap": 20,
+        "duplicated_word_positions": 160
+      },
+      "full_model_tokens": 878,
+      "chunk_model_tokens": {
+        "count": 9,
+        "min": 79,
+        "average": 122.0,
+        "max": 135,
+        "above_256": 0
+      },
+      "oversized_chunk_ids": []
+    },
+    {
+      "document_id": "HCE-DOC02",
+      "statistics": {
+        "document_word_count": 1313,
+        "chunk_count": 17,
+        "min_words": 33,
+        "max_words": 100,
+        "average_words": 96.05882352941177,
+        "overlap": 20,
+        "duplicated_word_positions": 320
+      },
+      "full_model_tokens": 1890,
+      "chunk_model_tokens": {
+        "count": 17,
+        "min": 43,
+        "average": 140.11764705882354,
+        "max": 177,
+        "above_256": 0
+      },
+      "oversized_chunk_ids": []
+    },
+    {
+      "document_id": "HCE-DOC03",
+      "statistics": {
+        "document_word_count": 1092,
+        "chunk_count": 14,
+        "min_words": 52,
+        "max_words": 100,
+        "average_words": 96.57142857142857,
+        "overlap": 20,
+        "duplicated_word_positions": 260
+      },
+      "full_model_tokens": 1607,
+      "chunk_model_tokens": {
+        "count": 14,
+        "min": 64,
+        "average": 143.28571428571428,
+        "max": 163,
+        "above_256": 0
+      },
+      "oversized_chunk_ids": []
+    },
+    {
+      "document_id": "HCE-DOC04",
+      "statistics": {
+        "document_word_count": 924,
+        "chunk_count": 12,
+        "min_words": 44,
+        "max_words": 100,
+        "average_words": 95.33333333333333,
+        "overlap": 20,
+        "duplicated_word_positions": 220
+      },
+      "full_model_tokens": 1269,
+      "chunk_model_tokens": {
+        "count": 12,
+        "min": 56,
+        "average": 131.66666666666666,
+        "max": 190,
+        "above_256": 0
+      },
+      "oversized_chunk_ids": []
+    },
+    {
+      "document_id": "HCE-DOC05",
+      "statistics": {
+        "document_word_count": 759,
+        "chunk_count": 10,
+        "min_words": 39,
+        "max_words": 100,
+        "average_words": 93.9,
+        "overlap": 20,
+        "duplicated_word_positions": 180
+      },
+      "full_model_tokens": 1043,
+      "chunk_model_tokens": {
+        "count": 10,
+        "min": 47,
+        "average": 128.1,
+        "max": 198,
+        "above_256": 0
+      },
+      "oversized_chunk_ids": []
+    },
+    {
+      "document_id": "HCE-DOC06",
+      "statistics": {
+        "document_word_count": 738,
+        "chunk_count": 9,
+        "min_words": 98,
+        "max_words": 100,
+        "average_words": 99.77777777777777,
+        "overlap": 20,
+        "duplicated_word_positions": 160
+      },
+      "full_model_tokens": 1013,
+      "chunk_model_tokens": {
+        "count": 9,
+        "min": 119,
+        "average": 138.22222222222223,
+        "max": 200,
+        "above_256": 0
+      },
+      "oversized_chunk_ids": []
+    },
+    {
+      "document_id": "HCE-DOC07",
+      "statistics": {
+        "document_word_count": 739,
+        "chunk_count": 9,
+        "min_words": 99,
+        "max_words": 100,
+        "average_words": 99.88888888888889,
+        "overlap": 20,
+        "duplicated_word_positions": 160
+      },
+      "full_model_tokens": 1127,
+      "chunk_model_tokens": {
+        "count": 9,
+        "min": 124,
+        "average": 154.55555555555554,
+        "max": 205,
+        "above_256": 0
+      },
+      "oversized_chunk_ids": []
+    },
+    {
+      "document_id": "HCE-DOC08",
+      "statistics": {
+        "document_word_count": 613,
+        "chunk_count": 8,
+        "min_words": 53,
+        "max_words": 100,
+        "average_words": 94.125,
+        "overlap": 20,
+        "duplicated_word_positions": 140
+      },
+      "full_model_tokens": 723,
+      "chunk_model_tokens": {
+        "count": 8,
+        "min": 63,
+        "average": 112.125,
+        "max": 127,
+        "above_256": 0
+      },
+      "oversized_chunk_ids": []
+    },
+    {
+      "document_id": "HCE-DOC09",
+      "statistics": {
+        "document_word_count": 661,
+        "chunk_count": 9,
+        "min_words": 21,
+        "max_words": 100,
+        "average_words": 91.22222222222223,
+        "overlap": 20,
+        "duplicated_word_positions": 160
+      },
+      "full_model_tokens": 837,
+      "chunk_model_tokens": {
+        "count": 9,
+        "min": 25,
+        "average": 117.11111111111111,
+        "max": 136,
+        "above_256": 0
+      },
+      "oversized_chunk_ids": []
+    },
+    {
+      "document_id": "HCE-DOC10",
+      "statistics": {
+        "document_word_count": 671,
+        "chunk_count": 9,
+        "min_words": 31,
+        "max_words": 100,
+        "average_words": 92.33333333333333,
+        "overlap": 20,
+        "duplicated_word_positions": 160
+      },
+      "full_model_tokens": 834,
+      "chunk_model_tokens": {
+        "count": 9,
+        "min": 36,
+        "average": 116.88888888888889,
+        "max": 142,
+        "above_256": 0
+      },
+      "oversized_chunk_ids": []
+    },
+    {
+      "document_id": "HCE-DOC11",
+      "statistics": {
+        "document_word_count": 612,
+        "chunk_count": 8,
+        "min_words": 52,
+        "max_words": 100,
+        "average_words": 94.0,
+        "overlap": 20,
+        "duplicated_word_positions": 140
+      },
+      "full_model_tokens": 750,
+      "chunk_model_tokens": {
+        "count": 8,
+        "min": 63,
+        "average": 116.375,
+        "max": 131,
+        "above_256": 0
+      },
+      "oversized_chunk_ids": []
+    },
+    {
+      "document_id": "HCE-DOC12",
+      "statistics": {
+        "document_word_count": 693,
+        "chunk_count": 9,
+        "min_words": 53,
+        "max_words": 100,
+        "average_words": 94.77777777777777,
+        "overlap": 20,
+        "duplicated_word_positions": 160
+      },
+      "full_model_tokens": 852,
+      "chunk_model_tokens": {
+        "count": 9,
+        "min": 65,
+        "average": 118.22222222222223,
+        "max": 131,
+        "above_256": 0
+      },
+      "oversized_chunk_ids": []
+    },
+    {
+      "document_id": "HCE-DOC13",
+      "statistics": {
+        "document_word_count": 1335,
+        "chunk_count": 17,
+        "min_words": 55,
+        "max_words": 100,
+        "average_words": 97.3529411764706,
+        "overlap": 20,
+        "duplicated_word_positions": 320
+      },
+      "full_model_tokens": 2571,
+      "chunk_model_tokens": {
+        "count": 17,
+        "min": 72,
+        "average": 188.76470588235293,
+        "max": 247,
+        "above_256": 0
+      },
+      "oversized_chunk_ids": []
+    },
+    {
+      "document_id": "HCE-DOC14",
+      "statistics": {
+        "document_word_count": 909,
+        "chunk_count": 12,
+        "min_words": 29,
+        "max_words": 100,
+        "average_words": 94.08333333333333,
+        "overlap": 20,
+        "duplicated_word_positions": 220
+      },
+      "full_model_tokens": 1244,
+      "chunk_model_tokens": {
+        "count": 12,
+        "min": 40,
+        "average": 131.25,
+        "max": 157,
+        "above_256": 0
+      },
+      "oversized_chunk_ids": []
+    }
+  ],
+  "experiments": [
+    {
+      "chunk_size": 60,
+      "overlap": 20,
+      "words": {
+        "count": 293,
+        "min": 21,
+        "average": 59.184300341296925,
+        "max": 60,
+        "above_256": 0
+      },
+      "model_tokens": {
+        "count": 293,
+        "min": 25,
+        "average": 85.40273037542661,
+        "max": 162,
+        "above_256": 0
+      },
+      "duplicated_word_positions": 5580
+    },
+    {
+      "chunk_size": 100,
+      "overlap": 0,
+      "words": {
+        "count": 126,
+        "min": 2,
+        "average": 93.34126984126983,
+        "max": 100,
+        "above_256": 0
+      },
+      "model_tokens": {
+        "count": 126,
+        "min": 5,
+        "average": 133.82539682539684,
+        "max": 247,
+        "above_256": 0
+      },
+      "duplicated_word_positions": 0
+    },
+    {
+      "chunk_size": 100,
+      "overlap": 20,
+      "words": {
+        "count": 152,
+        "min": 21,
+        "average": 95.53289473684211,
+        "max": 100,
+        "above_256": 0
+      },
+      "model_tokens": {
+        "count": 152,
+        "min": 25,
+        "average": 136.60526315789474,
+        "max": 247,
+        "above_256": 0
+      },
+      "duplicated_word_positions": 2760
+    },
+    {
+      "chunk_size": 100,
+      "overlap": 40,
+      "words": {
+        "count": 193,
+        "min": 42,
+        "average": 98.03626943005182,
+        "max": 100,
+        "above_256": 0
+      },
+      "model_tokens": {
+        "count": 193,
+        "min": 53,
+        "average": 140.40414507772022,
+        "max": 245,
+        "above_256": 0
+      },
+      "duplicated_word_positions": 7160
+    },
+    {
+      "chunk_size": 120,
+      "overlap": 20,
+      "words": {
+        "count": 121,
+        "min": 24,
+        "average": 114.88429752066116,
+        "max": 120,
+        "above_256": 0
+      },
+      "model_tokens": {
+        "count": 121,
+        "min": 31,
+        "average": 164.8181818181818,
+        "max": 288,
+        "above_256": 6
+      },
+      "duplicated_word_positions": 2140
+    },
+    {
+      "chunk_size": 240,
+      "overlap": 20,
+      "words": {
+        "count": 59,
+        "min": 29,
+        "average": 214.59322033898306,
+        "max": 240,
+        "above_256": 0
+      },
+      "model_tokens": {
+        "count": 59,
+        "min": 40,
+        "average": 305.1525423728813,
+        "max": 566,
+        "above_256": 50
+      },
+      "duplicated_word_positions": 900
+    }
+  ],
+  "full_document_tokens": {
+    "count": 14,
+    "min": 723,
+    "average": 1188.4285714285713,
+    "max": 2571,
+    "above_256": 14
+  },
+  "default_chunk_words": {
+    "count": 152,
+    "min": 21,
+    "average": 95.53289473684211,
+    "max": 100,
+    "above_256": 0
+  },
+  "default_chunk_tokens": {
+    "count": 152,
+    "min": 25,
+    "average": 136.60526315789474,
+    "max": 247,
+    "above_256": 0
+  }
+}

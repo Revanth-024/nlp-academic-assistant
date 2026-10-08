@@ -1,0 +1,3310 @@
+{
+  "usage": "Measured instructor/testing output only. Not canonical facts or application answers. Regenerate with python -m workshop.evaluate_retrieval.",
+  "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+  "model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "python": "3.11.17",
+  "packages": {
+    "sentence-transformers": "5.1.2",
+    "torch": "2.14.1",
+    "transformers": "4.57.6",
+    "numpy": "2.4.6"
+  },
+  "indexing_policy": "Course comparison: description only, same raw content supplied to both methods; classical preprocessing unchanged. Full-document benchmarks: unchanged complete Markdown, including headings/disclaimers. Encoder-native 256-word-piece truncation, no extraction/chunking.",
+  "source_sha256": {
+    "data/search_corpus/course_descriptions.csv": "b10422b489712c72aa92e493487b9927e0af8ade806fe1a550a360233427bf38",
+    "data/retrieval_benchmarks.json": "fa621bb56008a8c11c81712af77e59685d8b43bb2423606945862d95a840d64f",
+    "data/document_manifest.json": "5b0a0f11b05e4a3cb479185161d98543b9279f6f9e36ec8db26e3d7f3f641118",
+    "data/academic_documents/01_student_academic_regulations.md": "5c830c32e6cbd87d99ebf8ba1bab4b67672c924f2dc0fa7817545c302e2c9fa2",
+    "data/academic_documents/02_btech_cse_curriculum.md": "090638c6063b28d1f144f372895caeb2f6233a40f79ecf5f0415a1b9e2307fee",
+    "data/academic_documents/03_semester_course_structure.md": "266aefec08e287753231d0ea5b570f6a504ae6314211d987cc27793f9b102316",
+    "data/academic_documents/04_nlp_syllabus.md": "0083a0435e17bf508799cf4d6b3a54f1f259eb904e3a45e3a0890c87cc0a787f",
+    "data/academic_documents/05_machine_learning_syllabus.md": "ff629f557b982c559b5d142a5d749b946b8897aefdf5b669b355f46727357d34",
+    "data/academic_documents/06_deep_learning_syllabus.md": "651d7a97727bbd2a07f18423c606a9a5833f16a82f621ff64740b98ee95c4333",
+    "data/academic_documents/07_academic_calendar.md": "4b6302c86d25f7ab09c039bdeec9d1314de6706da38da42ef6b8b3cf616d0b40",
+    "data/academic_documents/08_attendance_policy.md": "ab84817c4f8701a6c4beef2a3e024d40c12c9b05a35bc6ac4d011d154d901548",
+    "data/academic_documents/09_examination_regulations.md": "bf675dfc860c1b1173ac1d44f63a1c7ce8efc423a1247da82dd1df798ccf4716",
+    "data/academic_documents/10_laboratory_guidelines.md": "b3aba7fb6c6f2bd9c7910f948b5371c345965ac5436f2c6461939104863b8882",
+    "data/academic_documents/11_placement_faq.md": "29d5b352f8ec2e78e06fc99eef6ba9d2966d663b60aad35ec06e77ce06492eec",
+    "data/academic_documents/12_student_handbook.md": "d7e92c2a0440e81c373bf37fec2a40721c66bc3d4ab13d185e8666a6d30e983b",
+    "data/academic_documents/13_course_prerequisites.md": "6b873138f08d991b86e06ec8acb32b1f7e65edd28b5fe84d03a0dd6479db6eba",
+    "data/academic_documents/14_faculty_course_information.md": "fe65ebb083ebef463cf0e3a80ec199e461afdce9baa39dae4561cb7665930734",
+    "data/question_papers/nlp_question_paper_01.md": "ac5fb29bffb184daebf53966ad24d0231547b3dbe5643f333f55c7a5e6724b2a",
+    "data/question_papers/nlp_question_paper_02.md": "0b62b26ec501510c7698aba8ab97106fac15bb4588b16823111ec221fc3603f6",
+    "data/question_papers/nlp_question_paper_03.md": "001a0906d647a73798f2470e62a0d611ddf0cd740c972241e42c2bfeb15902ab",
+    "data/question_papers/nlp_question_paper_04.md": "a5b11100be438c8fa822a158ba784f6160738ff8aa4cdd735c77a8da90920b73"
+  },
+  "performance": {
+    "cpu_model_load_seconds": 15.521140600001672,
+    "course_count": 20,
+    "course_matrix_shape": [
+      20,
+      384
+    ],
+    "course_corpus_encoding_seconds": 0.4840107999916654,
+    "document_count": 18,
+    "document_corpus_encoding_seconds": 1.4366925999929663
+  },
+  "course_comparisons": [
+    {
+      "query": "natural language processing",
+      "query_encoding_seconds": 0.018387199990684167,
+      "cosine_scoring_seconds": 0.04157849997864105,
+      "ranking_seconds": 9.799998952075839e-05,
+      "tfidf_results": [
+        {
+          "document_id": "HCE-CSE603",
+          "title": "Natural Language Processing",
+          "text": "Computational methods for processing, understanding and generating human language through symbolic, statistical and contextual representations.",
+          "semester": 6,
+          "score": 0.41670133331585285
+        },
+        {
+          "document_id": "HCE-CSE504",
+          "title": "Data Engineering",
+          "text": "Data preparation workflows organize, clean and transform collections into dependable inputs for downstream analytical systems, emphasizing consistency across processing stages.",
+          "semester": 5,
+          "score": 0.12523191696389546
+        },
+        {
+          "document_id": "HCE-CSE101",
+          "title": "Programming Fundamentals",
+          "text": "Procedural programming develops step-by-step solutions using variables, decisions, repetition and functions, with attention to tracing and debugging small programs.",
+          "semester": 1,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE201",
+          "title": "Object-Oriented Programming",
+          "text": "Object-based software design organizes state and behaviour into classes, exploring encapsulation, inheritance and reusable abstractions for structured applications.",
+          "semester": 2,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE202",
+          "title": "Discrete Mathematics",
+          "text": "Mathematical structures for computing connect logic, sets, relations and graph reasoning to precise statements about finite computational problems.",
+          "semester": 2,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE301",
+          "title": "Data Structures",
+          "text": "Organizing collections through lists, stacks, queues, trees and related structures supports efficient storage, access and modification of program data.",
+          "semester": 3,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE302",
+          "title": "Database Management Systems",
+          "text": "Relational data organization uses schemas, structured queries and integrity constraints to store linked records and maintain consistent information during updates.",
+          "semester": 3,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE303",
+          "title": "Probability and Statistics",
+          "text": "Mathematical treatment of uncertainty combines probability distributions, summary statistics and inference to interpret variable observations and reason about evidence.",
+          "semester": 3,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE304",
+          "title": "Design and Analysis of Algorithms",
+          "text": "Systematic algorithm design compares strategies for solving computational problems and evaluates their resource costs as input sizes change.",
+          "semester": 3,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE401",
+          "title": "Operating Systems",
+          "text": "System software coordinates processes, memory and shared resources so concurrent programs can run safely while using underlying computing hardware.",
+          "semester": 4,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE402",
+          "title": "Computer Networks",
+          "text": "Protocols and layered architectures that enable digital devices to exchange data over connected systems.",
+          "semester": 4,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE403",
+          "title": "Software Engineering",
+          "text": "Disciplined software development connects requirements, design, testing and maintenance to the construction of dependable applications by collaborating teams.",
+          "semester": 4,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE404",
+          "title": "Linear Algebra for Computing",
+          "text": "Vector spaces, matrices and linear transformations provide mathematical tools for representing numerical observations and reasoning about computations in multiple dimensions.",
+          "semester": 4,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE501",
+          "title": "Artificial Intelligence",
+          "text": "Intelligent problem solving examines search, knowledge representation and reasoning methods for choosing actions under specified goals and constraints.",
+          "semester": 5,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE502",
+          "title": "Machine Learning",
+          "text": "Data-driven methods that learn patterns from examples to make predictions on unseen observations.",
+          "semester": 5,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE601",
+          "title": "Compiler Design",
+          "text": "Translation of programming languages connects lexical analysis, syntax and semantic checking to the construction of representations suitable for execution.",
+          "semester": 6,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE602",
+          "title": "Information Retrieval",
+          "text": "Retrieval of relevant items from document collections examines representations, ranking and evaluation, linking information needs with indexed textual evidence.",
+          "semester": 6,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE701",
+          "title": "Deep Learning",
+          "text": "Multilayer neural methods for learning hierarchical representations from data, building on Machine Learning.",
+          "semester": 7,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE702",
+          "title": "Computer Vision",
+          "text": "Visual pattern interpretation applies learned representations to images, considering recognition tasks and evaluation of predictions from visual observations.",
+          "semester": 7,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE704",
+          "title": "Distributed Systems",
+          "text": "Cooperating processes across multiple machines coordinate computation while reasoning about communication, consistency and failures in shared systems.",
+          "semester": 7,
+          "score": 0.0
+        }
+      ],
+      "semantic_results": [
+        {
+          "document_id": "HCE-CSE603",
+          "title": "Natural Language Processing",
+          "text": "Computational methods for processing, understanding and generating human language through symbolic, statistical and contextual representations.",
+          "semester": 6,
+          "score": 0.5050264394301499
+        },
+        {
+          "document_id": "HCE-CSE601",
+          "title": "Compiler Design",
+          "text": "Translation of programming languages connects lexical analysis, syntax and semantic checking to the construction of representations suitable for execution.",
+          "semester": 6,
+          "score": 0.3291062140822655
+        },
+        {
+          "document_id": "HCE-CSE602",
+          "title": "Information Retrieval",
+          "text": "Retrieval of relevant items from document collections examines representations, ranking and evaluation, linking information needs with indexed textual evidence.",
+          "semester": 6,
+          "score": 0.3164142413185222
+        },
+        {
+          "document_id": "HCE-CSE502",
+          "title": "Machine Learning",
+          "text": "Data-driven methods that learn patterns from examples to make predictions on unseen observations.",
+          "semester": 5,
+          "score": 0.23879789955537684
+        },
+        {
+          "document_id": "HCE-CSE202",
+          "title": "Discrete Mathematics",
+          "text": "Mathematical structures for computing connect logic, sets, relations and graph reasoning to precise statements about finite computational problems.",
+          "semester": 2,
+          "score": 0.23514625484183158
+        },
+        {
+          "document_id": "HCE-CSE701",
+          "title": "Deep Learning",
+          "text": "Multilayer neural methods for learning hierarchical representations from data, building on Machine Learning.",
+          "semester": 7,
+          "score": 0.21678445050251138
+        },
+        {
+          "document_id": "HCE-CSE501",
+          "title": "Artificial Intelligence",
+          "text": "Intelligent problem solving examines search, knowledge representation and reasoning methods for choosing actions under specified goals and constraints.",
+          "semester": 5,
+          "score": 0.21014405267398287
+        },
+        {
+          "document_id": "HCE-CSE504",
+          "title": "Data Engineering",
+          "text": "Data preparation workflows organize, clean and transform collections into dependable inputs for downstream analytical systems, emphasizing consistency across processing stages.",
+          "semester": 5,
+          "score": 0.19269120717984098
+        },
+        {
+          "document_id": "HCE-CSE201",
+          "title": "Object-Oriented Programming",
+          "text": "Object-based software design organizes state and behaviour into classes, exploring encapsulation, inheritance and reusable abstractions for structured applications.",
+          "semester": 2,
+          "score": 0.14991995960597293
+        },
+        {
+          "document_id": "HCE-CSE301",
+          "title": "Data Structures",
+          "text": "Organizing collections through lists, stacks, queues, trees and related structures supports efficient storage, access and modification of program data.",
+          "semester": 3,
+          "score": 0.1494559567280148
+        },
+        {
+          "document_id": "HCE-CSE702",
+          "title": "Computer Vision",
+          "text": "Visual pattern interpretation applies learned representations to images, considering recognition tasks and evaluation of predictions from visual observations.",
+          "semester": 7,
+          "score": 0.14739312302320523
+        },
+        {
+          "document_id": "HCE-CSE704",
+          "title": "Distributed Systems",
+          "text": "Cooperating processes across multiple machines coordinate computation while reasoning about communication, consistency and failures in shared systems.",
+          "semester": 7,
+          "score": 0.1378466608612346
+        },
+        {
+          "document_id": "HCE-CSE303",
+          "title": "Probability and Statistics",
+          "text": "Mathematical treatment of uncertainty combines probability distributions, summary statistics and inference to interpret variable observations and reason about evidence.",
+          "semester": 3,
+          "score": 0.13415278374726833
+        },
+        {
+          "document_id": "HCE-CSE302",
+          "title": "Database Management Systems",
+          "text": "Relational data organization uses schemas, structured queries and integrity constraints to store linked records and maintain consistent information during updates.",
+          "semester": 3,
+          "score": 0.12768625745656154
+        },
+        {
+          "document_id": "HCE-CSE404",
+          "title": "Linear Algebra for Computing",
+          "text": "Vector spaces, matrices and linear transformations provide mathematical tools for representing numerical observations and reasoning about computations in multiple dimensions.",
+          "semester": 4,
+          "score": 0.11172698229233992
+        },
+        {
+          "document_id": "HCE-CSE101",
+          "title": "Programming Fundamentals",
+          "text": "Procedural programming develops step-by-step solutions using variables, decisions, repetition and functions, with attention to tracing and debugging small programs.",
+          "semester": 1,
+          "score": 0.09579767965230811
+        },
+        {
+          "document_id": "HCE-CSE402",
+          "title": "Computer Networks",
+          "text": "Protocols and layered architectures that enable digital devices to exchange data over connected systems.",
+          "semester": 4,
+          "score": 0.07842835909213532
+        },
+        {
+          "document_id": "HCE-CSE304",
+          "title": "Design and Analysis of Algorithms",
+          "text": "Systematic algorithm design compares strategies for solving computational problems and evaluates their resource costs as input sizes change.",
+          "semester": 3,
+          "score": 0.06805072757435322
+        },
+        {
+          "document_id": "HCE-CSE401",
+          "title": "Operating Systems",
+          "text": "System software coordinates processes, memory and shared resources so concurrent programs can run safely while using underlying computing hardware.",
+          "semester": 4,
+          "score": 0.04573477019879062
+        },
+        {
+          "document_id": "HCE-CSE403",
+          "title": "Software Engineering",
+          "text": "Disciplined software development connects requirements, design, testing and maintenance to the construction of dependable applications by collaborating teams.",
+          "semester": 4,
+          "score": 0.04198116854161758
+        }
+      ]
+    },
+    {
+      "query": "machine learning",
+      "query_encoding_seconds": 0.01561030000448227,
+      "cosine_scoring_seconds": 0.03741940000327304,
+      "ranking_seconds": 9.539999882690609e-05,
+      "tfidf_results": [
+        {
+          "document_id": "HCE-CSE701",
+          "title": "Deep Learning",
+          "text": "Multilayer neural methods for learning hierarchical representations from data, building on Machine Learning.",
+          "semester": 7,
+          "score": 0.6511054282836554
+        },
+        {
+          "document_id": "HCE-CSE101",
+          "title": "Programming Fundamentals",
+          "text": "Procedural programming develops step-by-step solutions using variables, decisions, repetition and functions, with attention to tracing and debugging small programs.",
+          "semester": 1,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE201",
+          "title": "Object-Oriented Programming",
+          "text": "Object-based software design organizes state and behaviour into classes, exploring encapsulation, inheritance and reusable abstractions for structured applications.",
+          "semester": 2,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE202",
+          "title": "Discrete Mathematics",
+          "text": "Mathematical structures for computing connect logic, sets, relations and graph reasoning to precise statements about finite computational problems.",
+          "semester": 2,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE301",
+          "title": "Data Structures",
+          "text": "Organizing collections through lists, stacks, queues, trees and related structures supports efficient storage, access and modification of program data.",
+          "semester": 3,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE302",
+          "title": "Database Management Systems",
+          "text": "Relational data organization uses schemas, structured queries and integrity constraints to store linked records and maintain consistent information during updates.",
+          "semester": 3,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE303",
+          "title": "Probability and Statistics",
+          "text": "Mathematical treatment of uncertainty combines probability distributions, summary statistics and inference to interpret variable observations and reason about evidence.",
+          "semester": 3,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE304",
+          "title": "Design and Analysis of Algorithms",
+          "text": "Systematic algorithm design compares strategies for solving computational problems and evaluates their resource costs as input sizes change.",
+          "semester": 3,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE401",
+          "title": "Operating Systems",
+          "text": "System software coordinates processes, memory and shared resources so concurrent programs can run safely while using underlying computing hardware.",
+          "semester": 4,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE402",
+          "title": "Computer Networks",
+          "text": "Protocols and layered architectures that enable digital devices to exchange data over connected systems.",
+          "semester": 4,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE403",
+          "title": "Software Engineering",
+          "text": "Disciplined software development connects requirements, design, testing and maintenance to the construction of dependable applications by collaborating teams.",
+          "semester": 4,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE404",
+          "title": "Linear Algebra for Computing",
+          "text": "Vector spaces, matrices and linear transformations provide mathematical tools for representing numerical observations and reasoning about computations in multiple dimensions.",
+          "semester": 4,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE501",
+          "title": "Artificial Intelligence",
+          "text": "Intelligent problem solving examines search, knowledge representation and reasoning methods for choosing actions under specified goals and constraints.",
+          "semester": 5,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE502",
+          "title": "Machine Learning",
+          "text": "Data-driven methods that learn patterns from examples to make predictions on unseen observations.",
+          "semester": 5,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE504",
+          "title": "Data Engineering",
+          "text": "Data preparation workflows organize, clean and transform collections into dependable inputs for downstream analytical systems, emphasizing consistency across processing stages.",
+          "semester": 5,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE601",
+          "title": "Compiler Design",
+          "text": "Translation of programming languages connects lexical analysis, syntax and semantic checking to the construction of representations suitable for execution.",
+          "semester": 6,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE602",
+          "title": "Information Retrieval",
+          "text": "Retrieval of relevant items from document collections examines representations, ranking and evaluation, linking information needs with indexed textual evidence.",
+          "semester": 6,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE603",
+          "title": "Natural Language Processing",
+          "text": "Computational methods for processing, understanding and generating human language through symbolic, statistical and contextual representations.",
+          "semester": 6,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE702",
+          "title": "Computer Vision",
+          "text": "Visual pattern interpretation applies learned representations to images, considering recognition tasks and evaluation of predictions from visual observations.",
+          "semester": 7,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE704",
+          "title": "Distributed Systems",
+          "text": "Cooperating processes across multiple machines coordinate computation while reasoning about communication, consistency and failures in shared systems.",
+          "semester": 7,
+          "score": 0.0
+        }
+      ],
+      "semantic_results": [
+        {
+          "document_id": "HCE-CSE502",
+          "title": "Machine Learning",
+          "text": "Data-driven methods that learn patterns from examples to make predictions on unseen observations.",
+          "semester": 5,
+          "score": 0.44417615516967246
+        },
+        {
+          "document_id": "HCE-CSE701",
+          "title": "Deep Learning",
+          "text": "Multilayer neural methods for learning hierarchical representations from data, building on Machine Learning.",
+          "semester": 7,
+          "score": 0.39891482846439574
+        },
+        {
+          "document_id": "HCE-CSE603",
+          "title": "Natural Language Processing",
+          "text": "Computational methods for processing, understanding and generating human language through symbolic, statistical and contextual representations.",
+          "semester": 6,
+          "score": 0.3259331673081439
+        },
+        {
+          "document_id": "HCE-CSE702",
+          "title": "Computer Vision",
+          "text": "Visual pattern interpretation applies learned representations to images, considering recognition tasks and evaluation of predictions from visual observations.",
+          "semester": 7,
+          "score": 0.27580408283261415
+        },
+        {
+          "document_id": "HCE-CSE404",
+          "title": "Linear Algebra for Computing",
+          "text": "Vector spaces, matrices and linear transformations provide mathematical tools for representing numerical observations and reasoning about computations in multiple dimensions.",
+          "semester": 4,
+          "score": 0.2531574021336676
+        },
+        {
+          "document_id": "HCE-CSE501",
+          "title": "Artificial Intelligence",
+          "text": "Intelligent problem solving examines search, knowledge representation and reasoning methods for choosing actions under specified goals and constraints.",
+          "semester": 5,
+          "score": 0.25117590805673856
+        },
+        {
+          "document_id": "HCE-CSE704",
+          "title": "Distributed Systems",
+          "text": "Cooperating processes across multiple machines coordinate computation while reasoning about communication, consistency and failures in shared systems.",
+          "semester": 7,
+          "score": 0.24988592306474217
+        },
+        {
+          "document_id": "HCE-CSE304",
+          "title": "Design and Analysis of Algorithms",
+          "text": "Systematic algorithm design compares strategies for solving computational problems and evaluates their resource costs as input sizes change.",
+          "semester": 3,
+          "score": 0.22670531340558392
+        },
+        {
+          "document_id": "HCE-CSE303",
+          "title": "Probability and Statistics",
+          "text": "Mathematical treatment of uncertainty combines probability distributions, summary statistics and inference to interpret variable observations and reason about evidence.",
+          "semester": 3,
+          "score": 0.2073752046987232
+        },
+        {
+          "document_id": "HCE-CSE202",
+          "title": "Discrete Mathematics",
+          "text": "Mathematical structures for computing connect logic, sets, relations and graph reasoning to precise statements about finite computational problems.",
+          "semester": 2,
+          "score": 0.19544020014435684
+        },
+        {
+          "document_id": "HCE-CSE602",
+          "title": "Information Retrieval",
+          "text": "Retrieval of relevant items from document collections examines representations, ranking and evaluation, linking information needs with indexed textual evidence.",
+          "semester": 6,
+          "score": 0.18665156363901028
+        },
+        {
+          "document_id": "HCE-CSE101",
+          "title": "Programming Fundamentals",
+          "text": "Procedural programming develops step-by-step solutions using variables, decisions, repetition and functions, with attention to tracing and debugging small programs.",
+          "semester": 1,
+          "score": 0.1849058184790192
+        },
+        {
+          "document_id": "HCE-CSE403",
+          "title": "Software Engineering",
+          "text": "Disciplined software development connects requirements, design, testing and maintenance to the construction of dependable applications by collaborating teams.",
+          "semester": 4,
+          "score": 0.16240045246868262
+        },
+        {
+          "document_id": "HCE-CSE504",
+          "title": "Data Engineering",
+          "text": "Data preparation workflows organize, clean and transform collections into dependable inputs for downstream analytical systems, emphasizing consistency across processing stages.",
+          "semester": 5,
+          "score": 0.15110153846576524
+        },
+        {
+          "document_id": "HCE-CSE301",
+          "title": "Data Structures",
+          "text": "Organizing collections through lists, stacks, queues, trees and related structures supports efficient storage, access and modification of program data.",
+          "semester": 3,
+          "score": 0.13618921400095965
+        },
+        {
+          "document_id": "HCE-CSE201",
+          "title": "Object-Oriented Programming",
+          "text": "Object-based software design organizes state and behaviour into classes, exploring encapsulation, inheritance and reusable abstractions for structured applications.",
+          "semester": 2,
+          "score": 0.12693577158795719
+        },
+        {
+          "document_id": "HCE-CSE601",
+          "title": "Compiler Design",
+          "text": "Translation of programming languages connects lexical analysis, syntax and semantic checking to the construction of representations suitable for execution.",
+          "semester": 6,
+          "score": 0.11355383412448763
+        },
+        {
+          "document_id": "HCE-CSE302",
+          "title": "Database Management Systems",
+          "text": "Relational data organization uses schemas, structured queries and integrity constraints to store linked records and maintain consistent information during updates.",
+          "semester": 3,
+          "score": 0.0975388073080392
+        },
+        {
+          "document_id": "HCE-CSE401",
+          "title": "Operating Systems",
+          "text": "System software coordinates processes, memory and shared resources so concurrent programs can run safely while using underlying computing hardware.",
+          "semester": 4,
+          "score": 0.09301241827242344
+        },
+        {
+          "document_id": "HCE-CSE402",
+          "title": "Computer Networks",
+          "text": "Protocols and layered architectures that enable digital devices to exchange data over connected systems.",
+          "semester": 4,
+          "score": 0.08661489185970667
+        }
+      ]
+    },
+    {
+      "query": "database systems",
+      "query_encoding_seconds": 0.014366199990035966,
+      "cosine_scoring_seconds": 0.034409600018989295,
+      "ranking_seconds": 9.609997505322099e-05,
+      "tfidf_results": [
+        {
+          "document_id": "HCE-CSE402",
+          "title": "Computer Networks",
+          "text": "Protocols and layered architectures that enable digital devices to exchange data over connected systems.",
+          "semester": 4,
+          "score": 0.19803728029170561
+        },
+        {
+          "document_id": "HCE-CSE704",
+          "title": "Distributed Systems",
+          "text": "Cooperating processes across multiple machines coordinate computation while reasoning about communication, consistency and failures in shared systems.",
+          "semester": 7,
+          "score": 0.1899491044050117
+        },
+        {
+          "document_id": "HCE-CSE504",
+          "title": "Data Engineering",
+          "text": "Data preparation workflows organize, clean and transform collections into dependable inputs for downstream analytical systems, emphasizing consistency across processing stages.",
+          "semester": 5,
+          "score": 0.16931149111842425
+        },
+        {
+          "document_id": "HCE-CSE101",
+          "title": "Programming Fundamentals",
+          "text": "Procedural programming develops step-by-step solutions using variables, decisions, repetition and functions, with attention to tracing and debugging small programs.",
+          "semester": 1,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE201",
+          "title": "Object-Oriented Programming",
+          "text": "Object-based software design organizes state and behaviour into classes, exploring encapsulation, inheritance and reusable abstractions for structured applications.",
+          "semester": 2,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE202",
+          "title": "Discrete Mathematics",
+          "text": "Mathematical structures for computing connect logic, sets, relations and graph reasoning to precise statements about finite computational problems.",
+          "semester": 2,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE301",
+          "title": "Data Structures",
+          "text": "Organizing collections through lists, stacks, queues, trees and related structures supports efficient storage, access and modification of program data.",
+          "semester": 3,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE302",
+          "title": "Database Management Systems",
+          "text": "Relational data organization uses schemas, structured queries and integrity constraints to store linked records and maintain consistent information during updates.",
+          "semester": 3,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE303",
+          "title": "Probability and Statistics",
+          "text": "Mathematical treatment of uncertainty combines probability distributions, summary statistics and inference to interpret variable observations and reason about evidence.",
+          "semester": 3,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE304",
+          "title": "Design and Analysis of Algorithms",
+          "text": "Systematic algorithm design compares strategies for solving computational problems and evaluates their resource costs as input sizes change.",
+          "semester": 3,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE401",
+          "title": "Operating Systems",
+          "text": "System software coordinates processes, memory and shared resources so concurrent programs can run safely while using underlying computing hardware.",
+          "semester": 4,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE403",
+          "title": "Software Engineering",
+          "text": "Disciplined software development connects requirements, design, testing and maintenance to the construction of dependable applications by collaborating teams.",
+          "semester": 4,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE404",
+          "title": "Linear Algebra for Computing",
+          "text": "Vector spaces, matrices and linear transformations provide mathematical tools for representing numerical observations and reasoning about computations in multiple dimensions.",
+          "semester": 4,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE501",
+          "title": "Artificial Intelligence",
+          "text": "Intelligent problem solving examines search, knowledge representation and reasoning methods for choosing actions under specified goals and constraints.",
+          "semester": 5,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE502",
+          "title": "Machine Learning",
+          "text": "Data-driven methods that learn patterns from examples to make predictions on unseen observations.",
+          "semester": 5,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE601",
+          "title": "Compiler Design",
+          "text": "Translation of programming languages connects lexical analysis, syntax and semantic checking to the construction of representations suitable for execution.",
+          "semester": 6,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE602",
+          "title": "Information Retrieval",
+          "text": "Retrieval of relevant items from document collections examines representations, ranking and evaluation, linking information needs with indexed textual evidence.",
+          "semester": 6,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE603",
+          "title": "Natural Language Processing",
+          "text": "Computational methods for processing, understanding and generating human language through symbolic, statistical and contextual representations.",
+          "semester": 6,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE701",
+          "title": "Deep Learning",
+          "text": "Multilayer neural methods for learning hierarchical representations from data, building on Machine Learning.",
+          "semester": 7,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE702",
+          "title": "Computer Vision",
+          "text": "Visual pattern interpretation applies learned representations to images, considering recognition tasks and evaluation of predictions from visual observations.",
+          "semester": 7,
+          "score": 0.0
+        }
+      ],
+      "semantic_results": [
+        {
+          "document_id": "HCE-CSE302",
+          "title": "Database Management Systems",
+          "text": "Relational data organization uses schemas, structured queries and integrity constraints to store linked records and maintain consistent information during updates.",
+          "semester": 3,
+          "score": 0.5607240049675344
+        },
+        {
+          "document_id": "HCE-CSE301",
+          "title": "Data Structures",
+          "text": "Organizing collections through lists, stacks, queues, trees and related structures supports efficient storage, access and modification of program data.",
+          "semester": 3,
+          "score": 0.4627064348140779
+        },
+        {
+          "document_id": "HCE-CSE504",
+          "title": "Data Engineering",
+          "text": "Data preparation workflows organize, clean and transform collections into dependable inputs for downstream analytical systems, emphasizing consistency across processing stages.",
+          "semester": 5,
+          "score": 0.4153316515214848
+        },
+        {
+          "document_id": "HCE-CSE402",
+          "title": "Computer Networks",
+          "text": "Protocols and layered architectures that enable digital devices to exchange data over connected systems.",
+          "semester": 4,
+          "score": 0.369326672872504
+        },
+        {
+          "document_id": "HCE-CSE202",
+          "title": "Discrete Mathematics",
+          "text": "Mathematical structures for computing connect logic, sets, relations and graph reasoning to precise statements about finite computational problems.",
+          "semester": 2,
+          "score": 0.3624742739615638
+        },
+        {
+          "document_id": "HCE-CSE401",
+          "title": "Operating Systems",
+          "text": "System software coordinates processes, memory and shared resources so concurrent programs can run safely while using underlying computing hardware.",
+          "semester": 4,
+          "score": 0.33807852839849684
+        },
+        {
+          "document_id": "HCE-CSE704",
+          "title": "Distributed Systems",
+          "text": "Cooperating processes across multiple machines coordinate computation while reasoning about communication, consistency and failures in shared systems.",
+          "semester": 7,
+          "score": 0.3162529690411013
+        },
+        {
+          "document_id": "HCE-CSE201",
+          "title": "Object-Oriented Programming",
+          "text": "Object-based software design organizes state and behaviour into classes, exploring encapsulation, inheritance and reusable abstractions for structured applications.",
+          "semester": 2,
+          "score": 0.3013663170532783
+        },
+        {
+          "document_id": "HCE-CSE404",
+          "title": "Linear Algebra for Computing",
+          "text": "Vector spaces, matrices and linear transformations provide mathematical tools for representing numerical observations and reasoning about computations in multiple dimensions.",
+          "semester": 4,
+          "score": 0.2849497521660205
+        },
+        {
+          "document_id": "HCE-CSE601",
+          "title": "Compiler Design",
+          "text": "Translation of programming languages connects lexical analysis, syntax and semantic checking to the construction of representations suitable for execution.",
+          "semester": 6,
+          "score": 0.2496963127822555
+        },
+        {
+          "document_id": "HCE-CSE501",
+          "title": "Artificial Intelligence",
+          "text": "Intelligent problem solving examines search, knowledge representation and reasoning methods for choosing actions under specified goals and constraints.",
+          "semester": 5,
+          "score": 0.2168456833114265
+        },
+        {
+          "document_id": "HCE-CSE602",
+          "title": "Information Retrieval",
+          "text": "Retrieval of relevant items from document collections examines representations, ranking and evaluation, linking information needs with indexed textual evidence.",
+          "semester": 6,
+          "score": 0.1950691094610394
+        },
+        {
+          "document_id": "HCE-CSE502",
+          "title": "Machine Learning",
+          "text": "Data-driven methods that learn patterns from examples to make predictions on unseen observations.",
+          "semester": 5,
+          "score": 0.18685054456634556
+        },
+        {
+          "document_id": "HCE-CSE403",
+          "title": "Software Engineering",
+          "text": "Disciplined software development connects requirements, design, testing and maintenance to the construction of dependable applications by collaborating teams.",
+          "semester": 4,
+          "score": 0.1803666205023654
+        },
+        {
+          "document_id": "HCE-CSE304",
+          "title": "Design and Analysis of Algorithms",
+          "text": "Systematic algorithm design compares strategies for solving computational problems and evaluates their resource costs as input sizes change.",
+          "semester": 3,
+          "score": 0.17508491355185085
+        },
+        {
+          "document_id": "HCE-CSE603",
+          "title": "Natural Language Processing",
+          "text": "Computational methods for processing, understanding and generating human language through symbolic, statistical and contextual representations.",
+          "semester": 6,
+          "score": 0.16537425552055188
+        },
+        {
+          "document_id": "HCE-CSE101",
+          "title": "Programming Fundamentals",
+          "text": "Procedural programming develops step-by-step solutions using variables, decisions, repetition and functions, with attention to tracing and debugging small programs.",
+          "semester": 1,
+          "score": 0.1494489499107134
+        },
+        {
+          "document_id": "HCE-CSE701",
+          "title": "Deep Learning",
+          "text": "Multilayer neural methods for learning hierarchical representations from data, building on Machine Learning.",
+          "semester": 7,
+          "score": 0.1417392015049141
+        },
+        {
+          "document_id": "HCE-CSE303",
+          "title": "Probability and Statistics",
+          "text": "Mathematical treatment of uncertainty combines probability distributions, summary statistics and inference to interpret variable observations and reason about evidence.",
+          "semester": 3,
+          "score": 0.11774066321784388
+        },
+        {
+          "document_id": "HCE-CSE702",
+          "title": "Computer Vision",
+          "text": "Visual pattern interpretation applies learned representations to images, considering recognition tasks and evaluation of predictions from visual observations.",
+          "semester": 7,
+          "score": 0.05161268872712892
+        }
+      ]
+    },
+    {
+      "query": "computer communication networks",
+      "query_encoding_seconds": 0.015084000013303012,
+      "cosine_scoring_seconds": 0.039355000015348196,
+      "ranking_seconds": 0.00011759999324567616,
+      "tfidf_results": [
+        {
+          "document_id": "HCE-CSE704",
+          "title": "Distributed Systems",
+          "text": "Cooperating processes across multiple machines coordinate computation while reasoning about communication, consistency and failures in shared systems.",
+          "semester": 7,
+          "score": 0.29994764007137886
+        },
+        {
+          "document_id": "HCE-CSE101",
+          "title": "Programming Fundamentals",
+          "text": "Procedural programming develops step-by-step solutions using variables, decisions, repetition and functions, with attention to tracing and debugging small programs.",
+          "semester": 1,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE201",
+          "title": "Object-Oriented Programming",
+          "text": "Object-based software design organizes state and behaviour into classes, exploring encapsulation, inheritance and reusable abstractions for structured applications.",
+          "semester": 2,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE202",
+          "title": "Discrete Mathematics",
+          "text": "Mathematical structures for computing connect logic, sets, relations and graph reasoning to precise statements about finite computational problems.",
+          "semester": 2,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE301",
+          "title": "Data Structures",
+          "text": "Organizing collections through lists, stacks, queues, trees and related structures supports efficient storage, access and modification of program data.",
+          "semester": 3,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE302",
+          "title": "Database Management Systems",
+          "text": "Relational data organization uses schemas, structured queries and integrity constraints to store linked records and maintain consistent information during updates.",
+          "semester": 3,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE303",
+          "title": "Probability and Statistics",
+          "text": "Mathematical treatment of uncertainty combines probability distributions, summary statistics and inference to interpret variable observations and reason about evidence.",
+          "semester": 3,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE304",
+          "title": "Design and Analysis of Algorithms",
+          "text": "Systematic algorithm design compares strategies for solving computational problems and evaluates their resource costs as input sizes change.",
+          "semester": 3,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE401",
+          "title": "Operating Systems",
+          "text": "System software coordinates processes, memory and shared resources so concurrent programs can run safely while using underlying computing hardware.",
+          "semester": 4,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE402",
+          "title": "Computer Networks",
+          "text": "Protocols and layered architectures that enable digital devices to exchange data over connected systems.",
+          "semester": 4,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE403",
+          "title": "Software Engineering",
+          "text": "Disciplined software development connects requirements, design, testing and maintenance to the construction of dependable applications by collaborating teams.",
+          "semester": 4,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE404",
+          "title": "Linear Algebra for Computing",
+          "text": "Vector spaces, matrices and linear transformations provide mathematical tools for representing numerical observations and reasoning about computations in multiple dimensions.",
+          "semester": 4,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE501",
+          "title": "Artificial Intelligence",
+          "text": "Intelligent problem solving examines search, knowledge representation and reasoning methods for choosing actions under specified goals and constraints.",
+          "semester": 5,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE502",
+          "title": "Machine Learning",
+          "text": "Data-driven methods that learn patterns from examples to make predictions on unseen observations.",
+          "semester": 5,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE504",
+          "title": "Data Engineering",
+          "text": "Data preparation workflows organize, clean and transform collections into dependable inputs for downstream analytical systems, emphasizing consistency across processing stages.",
+          "semester": 5,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE601",
+          "title": "Compiler Design",
+          "text": "Translation of programming languages connects lexical analysis, syntax and semantic checking to the construction of representations suitable for execution.",
+          "semester": 6,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE602",
+          "title": "Information Retrieval",
+          "text": "Retrieval of relevant items from document collections examines representations, ranking and evaluation, linking information needs with indexed textual evidence.",
+          "semester": 6,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE603",
+          "title": "Natural Language Processing",
+          "text": "Computational methods for processing, understanding and generating human language through symbolic, statistical and contextual representations.",
+          "semester": 6,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE701",
+          "title": "Deep Learning",
+          "text": "Multilayer neural methods for learning hierarchical representations from data, building on Machine Learning.",
+          "semester": 7,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE702",
+          "title": "Computer Vision",
+          "text": "Visual pattern interpretation applies learned representations to images, considering recognition tasks and evaluation of predictions from visual observations.",
+          "semester": 7,
+          "score": 0.0
+        }
+      ],
+      "semantic_results": [
+        {
+          "document_id": "HCE-CSE402",
+          "title": "Computer Networks",
+          "text": "Protocols and layered architectures that enable digital devices to exchange data over connected systems.",
+          "semester": 4,
+          "score": 0.4492513500461432
+        },
+        {
+          "document_id": "HCE-CSE704",
+          "title": "Distributed Systems",
+          "text": "Cooperating processes across multiple machines coordinate computation while reasoning about communication, consistency and failures in shared systems.",
+          "semester": 7,
+          "score": 0.3812487098948203
+        },
+        {
+          "document_id": "HCE-CSE202",
+          "title": "Discrete Mathematics",
+          "text": "Mathematical structures for computing connect logic, sets, relations and graph reasoning to precise statements about finite computational problems.",
+          "semester": 2,
+          "score": 0.3111999450165968
+        },
+        {
+          "document_id": "HCE-CSE401",
+          "title": "Operating Systems",
+          "text": "System software coordinates processes, memory and shared resources so concurrent programs can run safely while using underlying computing hardware.",
+          "semester": 4,
+          "score": 0.23272476317997004
+        },
+        {
+          "document_id": "HCE-CSE301",
+          "title": "Data Structures",
+          "text": "Organizing collections through lists, stacks, queues, trees and related structures supports efficient storage, access and modification of program data.",
+          "semester": 3,
+          "score": 0.21877016019833836
+        },
+        {
+          "document_id": "HCE-CSE404",
+          "title": "Linear Algebra for Computing",
+          "text": "Vector spaces, matrices and linear transformations provide mathematical tools for representing numerical observations and reasoning about computations in multiple dimensions.",
+          "semester": 4,
+          "score": 0.19224356144996108
+        },
+        {
+          "document_id": "HCE-CSE603",
+          "title": "Natural Language Processing",
+          "text": "Computational methods for processing, understanding and generating human language through symbolic, statistical and contextual representations.",
+          "semester": 6,
+          "score": 0.1907241768477674
+        },
+        {
+          "document_id": "HCE-CSE701",
+          "title": "Deep Learning",
+          "text": "Multilayer neural methods for learning hierarchical representations from data, building on Machine Learning.",
+          "semester": 7,
+          "score": 0.18435928517656575
+        },
+        {
+          "document_id": "HCE-CSE201",
+          "title": "Object-Oriented Programming",
+          "text": "Object-based software design organizes state and behaviour into classes, exploring encapsulation, inheritance and reusable abstractions for structured applications.",
+          "semester": 2,
+          "score": 0.153194525935032
+        },
+        {
+          "document_id": "HCE-CSE304",
+          "title": "Design and Analysis of Algorithms",
+          "text": "Systematic algorithm design compares strategies for solving computational problems and evaluates their resource costs as input sizes change.",
+          "semester": 3,
+          "score": 0.1516377699371382
+        },
+        {
+          "document_id": "HCE-CSE302",
+          "title": "Database Management Systems",
+          "text": "Relational data organization uses schemas, structured queries and integrity constraints to store linked records and maintain consistent information during updates.",
+          "semester": 3,
+          "score": 0.14954425425770454
+        },
+        {
+          "document_id": "HCE-CSE403",
+          "title": "Software Engineering",
+          "text": "Disciplined software development connects requirements, design, testing and maintenance to the construction of dependable applications by collaborating teams.",
+          "semester": 4,
+          "score": 0.12764376422891585
+        },
+        {
+          "document_id": "HCE-CSE601",
+          "title": "Compiler Design",
+          "text": "Translation of programming languages connects lexical analysis, syntax and semantic checking to the construction of representations suitable for execution.",
+          "semester": 6,
+          "score": 0.1149111671546471
+        },
+        {
+          "document_id": "HCE-CSE502",
+          "title": "Machine Learning",
+          "text": "Data-driven methods that learn patterns from examples to make predictions on unseen observations.",
+          "semester": 5,
+          "score": 0.09088693424845387
+        },
+        {
+          "document_id": "HCE-CSE501",
+          "title": "Artificial Intelligence",
+          "text": "Intelligent problem solving examines search, knowledge representation and reasoning methods for choosing actions under specified goals and constraints.",
+          "semester": 5,
+          "score": 0.08639921113331843
+        },
+        {
+          "document_id": "HCE-CSE504",
+          "title": "Data Engineering",
+          "text": "Data preparation workflows organize, clean and transform collections into dependable inputs for downstream analytical systems, emphasizing consistency across processing stages.",
+          "semester": 5,
+          "score": 0.08270122681856619
+        },
+        {
+          "document_id": "HCE-CSE101",
+          "title": "Programming Fundamentals",
+          "text": "Procedural programming develops step-by-step solutions using variables, decisions, repetition and functions, with attention to tracing and debugging small programs.",
+          "semester": 1,
+          "score": 0.07469839715568244
+        },
+        {
+          "document_id": "HCE-CSE303",
+          "title": "Probability and Statistics",
+          "text": "Mathematical treatment of uncertainty combines probability distributions, summary statistics and inference to interpret variable observations and reason about evidence.",
+          "semester": 3,
+          "score": 0.05161997759211203
+        },
+        {
+          "document_id": "HCE-CSE702",
+          "title": "Computer Vision",
+          "text": "Visual pattern interpretation applies learned representations to images, considering recognition tasks and evaluation of predictions from visual observations.",
+          "semester": 7,
+          "score": 0.04074616739623871
+        },
+        {
+          "document_id": "HCE-CSE602",
+          "title": "Information Retrieval",
+          "text": "Retrieval of relevant items from document collections examines representations, ranking and evaluation, linking information needs with indexed textual evidence.",
+          "semester": 6,
+          "score": 0.00128046707764948
+        }
+      ]
+    },
+    {
+      "query": "Which subject teaches machines to work with human communication?",
+      "query_encoding_seconds": 0.01858820000779815,
+      "cosine_scoring_seconds": 0.040787699981592596,
+      "ranking_seconds": 0.00011369999265298247,
+      "tfidf_results": [
+        {
+          "document_id": "HCE-CSE704",
+          "title": "Distributed Systems",
+          "text": "Cooperating processes across multiple machines coordinate computation while reasoning about communication, consistency and failures in shared systems.",
+          "semester": 7,
+          "score": 0.3134920295470769
+        },
+        {
+          "document_id": "HCE-CSE603",
+          "title": "Natural Language Processing",
+          "text": "Computational methods for processing, understanding and generating human language through symbolic, statistical and contextual representations.",
+          "semester": 6,
+          "score": 0.17265174110810846
+        },
+        {
+          "document_id": "HCE-CSE602",
+          "title": "Information Retrieval",
+          "text": "Retrieval of relevant items from document collections examines representations, ranking and evaluation, linking information needs with indexed textual evidence.",
+          "semester": 6,
+          "score": 0.08555850603307513
+        },
+        {
+          "document_id": "HCE-CSE101",
+          "title": "Programming Fundamentals",
+          "text": "Procedural programming develops step-by-step solutions using variables, decisions, repetition and functions, with attention to tracing and debugging small programs.",
+          "semester": 1,
+          "score": 0.08145153966430389
+        },
+        {
+          "document_id": "HCE-CSE502",
+          "title": "Machine Learning",
+          "text": "Data-driven methods that learn patterns from examples to make predictions on unseen observations.",
+          "semester": 5,
+          "score": 0.012465850404065944
+        },
+        {
+          "document_id": "HCE-CSE402",
+          "title": "Computer Networks",
+          "text": "Protocols and layered architectures that enable digital devices to exchange data over connected systems.",
+          "semester": 4,
+          "score": 0.011610700628307243
+        },
+        {
+          "document_id": "HCE-CSE202",
+          "title": "Discrete Mathematics",
+          "text": "Mathematical structures for computing connect logic, sets, relations and graph reasoning to precise statements about finite computational problems.",
+          "semester": 2,
+          "score": 0.01104739945550403
+        },
+        {
+          "document_id": "HCE-CSE403",
+          "title": "Software Engineering",
+          "text": "Disciplined software development connects requirements, design, testing and maintenance to the construction of dependable applications by collaborating teams.",
+          "semester": 4,
+          "score": 0.010910347832061401
+        },
+        {
+          "document_id": "HCE-CSE601",
+          "title": "Compiler Design",
+          "text": "Translation of programming languages connects lexical analysis, syntax and semantic checking to the construction of representations suitable for execution.",
+          "semester": 6,
+          "score": 0.01055788153077556
+        },
+        {
+          "document_id": "HCE-CSE303",
+          "title": "Probability and Statistics",
+          "text": "Mathematical treatment of uncertainty combines probability distributions, summary statistics and inference to interpret variable observations and reason about evidence.",
+          "semester": 3,
+          "score": 0.010374960868979472
+        },
+        {
+          "document_id": "HCE-CSE702",
+          "title": "Computer Vision",
+          "text": "Visual pattern interpretation applies learned representations to images, considering recognition tasks and evaluation of predictions from visual observations.",
+          "semester": 7,
+          "score": 0.009850439624652593
+        },
+        {
+          "document_id": "HCE-CSE302",
+          "title": "Database Management Systems",
+          "text": "Relational data organization uses schemas, structured queries and integrity constraints to store linked records and maintain consistent information during updates.",
+          "semester": 3,
+          "score": 0.0095832988698563
+        },
+        {
+          "document_id": "HCE-CSE201",
+          "title": "Object-Oriented Programming",
+          "text": "Object-based software design organizes state and behaviour into classes, exploring encapsulation, inheritance and reusable abstractions for structured applications.",
+          "semester": 2,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE301",
+          "title": "Data Structures",
+          "text": "Organizing collections through lists, stacks, queues, trees and related structures supports efficient storage, access and modification of program data.",
+          "semester": 3,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE304",
+          "title": "Design and Analysis of Algorithms",
+          "text": "Systematic algorithm design compares strategies for solving computational problems and evaluates their resource costs as input sizes change.",
+          "semester": 3,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE401",
+          "title": "Operating Systems",
+          "text": "System software coordinates processes, memory and shared resources so concurrent programs can run safely while using underlying computing hardware.",
+          "semester": 4,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE404",
+          "title": "Linear Algebra for Computing",
+          "text": "Vector spaces, matrices and linear transformations provide mathematical tools for representing numerical observations and reasoning about computations in multiple dimensions.",
+          "semester": 4,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE501",
+          "title": "Artificial Intelligence",
+          "text": "Intelligent problem solving examines search, knowledge representation and reasoning methods for choosing actions under specified goals and constraints.",
+          "semester": 5,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE504",
+          "title": "Data Engineering",
+          "text": "Data preparation workflows organize, clean and transform collections into dependable inputs for downstream analytical systems, emphasizing consistency across processing stages.",
+          "semester": 5,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE701",
+          "title": "Deep Learning",
+          "text": "Multilayer neural methods for learning hierarchical representations from data, building on Machine Learning.",
+          "semester": 7,
+          "score": 0.0
+        }
+      ],
+      "semantic_results": [
+        {
+          "document_id": "HCE-CSE603",
+          "title": "Natural Language Processing",
+          "text": "Computational methods for processing, understanding and generating human language through symbolic, statistical and contextual representations.",
+          "semester": 6,
+          "score": 0.39235668815984065
+        },
+        {
+          "document_id": "HCE-CSE704",
+          "title": "Distributed Systems",
+          "text": "Cooperating processes across multiple machines coordinate computation while reasoning about communication, consistency and failures in shared systems.",
+          "semester": 7,
+          "score": 0.38245387237645867
+        },
+        {
+          "document_id": "HCE-CSE402",
+          "title": "Computer Networks",
+          "text": "Protocols and layered architectures that enable digital devices to exchange data over connected systems.",
+          "semester": 4,
+          "score": 0.30110088261525947
+        },
+        {
+          "document_id": "HCE-CSE501",
+          "title": "Artificial Intelligence",
+          "text": "Intelligent problem solving examines search, knowledge representation and reasoning methods for choosing actions under specified goals and constraints.",
+          "semester": 5,
+          "score": 0.2940804971940001
+        },
+        {
+          "document_id": "HCE-CSE201",
+          "title": "Object-Oriented Programming",
+          "text": "Object-based software design organizes state and behaviour into classes, exploring encapsulation, inheritance and reusable abstractions for structured applications.",
+          "semester": 2,
+          "score": 0.23459423285804887
+        },
+        {
+          "document_id": "HCE-CSE701",
+          "title": "Deep Learning",
+          "text": "Multilayer neural methods for learning hierarchical representations from data, building on Machine Learning.",
+          "semester": 7,
+          "score": 0.2199755978035416
+        },
+        {
+          "document_id": "HCE-CSE202",
+          "title": "Discrete Mathematics",
+          "text": "Mathematical structures for computing connect logic, sets, relations and graph reasoning to precise statements about finite computational problems.",
+          "semester": 2,
+          "score": 0.21057289139620752
+        },
+        {
+          "document_id": "HCE-CSE702",
+          "title": "Computer Vision",
+          "text": "Visual pattern interpretation applies learned representations to images, considering recognition tasks and evaluation of predictions from visual observations.",
+          "semester": 7,
+          "score": 0.2014779161925255
+        },
+        {
+          "document_id": "HCE-CSE404",
+          "title": "Linear Algebra for Computing",
+          "text": "Vector spaces, matrices and linear transformations provide mathematical tools for representing numerical observations and reasoning about computations in multiple dimensions.",
+          "semester": 4,
+          "score": 0.1868980637030804
+        },
+        {
+          "document_id": "HCE-CSE401",
+          "title": "Operating Systems",
+          "text": "System software coordinates processes, memory and shared resources so concurrent programs can run safely while using underlying computing hardware.",
+          "semester": 4,
+          "score": 0.1849311692084547
+        },
+        {
+          "document_id": "HCE-CSE502",
+          "title": "Machine Learning",
+          "text": "Data-driven methods that learn patterns from examples to make predictions on unseen observations.",
+          "semester": 5,
+          "score": 0.1789497902835312
+        },
+        {
+          "document_id": "HCE-CSE304",
+          "title": "Design and Analysis of Algorithms",
+          "text": "Systematic algorithm design compares strategies for solving computational problems and evaluates their resource costs as input sizes change.",
+          "semester": 3,
+          "score": 0.15499416485026515
+        },
+        {
+          "document_id": "HCE-CSE601",
+          "title": "Compiler Design",
+          "text": "Translation of programming languages connects lexical analysis, syntax and semantic checking to the construction of representations suitable for execution.",
+          "semester": 6,
+          "score": 0.14524529956825236
+        },
+        {
+          "document_id": "HCE-CSE403",
+          "title": "Software Engineering",
+          "text": "Disciplined software development connects requirements, design, testing and maintenance to the construction of dependable applications by collaborating teams.",
+          "semester": 4,
+          "score": 0.13680981539343198
+        },
+        {
+          "document_id": "HCE-CSE301",
+          "title": "Data Structures",
+          "text": "Organizing collections through lists, stacks, queues, trees and related structures supports efficient storage, access and modification of program data.",
+          "semester": 3,
+          "score": 0.10910498164892993
+        },
+        {
+          "document_id": "HCE-CSE302",
+          "title": "Database Management Systems",
+          "text": "Relational data organization uses schemas, structured queries and integrity constraints to store linked records and maintain consistent information during updates.",
+          "semester": 3,
+          "score": 0.10601067069577633
+        },
+        {
+          "document_id": "HCE-CSE602",
+          "title": "Information Retrieval",
+          "text": "Retrieval of relevant items from document collections examines representations, ranking and evaluation, linking information needs with indexed textual evidence.",
+          "semester": 6,
+          "score": 0.10390576951795856
+        },
+        {
+          "document_id": "HCE-CSE101",
+          "title": "Programming Fundamentals",
+          "text": "Procedural programming develops step-by-step solutions using variables, decisions, repetition and functions, with attention to tracing and debugging small programs.",
+          "semester": 1,
+          "score": 0.08494064093941478
+        },
+        {
+          "document_id": "HCE-CSE303",
+          "title": "Probability and Statistics",
+          "text": "Mathematical treatment of uncertainty combines probability distributions, summary statistics and inference to interpret variable observations and reason about evidence.",
+          "semester": 3,
+          "score": 0.0771769694974998
+        },
+        {
+          "document_id": "HCE-CSE504",
+          "title": "Data Engineering",
+          "text": "Data preparation workflows organize, clean and transform collections into dependable inputs for downstream analytical systems, emphasizing consistency across processing stages.",
+          "semester": 5,
+          "score": 0.0727368246337231
+        }
+      ]
+    },
+    {
+      "query": "learning",
+      "query_encoding_seconds": 0.015751600003568456,
+      "cosine_scoring_seconds": 0.03973829999449663,
+      "ranking_seconds": 0.00011870000162161887,
+      "tfidf_results": [
+        {
+          "document_id": "HCE-CSE701",
+          "title": "Deep Learning",
+          "text": "Multilayer neural methods for learning hierarchical representations from data, building on Machine Learning.",
+          "semester": 7,
+          "score": 0.613868084808992
+        },
+        {
+          "document_id": "HCE-CSE101",
+          "title": "Programming Fundamentals",
+          "text": "Procedural programming develops step-by-step solutions using variables, decisions, repetition and functions, with attention to tracing and debugging small programs.",
+          "semester": 1,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE201",
+          "title": "Object-Oriented Programming",
+          "text": "Object-based software design organizes state and behaviour into classes, exploring encapsulation, inheritance and reusable abstractions for structured applications.",
+          "semester": 2,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE202",
+          "title": "Discrete Mathematics",
+          "text": "Mathematical structures for computing connect logic, sets, relations and graph reasoning to precise statements about finite computational problems.",
+          "semester": 2,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE301",
+          "title": "Data Structures",
+          "text": "Organizing collections through lists, stacks, queues, trees and related structures supports efficient storage, access and modification of program data.",
+          "semester": 3,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE302",
+          "title": "Database Management Systems",
+          "text": "Relational data organization uses schemas, structured queries and integrity constraints to store linked records and maintain consistent information during updates.",
+          "semester": 3,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE303",
+          "title": "Probability and Statistics",
+          "text": "Mathematical treatment of uncertainty combines probability distributions, summary statistics and inference to interpret variable observations and reason about evidence.",
+          "semester": 3,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE304",
+          "title": "Design and Analysis of Algorithms",
+          "text": "Systematic algorithm design compares strategies for solving computational problems and evaluates their resource costs as input sizes change.",
+          "semester": 3,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE401",
+          "title": "Operating Systems",
+          "text": "System software coordinates processes, memory and shared resources so concurrent programs can run safely while using underlying computing hardware.",
+          "semester": 4,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE402",
+          "title": "Computer Networks",
+          "text": "Protocols and layered architectures that enable digital devices to exchange data over connected systems.",
+          "semester": 4,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE403",
+          "title": "Software Engineering",
+          "text": "Disciplined software development connects requirements, design, testing and maintenance to the construction of dependable applications by collaborating teams.",
+          "semester": 4,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE404",
+          "title": "Linear Algebra for Computing",
+          "text": "Vector spaces, matrices and linear transformations provide mathematical tools for representing numerical observations and reasoning about computations in multiple dimensions.",
+          "semester": 4,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE501",
+          "title": "Artificial Intelligence",
+          "text": "Intelligent problem solving examines search, knowledge representation and reasoning methods for choosing actions under specified goals and constraints.",
+          "semester": 5,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE502",
+          "title": "Machine Learning",
+          "text": "Data-driven methods that learn patterns from examples to make predictions on unseen observations.",
+          "semester": 5,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE504",
+          "title": "Data Engineering",
+          "text": "Data preparation workflows organize, clean and transform collections into dependable inputs for downstream analytical systems, emphasizing consistency across processing stages.",
+          "semester": 5,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE601",
+          "title": "Compiler Design",
+          "text": "Translation of programming languages connects lexical analysis, syntax and semantic checking to the construction of representations suitable for execution.",
+          "semester": 6,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE602",
+          "title": "Information Retrieval",
+          "text": "Retrieval of relevant items from document collections examines representations, ranking and evaluation, linking information needs with indexed textual evidence.",
+          "semester": 6,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE603",
+          "title": "Natural Language Processing",
+          "text": "Computational methods for processing, understanding and generating human language through symbolic, statistical and contextual representations.",
+          "semester": 6,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE702",
+          "title": "Computer Vision",
+          "text": "Visual pattern interpretation applies learned representations to images, considering recognition tasks and evaluation of predictions from visual observations.",
+          "semester": 7,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE704",
+          "title": "Distributed Systems",
+          "text": "Cooperating processes across multiple machines coordinate computation while reasoning about communication, consistency and failures in shared systems.",
+          "semester": 7,
+          "score": 0.0
+        }
+      ],
+      "semantic_results": [
+        {
+          "document_id": "HCE-CSE502",
+          "title": "Machine Learning",
+          "text": "Data-driven methods that learn patterns from examples to make predictions on unseen observations.",
+          "semester": 5,
+          "score": 0.36483647822127857
+        },
+        {
+          "document_id": "HCE-CSE701",
+          "title": "Deep Learning",
+          "text": "Multilayer neural methods for learning hierarchical representations from data, building on Machine Learning.",
+          "semester": 7,
+          "score": 0.35955880108127547
+        },
+        {
+          "document_id": "HCE-CSE702",
+          "title": "Computer Vision",
+          "text": "Visual pattern interpretation applies learned representations to images, considering recognition tasks and evaluation of predictions from visual observations.",
+          "semester": 7,
+          "score": 0.3511464810584032
+        },
+        {
+          "document_id": "HCE-CSE603",
+          "title": "Natural Language Processing",
+          "text": "Computational methods for processing, understanding and generating human language through symbolic, statistical and contextual representations.",
+          "semester": 6,
+          "score": 0.33428117862760454
+        },
+        {
+          "document_id": "HCE-CSE501",
+          "title": "Artificial Intelligence",
+          "text": "Intelligent problem solving examines search, knowledge representation and reasoning methods for choosing actions under specified goals and constraints.",
+          "semester": 5,
+          "score": 0.2982766621009283
+        },
+        {
+          "document_id": "HCE-CSE101",
+          "title": "Programming Fundamentals",
+          "text": "Procedural programming develops step-by-step solutions using variables, decisions, repetition and functions, with attention to tracing and debugging small programs.",
+          "semester": 1,
+          "score": 0.21915602171286044
+        },
+        {
+          "document_id": "HCE-CSE304",
+          "title": "Design and Analysis of Algorithms",
+          "text": "Systematic algorithm design compares strategies for solving computational problems and evaluates their resource costs as input sizes change.",
+          "semester": 3,
+          "score": 0.21241606086025644
+        },
+        {
+          "document_id": "HCE-CSE404",
+          "title": "Linear Algebra for Computing",
+          "text": "Vector spaces, matrices and linear transformations provide mathematical tools for representing numerical observations and reasoning about computations in multiple dimensions.",
+          "semester": 4,
+          "score": 0.18769331691284488
+        },
+        {
+          "document_id": "HCE-CSE704",
+          "title": "Distributed Systems",
+          "text": "Cooperating processes across multiple machines coordinate computation while reasoning about communication, consistency and failures in shared systems.",
+          "semester": 7,
+          "score": 0.17268458603391224
+        },
+        {
+          "document_id": "HCE-CSE602",
+          "title": "Information Retrieval",
+          "text": "Retrieval of relevant items from document collections examines representations, ranking and evaluation, linking information needs with indexed textual evidence.",
+          "semester": 6,
+          "score": 0.16689956942212847
+        },
+        {
+          "document_id": "HCE-CSE303",
+          "title": "Probability and Statistics",
+          "text": "Mathematical treatment of uncertainty combines probability distributions, summary statistics and inference to interpret variable observations and reason about evidence.",
+          "semester": 3,
+          "score": 0.15166152313796752
+        },
+        {
+          "document_id": "HCE-CSE403",
+          "title": "Software Engineering",
+          "text": "Disciplined software development connects requirements, design, testing and maintenance to the construction of dependable applications by collaborating teams.",
+          "semester": 4,
+          "score": 0.1361376244697201
+        },
+        {
+          "document_id": "HCE-CSE202",
+          "title": "Discrete Mathematics",
+          "text": "Mathematical structures for computing connect logic, sets, relations and graph reasoning to precise statements about finite computational problems.",
+          "semester": 2,
+          "score": 0.13193921278387
+        },
+        {
+          "document_id": "HCE-CSE201",
+          "title": "Object-Oriented Programming",
+          "text": "Object-based software design organizes state and behaviour into classes, exploring encapsulation, inheritance and reusable abstractions for structured applications.",
+          "semester": 2,
+          "score": 0.12481198147339219
+        },
+        {
+          "document_id": "HCE-CSE601",
+          "title": "Compiler Design",
+          "text": "Translation of programming languages connects lexical analysis, syntax and semantic checking to the construction of representations suitable for execution.",
+          "semester": 6,
+          "score": 0.09744718968299375
+        },
+        {
+          "document_id": "HCE-CSE504",
+          "title": "Data Engineering",
+          "text": "Data preparation workflows organize, clean and transform collections into dependable inputs for downstream analytical systems, emphasizing consistency across processing stages.",
+          "semester": 5,
+          "score": 0.09674154823500547
+        },
+        {
+          "document_id": "HCE-CSE301",
+          "title": "Data Structures",
+          "text": "Organizing collections through lists, stacks, queues, trees and related structures supports efficient storage, access and modification of program data.",
+          "semester": 3,
+          "score": 0.08857665681372305
+        },
+        {
+          "document_id": "HCE-CSE402",
+          "title": "Computer Networks",
+          "text": "Protocols and layered architectures that enable digital devices to exchange data over connected systems.",
+          "semester": 4,
+          "score": 0.076980332718168
+        },
+        {
+          "document_id": "HCE-CSE401",
+          "title": "Operating Systems",
+          "text": "System software coordinates processes, memory and shared resources so concurrent programs can run safely while using underlying computing hardware.",
+          "semester": 4,
+          "score": 0.04206047296899948
+        },
+        {
+          "document_id": "HCE-CSE302",
+          "title": "Database Management Systems",
+          "text": "Relational data organization uses schemas, structured queries and integrity constraints to store linked records and maintain consistent information during updates.",
+          "semester": 3,
+          "score": 0.03338731335686586
+        }
+      ]
+    },
+    {
+      "query": "How do I bake a chocolate cake?",
+      "query_encoding_seconds": 0.018036499997833744,
+      "cosine_scoring_seconds": 0.03305259998887777,
+      "ranking_seconds": 9.210000280290842e-05,
+      "tfidf_results": [
+        {
+          "document_id": "HCE-CSE101",
+          "title": "Programming Fundamentals",
+          "text": "Procedural programming develops step-by-step solutions using variables, decisions, repetition and functions, with attention to tracing and debugging small programs.",
+          "semester": 1,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE201",
+          "title": "Object-Oriented Programming",
+          "text": "Object-based software design organizes state and behaviour into classes, exploring encapsulation, inheritance and reusable abstractions for structured applications.",
+          "semester": 2,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE202",
+          "title": "Discrete Mathematics",
+          "text": "Mathematical structures for computing connect logic, sets, relations and graph reasoning to precise statements about finite computational problems.",
+          "semester": 2,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE301",
+          "title": "Data Structures",
+          "text": "Organizing collections through lists, stacks, queues, trees and related structures supports efficient storage, access and modification of program data.",
+          "semester": 3,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE302",
+          "title": "Database Management Systems",
+          "text": "Relational data organization uses schemas, structured queries and integrity constraints to store linked records and maintain consistent information during updates.",
+          "semester": 3,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE303",
+          "title": "Probability and Statistics",
+          "text": "Mathematical treatment of uncertainty combines probability distributions, summary statistics and inference to interpret variable observations and reason about evidence.",
+          "semester": 3,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE304",
+          "title": "Design and Analysis of Algorithms",
+          "text": "Systematic algorithm design compares strategies for solving computational problems and evaluates their resource costs as input sizes change.",
+          "semester": 3,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE401",
+          "title": "Operating Systems",
+          "text": "System software coordinates processes, memory and shared resources so concurrent programs can run safely while using underlying computing hardware.",
+          "semester": 4,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE402",
+          "title": "Computer Networks",
+          "text": "Protocols and layered architectures that enable digital devices to exchange data over connected systems.",
+          "semester": 4,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE403",
+          "title": "Software Engineering",
+          "text": "Disciplined software development connects requirements, design, testing and maintenance to the construction of dependable applications by collaborating teams.",
+          "semester": 4,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE404",
+          "title": "Linear Algebra for Computing",
+          "text": "Vector spaces, matrices and linear transformations provide mathematical tools for representing numerical observations and reasoning about computations in multiple dimensions.",
+          "semester": 4,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE501",
+          "title": "Artificial Intelligence",
+          "text": "Intelligent problem solving examines search, knowledge representation and reasoning methods for choosing actions under specified goals and constraints.",
+          "semester": 5,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE502",
+          "title": "Machine Learning",
+          "text": "Data-driven methods that learn patterns from examples to make predictions on unseen observations.",
+          "semester": 5,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE504",
+          "title": "Data Engineering",
+          "text": "Data preparation workflows organize, clean and transform collections into dependable inputs for downstream analytical systems, emphasizing consistency across processing stages.",
+          "semester": 5,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE601",
+          "title": "Compiler Design",
+          "text": "Translation of programming languages connects lexical analysis, syntax and semantic checking to the construction of representations suitable for execution.",
+          "semester": 6,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE602",
+          "title": "Information Retrieval",
+          "text": "Retrieval of relevant items from document collections examines representations, ranking and evaluation, linking information needs with indexed textual evidence.",
+          "semester": 6,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE603",
+          "title": "Natural Language Processing",
+          "text": "Computational methods for processing, understanding and generating human language through symbolic, statistical and contextual representations.",
+          "semester": 6,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE701",
+          "title": "Deep Learning",
+          "text": "Multilayer neural methods for learning hierarchical representations from data, building on Machine Learning.",
+          "semester": 7,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE702",
+          "title": "Computer Vision",
+          "text": "Visual pattern interpretation applies learned representations to images, considering recognition tasks and evaluation of predictions from visual observations.",
+          "semester": 7,
+          "score": 0.0
+        },
+        {
+          "document_id": "HCE-CSE704",
+          "title": "Distributed Systems",
+          "text": "Cooperating processes across multiple machines coordinate computation while reasoning about communication, consistency and failures in shared systems.",
+          "semester": 7,
+          "score": 0.0
+        }
+      ],
+      "semantic_results": [
+        {
+          "document_id": "HCE-CSE701",
+          "title": "Deep Learning",
+          "text": "Multilayer neural methods for learning hierarchical representations from data, building on Machine Learning.",
+          "semester": 7,
+          "score": 0.09921474182486437
+        },
+        {
+          "document_id": "HCE-CSE501",
+          "title": "Artificial Intelligence",
+          "text": "Intelligent problem solving examines search, knowledge representation and reasoning methods for choosing actions under specified goals and constraints.",
+          "semester": 5,
+          "score": 0.08804503764727506
+        },
+        {
+          "document_id": "HCE-CSE404",
+          "title": "Linear Algebra for Computing",
+          "text": "Vector spaces, matrices and linear transformations provide mathematical tools for representing numerical observations and reasoning about computations in multiple dimensions.",
+          "semester": 4,
+          "score": 0.08760132544343474
+        },
+        {
+          "document_id": "HCE-CSE603",
+          "title": "Natural Language Processing",
+          "text": "Computational methods for processing, understanding and generating human language through symbolic, statistical and contextual representations.",
+          "semester": 6,
+          "score": 0.06596146831905784
+        },
+        {
+          "document_id": "HCE-CSE502",
+          "title": "Machine Learning",
+          "text": "Data-driven methods that learn patterns from examples to make predictions on unseen observations.",
+          "semester": 5,
+          "score": 0.0640405076079014
+        },
+        {
+          "document_id": "HCE-CSE704",
+          "title": "Distributed Systems",
+          "text": "Cooperating processes across multiple machines coordinate computation while reasoning about communication, consistency and failures in shared systems.",
+          "semester": 7,
+          "score": 0.05811424240944538
+        },
+        {
+          "document_id": "HCE-CSE202",
+          "title": "Discrete Mathematics",
+          "text": "Mathematical structures for computing connect logic, sets, relations and graph reasoning to precise statements about finite computational problems.",
+          "semester": 2,
+          "score": 0.046049125302829653
+        },
+        {
+          "document_id": "HCE-CSE702",
+          "title": "Computer Vision",
+          "text": "Visual pattern interpretation applies learned representations to images, considering recognition tasks and evaluation of predictions from visual observations.",
+          "semester": 7,
+          "score": 0.04577391334830653
+        },
+        {
+          "document_id": "HCE-CSE402",
+          "title": "Computer Networks",
+          "text": "Protocols and layered architectures that enable digital devices to exchange data over connected systems.",
+          "semester": 4,
+          "score": 0.03776180366740394
+        },
+        {
+          "document_id": "HCE-CSE303",
+          "title": "Probability and Statistics",
+          "text": "Mathematical treatment of uncertainty combines probability distributions, summary statistics and inference to interpret variable observations and reason about evidence.",
+          "semester": 3,
+          "score": 0.024157804830913156
+        },
+        {
+          "document_id": "HCE-CSE101",
+          "title": "Programming Fundamentals",
+          "text": "Procedural programming develops step-by-step solutions using variables, decisions, repetition and functions, with attention to tracing and debugging small programs.",
+          "semester": 1,
+          "score": -0.007788845028553367
+        },
+        {
+          "document_id": "HCE-CSE403",
+          "title": "Software Engineering",
+          "text": "Disciplined software development connects requirements, design, testing and maintenance to the construction of dependable applications by collaborating teams.",
+          "semester": 4,
+          "score": -0.015770999361987833
+        },
+        {
+          "document_id": "HCE-CSE304",
+          "title": "Design and Analysis of Algorithms",
+          "text": "Systematic algorithm design compares strategies for solving computational problems and evaluates their resource costs as input sizes change.",
+          "semester": 3,
+          "score": -0.03529827467229269
+        },
+        {
+          "document_id": "HCE-CSE201",
+          "title": "Object-Oriented Programming",
+          "text": "Object-based software design organizes state and behaviour into classes, exploring encapsulation, inheritance and reusable abstractions for structured applications.",
+          "semester": 2,
+          "score": -0.03720764813024985
+        },
+        {
+          "document_id": "HCE-CSE601",
+          "title": "Compiler Design",
+          "text": "Translation of programming languages connects lexical analysis, syntax and semantic checking to the construction of representations suitable for execution.",
+          "semester": 6,
+          "score": -0.05657440177368094
+        },
+        {
+          "document_id": "HCE-CSE504",
+          "title": "Data Engineering",
+          "text": "Data preparation workflows organize, clean and transform collections into dependable inputs for downstream analytical systems, emphasizing consistency across processing stages.",
+          "semester": 5,
+          "score": -0.06266853839138958
+        },
+        {
+          "document_id": "HCE-CSE401",
+          "title": "Operating Systems",
+          "text": "System software coordinates processes, memory and shared resources so concurrent programs can run safely while using underlying computing hardware.",
+          "semester": 4,
+          "score": -0.06371192623285604
+        },
+        {
+          "document_id": "HCE-CSE302",
+          "title": "Database Management Systems",
+          "text": "Relational data organization uses schemas, structured queries and integrity constraints to store linked records and maintain consistent information during updates.",
+          "semester": 3,
+          "score": -0.12131657784991513
+        },
+        {
+          "document_id": "HCE-CSE602",
+          "title": "Information Retrieval",
+          "text": "Retrieval of relevant items from document collections examines representations, ranking and evaluation, linking information needs with indexed textual evidence.",
+          "semester": 6,
+          "score": -0.12489937044856876
+        },
+        {
+          "document_id": "HCE-CSE301",
+          "title": "Data Structures",
+          "text": "Organizing collections through lists, stacks, queues, trees and related structures supports efficient storage, access and modification of program data.",
+          "semester": 3,
+          "score": -0.1478305947699712
+        }
+      ]
+    }
+  ],
+  "benchmarks": [
+    {
+      "benchmark_id": "RET-01",
+      "query": "What attendance percentage is required?",
+      "type": "direct_fact",
+      "semantic_vs_keyword": false,
+      "expected_document_ids": [
+        "HCE-DOC08"
+      ],
+      "evaluation_group": "single_source_retrieval",
+      "tfidf": {
+        "ranks": {
+          "HCE-DOC08": 1
+        },
+        "top_3": [
+          {
+            "document_id": "HCE-DOC08",
+            "score": 0.14268384841485163
+          },
+          {
+            "document_id": "HCE-DOC11",
+            "score": 0.09456994775166941
+          },
+          {
+            "document_id": "HCE-DOC01",
+            "score": 0.0939047178977959
+          }
+        ],
+        "any_expected_in_top_3": true,
+        "expected_source_coverage_at_3": 1.0,
+        "all_expected_in_top_3": true,
+        "first_relevant_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      "semantic": {
+        "ranks": {
+          "HCE-DOC08": 1
+        },
+        "top_3": [
+          {
+            "document_id": "HCE-DOC08",
+            "score": 0.6444579185575063
+          },
+          {
+            "document_id": "HCE-DOC09",
+            "score": 0.46079197335758276
+          },
+          {
+            "document_id": "HCE-DOC11",
+            "score": 0.409460629050793
+          }
+        ],
+        "any_expected_in_top_3": true,
+        "expected_source_coverage_at_3": 1.0,
+        "all_expected_in_top_3": true,
+        "first_relevant_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      "notes": "Full Markdown inputs; MiniLM truncates at 256 word pieces. Ranks indicate source retrieval only, never generated answer correctness. Included in single-source metrics."
+    },
+    {
+      "benchmark_id": "RET-02",
+      "query": "Find the TF-IDF unit in the NLP syllabus.",
+      "type": "lexical_search",
+      "semantic_vs_keyword": false,
+      "expected_document_ids": [
+        "HCE-DOC04"
+      ],
+      "evaluation_group": "single_source_retrieval",
+      "tfidf": {
+        "ranks": {
+          "HCE-DOC04": 1
+        },
+        "top_3": [
+          {
+            "document_id": "HCE-DOC04",
+            "score": 0.13384074713030958
+          },
+          {
+            "document_id": "NLP-P02",
+            "score": 0.1084068338168094
+          },
+          {
+            "document_id": "NLP-P01",
+            "score": 0.10213057680886878
+          }
+        ],
+        "any_expected_in_top_3": true,
+        "expected_source_coverage_at_3": 1.0,
+        "all_expected_in_top_3": true,
+        "first_relevant_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      "semantic": {
+        "ranks": {
+          "HCE-DOC04": 6
+        },
+        "top_3": [
+          {
+            "document_id": "NLP-P01",
+            "score": 0.4559732410321835
+          },
+          {
+            "document_id": "NLP-P03",
+            "score": 0.4297098023673562
+          },
+          {
+            "document_id": "NLP-P02",
+            "score": 0.41520901490701584
+          }
+        ],
+        "any_expected_in_top_3": false,
+        "expected_source_coverage_at_3": 0.0,
+        "all_expected_in_top_3": false,
+        "first_relevant_rank": 6,
+        "reciprocal_rank": 0.16666666666666666
+      },
+      "notes": "Full Markdown inputs; MiniLM truncates at 256 word pieces. Ranks indicate source retrieval only, never generated answer correctness. Included in single-source metrics."
+    },
+    {
+      "benchmark_id": "RET-03",
+      "query": "Which subject teaches computers to interpret human language?",
+      "type": "semantic_search",
+      "semantic_vs_keyword": true,
+      "expected_document_ids": [
+        "HCE-DOC04"
+      ],
+      "evaluation_group": "single_source_retrieval",
+      "tfidf": {
+        "ranks": {
+          "HCE-DOC04": 5
+        },
+        "top_3": [
+          {
+            "document_id": "HCE-DOC14",
+            "score": 0.1331433223773326
+          },
+          {
+            "document_id": "HCE-DOC03",
+            "score": 0.06205444890545093
+          },
+          {
+            "document_id": "HCE-DOC12",
+            "score": 0.054707728763797765
+          }
+        ],
+        "any_expected_in_top_3": false,
+        "expected_source_coverage_at_3": 0.0,
+        "all_expected_in_top_3": false,
+        "first_relevant_rank": 5,
+        "reciprocal_rank": 0.2
+      },
+      "semantic": {
+        "ranks": {
+          "HCE-DOC04": 1
+        },
+        "top_3": [
+          {
+            "document_id": "HCE-DOC04",
+            "score": 0.48645046982108076
+          },
+          {
+            "document_id": "HCE-DOC12",
+            "score": 0.40876356744165354
+          },
+          {
+            "document_id": "HCE-DOC10",
+            "score": 0.3929436248237197
+          }
+        ],
+        "any_expected_in_top_3": true,
+        "expected_source_coverage_at_3": 1.0,
+        "all_expected_in_top_3": true,
+        "first_relevant_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      "notes": "Full Markdown inputs; MiniLM truncates at 256 word pieces. Ranks indicate source retrieval only, never generated answer correctness. Included in single-source metrics."
+    },
+    {
+      "benchmark_id": "RET-04",
+      "query": "How much classroom presence do I need to sit my finals?",
+      "type": "semantic_search",
+      "semantic_vs_keyword": true,
+      "expected_document_ids": [
+        "HCE-DOC08",
+        "HCE-DOC09"
+      ],
+      "evaluation_group": "multi_source_retrieval",
+      "tfidf": {
+        "ranks": {
+          "HCE-DOC08": 7,
+          "HCE-DOC09": 9
+        },
+        "top_3": [
+          {
+            "document_id": "NLP-P03",
+            "score": 0.053639484849120525
+          },
+          {
+            "document_id": "HCE-DOC01",
+            "score": 0.04871439773954353
+          },
+          {
+            "document_id": "HCE-DOC13",
+            "score": 0.042381145764507876
+          }
+        ],
+        "any_expected_in_top_3": false,
+        "expected_source_coverage_at_3": 0.0,
+        "all_expected_in_top_3": false,
+        "first_relevant_rank": 7,
+        "reciprocal_rank": 0.14285714285714285
+      },
+      "semantic": {
+        "ranks": {
+          "HCE-DOC08": 1,
+          "HCE-DOC09": 2
+        },
+        "top_3": [
+          {
+            "document_id": "HCE-DOC08",
+            "score": 0.3566907970784074
+          },
+          {
+            "document_id": "HCE-DOC09",
+            "score": 0.31235550558175196
+          },
+          {
+            "document_id": "HCE-DOC10",
+            "score": 0.2741495840969609
+          }
+        ],
+        "any_expected_in_top_3": true,
+        "expected_source_coverage_at_3": 1.0,
+        "all_expected_in_top_3": true,
+        "first_relevant_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      "notes": "Full Markdown inputs; MiniLM truncates at 256 word pieces. Ranks indicate source retrieval only, never generated answer correctness. Excluded from single-source aggregates; inspect evidence coverage/ranks separately."
+    },
+    {
+      "benchmark_id": "RET-05",
+      "query": "Which class learns to predict outcomes from examples?",
+      "type": "semantic_search",
+      "semantic_vs_keyword": true,
+      "expected_document_ids": [
+        "HCE-DOC05"
+      ],
+      "evaluation_group": "single_source_retrieval",
+      "tfidf": {
+        "ranks": {
+          "HCE-DOC05": 1
+        },
+        "top_3": [
+          {
+            "document_id": "HCE-DOC05",
+            "score": 0.06384180462225907
+          },
+          {
+            "document_id": "HCE-DOC04",
+            "score": 0.03768824894718292
+          },
+          {
+            "document_id": "NLP-P01",
+            "score": 0.02797214607263828
+          }
+        ],
+        "any_expected_in_top_3": true,
+        "expected_source_coverage_at_3": 1.0,
+        "all_expected_in_top_3": true,
+        "first_relevant_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      "semantic": {
+        "ranks": {
+          "HCE-DOC05": 1
+        },
+        "top_3": [
+          {
+            "document_id": "HCE-DOC05",
+            "score": 0.3802420825427409
+          },
+          {
+            "document_id": "HCE-DOC10",
+            "score": 0.3519172446459513
+          },
+          {
+            "document_id": "HCE-DOC06",
+            "score": 0.3386732013231326
+          }
+        ],
+        "any_expected_in_top_3": true,
+        "expected_source_coverage_at_3": 1.0,
+        "all_expected_in_top_3": true,
+        "first_relevant_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      "notes": "Full Markdown inputs; MiniLM truncates at 256 word pieces. Ranks indicate source retrieval only, never generated answer correctness. Included in single-source metrics."
+    },
+    {
+      "benchmark_id": "RET-06",
+      "query": "Where do connected devices learn the rules for exchanging messages?",
+      "type": "semantic_search",
+      "semantic_vs_keyword": true,
+      "expected_document_ids": [
+        "HCE-DOC02"
+      ],
+      "evaluation_group": "single_source_retrieval",
+      "tfidf": {
+        "ranks": {
+          "HCE-DOC02": 1
+        },
+        "top_3": [
+          {
+            "document_id": "HCE-DOC02",
+            "score": 0.07670780086186287
+          },
+          {
+            "document_id": "HCE-DOC12",
+            "score": 0.04270345696593754
+          },
+          {
+            "document_id": "HCE-DOC01",
+            "score": 0.026844533918424538
+          }
+        ],
+        "any_expected_in_top_3": true,
+        "expected_source_coverage_at_3": 1.0,
+        "all_expected_in_top_3": true,
+        "first_relevant_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      "semantic": {
+        "ranks": {
+          "HCE-DOC02": 15
+        },
+        "top_3": [
+          {
+            "document_id": "HCE-DOC12",
+            "score": 0.14585389936325338
+          },
+          {
+            "document_id": "HCE-DOC10",
+            "score": 0.14299573768236618
+          },
+          {
+            "document_id": "HCE-DOC14",
+            "score": 0.1198714763034587
+          }
+        ],
+        "any_expected_in_top_3": false,
+        "expected_source_coverage_at_3": 0.0,
+        "all_expected_in_top_3": false,
+        "first_relevant_rank": 15,
+        "reciprocal_rank": 0.06666666666666667
+      },
+      "notes": "Full Markdown inputs; MiniLM truncates at 256 word pieces. Ranks indicate source retrieval only, never generated answer correctness. Included in single-source metrics."
+    },
+    {
+      "benchmark_id": "RET-07",
+      "query": "What should I study before taking Deep Learning?",
+      "type": "direct_fact",
+      "semantic_vs_keyword": false,
+      "expected_document_ids": [
+        "HCE-DOC13",
+        "HCE-DOC06"
+      ],
+      "evaluation_group": "multi_source_retrieval",
+      "tfidf": {
+        "ranks": {
+          "HCE-DOC13": 2,
+          "HCE-DOC06": 10
+        },
+        "top_3": [
+          {
+            "document_id": "HCE-DOC03",
+            "score": 0.0841616250547546
+          },
+          {
+            "document_id": "HCE-DOC13",
+            "score": 0.08363985105593677
+          },
+          {
+            "document_id": "NLP-P01",
+            "score": 0.07131952707645876
+          }
+        ],
+        "any_expected_in_top_3": true,
+        "expected_source_coverage_at_3": 0.5,
+        "all_expected_in_top_3": false,
+        "first_relevant_rank": 2,
+        "reciprocal_rank": 0.5
+      },
+      "semantic": {
+        "ranks": {
+          "HCE-DOC13": 11,
+          "HCE-DOC06": 1
+        },
+        "top_3": [
+          {
+            "document_id": "HCE-DOC06",
+            "score": 0.41866909163397453
+          },
+          {
+            "document_id": "HCE-DOC12",
+            "score": 0.32286249088852154
+          },
+          {
+            "document_id": "HCE-DOC10",
+            "score": 0.26757595193349565
+          }
+        ],
+        "any_expected_in_top_3": true,
+        "expected_source_coverage_at_3": 0.5,
+        "all_expected_in_top_3": false,
+        "first_relevant_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      "notes": "Full Markdown inputs; MiniLM truncates at 256 word pieces. Ranks indicate source retrieval only, never generated answer correctness. Excluded from single-source aggregates; inspect evidence coverage/ranks separately."
+    },
+    {
+      "benchmark_id": "RET-08",
+      "query": "How do Machine Learning and Natural Language Processing differ?",
+      "type": "comparison",
+      "semantic_vs_keyword": false,
+      "expected_document_ids": [
+        "HCE-DOC05",
+        "HCE-DOC04"
+      ],
+      "evaluation_group": "comparison_evidence_only",
+      "tfidf": {
+        "ranks": {
+          "HCE-DOC05": 15,
+          "HCE-DOC04": 8
+        },
+        "top_3": [
+          {
+            "document_id": "NLP-P01",
+            "score": 0.08320268405779936
+          },
+          {
+            "document_id": "HCE-DOC12",
+            "score": 0.06412537234766527
+          },
+          {
+            "document_id": "HCE-DOC10",
+            "score": 0.03926841075660895
+          }
+        ],
+        "any_expected_in_top_3": false,
+        "expected_source_coverage_at_3": 0.0,
+        "all_expected_in_top_3": false,
+        "first_relevant_rank": 8,
+        "reciprocal_rank": 0.125
+      },
+      "semantic": {
+        "ranks": {
+          "HCE-DOC05": 4,
+          "HCE-DOC04": 1
+        },
+        "top_3": [
+          {
+            "document_id": "HCE-DOC04",
+            "score": 0.3971365736887231
+          },
+          {
+            "document_id": "HCE-DOC06",
+            "score": 0.29830351073564715
+          },
+          {
+            "document_id": "NLP-P03",
+            "score": 0.2959935550547056
+          }
+        ],
+        "any_expected_in_top_3": true,
+        "expected_source_coverage_at_3": 0.5,
+        "all_expected_in_top_3": false,
+        "first_relevant_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      "notes": "Full Markdown inputs; MiniLM truncates at 256 word pieces. Ranks indicate source retrieval only, never generated answer correctness. Excluded from single-source aggregates; inspect evidence coverage/ranks separately."
+    },
+    {
+      "benchmark_id": "RET-09",
+      "query": "When is the NLP examination and what topics are included?",
+      "type": "cross_document",
+      "semantic_vs_keyword": false,
+      "expected_document_ids": [
+        "HCE-DOC07",
+        "HCE-DOC04"
+      ],
+      "evaluation_group": "multi_source_retrieval",
+      "tfidf": {
+        "ranks": {
+          "HCE-DOC07": 8,
+          "HCE-DOC04": 1
+        },
+        "top_3": [
+          {
+            "document_id": "HCE-DOC04",
+            "score": 0.11486523538619196
+          },
+          {
+            "document_id": "HCE-DOC05",
+            "score": 0.09898598998431037
+          },
+          {
+            "document_id": "HCE-DOC06",
+            "score": 0.0667661160025907
+          }
+        ],
+        "any_expected_in_top_3": true,
+        "expected_source_coverage_at_3": 0.5,
+        "all_expected_in_top_3": false,
+        "first_relevant_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      "semantic": {
+        "ranks": {
+          "HCE-DOC07": 6,
+          "HCE-DOC04": 7
+        },
+        "top_3": [
+          {
+            "document_id": "NLP-P03",
+            "score": 0.6555094333214754
+          },
+          {
+            "document_id": "NLP-P01",
+            "score": 0.649288277009018
+          },
+          {
+            "document_id": "NLP-P02",
+            "score": 0.6451462189827589
+          }
+        ],
+        "any_expected_in_top_3": false,
+        "expected_source_coverage_at_3": 0.0,
+        "all_expected_in_top_3": false,
+        "first_relevant_rank": 6,
+        "reciprocal_rank": 0.16666666666666666
+      },
+      "notes": "Full Markdown inputs; MiniLM truncates at 256 word pieces. Ranks indicate source retrieval only, never generated answer correctness. Excluded from single-source aggregates; inspect evidence coverage/ranks separately."
+    },
+    {
+      "benchmark_id": "RET-10",
+      "query": "When does Semester 6 begin?",
+      "type": "direct_fact",
+      "semantic_vs_keyword": false,
+      "expected_document_ids": [
+        "HCE-DOC07"
+      ],
+      "evaluation_group": "single_source_retrieval",
+      "tfidf": {
+        "ranks": {
+          "HCE-DOC07": 4
+        },
+        "top_3": [
+          {
+            "document_id": "HCE-DOC03",
+            "score": 0.023494160728686545
+          },
+          {
+            "document_id": "HCE-DOC14",
+            "score": 0.02233384049993868
+          },
+          {
+            "document_id": "HCE-DOC08",
+            "score": 0.01987253364190008
+          }
+        ],
+        "any_expected_in_top_3": false,
+        "expected_source_coverage_at_3": 0.0,
+        "all_expected_in_top_3": false,
+        "first_relevant_rank": 4,
+        "reciprocal_rank": 0.25
+      },
+      "semantic": {
+        "ranks": {
+          "HCE-DOC07": 1
+        },
+        "top_3": [
+          {
+            "document_id": "HCE-DOC07",
+            "score": 0.5600400803142899
+          },
+          {
+            "document_id": "HCE-DOC01",
+            "score": 0.4651587611692604
+          },
+          {
+            "document_id": "HCE-DOC03",
+            "score": 0.4589227467801257
+          }
+        ],
+        "any_expected_in_top_3": true,
+        "expected_source_coverage_at_3": 1.0,
+        "all_expected_in_top_3": true,
+        "first_relevant_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      "notes": "Full Markdown inputs; MiniLM truncates at 256 word pieces. Ranks indicate source retrieval only, never generated answer correctness. Included in single-source metrics."
+    },
+    {
+      "benchmark_id": "RET-11",
+      "query": "When are laboratory examinations for Semester 6?",
+      "type": "direct_fact",
+      "semantic_vs_keyword": false,
+      "expected_document_ids": [
+        "HCE-DOC07"
+      ],
+      "evaluation_group": "single_source_retrieval",
+      "tfidf": {
+        "ranks": {
+          "HCE-DOC07": 1
+        },
+        "top_3": [
+          {
+            "document_id": "HCE-DOC07",
+            "score": 0.2942439114296994
+          },
+          {
+            "document_id": "HCE-DOC01",
+            "score": 0.05706369140479887
+          },
+          {
+            "document_id": "HCE-DOC12",
+            "score": 0.05029168625526903
+          }
+        ],
+        "any_expected_in_top_3": true,
+        "expected_source_coverage_at_3": 1.0,
+        "all_expected_in_top_3": true,
+        "first_relevant_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      "semantic": {
+        "ranks": {
+          "HCE-DOC07": 4
+        },
+        "top_3": [
+          {
+            "document_id": "HCE-DOC01",
+            "score": 0.47686616209575705
+          },
+          {
+            "document_id": "HCE-DOC03",
+            "score": 0.4677521009171983
+          },
+          {
+            "document_id": "HCE-DOC10",
+            "score": 0.46117506555425186
+          }
+        ],
+        "any_expected_in_top_3": false,
+        "expected_source_coverage_at_3": 0.0,
+        "all_expected_in_top_3": false,
+        "first_relevant_rank": 4,
+        "reciprocal_rank": 0.25
+      },
+      "notes": "Full Markdown inputs; MiniLM truncates at 256 word pieces. Ranks indicate source retrieval only, never generated answer correctness. Included in single-source metrics."
+    },
+    {
+      "benchmark_id": "RET-12",
+      "query": "How is an NLP course evaluated and what is required to pass?",
+      "type": "direct_fact",
+      "semantic_vs_keyword": false,
+      "expected_document_ids": [
+        "HCE-DOC09",
+        "HCE-DOC04"
+      ],
+      "evaluation_group": "multi_source_retrieval",
+      "tfidf": {
+        "ranks": {
+          "HCE-DOC09": 1,
+          "HCE-DOC04": 8
+        },
+        "top_3": [
+          {
+            "document_id": "HCE-DOC09",
+            "score": 0.1317939692965457
+          },
+          {
+            "document_id": "HCE-DOC01",
+            "score": 0.09048554800695122
+          },
+          {
+            "document_id": "HCE-DOC11",
+            "score": 0.04694952213164761
+          }
+        ],
+        "any_expected_in_top_3": true,
+        "expected_source_coverage_at_3": 0.5,
+        "all_expected_in_top_3": false,
+        "first_relevant_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      "semantic": {
+        "ranks": {
+          "HCE-DOC09": 5,
+          "HCE-DOC04": 6
+        },
+        "top_3": [
+          {
+            "document_id": "NLP-P02",
+            "score": 0.5713411721477762
+          },
+          {
+            "document_id": "NLP-P03",
+            "score": 0.5553924127383394
+          },
+          {
+            "document_id": "NLP-P04",
+            "score": 0.5533022788068218
+          }
+        ],
+        "any_expected_in_top_3": false,
+        "expected_source_coverage_at_3": 0.0,
+        "all_expected_in_top_3": false,
+        "first_relevant_rank": 5,
+        "reciprocal_rank": 0.2
+      },
+      "notes": "Full Markdown inputs; MiniLM truncates at 256 word pieces. Ranks indicate source retrieval only, never generated answer correctness. Excluded from single-source aggregates; inspect evidence coverage/ranks separately."
+    },
+    {
+      "benchmark_id": "RET-13",
+      "query": "Summarize what I must submit and demonstrate in a laboratory.",
+      "type": "summarization",
+      "semantic_vs_keyword": false,
+      "expected_document_ids": [
+        "HCE-DOC10"
+      ],
+      "evaluation_group": "summary_evidence_only",
+      "tfidf": {
+        "ranks": {
+          "HCE-DOC10": 1
+        },
+        "top_3": [
+          {
+            "document_id": "HCE-DOC10",
+            "score": 0.17683394999728813
+          },
+          {
+            "document_id": "HCE-DOC03",
+            "score": 0.041302134301349984
+          },
+          {
+            "document_id": "HCE-DOC13",
+            "score": 0.034082479979678025
+          }
+        ],
+        "any_expected_in_top_3": true,
+        "expected_source_coverage_at_3": 1.0,
+        "all_expected_in_top_3": true,
+        "first_relevant_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      "semantic": {
+        "ranks": {
+          "HCE-DOC10": 1
+        },
+        "top_3": [
+          {
+            "document_id": "HCE-DOC10",
+            "score": 0.3339333888565317
+          },
+          {
+            "document_id": "HCE-DOC09",
+            "score": 0.3043946530938566
+          },
+          {
+            "document_id": "HCE-DOC01",
+            "score": 0.2789460067048688
+          }
+        ],
+        "any_expected_in_top_3": true,
+        "expected_source_coverage_at_3": 1.0,
+        "all_expected_in_top_3": true,
+        "first_relevant_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      "notes": "Full Markdown inputs; MiniLM truncates at 256 word pieces. Ranks indicate source retrieval only, never generated answer correctness. Excluded from single-source aggregates; inspect evidence coverage/ranks separately."
+    },
+    {
+      "benchmark_id": "RET-14",
+      "query": "Which NLP topics appeared most frequently in previous examinations?",
+      "type": "question_paper_analysis",
+      "semantic_vs_keyword": false,
+      "expected_document_ids": [
+        "NLP-P01",
+        "NLP-P02",
+        "NLP-P03",
+        "NLP-P04"
+      ],
+      "evaluation_group": "analysis_papers_evidence_only",
+      "tfidf": {
+        "ranks": {
+          "NLP-P01": 8,
+          "NLP-P02": 9,
+          "NLP-P03": 6,
+          "NLP-P04": 7
+        },
+        "top_3": [
+          {
+            "document_id": "HCE-DOC07",
+            "score": 0.12084861416644126
+          },
+          {
+            "document_id": "HCE-DOC05",
+            "score": 0.058888640512530295
+          },
+          {
+            "document_id": "HCE-DOC04",
+            "score": 0.052115704910120006
+          }
+        ],
+        "any_expected_in_top_3": false,
+        "expected_source_coverage_at_3": 0.0,
+        "all_expected_in_top_3": false,
+        "first_relevant_rank": 6,
+        "reciprocal_rank": 0.16666666666666666
+      },
+      "semantic": {
+        "ranks": {
+          "NLP-P01": 4,
+          "NLP-P02": 3,
+          "NLP-P03": 2,
+          "NLP-P04": 1
+        },
+        "top_3": [
+          {
+            "document_id": "NLP-P04",
+            "score": 0.6013299640411716
+          },
+          {
+            "document_id": "NLP-P03",
+            "score": 0.6002424277754806
+          },
+          {
+            "document_id": "NLP-P02",
+            "score": 0.5927248515567675
+          }
+        ],
+        "any_expected_in_top_3": true,
+        "expected_source_coverage_at_3": 0.75,
+        "all_expected_in_top_3": false,
+        "first_relevant_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      "notes": "Full Markdown inputs; MiniLM truncates at 256 word pieces. Ranks indicate source retrieval only, never generated answer correctness. Excluded from single-source aggregates; inspect evidence coverage/ranks separately."
+    },
+    {
+      "benchmark_id": "RET-15",
+      "query": "Can I register for placement preparation if I have a pending course?",
+      "type": "direct_fact",
+      "semantic_vs_keyword": false,
+      "expected_document_ids": [
+        "HCE-DOC11"
+      ],
+      "evaluation_group": "single_source_retrieval",
+      "tfidf": {
+        "ranks": {
+          "HCE-DOC11": 1
+        },
+        "top_3": [
+          {
+            "document_id": "HCE-DOC11",
+            "score": 0.2598436917925335
+          },
+          {
+            "document_id": "HCE-DOC12",
+            "score": 0.10246818898383028
+          },
+          {
+            "document_id": "HCE-DOC02",
+            "score": 0.06895447389361822
+          }
+        ],
+        "any_expected_in_top_3": true,
+        "expected_source_coverage_at_3": 1.0,
+        "all_expected_in_top_3": true,
+        "first_relevant_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      "semantic": {
+        "ranks": {
+          "HCE-DOC11": 1
+        },
+        "top_3": [
+          {
+            "document_id": "HCE-DOC11",
+            "score": 0.597657195679609
+          },
+          {
+            "document_id": "HCE-DOC13",
+            "score": 0.4210831813186035
+          },
+          {
+            "document_id": "HCE-DOC01",
+            "score": 0.42024863309750554
+          }
+        ],
+        "any_expected_in_top_3": true,
+        "expected_source_coverage_at_3": 1.0,
+        "all_expected_in_top_3": true,
+        "first_relevant_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      "notes": "Full Markdown inputs; MiniLM truncates at 256 word pieces. Ranks indicate source retrieval only, never generated answer correctness. Included in single-source metrics."
+    },
+    {
+      "benchmark_id": "RET-16",
+      "query": "Compare the focus of Machine Learning and Deep Learning.",
+      "type": "comparison",
+      "semantic_vs_keyword": false,
+      "expected_document_ids": [
+        "HCE-DOC05",
+        "HCE-DOC06"
+      ],
+      "evaluation_group": "comparison_evidence_only",
+      "tfidf": {
+        "ranks": {
+          "HCE-DOC05": 7,
+          "HCE-DOC06": 2
+        },
+        "top_3": [
+          {
+            "document_id": "HCE-DOC02",
+            "score": 0.058023115002112054
+          },
+          {
+            "document_id": "HCE-DOC06",
+            "score": 0.03951353348788458
+          },
+          {
+            "document_id": "HCE-DOC03",
+            "score": 0.03238254119593985
+          }
+        ],
+        "any_expected_in_top_3": true,
+        "expected_source_coverage_at_3": 0.5,
+        "all_expected_in_top_3": false,
+        "first_relevant_rank": 2,
+        "reciprocal_rank": 0.5
+      },
+      "semantic": {
+        "ranks": {
+          "HCE-DOC05": 4,
+          "HCE-DOC06": 1
+        },
+        "top_3": [
+          {
+            "document_id": "HCE-DOC06",
+            "score": 0.42556838139094477
+          },
+          {
+            "document_id": "HCE-DOC12",
+            "score": 0.3080151000459785
+          },
+          {
+            "document_id": "HCE-DOC10",
+            "score": 0.2762369199772488
+          }
+        ],
+        "any_expected_in_top_3": true,
+        "expected_source_coverage_at_3": 0.5,
+        "all_expected_in_top_3": false,
+        "first_relevant_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      "notes": "Full Markdown inputs; MiniLM truncates at 256 word pieces. Ranks indicate source retrieval only, never generated answer correctness. Excluded from single-source aggregates; inspect evidence coverage/ranks separately."
+    },
+    {
+      "benchmark_id": "RET-17",
+      "query": "Summarize Unit 3 of NLP.",
+      "type": "summarization",
+      "semantic_vs_keyword": false,
+      "expected_document_ids": [
+        "HCE-DOC04"
+      ],
+      "evaluation_group": "summary_evidence_only",
+      "tfidf": {
+        "ranks": {
+          "HCE-DOC04": 2
+        },
+        "top_3": [
+          {
+            "document_id": "HCE-DOC05",
+            "score": 0.08154417871576376
+          },
+          {
+            "document_id": "HCE-DOC04",
+            "score": 0.06907691040686946
+          },
+          {
+            "document_id": "HCE-DOC08",
+            "score": 0.04562651135923596
+          }
+        ],
+        "any_expected_in_top_3": true,
+        "expected_source_coverage_at_3": 1.0,
+        "all_expected_in_top_3": true,
+        "first_relevant_rank": 2,
+        "reciprocal_rank": 0.5
+      },
+      "semantic": {
+        "ranks": {
+          "HCE-DOC04": 8
+        },
+        "top_3": [
+          {
+            "document_id": "NLP-P03",
+            "score": 0.45513905413097483
+          },
+          {
+            "document_id": "NLP-P01",
+            "score": 0.4479724368444181
+          },
+          {
+            "document_id": "NLP-P04",
+            "score": 0.43849302568612
+          }
+        ],
+        "any_expected_in_top_3": false,
+        "expected_source_coverage_at_3": 0.0,
+        "all_expected_in_top_3": false,
+        "first_relevant_rank": 8,
+        "reciprocal_rank": 0.125
+      },
+      "notes": "Full Markdown inputs; MiniLM truncates at 256 word pieces. Ranks indicate source retrieval only, never generated answer correctness. Excluded from single-source aggregates; inspect evidence coverage/ranks separately."
+    },
+    {
+      "benchmark_id": "RET-18",
+      "query": "Show questions related to transformers.",
+      "type": "question_filtering",
+      "semantic_vs_keyword": false,
+      "expected_document_ids": [
+        "NLP-P01",
+        "NLP-P02",
+        "NLP-P03",
+        "NLP-P04"
+      ],
+      "evaluation_group": "analysis_papers_evidence_only",
+      "tfidf": {
+        "ranks": {
+          "NLP-P01": 5,
+          "NLP-P02": 3,
+          "NLP-P03": 1,
+          "NLP-P04": 4
+        },
+        "top_3": [
+          {
+            "document_id": "NLP-P03",
+            "score": 0.10382012085075322
+          },
+          {
+            "document_id": "HCE-DOC04",
+            "score": 0.06654249594472224
+          },
+          {
+            "document_id": "NLP-P02",
+            "score": 0.034516155146419855
+          }
+        ],
+        "any_expected_in_top_3": true,
+        "expected_source_coverage_at_3": 0.5,
+        "all_expected_in_top_3": false,
+        "first_relevant_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      "semantic": {
+        "ranks": {
+          "NLP-P01": 1,
+          "NLP-P02": 3,
+          "NLP-P03": 2,
+          "NLP-P04": 4
+        },
+        "top_3": [
+          {
+            "document_id": "NLP-P01",
+            "score": 0.32439501787215363
+          },
+          {
+            "document_id": "NLP-P03",
+            "score": 0.27169561059471203
+          },
+          {
+            "document_id": "NLP-P02",
+            "score": 0.26467930684364027
+          }
+        ],
+        "any_expected_in_top_3": true,
+        "expected_source_coverage_at_3": 0.75,
+        "all_expected_in_top_3": false,
+        "first_relevant_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      "notes": "Full Markdown inputs; MiniLM truncates at 256 word pieces. Ranks indicate source retrieval only, never generated answer correctness. Excluded from single-source aggregates; inspect evidence coverage/ranks separately."
+    }
+  ],
+  "benchmark_input_lengths": [
+    {
+      "document_id": "HCE-DOC01",
+      "word_pieces_with_special_tokens": 878,
+      "encoder_truncates": true
+    },
+    {
+      "document_id": "HCE-DOC02",
+      "word_pieces_with_special_tokens": 1890,
+      "encoder_truncates": true
+    },
+    {
+      "document_id": "HCE-DOC03",
+      "word_pieces_with_special_tokens": 1607,
+      "encoder_truncates": true
+    },
+    {
+      "document_id": "HCE-DOC04",
+      "word_pieces_with_special_tokens": 1269,
+      "encoder_truncates": true
+    },
+    {
+      "document_id": "HCE-DOC05",
+      "word_pieces_with_special_tokens": 1043,
+      "encoder_truncates": true
+    },
+    {
+      "document_id": "HCE-DOC06",
+      "word_pieces_with_special_tokens": 1013,
+      "encoder_truncates": true
+    },
+    {
+      "document_id": "HCE-DOC07",
+      "word_pieces_with_special_tokens": 1127,
+      "encoder_truncates": true
+    },
+    {
+      "document_id": "HCE-DOC08",
+      "word_pieces_with_special_tokens": 723,
+      "encoder_truncates": true
+    },
+    {
+      "document_id": "HCE-DOC09",
+      "word_pieces_with_special_tokens": 837,
+      "encoder_truncates": true
+    },
+    {
+      "document_id": "HCE-DOC10",
+      "word_pieces_with_special_tokens": 834,
+      "encoder_truncates": true
+    },
+    {
+      "document_id": "HCE-DOC11",
+      "word_pieces_with_special_tokens": 750,
+      "encoder_truncates": true
+    },
+    {
+      "document_id": "HCE-DOC12",
+      "word_pieces_with_special_tokens": 852,
+      "encoder_truncates": true
+    },
+    {
+      "document_id": "HCE-DOC13",
+      "word_pieces_with_special_tokens": 2571,
+      "encoder_truncates": true
+    },
+    {
+      "document_id": "HCE-DOC14",
+      "word_pieces_with_special_tokens": 1244,
+      "encoder_truncates": true
+    },
+    {
+      "document_id": "NLP-P01",
+      "word_pieces_with_special_tokens": 570,
+      "encoder_truncates": true
+    },
+    {
+      "document_id": "NLP-P02",
+      "word_pieces_with_special_tokens": 548,
+      "encoder_truncates": true
+    },
+    {
+      "document_id": "NLP-P03",
+      "word_pieces_with_special_tokens": 559,
+      "encoder_truncates": true
+    },
+    {
+      "document_id": "NLP-P04",
+      "word_pieces_with_special_tokens": 560,
+      "encoder_truncates": true
+    }
+  ],
+  "single_source_metrics": {
+    "tfidf": {
+      "count": 8,
+      "benchmark_ids": [
+        "RET-01",
+        "RET-02",
+        "RET-03",
+        "RET-05",
+        "RET-06",
+        "RET-10",
+        "RET-11",
+        "RET-15"
+      ],
+      "top_1_correct": 6,
+      "top_1_accuracy": 0.75,
+      "top_3_hits": 6,
+      "top_3_hit_rate": 0.75,
+      "mrr": 0.80625
+    },
+    "semantic": {
+      "count": 8,
+      "benchmark_ids": [
+        "RET-01",
+        "RET-02",
+        "RET-03",
+        "RET-05",
+        "RET-06",
+        "RET-10",
+        "RET-11",
+        "RET-15"
+      ],
+      "top_1_correct": 5,
+      "top_1_accuracy": 0.625,
+      "top_3_hits": 5,
+      "top_3_hit_rate": 0.625,
+      "mrr": 0.6854166666666668
+    }
+  },
+  "metric_exclusions": "Single-source aggregates include direct_fact/lexical_search/semantic_search with exactly one listed source. Multi-source, comparison, summary, analysis/paper queries report evidence ranks/coverage separately. A Top-3 hit is not recall of all required sources; paper analysis needs four papers. Source retrieval does not perform analysis, filtering, comparison or summarization."
+}

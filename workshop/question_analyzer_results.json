@@ -1,0 +1,3242 @@
+{
+  "usage": "Measured evaluation only. User-facing counts/predictions come from production paper text, never this artifact.",
+  "utc_time": "2026-10-06T09:08:38.618247+00:00",
+  "python": "3.11.17",
+  "taxonomy_source": "data/university_facts.json#/nlp_topic_taxonomy",
+  "taxonomy_schema_version": "1.0.0",
+  "topic_count": 16,
+  "specificity_policy": {
+    "cbow": 2,
+    "skip_gram": 2,
+    "bert": 2,
+    "word2vec": 1,
+    "attention": 1
+  },
+  "rule_scope": "Canonical names/aliases; separator normalization, word boundaries, limited final-word singular/plural variation. Related IDs are never propagated. No new synonyms/question-specific hacks.",
+  "paper_ids": [
+    "NLP-P01",
+    "NLP-P02",
+    "NLP-P03",
+    "NLP-P04"
+  ],
+  "questions_per_paper": {
+    "NLP-P01": 12,
+    "NLP-P02": 12,
+    "NLP-P03": 12,
+    "NLP-P04": 12
+  },
+  "paper_marks": {
+    "NLP-P01": 60,
+    "NLP-P02": 60,
+    "NLP-P03": 60,
+    "NLP-P04": 60
+  },
+  "total_questions": 48,
+  "correct": 39,
+  "incorrect": 9,
+  "unmatched": 9,
+  "matched_but_incorrect": 0,
+  "accuracy": 0.8125,
+  "ambiguous": 0,
+  "observed_frequencies": {
+    "text_preprocessing": 2,
+    "tokenization": 1,
+    "bag_of_words": 2,
+    "n_grams": 2,
+    "tf_idf": 4,
+    "cosine_similarity": 1,
+    "word_embeddings": 4,
+    "word2vec": 4,
+    "cbow": 1,
+    "skip_gram": 1,
+    "attention": 3,
+    "transformers": 8,
+    "bert": 3,
+    "language_models": 2,
+    "semantic_similarity": 0,
+    "semantic_search": 1,
+    "UNMATCHED": 9
+  },
+  "ground_truth_frequencies": {
+    "text_preprocessing": 2,
+    "tokenization": 2,
+    "bag_of_words": 2,
+    "n_grams": 2,
+    "tf_idf": 7,
+    "cosine_similarity": 2,
+    "word_embeddings": 5,
+    "word2vec": 4,
+    "cbow": 1,
+    "skip_gram": 1,
+    "attention": 5,
+    "transformers": 8,
+    "bert": 3,
+    "language_models": 2,
+    "semantic_similarity": 1,
+    "semantic_search": 1
+  },
+  "frequency_differences": {
+    "text_preprocessing": 0,
+    "tokenization": -1,
+    "bag_of_words": 0,
+    "n_grams": 0,
+    "tf_idf": -3,
+    "cosine_similarity": -1,
+    "word_embeddings": -1,
+    "word2vec": 0,
+    "cbow": 0,
+    "skip_gram": 0,
+    "attention": -2,
+    "transformers": 0,
+    "bert": 0,
+    "language_models": 0,
+    "semantic_similarity": -1,
+    "semantic_search": 0
+  },
+  "ranking": [
+    {
+      "rank": 1,
+      "topic_id": "transformers",
+      "topic_name": "Transformers",
+      "count": 8
+    },
+    {
+      "rank": 2,
+      "topic_id": "tf_idf",
+      "topic_name": "TF-IDF",
+      "count": 4
+    },
+    {
+      "rank": 3,
+      "topic_id": "word_embeddings",
+      "topic_name": "Word Embeddings",
+      "count": 4
+    },
+    {
+      "rank": 4,
+      "topic_id": "word2vec",
+      "topic_name": "Word2Vec",
+      "count": 4
+    },
+    {
+      "rank": 5,
+      "topic_id": "attention",
+      "topic_name": "Attention",
+      "count": 3
+    },
+    {
+      "rank": 6,
+      "topic_id": "bert",
+      "topic_name": "BERT",
+      "count": 3
+    },
+    {
+      "rank": 7,
+      "topic_id": "text_preprocessing",
+      "topic_name": "Text Preprocessing",
+      "count": 2
+    },
+    {
+      "rank": 8,
+      "topic_id": "bag_of_words",
+      "topic_name": "Bag of Words",
+      "count": 2
+    },
+    {
+      "rank": 9,
+      "topic_id": "n_grams",
+      "topic_name": "N-Grams",
+      "count": 2
+    },
+    {
+      "rank": 10,
+      "topic_id": "language_models",
+      "topic_name": "Language Models",
+      "count": 2
+    },
+    {
+      "rank": 11,
+      "topic_id": "tokenization",
+      "topic_name": "Tokenization",
+      "count": 1
+    },
+    {
+      "rank": 12,
+      "topic_id": "cosine_similarity",
+      "topic_name": "Cosine Similarity",
+      "count": 1
+    },
+    {
+      "rank": 13,
+      "topic_id": "cbow",
+      "topic_name": "CBOW",
+      "count": 1
+    },
+    {
+      "rank": 14,
+      "topic_id": "skip_gram",
+      "topic_name": "Skip-Gram",
+      "count": 1
+    },
+    {
+      "rank": 15,
+      "topic_id": "semantic_search",
+      "topic_name": "Semantic Search",
+      "count": 1
+    },
+    {
+      "rank": 16,
+      "topic_id": "semantic_similarity",
+      "topic_name": "Semantic Similarity",
+      "count": 0
+    }
+  ],
+  "per_topic_metrics": [
+    {
+      "topic_id": "text_preprocessing",
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "topic_id": "tokenization",
+      "true_positives": 1,
+      "false_positives": 0,
+      "false_negatives": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    },
+    {
+      "topic_id": "bag_of_words",
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "topic_id": "n_grams",
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "topic_id": "tf_idf",
+      "true_positives": 4,
+      "false_positives": 0,
+      "false_negatives": 3,
+      "precision": 1.0,
+      "recall": 0.5714285714285714,
+      "f1": 0.7272727272727273
+    },
+    {
+      "topic_id": "cosine_similarity",
+      "true_positives": 1,
+      "false_positives": 0,
+      "false_negatives": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    },
+    {
+      "topic_id": "word_embeddings",
+      "true_positives": 4,
+      "false_positives": 0,
+      "false_negatives": 1,
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1": 0.888888888888889
+    },
+    {
+      "topic_id": "word2vec",
+      "true_positives": 4,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "topic_id": "cbow",
+      "true_positives": 1,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "topic_id": "skip_gram",
+      "true_positives": 1,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "topic_id": "attention",
+      "true_positives": 3,
+      "false_positives": 0,
+      "false_negatives": 2,
+      "precision": 1.0,
+      "recall": 0.6,
+      "f1": 0.7499999999999999
+    },
+    {
+      "topic_id": "transformers",
+      "true_positives": 8,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "topic_id": "bert",
+      "true_positives": 3,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "topic_id": "language_models",
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "topic_id": "semantic_similarity",
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "topic_id": "semantic_search",
+      "true_positives": 1,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  ],
+  "macro_f1": 0.8562184343434344,
+  "confusion_pairs": [
+    {
+      "actual": "attention",
+      "predicted": "UNMATCHED",
+      "count": 2
+    },
+    {
+      "actual": "cosine_similarity",
+      "predicted": "UNMATCHED",
+      "count": 1
+    },
+    {
+      "actual": "semantic_similarity",
+      "predicted": "UNMATCHED",
+      "count": 1
+    },
+    {
+      "actual": "tf_idf",
+      "predicted": "UNMATCHED",
+      "count": 3
+    },
+    {
+      "actual": "tokenization",
+      "predicted": "UNMATCHED",
+      "count": 1
+    },
+    {
+      "actual": "word_embeddings",
+      "predicted": "UNMATCHED",
+      "count": 1
+    }
+  ],
+  "questions": [
+    {
+      "paper_id": "NLP-P01",
+      "question_id": "Q1",
+      "question_number": 1,
+      "marks": 5,
+      "text": "Describe the encoder and decoder roles in a Transformer architecture, emphasizing how information passes between its main components.",
+      "source_path": "data/question_papers/nlp_question_paper_01.md",
+      "source_char_start": 1029,
+      "source_char_end": 1165,
+      "normalized_text": "describe the encoder and decoder roles in a transformer architecture emphasizing how information passes between its main components",
+      "primary_topic": "transformers",
+      "primary_match": {
+        "topic_id": "transformers",
+        "topic_name": "Transformers",
+        "alias_phrase": "transformer architecture",
+        "normalized_alias": "transformer architecture",
+        "match_type": "alias",
+        "phrase_words": 2,
+        "specificity": 0,
+        "taxonomy_order": 11,
+        "matched_phrase": "transformer architecture",
+        "start": 44,
+        "end": 68
+      },
+      "matched_topics": [
+        "transformers"
+      ],
+      "matches": [
+        {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "transformer architecture",
+          "normalized_alias": "transformer architecture",
+          "match_type": "alias",
+          "phrase_words": 2,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformer architecture",
+          "start": 44,
+          "end": 68
+        },
+        {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "Transformers",
+          "normalized_alias": "transformers",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformer",
+          "start": 44,
+          "end": 55
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected transformers: specificity 0, 2 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "transformers",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P01",
+      "question_id": "Q2",
+      "question_number": 2,
+      "marks": 5,
+      "text": "Calculate IDF using ln(N/DF) for a term occurring in 2 of 8 documents, and explain what the resulting weight represents.",
+      "source_path": "data/question_papers/nlp_question_paper_01.md",
+      "source_char_start": 1181,
+      "source_char_end": 1304,
+      "normalized_text": "calculate idf using ln n df for a term occurring in 2 of 8 documents and explain what the resulting weight represents",
+      "primary_topic": "UNMATCHED",
+      "primary_match": null,
+      "matched_topics": [],
+      "matches": [],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "No canonical name/alias matched; not forced into a topic.",
+      "ground_truth_primary": "tf_idf",
+      "correct": false
+    },
+    {
+      "paper_id": "NLP-P01",
+      "question_id": "Q3",
+      "question_number": 3,
+      "marks": 5,
+      "text": "Explain how dense word representations differ from assigning each vocabulary item an unrelated one-hot coordinate.",
+      "source_path": "data/question_papers/nlp_question_paper_01.md",
+      "source_char_start": 1320,
+      "source_char_end": 1437,
+      "normalized_text": "explain how dense word representations differ from assigning each vocabulary item an unrelated one hot coordinate",
+      "primary_topic": "word_embeddings",
+      "primary_match": {
+        "topic_id": "word_embeddings",
+        "topic_name": "Word Embeddings",
+        "alias_phrase": "dense word representation",
+        "normalized_alias": "dense word representation",
+        "match_type": "alias",
+        "phrase_words": 3,
+        "specificity": 0,
+        "taxonomy_order": 6,
+        "matched_phrase": "dense word representations",
+        "start": 12,
+        "end": 38
+      },
+      "matched_topics": [
+        "word_embeddings"
+      ],
+      "matches": [
+        {
+          "topic_id": "word_embeddings",
+          "topic_name": "Word Embeddings",
+          "alias_phrase": "dense word representation",
+          "normalized_alias": "dense word representation",
+          "match_type": "alias",
+          "phrase_words": 3,
+          "specificity": 0,
+          "taxonomy_order": 6,
+          "matched_phrase": "dense word representations",
+          "start": 12,
+          "end": 38
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected word_embeddings: specificity 0, 3 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "word_embeddings",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P01",
+      "question_id": "Q4",
+      "question_number": 4,
+      "marks": 5,
+      "text": "Explain how self-attention assigns different relevance to tokens when constructing a contextual representation.",
+      "source_path": "data/question_papers/nlp_question_paper_01.md",
+      "source_char_start": 1453,
+      "source_char_end": 1567,
+      "normalized_text": "explain how self attention assigns different relevance to tokens when constructing a contextual representation",
+      "primary_topic": "attention",
+      "primary_match": {
+        "topic_id": "attention",
+        "topic_name": "Attention",
+        "alias_phrase": "self-attention",
+        "normalized_alias": "self attention",
+        "match_type": "alias",
+        "phrase_words": 2,
+        "specificity": 1,
+        "taxonomy_order": 10,
+        "matched_phrase": "self attention",
+        "start": 12,
+        "end": 26
+      },
+      "matched_topics": [
+        "attention"
+      ],
+      "matches": [
+        {
+          "topic_id": "attention",
+          "topic_name": "Attention",
+          "alias_phrase": "self-attention",
+          "normalized_alias": "self attention",
+          "match_type": "alias",
+          "phrase_words": 2,
+          "specificity": 1,
+          "taxonomy_order": 10,
+          "matched_phrase": "self attention",
+          "start": 12,
+          "end": 26
+        },
+        {
+          "topic_id": "attention",
+          "topic_name": "Attention",
+          "alias_phrase": "Attention",
+          "normalized_alias": "attention",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 1,
+          "taxonomy_order": 10,
+          "matched_phrase": "attention",
+          "start": 17,
+          "end": 26
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected attention: specificity 1, 2 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "attention",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P01",
+      "question_id": "Q5",
+      "question_number": 5,
+      "marks": 5,
+      "text": "Compare stemming and lemmatization as text-normalization choices, using the forms 'study', 'studied' and 'studying' to illustrate the goal.",
+      "source_path": "data/question_papers/nlp_question_paper_01.md",
+      "source_char_start": 1583,
+      "source_char_end": 1725,
+      "normalized_text": "compare stemming and lemmatization as text normalization choices using the forms study studied and studying to illustrate the goal",
+      "primary_topic": "text_preprocessing",
+      "primary_match": {
+        "topic_id": "text_preprocessing",
+        "topic_name": "Text Preprocessing",
+        "alias_phrase": "text normalization",
+        "normalized_alias": "text normalization",
+        "match_type": "alias",
+        "phrase_words": 2,
+        "specificity": 0,
+        "taxonomy_order": 0,
+        "matched_phrase": "text normalization",
+        "start": 38,
+        "end": 56
+      },
+      "matched_topics": [
+        "text_preprocessing"
+      ],
+      "matches": [
+        {
+          "topic_id": "text_preprocessing",
+          "topic_name": "Text Preprocessing",
+          "alias_phrase": "text normalization",
+          "normalized_alias": "text normalization",
+          "match_type": "alias",
+          "phrase_words": 2,
+          "specificity": 0,
+          "taxonomy_order": 0,
+          "matched_phrase": "text normalization",
+          "start": 38,
+          "end": 56
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected text_preprocessing: specificity 0, 2 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "text_preprocessing",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P01",
+      "question_id": "Q6",
+      "question_number": 6,
+      "marks": 5,
+      "text": "Calculate cosine similarity for vectors (1, 1, 0) and (1, 0, 1), showing the dot product and vector lengths.",
+      "source_path": "data/question_papers/nlp_question_paper_01.md",
+      "source_char_start": 1741,
+      "source_char_end": 1852,
+      "normalized_text": "calculate cosine similarity for vectors 1 1 0 and 1 0 1 showing the dot product and vector lengths",
+      "primary_topic": "cosine_similarity",
+      "primary_match": {
+        "topic_id": "cosine_similarity",
+        "topic_name": "Cosine Similarity",
+        "alias_phrase": "Cosine Similarity",
+        "normalized_alias": "cosine similarity",
+        "match_type": "canonical",
+        "phrase_words": 2,
+        "specificity": 0,
+        "taxonomy_order": 5,
+        "matched_phrase": "cosine similarity",
+        "start": 10,
+        "end": 27
+      },
+      "matched_topics": [
+        "cosine_similarity"
+      ],
+      "matches": [
+        {
+          "topic_id": "cosine_similarity",
+          "topic_name": "Cosine Similarity",
+          "alias_phrase": "Cosine Similarity",
+          "normalized_alias": "cosine similarity",
+          "match_type": "canonical",
+          "phrase_words": 2,
+          "specificity": 0,
+          "taxonomy_order": 5,
+          "matched_phrase": "cosine similarity",
+          "start": 10,
+          "end": 27
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected cosine_similarity: specificity 0, 2 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "cosine_similarity",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P01",
+      "question_id": "Q7",
+      "question_number": 7,
+      "marks": 5,
+      "text": "Explain why positional information is needed in a Transformer when token representations are processed without a recurrent chain.",
+      "source_path": "data/question_papers/nlp_question_paper_01.md",
+      "source_char_start": 1868,
+      "source_char_end": 2000,
+      "normalized_text": "explain why positional information is needed in a transformer when token representations are processed without a recurrent chain",
+      "primary_topic": "transformers",
+      "primary_match": {
+        "topic_id": "transformers",
+        "topic_name": "Transformers",
+        "alias_phrase": "Transformers",
+        "normalized_alias": "transformers",
+        "match_type": "canonical",
+        "phrase_words": 1,
+        "specificity": 0,
+        "taxonomy_order": 11,
+        "matched_phrase": "transformer",
+        "start": 50,
+        "end": 61
+      },
+      "matched_topics": [
+        "transformers"
+      ],
+      "matches": [
+        {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "Transformers",
+          "normalized_alias": "transformers",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformer",
+          "start": 50,
+          "end": 61
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected transformers: specificity 0, 1 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "transformers",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P01",
+      "question_id": "Q8",
+      "question_number": 8,
+      "marks": 5,
+      "text": "Explain how TF-IDF distinguishes a word frequent in one document from a word frequent throughout a collection.",
+      "source_path": "data/question_papers/nlp_question_paper_01.md",
+      "source_char_start": 2016,
+      "source_char_end": 2129,
+      "normalized_text": "explain how tf idf distinguishes a word frequent in one document from a word frequent throughout a collection",
+      "primary_topic": "tf_idf",
+      "primary_match": {
+        "topic_id": "tf_idf",
+        "topic_name": "TF-IDF",
+        "alias_phrase": "TF-IDF",
+        "normalized_alias": "tf idf",
+        "match_type": "canonical",
+        "phrase_words": 2,
+        "specificity": 0,
+        "taxonomy_order": 4,
+        "matched_phrase": "tf idf",
+        "start": 12,
+        "end": 18
+      },
+      "matched_topics": [
+        "tf_idf"
+      ],
+      "matches": [
+        {
+          "topic_id": "tf_idf",
+          "topic_name": "TF-IDF",
+          "alias_phrase": "TF-IDF",
+          "normalized_alias": "tf idf",
+          "match_type": "canonical",
+          "phrase_words": 2,
+          "specificity": 0,
+          "taxonomy_order": 4,
+          "matched_phrase": "tf idf",
+          "start": 12,
+          "end": 18
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected tf_idf: specificity 0, 2 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "tf_idf",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P01",
+      "question_id": "Q9",
+      "question_number": 9,
+      "marks": 5,
+      "text": "Describe the mechanism that weights different token positions when forming a representation, rather than treating every context word as equally important.",
+      "source_path": "data/question_papers/nlp_question_paper_01.md",
+      "source_char_start": 2145,
+      "source_char_end": 2302,
+      "normalized_text": "describe the mechanism that weights different token positions when forming a representation rather than treating every context word as equally important",
+      "primary_topic": "UNMATCHED",
+      "primary_match": null,
+      "matched_topics": [],
+      "matches": [],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "No canonical name/alias matched; not forced into a topic.",
+      "ground_truth_primary": "attention",
+      "correct": false
+    },
+    {
+      "paper_id": "NLP-P01",
+      "question_id": "Q10",
+      "question_number": 10,
+      "marks": 5,
+      "text": "Explain the distributional training idea of Word2Vec and how local context provides learning evidence.",
+      "source_path": "data/question_papers/nlp_question_paper_01.md",
+      "source_char_start": 2319,
+      "source_char_end": 2424,
+      "normalized_text": "explain the distributional training idea of word2vec and how local context provides learning evidence",
+      "primary_topic": "word2vec",
+      "primary_match": {
+        "topic_id": "word2vec",
+        "topic_name": "Word2Vec",
+        "alias_phrase": "Word2Vec",
+        "normalized_alias": "word2vec",
+        "match_type": "canonical",
+        "phrase_words": 1,
+        "specificity": 1,
+        "taxonomy_order": 7,
+        "matched_phrase": "word2vec",
+        "start": 44,
+        "end": 52
+      },
+      "matched_topics": [
+        "word2vec"
+      ],
+      "matches": [
+        {
+          "topic_id": "word2vec",
+          "topic_name": "Word2Vec",
+          "alias_phrase": "Word2Vec",
+          "normalized_alias": "word2vec",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 1,
+          "taxonomy_order": 7,
+          "matched_phrase": "word2vec",
+          "start": 44,
+          "end": 52
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected word2vec: specificity 1, 1 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "word2vec",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P01",
+      "question_id": "Q11",
+      "question_number": 11,
+      "marks": 5,
+      "text": "Construct Bag of Words count vectors for 'students study language' and 'students study data' using one shared vocabulary.",
+      "source_path": "data/question_papers/nlp_question_paper_01.md",
+      "source_char_start": 2441,
+      "source_char_end": 2565,
+      "normalized_text": "construct bag of words count vectors for students study language and students study data using one shared vocabulary",
+      "primary_topic": "bag_of_words",
+      "primary_match": {
+        "topic_id": "bag_of_words",
+        "topic_name": "Bag of Words",
+        "alias_phrase": "Bag of Words",
+        "normalized_alias": "bag of words",
+        "match_type": "canonical",
+        "phrase_words": 3,
+        "specificity": 0,
+        "taxonomy_order": 2,
+        "matched_phrase": "bag of words",
+        "start": 10,
+        "end": 22
+      },
+      "matched_topics": [
+        "bag_of_words"
+      ],
+      "matches": [
+        {
+          "topic_id": "bag_of_words",
+          "topic_name": "Bag of Words",
+          "alias_phrase": "Bag of Words",
+          "normalized_alias": "bag of words",
+          "match_type": "canonical",
+          "phrase_words": 3,
+          "specificity": 0,
+          "taxonomy_order": 2,
+          "matched_phrase": "bag of words",
+          "start": 10,
+          "end": 22
+        },
+        {
+          "topic_id": "bag_of_words",
+          "topic_name": "Bag of Words",
+          "alias_phrase": "count vector",
+          "normalized_alias": "count vector",
+          "match_type": "alias",
+          "phrase_words": 2,
+          "specificity": 0,
+          "taxonomy_order": 2,
+          "matched_phrase": "count vectors",
+          "start": 23,
+          "end": 36
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected bag_of_words: specificity 0, 3 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "bag_of_words",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P01",
+      "question_id": "Q12",
+      "question_number": 12,
+      "marks": 5,
+      "text": "Illustrate Continuous Bag of Words training with a short context window, identifying the surrounding-word input and the target word to predict.",
+      "source_path": "data/question_papers/nlp_question_paper_01.md",
+      "source_char_start": 2582,
+      "source_char_end": 2727,
+      "normalized_text": "illustrate continuous bag of words training with a short context window identifying the surrounding word input and the target word to predict",
+      "primary_topic": "cbow",
+      "primary_match": {
+        "topic_id": "cbow",
+        "topic_name": "CBOW",
+        "alias_phrase": "continuous bag of words",
+        "normalized_alias": "continuous bag of words",
+        "match_type": "alias",
+        "phrase_words": 4,
+        "specificity": 2,
+        "taxonomy_order": 8,
+        "matched_phrase": "continuous bag of words",
+        "start": 11,
+        "end": 34
+      },
+      "matched_topics": [
+        "cbow",
+        "bag_of_words"
+      ],
+      "matches": [
+        {
+          "topic_id": "cbow",
+          "topic_name": "CBOW",
+          "alias_phrase": "continuous bag of words",
+          "normalized_alias": "continuous bag of words",
+          "match_type": "alias",
+          "phrase_words": 4,
+          "specificity": 2,
+          "taxonomy_order": 8,
+          "matched_phrase": "continuous bag of words",
+          "start": 11,
+          "end": 34
+        },
+        {
+          "topic_id": "bag_of_words",
+          "topic_name": "Bag of Words",
+          "alias_phrase": "Bag of Words",
+          "normalized_alias": "bag of words",
+          "match_type": "canonical",
+          "phrase_words": 3,
+          "specificity": 0,
+          "taxonomy_order": 2,
+          "matched_phrase": "bag of words",
+          "start": 22,
+          "end": 34
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected cbow: specificity 2, 4 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "cbow",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P02",
+      "question_id": "Q1",
+      "question_number": 1,
+      "marks": 5,
+      "text": "Compare Transformer processing with recurrent processing in terms of token relationships and opportunities for parallel computation.",
+      "source_path": "data/question_papers/nlp_question_paper_02.md",
+      "source_char_start": 1029,
+      "source_char_end": 1164,
+      "normalized_text": "compare transformer processing with recurrent processing in terms of token relationships and opportunities for parallel computation",
+      "primary_topic": "transformers",
+      "primary_match": {
+        "topic_id": "transformers",
+        "topic_name": "Transformers",
+        "alias_phrase": "Transformers",
+        "normalized_alias": "transformers",
+        "match_type": "canonical",
+        "phrase_words": 1,
+        "specificity": 0,
+        "taxonomy_order": 11,
+        "matched_phrase": "transformer",
+        "start": 8,
+        "end": 19
+      },
+      "matched_topics": [
+        "transformers"
+      ],
+      "matches": [
+        {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "Transformers",
+          "normalized_alias": "transformers",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformer",
+          "start": 8,
+          "end": 19
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected transformers: specificity 0, 1 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "transformers",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P02",
+      "question_id": "Q2",
+      "question_number": 2,
+      "marks": 5,
+      "text": "Compare raw term counts with term frequency inverse document frequency when ranking short course descriptions.",
+      "source_path": "data/question_papers/nlp_question_paper_02.md",
+      "source_char_start": 1180,
+      "source_char_end": 1293,
+      "normalized_text": "compare raw term counts with term frequency inverse document frequency when ranking short course descriptions",
+      "primary_topic": "tf_idf",
+      "primary_match": {
+        "topic_id": "tf_idf",
+        "topic_name": "TF-IDF",
+        "alias_phrase": "term frequency inverse document frequency",
+        "normalized_alias": "term frequency inverse document frequency",
+        "match_type": "alias",
+        "phrase_words": 5,
+        "specificity": 0,
+        "taxonomy_order": 4,
+        "matched_phrase": "term frequency inverse document frequency",
+        "start": 29,
+        "end": 70
+      },
+      "matched_topics": [
+        "tf_idf"
+      ],
+      "matches": [
+        {
+          "topic_id": "tf_idf",
+          "topic_name": "TF-IDF",
+          "alias_phrase": "term frequency inverse document frequency",
+          "normalized_alias": "term frequency inverse document frequency",
+          "match_type": "alias",
+          "phrase_words": 5,
+          "specificity": 0,
+          "taxonomy_order": 4,
+          "matched_phrase": "term frequency inverse document frequency",
+          "start": 29,
+          "end": 70
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected tf_idf: specificity 0, 5 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "tf_idf",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P02",
+      "question_id": "Q3",
+      "question_number": 3,
+      "marks": 5,
+      "text": "Discuss how distributional context can place related words near each other in a learned word-vector space.",
+      "source_path": "data/question_papers/nlp_question_paper_02.md",
+      "source_char_start": 1309,
+      "source_char_end": 1418,
+      "normalized_text": "discuss how distributional context can place related words near each other in a learned word vector space",
+      "primary_topic": "word_embeddings",
+      "primary_match": {
+        "topic_id": "word_embeddings",
+        "topic_name": "Word Embeddings",
+        "alias_phrase": "word vectors",
+        "normalized_alias": "word vectors",
+        "match_type": "alias",
+        "phrase_words": 2,
+        "specificity": 0,
+        "taxonomy_order": 6,
+        "matched_phrase": "word vector",
+        "start": 88,
+        "end": 99
+      },
+      "matched_topics": [
+        "word_embeddings"
+      ],
+      "matches": [
+        {
+          "topic_id": "word_embeddings",
+          "topic_name": "Word Embeddings",
+          "alias_phrase": "word vectors",
+          "normalized_alias": "word vectors",
+          "match_type": "alias",
+          "phrase_words": 2,
+          "specificity": 0,
+          "taxonomy_order": 6,
+          "matched_phrase": "word vector",
+          "start": 88,
+          "end": 99
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected word_embeddings: specificity 0, 2 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "word_embeddings",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P02",
+      "question_id": "Q4",
+      "question_number": 4,
+      "marks": 5,
+      "text": "Compare the two predictive directions used by Word2Vec while focusing on their common goal of learning word representations.",
+      "source_path": "data/question_papers/nlp_question_paper_02.md",
+      "source_char_start": 1434,
+      "source_char_end": 1561,
+      "normalized_text": "compare the two predictive directions used by word2vec while focusing on their common goal of learning word representations",
+      "primary_topic": "word2vec",
+      "primary_match": {
+        "topic_id": "word2vec",
+        "topic_name": "Word2Vec",
+        "alias_phrase": "Word2Vec",
+        "normalized_alias": "word2vec",
+        "match_type": "canonical",
+        "phrase_words": 1,
+        "specificity": 1,
+        "taxonomy_order": 7,
+        "matched_phrase": "word2vec",
+        "start": 46,
+        "end": 54
+      },
+      "matched_topics": [
+        "word2vec"
+      ],
+      "matches": [
+        {
+          "topic_id": "word2vec",
+          "topic_name": "Word2Vec",
+          "alias_phrase": "Word2Vec",
+          "normalized_alias": "word2vec",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 1,
+          "taxonomy_order": 7,
+          "matched_phrase": "word2vec",
+          "start": 46,
+          "end": 54
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected word2vec: specificity 1, 1 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "word2vec",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P02",
+      "question_id": "Q5",
+      "question_number": 5,
+      "marks": 5,
+      "text": "Analyze a text-cleaning plan that removes all short common words, explaining why preserving negation may matter for a language task.",
+      "source_path": "data/question_papers/nlp_question_paper_02.md",
+      "source_char_start": 1577,
+      "source_char_end": 1712,
+      "normalized_text": "analyze a text cleaning plan that removes all short common words explaining why preserving negation may matter for a language task",
+      "primary_topic": "text_preprocessing",
+      "primary_match": {
+        "topic_id": "text_preprocessing",
+        "topic_name": "Text Preprocessing",
+        "alias_phrase": "text cleaning",
+        "normalized_alias": "text cleaning",
+        "match_type": "alias",
+        "phrase_words": 2,
+        "specificity": 0,
+        "taxonomy_order": 0,
+        "matched_phrase": "text cleaning",
+        "start": 10,
+        "end": 23
+      },
+      "matched_topics": [
+        "text_preprocessing"
+      ],
+      "matches": [
+        {
+          "topic_id": "text_preprocessing",
+          "topic_name": "Text Preprocessing",
+          "alias_phrase": "text cleaning",
+          "normalized_alias": "text cleaning",
+          "match_type": "alias",
+          "phrase_words": 2,
+          "specificity": 0,
+          "taxonomy_order": 0,
+          "matched_phrase": "text cleaning",
+          "start": 10,
+          "end": 23
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected text_preprocessing: specificity 0, 2 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "text_preprocessing",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P02",
+      "question_id": "Q6",
+      "question_number": 6,
+      "marks": 5,
+      "text": "Explain why comparing vector angles can reduce the effect of document length relative to comparing unnormalized dot products.",
+      "source_path": "data/question_papers/nlp_question_paper_02.md",
+      "source_char_start": 1728,
+      "source_char_end": 1856,
+      "normalized_text": "explain why comparing vector angles can reduce the effect of document length relative to comparing unnormalized dot products",
+      "primary_topic": "UNMATCHED",
+      "primary_match": null,
+      "matched_topics": [],
+      "matches": [],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "No canonical name/alias matched; not forced into a topic.",
+      "ground_truth_primary": "cosine_similarity",
+      "correct": false
+    },
+    {
+      "paper_id": "NLP-P02",
+      "question_id": "Q7",
+      "question_number": 7,
+      "marks": 5,
+      "text": "Illustrate the role of residual connections and feed-forward blocks in a Transformer layer.",
+      "source_path": "data/question_papers/nlp_question_paper_02.md",
+      "source_char_start": 1872,
+      "source_char_end": 1966,
+      "normalized_text": "illustrate the role of residual connections and feed forward blocks in a transformer layer",
+      "primary_topic": "transformers",
+      "primary_match": {
+        "topic_id": "transformers",
+        "topic_name": "Transformers",
+        "alias_phrase": "Transformers",
+        "normalized_alias": "transformers",
+        "match_type": "canonical",
+        "phrase_words": 1,
+        "specificity": 0,
+        "taxonomy_order": 11,
+        "matched_phrase": "transformer",
+        "start": 73,
+        "end": 84
+      },
+      "matched_topics": [
+        "transformers"
+      ],
+      "matches": [
+        {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "Transformers",
+          "normalized_alias": "transformers",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformer",
+          "start": 73,
+          "end": 84
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected transformers: specificity 0, 1 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "transformers",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P02",
+      "question_id": "Q8",
+      "question_number": 8,
+      "marks": 5,
+      "text": "Calculate TF-IDF for a term with raw term frequency 3, document frequency 2 and collection size 10, using TF multiplied by ln(N/DF).",
+      "source_path": "data/question_papers/nlp_question_paper_02.md",
+      "source_char_start": 1982,
+      "source_char_end": 2117,
+      "normalized_text": "calculate tf idf for a term with raw term frequency 3 document frequency 2 and collection size 10 using tf multiplied by ln n df",
+      "primary_topic": "tf_idf",
+      "primary_match": {
+        "topic_id": "tf_idf",
+        "topic_name": "TF-IDF",
+        "alias_phrase": "TF-IDF",
+        "normalized_alias": "tf idf",
+        "match_type": "canonical",
+        "phrase_words": 2,
+        "specificity": 0,
+        "taxonomy_order": 4,
+        "matched_phrase": "tf idf",
+        "start": 10,
+        "end": 16
+      },
+      "matched_topics": [
+        "tf_idf"
+      ],
+      "matches": [
+        {
+          "topic_id": "tf_idf",
+          "topic_name": "TF-IDF",
+          "alias_phrase": "TF-IDF",
+          "normalized_alias": "tf idf",
+          "match_type": "canonical",
+          "phrase_words": 2,
+          "specificity": 0,
+          "taxonomy_order": 4,
+          "matched_phrase": "tf idf",
+          "start": 10,
+          "end": 16
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected tf_idf: specificity 0, 2 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "tf_idf",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P02",
+      "question_id": "Q9",
+      "question_number": 9,
+      "marks": 5,
+      "text": "Illustrate the roles of queries, keys and values in an attention mechanism for a short sequence.",
+      "source_path": "data/question_papers/nlp_question_paper_02.md",
+      "source_char_start": 2133,
+      "source_char_end": 2232,
+      "normalized_text": "illustrate the roles of queries keys and values in an attention mechanism for a short sequence",
+      "primary_topic": "attention",
+      "primary_match": {
+        "topic_id": "attention",
+        "topic_name": "Attention",
+        "alias_phrase": "attention mechanism",
+        "normalized_alias": "attention mechanism",
+        "match_type": "alias",
+        "phrase_words": 2,
+        "specificity": 1,
+        "taxonomy_order": 10,
+        "matched_phrase": "attention mechanism",
+        "start": 54,
+        "end": 73
+      },
+      "matched_topics": [
+        "attention"
+      ],
+      "matches": [
+        {
+          "topic_id": "attention",
+          "topic_name": "Attention",
+          "alias_phrase": "attention mechanism",
+          "normalized_alias": "attention mechanism",
+          "match_type": "alias",
+          "phrase_words": 2,
+          "specificity": 1,
+          "taxonomy_order": 10,
+          "matched_phrase": "attention mechanism",
+          "start": 54,
+          "end": 73
+        },
+        {
+          "topic_id": "attention",
+          "topic_name": "Attention",
+          "alias_phrase": "Attention",
+          "normalized_alias": "attention",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 1,
+          "taxonomy_order": 10,
+          "matched_phrase": "attention",
+          "start": 54,
+          "end": 63
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected attention: specificity 1, 2 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "attention",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P02",
+      "question_id": "Q10",
+      "question_number": 10,
+      "marks": 5,
+      "text": "Explain how BERT uses surrounding context to represent a token and why that differs from a static word vector.",
+      "source_path": "data/question_papers/nlp_question_paper_02.md",
+      "source_char_start": 2249,
+      "source_char_end": 2362,
+      "normalized_text": "explain how bert uses surrounding context to represent a token and why that differs from a static word vector",
+      "primary_topic": "bert",
+      "primary_match": {
+        "topic_id": "bert",
+        "topic_name": "BERT",
+        "alias_phrase": "BERT",
+        "normalized_alias": "bert",
+        "match_type": "canonical",
+        "phrase_words": 1,
+        "specificity": 2,
+        "taxonomy_order": 12,
+        "matched_phrase": "bert",
+        "start": 12,
+        "end": 16
+      },
+      "matched_topics": [
+        "bert",
+        "word_embeddings"
+      ],
+      "matches": [
+        {
+          "topic_id": "bert",
+          "topic_name": "BERT",
+          "alias_phrase": "BERT",
+          "normalized_alias": "bert",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 2,
+          "taxonomy_order": 12,
+          "matched_phrase": "bert",
+          "start": 12,
+          "end": 16
+        },
+        {
+          "topic_id": "word_embeddings",
+          "topic_name": "Word Embeddings",
+          "alias_phrase": "word vectors",
+          "normalized_alias": "word vectors",
+          "match_type": "alias",
+          "phrase_words": 2,
+          "specificity": 0,
+          "taxonomy_order": 6,
+          "matched_phrase": "word vector",
+          "start": 98,
+          "end": 109
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected bert: specificity 2, 1 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "bert",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P02",
+      "question_id": "Q11",
+      "question_number": 11,
+      "marks": 5,
+      "text": "Explain why a count-vector representation cannot distinguish 'students explain models' from 'models explain students' when their vocabularies match.",
+      "source_path": "data/question_papers/nlp_question_paper_02.md",
+      "source_char_start": 2379,
+      "source_char_end": 2530,
+      "normalized_text": "explain why a count vector representation cannot distinguish students explain models from models explain students when their vocabularies match",
+      "primary_topic": "bag_of_words",
+      "primary_match": {
+        "topic_id": "bag_of_words",
+        "topic_name": "Bag of Words",
+        "alias_phrase": "count vector",
+        "normalized_alias": "count vector",
+        "match_type": "alias",
+        "phrase_words": 2,
+        "specificity": 0,
+        "taxonomy_order": 2,
+        "matched_phrase": "count vector",
+        "start": 14,
+        "end": 26
+      },
+      "matched_topics": [
+        "bag_of_words"
+      ],
+      "matches": [
+        {
+          "topic_id": "bag_of_words",
+          "topic_name": "Bag of Words",
+          "alias_phrase": "count vector",
+          "normalized_alias": "count vector",
+          "match_type": "alias",
+          "phrase_words": 2,
+          "specificity": 0,
+          "taxonomy_order": 2,
+          "matched_phrase": "count vector",
+          "start": 14,
+          "end": 26
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected bag_of_words: specificity 0, 2 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "bag_of_words",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P02",
+      "question_id": "Q12",
+      "question_number": 12,
+      "marks": 5,
+      "text": "Illustrate Skip-Gram training by identifying how a target word is used to predict surrounding context words.",
+      "source_path": "data/question_papers/nlp_question_paper_02.md",
+      "source_char_start": 2547,
+      "source_char_end": 2657,
+      "normalized_text": "illustrate skip gram training by identifying how a target word is used to predict surrounding context words",
+      "primary_topic": "skip_gram",
+      "primary_match": {
+        "topic_id": "skip_gram",
+        "topic_name": "Skip-Gram",
+        "alias_phrase": "Skip-Gram",
+        "normalized_alias": "skip gram",
+        "match_type": "canonical",
+        "phrase_words": 2,
+        "specificity": 2,
+        "taxonomy_order": 9,
+        "matched_phrase": "skip gram",
+        "start": 11,
+        "end": 20
+      },
+      "matched_topics": [
+        "skip_gram"
+      ],
+      "matches": [
+        {
+          "topic_id": "skip_gram",
+          "topic_name": "Skip-Gram",
+          "alias_phrase": "Skip-Gram",
+          "normalized_alias": "skip gram",
+          "match_type": "canonical",
+          "phrase_words": 2,
+          "specificity": 2,
+          "taxonomy_order": 9,
+          "matched_phrase": "skip gram",
+          "start": 11,
+          "end": 20
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected skip_gram: specificity 2, 2 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "skip_gram",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P03",
+      "question_id": "Q1",
+      "question_number": 1,
+      "marks": 5,
+      "text": "Discuss how an encoder-decoder Transformer connects an input sequence with an output sequence while retaining distinct component roles.",
+      "source_path": "data/question_papers/nlp_question_paper_03.md",
+      "source_char_start": 1029,
+      "source_char_end": 1167,
+      "normalized_text": "discuss how an encoder decoder transformer connects an input sequence with an output sequence while retaining distinct component roles",
+      "primary_topic": "transformers",
+      "primary_match": {
+        "topic_id": "transformers",
+        "topic_name": "Transformers",
+        "alias_phrase": "Transformers",
+        "normalized_alias": "transformers",
+        "match_type": "canonical",
+        "phrase_words": 1,
+        "specificity": 0,
+        "taxonomy_order": 11,
+        "matched_phrase": "transformer",
+        "start": 31,
+        "end": 42
+      },
+      "matched_topics": [
+        "transformers"
+      ],
+      "matches": [
+        {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "Transformers",
+          "normalized_alias": "transformers",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformer",
+          "start": 31,
+          "end": 42
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected transformers: specificity 0, 1 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "transformers",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P03",
+      "question_id": "Q2",
+      "question_number": 2,
+      "marks": 5,
+      "text": "Discuss why a term present in every document receives zero IDF under the unsmoothed ln(N/DF) definition.",
+      "source_path": "data/question_papers/nlp_question_paper_03.md",
+      "source_char_start": 1183,
+      "source_char_end": 1290,
+      "normalized_text": "discuss why a term present in every document receives zero idf under the unsmoothed ln n df definition",
+      "primary_topic": "UNMATCHED",
+      "primary_match": null,
+      "matched_topics": [],
+      "matches": [],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "No canonical name/alias matched; not forced into a topic.",
+      "ground_truth_primary": "tf_idf",
+      "correct": false
+    },
+    {
+      "paper_id": "NLP-P03",
+      "question_id": "Q3",
+      "question_number": 3,
+      "marks": 5,
+      "text": "Compare a single static embedding for a word with its need for different meanings across sentence contexts.",
+      "source_path": "data/question_papers/nlp_question_paper_03.md",
+      "source_char_start": 1306,
+      "source_char_end": 1416,
+      "normalized_text": "compare a single static embedding for a word with its need for different meanings across sentence contexts",
+      "primary_topic": "UNMATCHED",
+      "primary_match": null,
+      "matched_topics": [],
+      "matches": [],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "No canonical name/alias matched; not forced into a topic.",
+      "ground_truth_primary": "word_embeddings",
+      "correct": false
+    },
+    {
+      "paper_id": "NLP-P03",
+      "question_id": "Q4",
+      "question_number": 4,
+      "marks": 5,
+      "text": "Discuss why the choice of context window influences the relationships learned by a word2vec model.",
+      "source_path": "data/question_papers/nlp_question_paper_03.md",
+      "source_char_start": 1432,
+      "source_char_end": 1533,
+      "normalized_text": "discuss why the choice of context window influences the relationships learned by a word2vec model",
+      "primary_topic": "word2vec",
+      "primary_match": {
+        "topic_id": "word2vec",
+        "topic_name": "Word2Vec",
+        "alias_phrase": "word2vec model",
+        "normalized_alias": "word2vec model",
+        "match_type": "alias",
+        "phrase_words": 2,
+        "specificity": 1,
+        "taxonomy_order": 7,
+        "matched_phrase": "word2vec model",
+        "start": 83,
+        "end": 97
+      },
+      "matched_topics": [
+        "word2vec"
+      ],
+      "matches": [
+        {
+          "topic_id": "word2vec",
+          "topic_name": "Word2Vec",
+          "alias_phrase": "word2vec model",
+          "normalized_alias": "word2vec model",
+          "match_type": "alias",
+          "phrase_words": 2,
+          "specificity": 1,
+          "taxonomy_order": 7,
+          "matched_phrase": "word2vec model",
+          "start": 83,
+          "end": 97
+        },
+        {
+          "topic_id": "word2vec",
+          "topic_name": "Word2Vec",
+          "alias_phrase": "Word2Vec",
+          "normalized_alias": "word2vec",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 1,
+          "taxonomy_order": 7,
+          "matched_phrase": "word2vec",
+          "start": 83,
+          "end": 91
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected word2vec: specificity 1, 2 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "word2vec",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P03",
+      "question_id": "Q5",
+      "question_number": 5,
+      "marks": 5,
+      "text": "Propose token boundaries for 'human-language methods in HCE-CSE603' and explain how handling hyphens changes the units represented.",
+      "source_path": "data/question_papers/nlp_question_paper_03.md",
+      "source_char_start": 1549,
+      "source_char_end": 1683,
+      "normalized_text": "propose token boundaries for human language methods in hce cse603 and explain how handling hyphens changes the units represented",
+      "primary_topic": "UNMATCHED",
+      "primary_match": null,
+      "matched_topics": [],
+      "matches": [],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "No canonical name/alias matched; not forced into a topic.",
+      "ground_truth_primary": "tokenization",
+      "correct": false
+    },
+    {
+      "paper_id": "NLP-P03",
+      "question_id": "Q6",
+      "question_number": 6,
+      "marks": 5,
+      "text": "Describe next-token prediction as a language-modeling objective and distinguish a likely continuation from a verified factual statement.",
+      "source_path": "data/question_papers/nlp_question_paper_03.md",
+      "source_char_start": 1699,
+      "source_char_end": 1838,
+      "normalized_text": "describe next token prediction as a language modeling objective and distinguish a likely continuation from a verified factual statement",
+      "primary_topic": "language_models",
+      "primary_match": {
+        "topic_id": "language_models",
+        "topic_name": "Language Models",
+        "alias_phrase": "next-token prediction",
+        "normalized_alias": "next token prediction",
+        "match_type": "alias",
+        "phrase_words": 3,
+        "specificity": 0,
+        "taxonomy_order": 13,
+        "matched_phrase": "next token prediction",
+        "start": 9,
+        "end": 30
+      },
+      "matched_topics": [
+        "language_models"
+      ],
+      "matches": [
+        {
+          "topic_id": "language_models",
+          "topic_name": "Language Models",
+          "alias_phrase": "next-token prediction",
+          "normalized_alias": "next token prediction",
+          "match_type": "alias",
+          "phrase_words": 3,
+          "specificity": 0,
+          "taxonomy_order": 13,
+          "matched_phrase": "next token prediction",
+          "start": 9,
+          "end": 30
+        },
+        {
+          "topic_id": "language_models",
+          "topic_name": "Language Models",
+          "alias_phrase": "language modeling",
+          "normalized_alias": "language modeling",
+          "match_type": "alias",
+          "phrase_words": 2,
+          "specificity": 0,
+          "taxonomy_order": 13,
+          "matched_phrase": "language modeling",
+          "start": 36,
+          "end": 53
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected language_models: specificity 0, 3 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "language_models",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P03",
+      "question_id": "Q7",
+      "question_number": 7,
+      "marks": 5,
+      "text": "Analyze the architectural purpose of multiple representation layers in a Transformer without equating layer count with guaranteed accuracy.",
+      "source_path": "data/question_papers/nlp_question_paper_03.md",
+      "source_char_start": 1854,
+      "source_char_end": 1996,
+      "normalized_text": "analyze the architectural purpose of multiple representation layers in a transformer without equating layer count with guaranteed accuracy",
+      "primary_topic": "transformers",
+      "primary_match": {
+        "topic_id": "transformers",
+        "topic_name": "Transformers",
+        "alias_phrase": "Transformers",
+        "normalized_alias": "transformers",
+        "match_type": "canonical",
+        "phrase_words": 1,
+        "specificity": 0,
+        "taxonomy_order": 11,
+        "matched_phrase": "transformer",
+        "start": 73,
+        "end": 84
+      },
+      "matched_topics": [
+        "transformers"
+      ],
+      "matches": [
+        {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "Transformers",
+          "normalized_alias": "transformers",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformer",
+          "start": 73,
+          "end": 84
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected transformers: specificity 0, 1 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "transformers",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P03",
+      "question_id": "Q8",
+      "question_number": 8,
+      "marks": 5,
+      "text": "Analyze how adding documents containing a previously rare term changes its inverse document frequency when that term becomes more prevalent.",
+      "source_path": "data/question_papers/nlp_question_paper_03.md",
+      "source_char_start": 2012,
+      "source_char_end": 2155,
+      "normalized_text": "analyze how adding documents containing a previously rare term changes its inverse document frequency when that term becomes more prevalent",
+      "primary_topic": "UNMATCHED",
+      "primary_match": null,
+      "matched_topics": [],
+      "matches": [],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "No canonical name/alias matched; not forced into a topic.",
+      "ground_truth_primary": "tf_idf",
+      "correct": false
+    },
+    {
+      "paper_id": "NLP-P03",
+      "question_id": "Q9",
+      "question_number": 9,
+      "marks": 5,
+      "text": "Compare a single attention head with multi-head attention in terms of the relationships represented.",
+      "source_path": "data/question_papers/nlp_question_paper_03.md",
+      "source_char_start": 2171,
+      "source_char_end": 2274,
+      "normalized_text": "compare a single attention head with multi head attention in terms of the relationships represented",
+      "primary_topic": "attention",
+      "primary_match": {
+        "topic_id": "attention",
+        "topic_name": "Attention",
+        "alias_phrase": "multi-head attention",
+        "normalized_alias": "multi head attention",
+        "match_type": "alias",
+        "phrase_words": 3,
+        "specificity": 1,
+        "taxonomy_order": 10,
+        "matched_phrase": "multi head attention",
+        "start": 37,
+        "end": 57
+      },
+      "matched_topics": [
+        "attention"
+      ],
+      "matches": [
+        {
+          "topic_id": "attention",
+          "topic_name": "Attention",
+          "alias_phrase": "multi-head attention",
+          "normalized_alias": "multi head attention",
+          "match_type": "alias",
+          "phrase_words": 3,
+          "specificity": 1,
+          "taxonomy_order": 10,
+          "matched_phrase": "multi head attention",
+          "start": 37,
+          "end": 57
+        },
+        {
+          "topic_id": "attention",
+          "topic_name": "Attention",
+          "alias_phrase": "Attention",
+          "normalized_alias": "attention",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 1,
+          "taxonomy_order": 10,
+          "matched_phrase": "attention",
+          "start": 17,
+          "end": 26
+        },
+        {
+          "topic_id": "attention",
+          "topic_name": "Attention",
+          "alias_phrase": "Attention",
+          "normalized_alias": "attention",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 1,
+          "taxonomy_order": 10,
+          "matched_phrase": "attention",
+          "start": 48,
+          "end": 57
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected attention: specificity 1, 3 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "attention",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P03",
+      "question_id": "Q10",
+      "question_number": 10,
+      "marks": 5,
+      "text": "Describe masked language modeling in Bidirectional Encoder Representations from Transformers and its connection to contextual learning.",
+      "source_path": "data/question_papers/nlp_question_paper_03.md",
+      "source_char_start": 2291,
+      "source_char_end": 2429,
+      "normalized_text": "describe masked language modeling in bidirectional encoder representations from transformers and its connection to contextual learning",
+      "primary_topic": "bert",
+      "primary_match": {
+        "topic_id": "bert",
+        "topic_name": "BERT",
+        "alias_phrase": "bidirectional encoder representations from transformers",
+        "normalized_alias": "bidirectional encoder representations from transformers",
+        "match_type": "alias",
+        "phrase_words": 5,
+        "specificity": 2,
+        "taxonomy_order": 12,
+        "matched_phrase": "bidirectional encoder representations from transformers",
+        "start": 37,
+        "end": 92
+      },
+      "matched_topics": [
+        "bert",
+        "language_models",
+        "transformers"
+      ],
+      "matches": [
+        {
+          "topic_id": "bert",
+          "topic_name": "BERT",
+          "alias_phrase": "bidirectional encoder representations from transformers",
+          "normalized_alias": "bidirectional encoder representations from transformers",
+          "match_type": "alias",
+          "phrase_words": 5,
+          "specificity": 2,
+          "taxonomy_order": 12,
+          "matched_phrase": "bidirectional encoder representations from transformers",
+          "start": 37,
+          "end": 92
+        },
+        {
+          "topic_id": "language_models",
+          "topic_name": "Language Models",
+          "alias_phrase": "language modeling",
+          "normalized_alias": "language modeling",
+          "match_type": "alias",
+          "phrase_words": 2,
+          "specificity": 0,
+          "taxonomy_order": 13,
+          "matched_phrase": "language modeling",
+          "start": 16,
+          "end": 33
+        },
+        {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "Transformers",
+          "normalized_alias": "transformers",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformers",
+          "start": 80,
+          "end": 92
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected bert: specificity 2, 5 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "bert",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P03",
+      "question_id": "Q11",
+      "question_number": 11,
+      "marks": 5,
+      "text": "List the bigrams in 'students study natural language' and explain what local order they retain compared with individual word counts.",
+      "source_path": "data/question_papers/nlp_question_paper_03.md",
+      "source_char_start": 2446,
+      "source_char_end": 2581,
+      "normalized_text": "list the bigrams in students study natural language and explain what local order they retain compared with individual word counts",
+      "primary_topic": "n_grams",
+      "primary_match": {
+        "topic_id": "n_grams",
+        "topic_name": "N-Grams",
+        "alias_phrase": "bigram",
+        "normalized_alias": "bigram",
+        "match_type": "alias",
+        "phrase_words": 1,
+        "specificity": 0,
+        "taxonomy_order": 3,
+        "matched_phrase": "bigrams",
+        "start": 9,
+        "end": 16
+      },
+      "matched_topics": [
+        "n_grams"
+      ],
+      "matches": [
+        {
+          "topic_id": "n_grams",
+          "topic_name": "N-Grams",
+          "alias_phrase": "bigram",
+          "normalized_alias": "bigram",
+          "match_type": "alias",
+          "phrase_words": 1,
+          "specificity": 0,
+          "taxonomy_order": 3,
+          "matched_phrase": "bigrams",
+          "start": 9,
+          "end": 16
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected n_grams: specificity 0, 1 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "n_grams",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P03",
+      "question_id": "Q12",
+      "question_number": 12,
+      "marks": 5,
+      "text": "Explain how two sentences with different vocabulary may express related meaning, and state why a numerical similarity score still needs interpretation.",
+      "source_path": "data/question_papers/nlp_question_paper_03.md",
+      "source_char_start": 2598,
+      "source_char_end": 2751,
+      "normalized_text": "explain how two sentences with different vocabulary may express related meaning and state why a numerical similarity score still needs interpretation",
+      "primary_topic": "UNMATCHED",
+      "primary_match": null,
+      "matched_topics": [],
+      "matches": [],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "No canonical name/alias matched; not forced into a topic.",
+      "ground_truth_primary": "semantic_similarity",
+      "correct": false
+    },
+    {
+      "paper_id": "NLP-P04",
+      "question_id": "Q1",
+      "question_number": 1,
+      "marks": 5,
+      "text": "Differentiate an encoder-only Transformer from an encoder-decoder arrangement in terms of how each uses the input representation.",
+      "source_path": "data/question_papers/nlp_question_paper_04.md",
+      "source_char_start": 1029,
+      "source_char_end": 1161,
+      "normalized_text": "differentiate an encoder only transformer from an encoder decoder arrangement in terms of how each uses the input representation",
+      "primary_topic": "transformers",
+      "primary_match": {
+        "topic_id": "transformers",
+        "topic_name": "Transformers",
+        "alias_phrase": "Transformers",
+        "normalized_alias": "transformers",
+        "match_type": "canonical",
+        "phrase_words": 1,
+        "specificity": 0,
+        "taxonomy_order": 11,
+        "matched_phrase": "transformer",
+        "start": 30,
+        "end": 41
+      },
+      "matched_topics": [
+        "transformers"
+      ],
+      "matches": [
+        {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "Transformers",
+          "normalized_alias": "transformers",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformer",
+          "start": 30,
+          "end": 41
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected transformers: specificity 0, 1 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "transformers",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P04",
+      "question_id": "Q2",
+      "question_number": 2,
+      "marks": 5,
+      "text": "Describe the role of term weighting in reducing the influence of common collection-wide words, using TF-IDF as the example.",
+      "source_path": "data/question_papers/nlp_question_paper_04.md",
+      "source_char_start": 1177,
+      "source_char_end": 1303,
+      "normalized_text": "describe the role of term weighting in reducing the influence of common collection wide words using tf idf as the example",
+      "primary_topic": "tf_idf",
+      "primary_match": {
+        "topic_id": "tf_idf",
+        "topic_name": "TF-IDF",
+        "alias_phrase": "term weighting",
+        "normalized_alias": "term weighting",
+        "match_type": "alias",
+        "phrase_words": 2,
+        "specificity": 0,
+        "taxonomy_order": 4,
+        "matched_phrase": "term weighting",
+        "start": 21,
+        "end": 35
+      },
+      "matched_topics": [
+        "tf_idf"
+      ],
+      "matches": [
+        {
+          "topic_id": "tf_idf",
+          "topic_name": "TF-IDF",
+          "alias_phrase": "term weighting",
+          "normalized_alias": "term weighting",
+          "match_type": "alias",
+          "phrase_words": 2,
+          "specificity": 0,
+          "taxonomy_order": 4,
+          "matched_phrase": "term weighting",
+          "start": 21,
+          "end": 35
+        },
+        {
+          "topic_id": "tf_idf",
+          "topic_name": "TF-IDF",
+          "alias_phrase": "TF-IDF",
+          "normalized_alias": "tf idf",
+          "match_type": "canonical",
+          "phrase_words": 2,
+          "specificity": 0,
+          "taxonomy_order": 4,
+          "matched_phrase": "tf idf",
+          "start": 100,
+          "end": 106
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected tf_idf: specificity 0, 2 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "tf_idf",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P04",
+      "question_id": "Q3",
+      "question_number": 3,
+      "marks": 5,
+      "text": "Illustrate how word-vector geometry can express a relationship between vocabulary items, and state a limitation of interpreting closeness.",
+      "source_path": "data/question_papers/nlp_question_paper_04.md",
+      "source_char_start": 1319,
+      "source_char_end": 1460,
+      "normalized_text": "illustrate how word vector geometry can express a relationship between vocabulary items and state a limitation of interpreting closeness",
+      "primary_topic": "word_embeddings",
+      "primary_match": {
+        "topic_id": "word_embeddings",
+        "topic_name": "Word Embeddings",
+        "alias_phrase": "word vectors",
+        "normalized_alias": "word vectors",
+        "match_type": "alias",
+        "phrase_words": 2,
+        "specificity": 0,
+        "taxonomy_order": 6,
+        "matched_phrase": "word vector",
+        "start": 15,
+        "end": 26
+      },
+      "matched_topics": [
+        "word_embeddings"
+      ],
+      "matches": [
+        {
+          "topic_id": "word_embeddings",
+          "topic_name": "Word Embeddings",
+          "alias_phrase": "word vectors",
+          "normalized_alias": "word vectors",
+          "match_type": "alias",
+          "phrase_words": 2,
+          "specificity": 0,
+          "taxonomy_order": 6,
+          "matched_phrase": "word vector",
+          "start": 15,
+          "end": 26
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected word_embeddings: specificity 0, 2 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "word_embeddings",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P04",
+      "question_id": "Q4",
+      "question_number": 4,
+      "marks": 5,
+      "text": "Describe how Word2Vec training differs from constructing a term-count vector directly from a document.",
+      "source_path": "data/question_papers/nlp_question_paper_04.md",
+      "source_char_start": 1476,
+      "source_char_end": 1581,
+      "normalized_text": "describe how word2vec training differs from constructing a term count vector directly from a document",
+      "primary_topic": "word2vec",
+      "primary_match": {
+        "topic_id": "word2vec",
+        "topic_name": "Word2Vec",
+        "alias_phrase": "word2vec training",
+        "normalized_alias": "word2vec training",
+        "match_type": "alias",
+        "phrase_words": 2,
+        "specificity": 1,
+        "taxonomy_order": 7,
+        "matched_phrase": "word2vec training",
+        "start": 13,
+        "end": 30
+      },
+      "matched_topics": [
+        "word2vec",
+        "bag_of_words"
+      ],
+      "matches": [
+        {
+          "topic_id": "word2vec",
+          "topic_name": "Word2Vec",
+          "alias_phrase": "word2vec training",
+          "normalized_alias": "word2vec training",
+          "match_type": "alias",
+          "phrase_words": 2,
+          "specificity": 1,
+          "taxonomy_order": 7,
+          "matched_phrase": "word2vec training",
+          "start": 13,
+          "end": 30
+        },
+        {
+          "topic_id": "word2vec",
+          "topic_name": "Word2Vec",
+          "alias_phrase": "Word2Vec",
+          "normalized_alias": "word2vec",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 1,
+          "taxonomy_order": 7,
+          "matched_phrase": "word2vec",
+          "start": 13,
+          "end": 21
+        },
+        {
+          "topic_id": "bag_of_words",
+          "topic_name": "Bag of Words",
+          "alias_phrase": "count vector",
+          "normalized_alias": "count vector",
+          "match_type": "alias",
+          "phrase_words": 2,
+          "specificity": 0,
+          "taxonomy_order": 2,
+          "matched_phrase": "count vector",
+          "start": 64,
+          "end": 76
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected word2vec: specificity 1, 2 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "word2vec",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P04",
+      "question_id": "Q5",
+      "question_number": 5,
+      "marks": 5,
+      "text": "Differentiate word segmentation from merely splitting a string at spaces, using punctuation and a course code as examples.",
+      "source_path": "data/question_papers/nlp_question_paper_04.md",
+      "source_char_start": 1597,
+      "source_char_end": 1722,
+      "normalized_text": "differentiate word segmentation from merely splitting a string at spaces using punctuation and a course code as examples",
+      "primary_topic": "tokenization",
+      "primary_match": {
+        "topic_id": "tokenization",
+        "topic_name": "Tokenization",
+        "alias_phrase": "word segmentation",
+        "normalized_alias": "word segmentation",
+        "match_type": "alias",
+        "phrase_words": 2,
+        "specificity": 0,
+        "taxonomy_order": 1,
+        "matched_phrase": "word segmentation",
+        "start": 14,
+        "end": 31
+      },
+      "matched_topics": [
+        "tokenization"
+      ],
+      "matches": [
+        {
+          "topic_id": "tokenization",
+          "topic_name": "Tokenization",
+          "alias_phrase": "word segmentation",
+          "normalized_alias": "word segmentation",
+          "match_type": "alias",
+          "phrase_words": 2,
+          "specificity": 0,
+          "taxonomy_order": 1,
+          "matched_phrase": "word segmentation",
+          "start": 14,
+          "end": 31
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected tokenization: specificity 0, 2 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "tokenization",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P04",
+      "question_id": "Q6",
+      "question_number": 6,
+      "marks": 5,
+      "text": "Compare predicting a missing token from surrounding context with predicting the next token from preceding context as language-model objectives.",
+      "source_path": "data/question_papers/nlp_question_paper_04.md",
+      "source_char_start": 1738,
+      "source_char_end": 1884,
+      "normalized_text": "compare predicting a missing token from surrounding context with predicting the next token from preceding context as language model objectives",
+      "primary_topic": "language_models",
+      "primary_match": {
+        "topic_id": "language_models",
+        "topic_name": "Language Models",
+        "alias_phrase": "Language Models",
+        "normalized_alias": "language models",
+        "match_type": "canonical",
+        "phrase_words": 2,
+        "specificity": 0,
+        "taxonomy_order": 13,
+        "matched_phrase": "language model",
+        "start": 117,
+        "end": 131
+      },
+      "matched_topics": [
+        "language_models"
+      ],
+      "matches": [
+        {
+          "topic_id": "language_models",
+          "topic_name": "Language Models",
+          "alias_phrase": "Language Models",
+          "normalized_alias": "language models",
+          "match_type": "canonical",
+          "phrase_words": 2,
+          "specificity": 0,
+          "taxonomy_order": 13,
+          "matched_phrase": "language model",
+          "start": 117,
+          "end": 131
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected language_models: specificity 0, 2 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "language_models",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P04",
+      "question_id": "Q7",
+      "question_number": 7,
+      "marks": 5,
+      "text": "Describe how the Transformer model combines positional information with interactions among tokens to represent a sentence.",
+      "source_path": "data/question_papers/nlp_question_paper_04.md",
+      "source_char_start": 1900,
+      "source_char_end": 2025,
+      "normalized_text": "describe how the transformer model combines positional information with interactions among tokens to represent a sentence",
+      "primary_topic": "transformers",
+      "primary_match": {
+        "topic_id": "transformers",
+        "topic_name": "Transformers",
+        "alias_phrase": "transformer model",
+        "normalized_alias": "transformer model",
+        "match_type": "alias",
+        "phrase_words": 2,
+        "specificity": 0,
+        "taxonomy_order": 11,
+        "matched_phrase": "transformer model",
+        "start": 17,
+        "end": 34
+      },
+      "matched_topics": [
+        "transformers"
+      ],
+      "matches": [
+        {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "transformer model",
+          "normalized_alias": "transformer model",
+          "match_type": "alias",
+          "phrase_words": 2,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformer model",
+          "start": 17,
+          "end": 34
+        },
+        {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "Transformers",
+          "normalized_alias": "transformers",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformer",
+          "start": 17,
+          "end": 28
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected transformers: specificity 0, 2 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "transformers",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P04",
+      "question_id": "Q8",
+      "question_number": 8,
+      "marks": 5,
+      "text": "Describe why distributed representations share information across vocabulary items rather than treating every word as an independent symbolic index.",
+      "source_path": "data/question_papers/nlp_question_paper_04.md",
+      "source_char_start": 2041,
+      "source_char_end": 2192,
+      "normalized_text": "describe why distributed representations share information across vocabulary items rather than treating every word as an independent symbolic index",
+      "primary_topic": "word_embeddings",
+      "primary_match": {
+        "topic_id": "word_embeddings",
+        "topic_name": "Word Embeddings",
+        "alias_phrase": "distributed representation",
+        "normalized_alias": "distributed representation",
+        "match_type": "alias",
+        "phrase_words": 2,
+        "specificity": 0,
+        "taxonomy_order": 6,
+        "matched_phrase": "distributed representations",
+        "start": 13,
+        "end": 40
+      },
+      "matched_topics": [
+        "word_embeddings"
+      ],
+      "matches": [
+        {
+          "topic_id": "word_embeddings",
+          "topic_name": "Word Embeddings",
+          "alias_phrase": "distributed representation",
+          "normalized_alias": "distributed representation",
+          "match_type": "alias",
+          "phrase_words": 2,
+          "specificity": 0,
+          "taxonomy_order": 6,
+          "matched_phrase": "distributed representations",
+          "start": 13,
+          "end": 40
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected word_embeddings: specificity 0, 2 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "word_embeddings",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P04",
+      "question_id": "Q9",
+      "question_number": 9,
+      "marks": 5,
+      "text": "Analyze how relevance-weighted combinations of token information can relate distant positions without carrying context through every intervening step.",
+      "source_path": "data/question_papers/nlp_question_paper_04.md",
+      "source_char_start": 2208,
+      "source_char_end": 2361,
+      "normalized_text": "analyze how relevance weighted combinations of token information can relate distant positions without carrying context through every intervening step",
+      "primary_topic": "UNMATCHED",
+      "primary_match": null,
+      "matched_topics": [],
+      "matches": [],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "No canonical name/alias matched; not forced into a topic.",
+      "ground_truth_primary": "attention",
+      "correct": false
+    },
+    {
+      "paper_id": "NLP-P04",
+      "question_id": "Q10",
+      "question_number": 10,
+      "marks": 5,
+      "text": "Discuss the encoder-oriented role of a BERT model without assuming that it is an unrestricted next-token text generator.",
+      "source_path": "data/question_papers/nlp_question_paper_04.md",
+      "source_char_start": 2378,
+      "source_char_end": 2501,
+      "normalized_text": "discuss the encoder oriented role of a bert model without assuming that it is an unrestricted next token text generator",
+      "primary_topic": "bert",
+      "primary_match": {
+        "topic_id": "bert",
+        "topic_name": "BERT",
+        "alias_phrase": "BERT",
+        "normalized_alias": "bert",
+        "match_type": "canonical",
+        "phrase_words": 1,
+        "specificity": 2,
+        "taxonomy_order": 12,
+        "matched_phrase": "bert",
+        "start": 39,
+        "end": 43
+      },
+      "matched_topics": [
+        "bert"
+      ],
+      "matches": [
+        {
+          "topic_id": "bert",
+          "topic_name": "BERT",
+          "alias_phrase": "BERT",
+          "normalized_alias": "bert",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 2,
+          "taxonomy_order": 12,
+          "matched_phrase": "bert",
+          "start": 39,
+          "end": 43
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected bert: specificity 2, 1 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "bert",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P04",
+      "question_id": "Q11",
+      "question_number": 11,
+      "marks": 5,
+      "text": "Compare unigram and trigram representations in terms of context retained and the number of possible observed sequences.",
+      "source_path": "data/question_papers/nlp_question_paper_04.md",
+      "source_char_start": 2518,
+      "source_char_end": 2640,
+      "normalized_text": "compare unigram and trigram representations in terms of context retained and the number of possible observed sequences",
+      "primary_topic": "n_grams",
+      "primary_match": {
+        "topic_id": "n_grams",
+        "topic_name": "N-Grams",
+        "alias_phrase": "trigram",
+        "normalized_alias": "trigram",
+        "match_type": "alias",
+        "phrase_words": 1,
+        "specificity": 0,
+        "taxonomy_order": 3,
+        "matched_phrase": "trigram",
+        "start": 20,
+        "end": 27
+      },
+      "matched_topics": [
+        "n_grams"
+      ],
+      "matches": [
+        {
+          "topic_id": "n_grams",
+          "topic_name": "N-Grams",
+          "alias_phrase": "trigram",
+          "normalized_alias": "trigram",
+          "match_type": "alias",
+          "phrase_words": 1,
+          "specificity": 0,
+          "taxonomy_order": 3,
+          "matched_phrase": "trigram",
+          "start": 20,
+          "end": 27
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected n_grams: specificity 0, 1 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "n_grams",
+      "correct": true
+    },
+    {
+      "paper_id": "NLP-P04",
+      "question_id": "Q12",
+      "question_number": 12,
+      "marks": 5,
+      "text": "Describe meaning-based retrieval of a course description when the query uses a paraphrase rather than the course's exact title.",
+      "source_path": "data/question_papers/nlp_question_paper_04.md",
+      "source_char_start": 2657,
+      "source_char_end": 2786,
+      "normalized_text": "describe meaning based retrieval of a course description when the query uses a paraphrase rather than the course s exact title",
+      "primary_topic": "semantic_search",
+      "primary_match": {
+        "topic_id": "semantic_search",
+        "topic_name": "Semantic Search",
+        "alias_phrase": "meaning-based retrieval",
+        "normalized_alias": "meaning based retrieval",
+        "match_type": "alias",
+        "phrase_words": 3,
+        "specificity": 0,
+        "taxonomy_order": 15,
+        "matched_phrase": "meaning based retrieval",
+        "start": 9,
+        "end": 32
+      },
+      "matched_topics": [
+        "semantic_search"
+      ],
+      "matches": [
+        {
+          "topic_id": "semantic_search",
+          "topic_name": "Semantic Search",
+          "alias_phrase": "meaning-based retrieval",
+          "normalized_alias": "meaning based retrieval",
+          "match_type": "alias",
+          "phrase_words": 3,
+          "specificity": 0,
+          "taxonomy_order": 15,
+          "matched_phrase": "meaning based retrieval",
+          "start": 9,
+          "end": 32
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected semantic_search: specificity 0, 3 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated.",
+      "ground_truth_primary": "semantic_search",
+      "correct": true
+    }
+  ],
+  "transformer_filter": [
+    {
+      "paper_id": "NLP-P01",
+      "question_id": "Q1",
+      "question_number": 1,
+      "marks": 5,
+      "text": "Describe the encoder and decoder roles in a Transformer architecture, emphasizing how information passes between its main components.",
+      "source_path": "data/question_papers/nlp_question_paper_01.md",
+      "source_char_start": 1029,
+      "source_char_end": 1165,
+      "normalized_text": "describe the encoder and decoder roles in a transformer architecture emphasizing how information passes between its main components",
+      "primary_topic": "transformers",
+      "primary_match": {
+        "topic_id": "transformers",
+        "topic_name": "Transformers",
+        "alias_phrase": "transformer architecture",
+        "normalized_alias": "transformer architecture",
+        "match_type": "alias",
+        "phrase_words": 2,
+        "specificity": 0,
+        "taxonomy_order": 11,
+        "matched_phrase": "transformer architecture",
+        "start": 44,
+        "end": 68
+      },
+      "matched_topics": [
+        "transformers"
+      ],
+      "matches": [
+        {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "transformer architecture",
+          "normalized_alias": "transformer architecture",
+          "match_type": "alias",
+          "phrase_words": 2,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformer architecture",
+          "start": 44,
+          "end": 68
+        },
+        {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "Transformers",
+          "normalized_alias": "transformers",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformer",
+          "start": 44,
+          "end": 55
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected transformers: specificity 0, 2 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated."
+    },
+    {
+      "paper_id": "NLP-P01",
+      "question_id": "Q7",
+      "question_number": 7,
+      "marks": 5,
+      "text": "Explain why positional information is needed in a Transformer when token representations are processed without a recurrent chain.",
+      "source_path": "data/question_papers/nlp_question_paper_01.md",
+      "source_char_start": 1868,
+      "source_char_end": 2000,
+      "normalized_text": "explain why positional information is needed in a transformer when token representations are processed without a recurrent chain",
+      "primary_topic": "transformers",
+      "primary_match": {
+        "topic_id": "transformers",
+        "topic_name": "Transformers",
+        "alias_phrase": "Transformers",
+        "normalized_alias": "transformers",
+        "match_type": "canonical",
+        "phrase_words": 1,
+        "specificity": 0,
+        "taxonomy_order": 11,
+        "matched_phrase": "transformer",
+        "start": 50,
+        "end": 61
+      },
+      "matched_topics": [
+        "transformers"
+      ],
+      "matches": [
+        {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "Transformers",
+          "normalized_alias": "transformers",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformer",
+          "start": 50,
+          "end": 61
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected transformers: specificity 0, 1 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated."
+    },
+    {
+      "paper_id": "NLP-P02",
+      "question_id": "Q1",
+      "question_number": 1,
+      "marks": 5,
+      "text": "Compare Transformer processing with recurrent processing in terms of token relationships and opportunities for parallel computation.",
+      "source_path": "data/question_papers/nlp_question_paper_02.md",
+      "source_char_start": 1029,
+      "source_char_end": 1164,
+      "normalized_text": "compare transformer processing with recurrent processing in terms of token relationships and opportunities for parallel computation",
+      "primary_topic": "transformers",
+      "primary_match": {
+        "topic_id": "transformers",
+        "topic_name": "Transformers",
+        "alias_phrase": "Transformers",
+        "normalized_alias": "transformers",
+        "match_type": "canonical",
+        "phrase_words": 1,
+        "specificity": 0,
+        "taxonomy_order": 11,
+        "matched_phrase": "transformer",
+        "start": 8,
+        "end": 19
+      },
+      "matched_topics": [
+        "transformers"
+      ],
+      "matches": [
+        {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "Transformers",
+          "normalized_alias": "transformers",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformer",
+          "start": 8,
+          "end": 19
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected transformers: specificity 0, 1 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated."
+    },
+    {
+      "paper_id": "NLP-P02",
+      "question_id": "Q7",
+      "question_number": 7,
+      "marks": 5,
+      "text": "Illustrate the role of residual connections and feed-forward blocks in a Transformer layer.",
+      "source_path": "data/question_papers/nlp_question_paper_02.md",
+      "source_char_start": 1872,
+      "source_char_end": 1966,
+      "normalized_text": "illustrate the role of residual connections and feed forward blocks in a transformer layer",
+      "primary_topic": "transformers",
+      "primary_match": {
+        "topic_id": "transformers",
+        "topic_name": "Transformers",
+        "alias_phrase": "Transformers",
+        "normalized_alias": "transformers",
+        "match_type": "canonical",
+        "phrase_words": 1,
+        "specificity": 0,
+        "taxonomy_order": 11,
+        "matched_phrase": "transformer",
+        "start": 73,
+        "end": 84
+      },
+      "matched_topics": [
+        "transformers"
+      ],
+      "matches": [
+        {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "Transformers",
+          "normalized_alias": "transformers",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformer",
+          "start": 73,
+          "end": 84
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected transformers: specificity 0, 1 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated."
+    },
+    {
+      "paper_id": "NLP-P03",
+      "question_id": "Q1",
+      "question_number": 1,
+      "marks": 5,
+      "text": "Discuss how an encoder-decoder Transformer connects an input sequence with an output sequence while retaining distinct component roles.",
+      "source_path": "data/question_papers/nlp_question_paper_03.md",
+      "source_char_start": 1029,
+      "source_char_end": 1167,
+      "normalized_text": "discuss how an encoder decoder transformer connects an input sequence with an output sequence while retaining distinct component roles",
+      "primary_topic": "transformers",
+      "primary_match": {
+        "topic_id": "transformers",
+        "topic_name": "Transformers",
+        "alias_phrase": "Transformers",
+        "normalized_alias": "transformers",
+        "match_type": "canonical",
+        "phrase_words": 1,
+        "specificity": 0,
+        "taxonomy_order": 11,
+        "matched_phrase": "transformer",
+        "start": 31,
+        "end": 42
+      },
+      "matched_topics": [
+        "transformers"
+      ],
+      "matches": [
+        {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "Transformers",
+          "normalized_alias": "transformers",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformer",
+          "start": 31,
+          "end": 42
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected transformers: specificity 0, 1 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated."
+    },
+    {
+      "paper_id": "NLP-P03",
+      "question_id": "Q7",
+      "question_number": 7,
+      "marks": 5,
+      "text": "Analyze the architectural purpose of multiple representation layers in a Transformer without equating layer count with guaranteed accuracy.",
+      "source_path": "data/question_papers/nlp_question_paper_03.md",
+      "source_char_start": 1854,
+      "source_char_end": 1996,
+      "normalized_text": "analyze the architectural purpose of multiple representation layers in a transformer without equating layer count with guaranteed accuracy",
+      "primary_topic": "transformers",
+      "primary_match": {
+        "topic_id": "transformers",
+        "topic_name": "Transformers",
+        "alias_phrase": "Transformers",
+        "normalized_alias": "transformers",
+        "match_type": "canonical",
+        "phrase_words": 1,
+        "specificity": 0,
+        "taxonomy_order": 11,
+        "matched_phrase": "transformer",
+        "start": 73,
+        "end": 84
+      },
+      "matched_topics": [
+        "transformers"
+      ],
+      "matches": [
+        {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "Transformers",
+          "normalized_alias": "transformers",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformer",
+          "start": 73,
+          "end": 84
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected transformers: specificity 0, 1 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated."
+    },
+    {
+      "paper_id": "NLP-P04",
+      "question_id": "Q1",
+      "question_number": 1,
+      "marks": 5,
+      "text": "Differentiate an encoder-only Transformer from an encoder-decoder arrangement in terms of how each uses the input representation.",
+      "source_path": "data/question_papers/nlp_question_paper_04.md",
+      "source_char_start": 1029,
+      "source_char_end": 1161,
+      "normalized_text": "differentiate an encoder only transformer from an encoder decoder arrangement in terms of how each uses the input representation",
+      "primary_topic": "transformers",
+      "primary_match": {
+        "topic_id": "transformers",
+        "topic_name": "Transformers",
+        "alias_phrase": "Transformers",
+        "normalized_alias": "transformers",
+        "match_type": "canonical",
+        "phrase_words": 1,
+        "specificity": 0,
+        "taxonomy_order": 11,
+        "matched_phrase": "transformer",
+        "start": 30,
+        "end": 41
+      },
+      "matched_topics": [
+        "transformers"
+      ],
+      "matches": [
+        {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "Transformers",
+          "normalized_alias": "transformers",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformer",
+          "start": 30,
+          "end": 41
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected transformers: specificity 0, 1 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated."
+    },
+    {
+      "paper_id": "NLP-P04",
+      "question_id": "Q7",
+      "question_number": 7,
+      "marks": 5,
+      "text": "Describe how the Transformer model combines positional information with interactions among tokens to represent a sentence.",
+      "source_path": "data/question_papers/nlp_question_paper_04.md",
+      "source_char_start": 1900,
+      "source_char_end": 2025,
+      "normalized_text": "describe how the transformer model combines positional information with interactions among tokens to represent a sentence",
+      "primary_topic": "transformers",
+      "primary_match": {
+        "topic_id": "transformers",
+        "topic_name": "Transformers",
+        "alias_phrase": "transformer model",
+        "normalized_alias": "transformer model",
+        "match_type": "alias",
+        "phrase_words": 2,
+        "specificity": 0,
+        "taxonomy_order": 11,
+        "matched_phrase": "transformer model",
+        "start": 17,
+        "end": 34
+      },
+      "matched_topics": [
+        "transformers"
+      ],
+      "matches": [
+        {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "transformer model",
+          "normalized_alias": "transformer model",
+          "match_type": "alias",
+          "phrase_words": 2,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformer model",
+          "start": 17,
+          "end": 34
+        },
+        {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "Transformers",
+          "normalized_alias": "transformers",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformer",
+          "start": 17,
+          "end": 28
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected transformers: specificity 0, 2 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated."
+    }
+  ],
+  "attention_filter": [
+    {
+      "paper_id": "NLP-P01",
+      "question_id": "Q4",
+      "question_number": 4,
+      "marks": 5,
+      "text": "Explain how self-attention assigns different relevance to tokens when constructing a contextual representation.",
+      "source_path": "data/question_papers/nlp_question_paper_01.md",
+      "source_char_start": 1453,
+      "source_char_end": 1567,
+      "normalized_text": "explain how self attention assigns different relevance to tokens when constructing a contextual representation",
+      "primary_topic": "attention",
+      "primary_match": {
+        "topic_id": "attention",
+        "topic_name": "Attention",
+        "alias_phrase": "self-attention",
+        "normalized_alias": "self attention",
+        "match_type": "alias",
+        "phrase_words": 2,
+        "specificity": 1,
+        "taxonomy_order": 10,
+        "matched_phrase": "self attention",
+        "start": 12,
+        "end": 26
+      },
+      "matched_topics": [
+        "attention"
+      ],
+      "matches": [
+        {
+          "topic_id": "attention",
+          "topic_name": "Attention",
+          "alias_phrase": "self-attention",
+          "normalized_alias": "self attention",
+          "match_type": "alias",
+          "phrase_words": 2,
+          "specificity": 1,
+          "taxonomy_order": 10,
+          "matched_phrase": "self attention",
+          "start": 12,
+          "end": 26
+        },
+        {
+          "topic_id": "attention",
+          "topic_name": "Attention",
+          "alias_phrase": "Attention",
+          "normalized_alias": "attention",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 1,
+          "taxonomy_order": 10,
+          "matched_phrase": "attention",
+          "start": 17,
+          "end": 26
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected attention: specificity 1, 2 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated."
+    },
+    {
+      "paper_id": "NLP-P02",
+      "question_id": "Q9",
+      "question_number": 9,
+      "marks": 5,
+      "text": "Illustrate the roles of queries, keys and values in an attention mechanism for a short sequence.",
+      "source_path": "data/question_papers/nlp_question_paper_02.md",
+      "source_char_start": 2133,
+      "source_char_end": 2232,
+      "normalized_text": "illustrate the roles of queries keys and values in an attention mechanism for a short sequence",
+      "primary_topic": "attention",
+      "primary_match": {
+        "topic_id": "attention",
+        "topic_name": "Attention",
+        "alias_phrase": "attention mechanism",
+        "normalized_alias": "attention mechanism",
+        "match_type": "alias",
+        "phrase_words": 2,
+        "specificity": 1,
+        "taxonomy_order": 10,
+        "matched_phrase": "attention mechanism",
+        "start": 54,
+        "end": 73
+      },
+      "matched_topics": [
+        "attention"
+      ],
+      "matches": [
+        {
+          "topic_id": "attention",
+          "topic_name": "Attention",
+          "alias_phrase": "attention mechanism",
+          "normalized_alias": "attention mechanism",
+          "match_type": "alias",
+          "phrase_words": 2,
+          "specificity": 1,
+          "taxonomy_order": 10,
+          "matched_phrase": "attention mechanism",
+          "start": 54,
+          "end": 73
+        },
+        {
+          "topic_id": "attention",
+          "topic_name": "Attention",
+          "alias_phrase": "Attention",
+          "normalized_alias": "attention",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 1,
+          "taxonomy_order": 10,
+          "matched_phrase": "attention",
+          "start": 54,
+          "end": 63
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected attention: specificity 1, 2 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated."
+    },
+    {
+      "paper_id": "NLP-P03",
+      "question_id": "Q9",
+      "question_number": 9,
+      "marks": 5,
+      "text": "Compare a single attention head with multi-head attention in terms of the relationships represented.",
+      "source_path": "data/question_papers/nlp_question_paper_03.md",
+      "source_char_start": 2171,
+      "source_char_end": 2274,
+      "normalized_text": "compare a single attention head with multi head attention in terms of the relationships represented",
+      "primary_topic": "attention",
+      "primary_match": {
+        "topic_id": "attention",
+        "topic_name": "Attention",
+        "alias_phrase": "multi-head attention",
+        "normalized_alias": "multi head attention",
+        "match_type": "alias",
+        "phrase_words": 3,
+        "specificity": 1,
+        "taxonomy_order": 10,
+        "matched_phrase": "multi head attention",
+        "start": 37,
+        "end": 57
+      },
+      "matched_topics": [
+        "attention"
+      ],
+      "matches": [
+        {
+          "topic_id": "attention",
+          "topic_name": "Attention",
+          "alias_phrase": "multi-head attention",
+          "normalized_alias": "multi head attention",
+          "match_type": "alias",
+          "phrase_words": 3,
+          "specificity": 1,
+          "taxonomy_order": 10,
+          "matched_phrase": "multi head attention",
+          "start": 37,
+          "end": 57
+        },
+        {
+          "topic_id": "attention",
+          "topic_name": "Attention",
+          "alias_phrase": "Attention",
+          "normalized_alias": "attention",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 1,
+          "taxonomy_order": 10,
+          "matched_phrase": "attention",
+          "start": 17,
+          "end": 26
+        },
+        {
+          "topic_id": "attention",
+          "topic_name": "Attention",
+          "alias_phrase": "Attention",
+          "normalized_alias": "attention",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 1,
+          "taxonomy_order": 10,
+          "matched_phrase": "attention",
+          "start": 48,
+          "end": 57
+        }
+      ],
+      "ambiguous_candidates": [],
+      "is_ambiguous": false,
+      "reason": "Selected attention: specificity 1, 3 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated."
+    }
+  ],
+  "timings_seconds": {
+    "extraction": 0.0056905999954324216,
+    "classification": 0.06236929999431595,
+    "aggregation_and_ranking": 0.00010109998402185738
+  },
+  "source_sha256": {
+    "data/question_papers/nlp_question_paper_01.md": "ac5fb29bffb184daebf53966ad24d0231547b3dbe5643f333f55c7a5e6724b2a",
+    "data/question_papers/nlp_question_paper_02.md": "0b62b26ec501510c7698aba8ab97106fac15bb4588b16823111ec221fc3603f6",
+    "data/question_papers/nlp_question_paper_03.md": "001a0906d647a73798f2470e62a0d611ddf0cd740c972241e42c2bfeb15902ab",
+    "data/question_papers/nlp_question_paper_04.md": "a5b11100be438c8fa822a158ba784f6160738ff8aa4cdd735c77a8da90920b73"
+  },
+  "taxonomy_contract_sha256": "10921826b20a5c336e431492ae565dbc6b158b10efd4d01515de87d35e7d8aba",
+  "ground_truth_sha256": "af4a0f555c7e5c50826eb11877e9e513a59bda6a189ad69aade7008fb4f63944",
+  "interpretation": "Unmatched paraphrases/components are honest taxonomy-coverage limits. Accuracy is measured on four synthetic papers, not general unseen-paper performance or exam prediction."
+}

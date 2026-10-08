@@ -1,0 +1,1524 @@
+{
+  "task": 16,
+  "created_utc": "2026-10-06T09:51:59.904588+00:00",
+  "python": "3.11.17",
+  "generation_requested": false,
+  "initialization_seconds": 13.619125299999723,
+  "case_count": 20,
+  "metrics": {
+    "routing": {
+      "passed": 20,
+      "total": 20,
+      "fraction": 1.0
+    },
+    "paper_intent": {
+      "passed": 8,
+      "total": 8,
+      "fraction": 1.0
+    },
+    "paper_topic": {
+      "passed": 6,
+      "total": 6,
+      "fraction": 1.0
+    },
+    "paper_count": {
+      "passed": 5,
+      "total": 5,
+      "fraction": 1.0
+    },
+    "supplied_evidence_phrase_checks": {
+      "passed": 8,
+      "total": 11
+    }
+  },
+  "scope": "Curated integration checks, not general routing/model accuracy. No metadata or expectations enter production.",
+  "results": [
+    {
+      "case_id": "ATT",
+      "question": "What is the minimum attendance required?",
+      "expected_capability": "academic_qa",
+      "expected_type": "retrieval_only",
+      "expected_topic": null,
+      "expected_count": null,
+      "evidence_patterns": [
+        "75%"
+      ],
+      "actual_capability": "academic_qa",
+      "routing_correct": true,
+      "routing": {
+        "capability": "academic_qa",
+        "reason": "Academic rules or course/curriculum navigation request.",
+        "matched_rules": [
+          "academic_or_navigation"
+        ],
+        "mode": "auto",
+        "fallback": false
+      },
+      "answer_type": "retrieval_only",
+      "type_correct": true,
+      "actual_topic": null,
+      "topic_correct": null,
+      "result_count": null,
+      "count_correct": null,
+      "source_documents": [
+        "HCE-DOC09",
+        "HCE-DOC08"
+      ],
+      "source_chunks": [
+        "HCE-DOC09::chunk_002",
+        "HCE-DOC08::chunk_000",
+        "HCE-DOC08::chunk_003",
+        "HCE-DOC08::chunk_001",
+        "HCE-DOC08::chunk_004"
+      ],
+      "generation_used": false,
+      "answer": null,
+      "warnings": [
+        "Generation unavailable or not requested; pre-generation pipeline is complete.",
+        "Retrieved chunks share source word positions; repeated evidence may consume context space.",
+        "Sources supplied as context, not verified citations or proof every claim is supported.",
+        "Local generation is unavailable or not requested, but the retrieved academic evidence is shown below.",
+        "Similarity is not factual confidence; retrieved evidence and generated claims require inspection."
+      ],
+      "diagnostics": {
+        "routing_seconds": 0.0008162000158336014,
+        "rag": {
+          "requested_top_k": 5,
+          "retrieved_chunks": 5,
+          "included_chunks": 5,
+          "excluded_chunks": 0,
+          "context_characters": 4098,
+          "context_words": 569,
+          "source_count": 5,
+          "distinct_documents": 2,
+          "duplicate_document_blocks": 3,
+          "generation_status": "unavailable",
+          "model_labels": {
+            "mentioned_labels": [],
+            "valid_labels": [],
+            "invalid_labels": [],
+            "has_source_labels": false,
+            "occurrence_count": 0,
+            "status": "no_labels",
+            "scope": "Structural label validity only; claim support is not verified."
+          },
+          "overlap_pairs": [
+            {
+              "chunk_ids": [
+                "HCE-DOC08::chunk_000",
+                "HCE-DOC08::chunk_001"
+              ],
+              "shared_word_positions": 20
+            },
+            {
+              "chunk_ids": [
+                "HCE-DOC08::chunk_003",
+                "HCE-DOC08::chunk_004"
+              ],
+              "shared_word_positions": 20
+            }
+          ],
+          "flags": [
+            "Generation unavailable or not requested; pre-generation pipeline is complete.",
+            "Retrieved chunks share source word positions; repeated evidence may consume context space."
+          ],
+          "scope": "Descriptive diagnostics, not correctness judgments."
+        },
+        "timings_seconds": {
+          "retrieval": 0.10952500000712462,
+          "context_and_prompt": 0.00013869997928850353,
+          "generation": 0.0,
+          "total": 0.109840199991595
+        }
+      },
+      "evidence_checks": {
+        "75%": true
+      },
+      "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+    },
+    {
+      "case_id": "EXAM",
+      "question": "What marks are required to pass?",
+      "expected_capability": "academic_qa",
+      "expected_type": "retrieval_only",
+      "expected_topic": null,
+      "expected_count": null,
+      "evidence_patterns": [
+        "50",
+        "24"
+      ],
+      "actual_capability": "academic_qa",
+      "routing_correct": true,
+      "routing": {
+        "capability": "academic_qa",
+        "reason": "Academic rules or course/curriculum navigation request.",
+        "matched_rules": [
+          "academic_or_navigation"
+        ],
+        "mode": "auto",
+        "fallback": false
+      },
+      "answer_type": "retrieval_only",
+      "type_correct": true,
+      "actual_topic": null,
+      "topic_correct": null,
+      "result_count": null,
+      "count_correct": null,
+      "source_documents": [
+        "HCE-DOC06",
+        "HCE-DOC12",
+        "HCE-DOC09",
+        "HCE-DOC10",
+        "HCE-DOC05"
+      ],
+      "source_chunks": [
+        "HCE-DOC06::chunk_008",
+        "HCE-DOC12::chunk_004",
+        "HCE-DOC09::chunk_005",
+        "HCE-DOC10::chunk_006",
+        "HCE-DOC05::chunk_009"
+      ],
+      "generation_used": false,
+      "answer": null,
+      "warnings": [
+        "Generation unavailable or not requested; pre-generation pipeline is complete.",
+        "Sources supplied as context, not verified citations or proof every claim is supported.",
+        "Local generation is unavailable or not requested, but the retrieved academic evidence is shown below.",
+        "Similarity is not factual confidence; retrieved evidence and generated claims require inspection."
+      ],
+      "diagnostics": {
+        "routing_seconds": 2.2799998987466097e-05,
+        "rag": {
+          "requested_top_k": 5,
+          "retrieved_chunks": 5,
+          "included_chunks": 5,
+          "excluded_chunks": 0,
+          "context_characters": 3555,
+          "context_words": 508,
+          "source_count": 5,
+          "distinct_documents": 5,
+          "duplicate_document_blocks": 0,
+          "generation_status": "unavailable",
+          "model_labels": {
+            "mentioned_labels": [],
+            "valid_labels": [],
+            "invalid_labels": [],
+            "has_source_labels": false,
+            "occurrence_count": 0,
+            "status": "no_labels",
+            "scope": "Structural label validity only; claim support is not verified."
+          },
+          "overlap_pairs": [],
+          "flags": [
+            "Generation unavailable or not requested; pre-generation pipeline is complete."
+          ],
+          "scope": "Descriptive diagnostics, not correctness judgments."
+        },
+        "timings_seconds": {
+          "retrieval": 0.10896650000358932,
+          "context_and_prompt": 0.0001404000213369727,
+          "generation": 0.0,
+          "total": 0.10914849999244325
+        }
+      },
+      "evidence_checks": {
+        "50": true,
+        "24": true
+      },
+      "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+    },
+    {
+      "case_id": "SEM",
+      "question": "In which semester is NLP offered?",
+      "expected_capability": "academic_qa",
+      "expected_type": "retrieval_only",
+      "expected_topic": null,
+      "expected_count": null,
+      "evidence_patterns": [
+        "HCE-CSE603",
+        "Semester\\s*[:|]?\\s*6"
+      ],
+      "actual_capability": "academic_qa",
+      "routing_correct": true,
+      "routing": {
+        "capability": "academic_qa",
+        "reason": "Academic rules or course/curriculum navigation request.",
+        "matched_rules": [
+          "academic_or_navigation"
+        ],
+        "mode": "auto",
+        "fallback": false
+      },
+      "answer_type": "retrieval_only",
+      "type_correct": true,
+      "actual_topic": null,
+      "topic_correct": null,
+      "result_count": null,
+      "count_correct": null,
+      "source_documents": [
+        "HCE-DOC12",
+        "HCE-DOC07",
+        "HCE-DOC02",
+        "HCE-DOC01"
+      ],
+      "source_chunks": [
+        "HCE-DOC12::chunk_006",
+        "HCE-DOC07::chunk_005",
+        "HCE-DOC07::chunk_004",
+        "HCE-DOC02::chunk_009",
+        "HCE-DOC01::chunk_003"
+      ],
+      "generation_used": false,
+      "answer": null,
+      "warnings": [
+        "Generation unavailable or not requested; pre-generation pipeline is complete.",
+        "Retrieved chunks share source word positions; repeated evidence may consume context space.",
+        "Sources supplied as context, not verified citations or proof every claim is supported.",
+        "Local generation is unavailable or not requested, but the retrieved academic evidence is shown below.",
+        "Similarity is not factual confidence; retrieved evidence and generated claims require inspection."
+      ],
+      "diagnostics": {
+        "routing_seconds": 2.2500025806948543e-05,
+        "rag": {
+          "requested_top_k": 5,
+          "retrieved_chunks": 5,
+          "included_chunks": 5,
+          "excluded_chunks": 0,
+          "context_characters": 3865,
+          "context_words": 571,
+          "source_count": 5,
+          "distinct_documents": 4,
+          "duplicate_document_blocks": 1,
+          "generation_status": "unavailable",
+          "model_labels": {
+            "mentioned_labels": [],
+            "valid_labels": [],
+            "invalid_labels": [],
+            "has_source_labels": false,
+            "occurrence_count": 0,
+            "status": "no_labels",
+            "scope": "Structural label validity only; claim support is not verified."
+          },
+          "overlap_pairs": [
+            {
+              "chunk_ids": [
+                "HCE-DOC07::chunk_005",
+                "HCE-DOC07::chunk_004"
+              ],
+              "shared_word_positions": 20
+            }
+          ],
+          "flags": [
+            "Generation unavailable or not requested; pre-generation pipeline is complete.",
+            "Retrieved chunks share source word positions; repeated evidence may consume context space."
+          ],
+          "scope": "Descriptive diagnostics, not correctness judgments."
+        },
+        "timings_seconds": {
+          "retrieval": 0.11473400000249967,
+          "context_and_prompt": 0.00012920002336613834,
+          "generation": 0.0,
+          "total": 0.11490009998669848
+        }
+      },
+      "evidence_checks": {
+        "HCE-CSE603": true,
+        "Semester\\s*[:|]?\\s*6": true
+      },
+      "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+    },
+    {
+      "case_id": "PRE",
+      "question": "What are the prerequisites for NLP?",
+      "expected_capability": "academic_qa",
+      "expected_type": "retrieval_only",
+      "expected_topic": null,
+      "expected_count": null,
+      "evidence_patterns": [
+        "Artificial Intelligence",
+        "Machine Learning"
+      ],
+      "actual_capability": "academic_qa",
+      "routing_correct": true,
+      "routing": {
+        "capability": "academic_qa",
+        "reason": "Academic rules or course/curriculum navigation request.",
+        "matched_rules": [
+          "academic_or_navigation"
+        ],
+        "mode": "auto",
+        "fallback": false
+      },
+      "answer_type": "retrieval_only",
+      "type_correct": true,
+      "actual_topic": null,
+      "topic_correct": null,
+      "result_count": null,
+      "count_correct": null,
+      "source_documents": [
+        "HCE-DOC13",
+        "HCE-DOC02",
+        "HCE-DOC06"
+      ],
+      "source_chunks": [
+        "HCE-DOC13::chunk_014",
+        "HCE-DOC02::chunk_016",
+        "HCE-DOC06::chunk_005",
+        "HCE-DOC02::chunk_015",
+        "HCE-DOC02::chunk_009"
+      ],
+      "generation_used": false,
+      "answer": null,
+      "warnings": [
+        "Generation unavailable or not requested; pre-generation pipeline is complete.",
+        "Retrieved chunks share source word positions; repeated evidence may consume context space.",
+        "Sources supplied as context, not verified citations or proof every claim is supported.",
+        "Local generation is unavailable or not requested, but the retrieved academic evidence is shown below.",
+        "Similarity is not factual confidence; retrieved evidence and generated claims require inspection."
+      ],
+      "diagnostics": {
+        "routing_seconds": 2.2299995180219412e-05,
+        "rag": {
+          "requested_top_k": 5,
+          "retrieved_chunks": 5,
+          "included_chunks": 5,
+          "excluded_chunks": 0,
+          "context_characters": 3661,
+          "context_words": 506,
+          "source_count": 5,
+          "distinct_documents": 3,
+          "duplicate_document_blocks": 2,
+          "generation_status": "unavailable",
+          "model_labels": {
+            "mentioned_labels": [],
+            "valid_labels": [],
+            "invalid_labels": [],
+            "has_source_labels": false,
+            "occurrence_count": 0,
+            "status": "no_labels",
+            "scope": "Structural label validity only; claim support is not verified."
+          },
+          "overlap_pairs": [
+            {
+              "chunk_ids": [
+                "HCE-DOC02::chunk_016",
+                "HCE-DOC02::chunk_015"
+              ],
+              "shared_word_positions": 20
+            }
+          ],
+          "flags": [
+            "Generation unavailable or not requested; pre-generation pipeline is complete.",
+            "Retrieved chunks share source word positions; repeated evidence may consume context space."
+          ],
+          "scope": "Descriptive diagnostics, not correctness judgments."
+        },
+        "timings_seconds": {
+          "retrieval": 0.11512970001786016,
+          "context_and_prompt": 0.00012129999231547117,
+          "generation": 0.0,
+          "total": 0.11528660001931712
+        }
+      },
+      "evidence_checks": {
+        "Artificial Intelligence": false,
+        "Machine Learning": true
+      },
+      "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+    },
+    {
+      "case_id": "DATE",
+      "question": "When is the NLP end-semester examination?",
+      "expected_capability": "academic_qa",
+      "expected_type": "retrieval_only",
+      "expected_topic": null,
+      "expected_count": null,
+      "evidence_patterns": [
+        "2027-05-07"
+      ],
+      "actual_capability": "academic_qa",
+      "routing_correct": true,
+      "routing": {
+        "capability": "academic_qa",
+        "reason": "Academic rules or course/curriculum navigation request.",
+        "matched_rules": [
+          "academic_or_navigation"
+        ],
+        "mode": "auto",
+        "fallback": false
+      },
+      "answer_type": "retrieval_only",
+      "type_correct": true,
+      "actual_topic": null,
+      "topic_correct": null,
+      "result_count": null,
+      "count_correct": null,
+      "source_documents": [
+        "HCE-DOC12",
+        "HCE-DOC07",
+        "HCE-DOC09"
+      ],
+      "source_chunks": [
+        "HCE-DOC12::chunk_006",
+        "HCE-DOC07::chunk_004",
+        "HCE-DOC07::chunk_005",
+        "HCE-DOC09::chunk_007",
+        "HCE-DOC07::chunk_008"
+      ],
+      "generation_used": false,
+      "answer": null,
+      "warnings": [
+        "Generation unavailable or not requested; pre-generation pipeline is complete.",
+        "Retrieved chunks share source word positions; repeated evidence may consume context space.",
+        "Sources supplied as context, not verified citations or proof every claim is supported.",
+        "Local generation is unavailable or not requested, but the retrieved academic evidence is shown below.",
+        "Similarity is not factual confidence; retrieved evidence and generated claims require inspection."
+      ],
+      "diagnostics": {
+        "routing_seconds": 2.370000584051013e-05,
+        "rag": {
+          "requested_top_k": 5,
+          "retrieved_chunks": 5,
+          "included_chunks": 5,
+          "excluded_chunks": 0,
+          "context_characters": 3989,
+          "context_words": 568,
+          "source_count": 5,
+          "distinct_documents": 3,
+          "duplicate_document_blocks": 2,
+          "generation_status": "unavailable",
+          "model_labels": {
+            "mentioned_labels": [],
+            "valid_labels": [],
+            "invalid_labels": [],
+            "has_source_labels": false,
+            "occurrence_count": 0,
+            "status": "no_labels",
+            "scope": "Structural label validity only; claim support is not verified."
+          },
+          "overlap_pairs": [
+            {
+              "chunk_ids": [
+                "HCE-DOC07::chunk_004",
+                "HCE-DOC07::chunk_005"
+              ],
+              "shared_word_positions": 20
+            }
+          ],
+          "flags": [
+            "Generation unavailable or not requested; pre-generation pipeline is complete.",
+            "Retrieved chunks share source word positions; repeated evidence may consume context space."
+          ],
+          "scope": "Descriptive diagnostics, not correctness judgments."
+        },
+        "timings_seconds": {
+          "retrieval": 0.1091086000087671,
+          "context_and_prompt": 0.00013459997717291117,
+          "generation": 0.0,
+          "total": 0.10928110001259483
+        }
+      },
+      "evidence_checks": {
+        "2027-05-07": true
+      },
+      "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+    },
+    {
+      "case_id": "PARA",
+      "question": "Where do connected devices learn the rules for exchanging messages?",
+      "expected_capability": "academic_qa",
+      "expected_type": "retrieval_only",
+      "expected_topic": null,
+      "expected_count": null,
+      "evidence_patterns": [
+        "Computer Networks"
+      ],
+      "actual_capability": "academic_qa",
+      "routing_correct": true,
+      "routing": {
+        "capability": "academic_qa",
+        "reason": "No specialized analyzer intent was detected, so this question is being handled through academic document retrieval.",
+        "matched_rules": [],
+        "mode": "auto",
+        "fallback": true
+      },
+      "answer_type": "retrieval_only",
+      "type_correct": true,
+      "actual_topic": null,
+      "topic_correct": null,
+      "result_count": null,
+      "count_correct": null,
+      "source_documents": [
+        "HCE-DOC02",
+        "HCE-DOC09"
+      ],
+      "source_chunks": [
+        "HCE-DOC02::chunk_013",
+        "HCE-DOC02::chunk_016",
+        "HCE-DOC09::chunk_008",
+        "HCE-DOC02::chunk_014",
+        "HCE-DOC02::chunk_003"
+      ],
+      "generation_used": false,
+      "answer": null,
+      "warnings": [
+        "Generation unavailable or not requested; pre-generation pipeline is complete.",
+        "Retrieved chunks share source word positions; repeated evidence may consume context space.",
+        "Sources supplied as context, not verified citations or proof every claim is supported.",
+        "Local generation is unavailable or not requested, but the retrieved academic evidence is shown below.",
+        "Similarity is not factual confidence; retrieved evidence and generated claims require inspection."
+      ],
+      "diagnostics": {
+        "routing_seconds": 2.889998722821474e-05,
+        "rag": {
+          "requested_top_k": 5,
+          "retrieved_chunks": 5,
+          "included_chunks": 5,
+          "excluded_chunks": 0,
+          "context_characters": 2972,
+          "context_words": 427,
+          "source_count": 5,
+          "distinct_documents": 2,
+          "duplicate_document_blocks": 3,
+          "generation_status": "unavailable",
+          "model_labels": {
+            "mentioned_labels": [],
+            "valid_labels": [],
+            "invalid_labels": [],
+            "has_source_labels": false,
+            "occurrence_count": 0,
+            "status": "no_labels",
+            "scope": "Structural label validity only; claim support is not verified."
+          },
+          "overlap_pairs": [
+            {
+              "chunk_ids": [
+                "HCE-DOC02::chunk_013",
+                "HCE-DOC02::chunk_014"
+              ],
+              "shared_word_positions": 20
+            }
+          ],
+          "flags": [
+            "Generation unavailable or not requested; pre-generation pipeline is complete.",
+            "Retrieved chunks share source word positions; repeated evidence may consume context space."
+          ],
+          "scope": "Descriptive diagnostics, not correctness judgments."
+        },
+        "timings_seconds": {
+          "retrieval": 0.11672099999850616,
+          "context_and_prompt": 0.00011759999324567616,
+          "generation": 0.0,
+          "total": 0.11687640001764521
+        }
+      },
+      "evidence_checks": {
+        "Computer Networks": true
+      },
+      "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+    },
+    {
+      "case_id": "MULTI",
+      "question": "What do I need to successfully complete NLP?",
+      "expected_capability": "academic_qa",
+      "expected_type": "retrieval_only",
+      "expected_topic": null,
+      "expected_count": null,
+      "evidence_patterns": [],
+      "actual_capability": "academic_qa",
+      "routing_correct": true,
+      "routing": {
+        "capability": "academic_qa",
+        "reason": "No specialized analyzer intent was detected, so this question is being handled through academic document retrieval.",
+        "matched_rules": [],
+        "mode": "auto",
+        "fallback": true
+      },
+      "answer_type": "retrieval_only",
+      "type_correct": true,
+      "actual_topic": null,
+      "topic_correct": null,
+      "result_count": null,
+      "count_correct": null,
+      "source_documents": [
+        "HCE-DOC13",
+        "HCE-DOC02",
+        "HCE-DOC04",
+        "HCE-DOC06"
+      ],
+      "source_chunks": [
+        "HCE-DOC13::chunk_014",
+        "HCE-DOC02::chunk_016",
+        "HCE-DOC02::chunk_009",
+        "HCE-DOC04::chunk_002",
+        "HCE-DOC06::chunk_005"
+      ],
+      "generation_used": false,
+      "answer": null,
+      "warnings": [
+        "Generation unavailable or not requested; pre-generation pipeline is complete.",
+        "Sources supplied as context, not verified citations or proof every claim is supported.",
+        "Local generation is unavailable or not requested, but the retrieved academic evidence is shown below.",
+        "Similarity is not factual confidence; retrieved evidence and generated claims require inspection."
+      ],
+      "diagnostics": {
+        "routing_seconds": 2.5699991965666413e-05,
+        "rag": {
+          "requested_top_k": 5,
+          "retrieved_chunks": 5,
+          "included_chunks": 5,
+          "excluded_chunks": 0,
+          "context_characters": 3668,
+          "context_words": 507,
+          "source_count": 5,
+          "distinct_documents": 4,
+          "duplicate_document_blocks": 1,
+          "generation_status": "unavailable",
+          "model_labels": {
+            "mentioned_labels": [],
+            "valid_labels": [],
+            "invalid_labels": [],
+            "has_source_labels": false,
+            "occurrence_count": 0,
+            "status": "no_labels",
+            "scope": "Structural label validity only; claim support is not verified."
+          },
+          "overlap_pairs": [],
+          "flags": [
+            "Generation unavailable or not requested; pre-generation pipeline is complete."
+          ],
+          "scope": "Descriptive diagnostics, not correctness judgments."
+        },
+        "timings_seconds": {
+          "retrieval": 0.11443450002116151,
+          "context_and_prompt": 0.00016610001330263913,
+          "generation": 0.0,
+          "total": 0.11464160002651624
+        }
+      },
+      "evidence_checks": {},
+      "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+    },
+    {
+      "case_id": "COMPARE",
+      "question": "Compare Machine Learning and Deep Learning.",
+      "expected_capability": "academic_qa",
+      "expected_type": "retrieval_only",
+      "expected_topic": null,
+      "expected_count": null,
+      "evidence_patterns": [],
+      "actual_capability": "academic_qa",
+      "routing_correct": true,
+      "routing": {
+        "capability": "academic_qa",
+        "reason": "No specialized analyzer intent was detected, so this question is being handled through academic document retrieval.",
+        "matched_rules": [],
+        "mode": "auto",
+        "fallback": true
+      },
+      "answer_type": "retrieval_only",
+      "type_correct": true,
+      "actual_topic": null,
+      "topic_correct": null,
+      "result_count": null,
+      "count_correct": null,
+      "source_documents": [
+        "HCE-DOC06",
+        "HCE-DOC05",
+        "HCE-DOC02"
+      ],
+      "source_chunks": [
+        "HCE-DOC06::chunk_004",
+        "HCE-DOC05::chunk_007",
+        "HCE-DOC06::chunk_001",
+        "HCE-DOC02::chunk_014",
+        "HCE-DOC06::chunk_002"
+      ],
+      "generation_used": false,
+      "answer": null,
+      "warnings": [
+        "Generation unavailable or not requested; pre-generation pipeline is complete.",
+        "Retrieved chunks share source word positions; repeated evidence may consume context space.",
+        "Sources supplied as context, not verified citations or proof every claim is supported.",
+        "Local generation is unavailable or not requested, but the retrieved academic evidence is shown below.",
+        "Similarity is not factual confidence; retrieved evidence and generated claims require inspection."
+      ],
+      "diagnostics": {
+        "routing_seconds": 3.37999954354018e-05,
+        "rag": {
+          "requested_top_k": 5,
+          "retrieved_chunks": 5,
+          "included_chunks": 5,
+          "excluded_chunks": 0,
+          "context_characters": 4514,
+          "context_words": 574,
+          "source_count": 5,
+          "distinct_documents": 3,
+          "duplicate_document_blocks": 2,
+          "generation_status": "unavailable",
+          "model_labels": {
+            "mentioned_labels": [],
+            "valid_labels": [],
+            "invalid_labels": [],
+            "has_source_labels": false,
+            "occurrence_count": 0,
+            "status": "no_labels",
+            "scope": "Structural label validity only; claim support is not verified."
+          },
+          "overlap_pairs": [
+            {
+              "chunk_ids": [
+                "HCE-DOC06::chunk_001",
+                "HCE-DOC06::chunk_002"
+              ],
+              "shared_word_positions": 20
+            }
+          ],
+          "flags": [
+            "Generation unavailable or not requested; pre-generation pipeline is complete.",
+            "Retrieved chunks share source word positions; repeated evidence may consume context space."
+          ],
+          "scope": "Descriptive diagnostics, not correctness judgments."
+        },
+        "timings_seconds": {
+          "retrieval": 0.11527489998843521,
+          "context_and_prompt": 0.0001320999872405082,
+          "generation": 0.0,
+          "total": 0.1154468999884557
+        }
+      },
+      "evidence_checks": {},
+      "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+    },
+    {
+      "case_id": "SUMMARY",
+      "question": "Summarize NLP Unit 4.",
+      "expected_capability": "study_support",
+      "expected_type": "retrieval_only",
+      "expected_topic": null,
+      "expected_count": null,
+      "evidence_patterns": [
+        "GPT",
+        "BERT"
+      ],
+      "actual_capability": "study_support",
+      "routing_correct": true,
+      "routing": {
+        "capability": "study_support",
+        "reason": "Summary or revision request will use retrieved academic evidence.",
+        "matched_rules": [
+          "study_request"
+        ],
+        "mode": "auto",
+        "fallback": false
+      },
+      "answer_type": "retrieval_only",
+      "type_correct": true,
+      "actual_topic": null,
+      "topic_correct": null,
+      "result_count": null,
+      "count_correct": null,
+      "source_documents": [
+        "HCE-DOC04",
+        "HCE-DOC06"
+      ],
+      "source_chunks": [
+        "HCE-DOC04::chunk_002",
+        "HCE-DOC04::chunk_005",
+        "HCE-DOC04::chunk_004",
+        "HCE-DOC06::chunk_005",
+        "HCE-DOC04::chunk_003"
+      ],
+      "generation_used": false,
+      "answer": null,
+      "warnings": [
+        "Generation unavailable or not requested; pre-generation pipeline is complete.",
+        "Retrieved chunks share source word positions; repeated evidence may consume context space.",
+        "Sources supplied as context, not verified citations or proof every claim is supported.",
+        "Local generation is unavailable or not requested, but the retrieved academic evidence is shown below.",
+        "Similarity is not factual confidence; retrieved evidence and generated claims require inspection."
+      ],
+      "diagnostics": {
+        "routing_seconds": 2.4399982066825032e-05,
+        "rag": {
+          "requested_top_k": 5,
+          "retrieved_chunks": 5,
+          "included_chunks": 5,
+          "excluded_chunks": 0,
+          "context_characters": 4342,
+          "context_words": 578,
+          "source_count": 5,
+          "distinct_documents": 2,
+          "duplicate_document_blocks": 3,
+          "generation_status": "unavailable",
+          "model_labels": {
+            "mentioned_labels": [],
+            "valid_labels": [],
+            "invalid_labels": [],
+            "has_source_labels": false,
+            "occurrence_count": 0,
+            "status": "no_labels",
+            "scope": "Structural label validity only; claim support is not verified."
+          },
+          "overlap_pairs": [
+            {
+              "chunk_ids": [
+                "HCE-DOC04::chunk_002",
+                "HCE-DOC04::chunk_003"
+              ],
+              "shared_word_positions": 20
+            },
+            {
+              "chunk_ids": [
+                "HCE-DOC04::chunk_005",
+                "HCE-DOC04::chunk_004"
+              ],
+              "shared_word_positions": 20
+            },
+            {
+              "chunk_ids": [
+                "HCE-DOC04::chunk_004",
+                "HCE-DOC04::chunk_003"
+              ],
+              "shared_word_positions": 20
+            }
+          ],
+          "flags": [
+            "Generation unavailable or not requested; pre-generation pipeline is complete.",
+            "Retrieved chunks share source word positions; repeated evidence may consume context space."
+          ],
+          "scope": "Descriptive diagnostics, not correctness judgments."
+        },
+        "timings_seconds": {
+          "retrieval": 0.12440599998808466,
+          "context_and_prompt": 0.00015400000847876072,
+          "generation": 0.0,
+          "total": 0.12460019998252392
+        }
+      },
+      "evidence_checks": {
+        "GPT": false,
+        "BERT": false
+      },
+      "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+    },
+    {
+      "case_id": "REVISE",
+      "question": "What should I revise for Attention?",
+      "expected_capability": "study_support",
+      "expected_type": "retrieval_only",
+      "expected_topic": null,
+      "expected_count": null,
+      "evidence_patterns": [],
+      "actual_capability": "study_support",
+      "routing_correct": true,
+      "routing": {
+        "capability": "study_support",
+        "reason": "Summary or revision request will use retrieved academic evidence.",
+        "matched_rules": [
+          "study_request"
+        ],
+        "mode": "auto",
+        "fallback": false
+      },
+      "answer_type": "retrieval_only",
+      "type_correct": true,
+      "actual_topic": null,
+      "topic_correct": null,
+      "result_count": null,
+      "count_correct": null,
+      "source_documents": [
+        "HCE-DOC06",
+        "HCE-DOC04"
+      ],
+      "source_chunks": [
+        "HCE-DOC06::chunk_005",
+        "HCE-DOC04::chunk_006",
+        "HCE-DOC06::chunk_007",
+        "HCE-DOC06::chunk_003",
+        "HCE-DOC04::chunk_002"
+      ],
+      "generation_used": false,
+      "answer": null,
+      "warnings": [
+        "Generation unavailable or not requested; pre-generation pipeline is complete.",
+        "Sources supplied as context, not verified citations or proof every claim is supported.",
+        "Local generation is unavailable or not requested, but the retrieved academic evidence is shown below.",
+        "Similarity is not factual confidence; retrieved evidence and generated claims require inspection."
+      ],
+      "diagnostics": {
+        "routing_seconds": 2.379997749812901e-05,
+        "rag": {
+          "requested_top_k": 5,
+          "retrieved_chunks": 5,
+          "included_chunks": 5,
+          "excluded_chunks": 0,
+          "context_characters": 4379,
+          "context_words": 576,
+          "source_count": 5,
+          "distinct_documents": 2,
+          "duplicate_document_blocks": 3,
+          "generation_status": "unavailable",
+          "model_labels": {
+            "mentioned_labels": [],
+            "valid_labels": [],
+            "invalid_labels": [],
+            "has_source_labels": false,
+            "occurrence_count": 0,
+            "status": "no_labels",
+            "scope": "Structural label validity only; claim support is not verified."
+          },
+          "overlap_pairs": [],
+          "flags": [
+            "Generation unavailable or not requested; pre-generation pipeline is complete."
+          ],
+          "scope": "Descriptive diagnostics, not correctness judgments."
+        },
+        "timings_seconds": {
+          "retrieval": 0.11745170000358485,
+          "context_and_prompt": 0.00013810000382363796,
+          "generation": 0.0,
+          "total": 0.11762299999827519
+        }
+      },
+      "evidence_checks": {},
+      "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+    },
+    {
+      "case_id": "CREATE",
+      "question": "Create five revision questions for NLP Unit 4.",
+      "expected_capability": "study_support",
+      "expected_type": "retrieval_only",
+      "expected_topic": null,
+      "expected_count": null,
+      "evidence_patterns": [],
+      "actual_capability": "study_support",
+      "routing_correct": true,
+      "routing": {
+        "capability": "study_support",
+        "reason": "Summary or revision request will use retrieved academic evidence.",
+        "matched_rules": [
+          "study_request"
+        ],
+        "mode": "auto",
+        "fallback": false
+      },
+      "answer_type": "retrieval_only",
+      "type_correct": true,
+      "actual_topic": null,
+      "topic_correct": null,
+      "result_count": null,
+      "count_correct": null,
+      "source_documents": [
+        "HCE-DOC02",
+        "HCE-DOC04",
+        "HCE-DOC07",
+        "HCE-DOC09"
+      ],
+      "source_chunks": [
+        "HCE-DOC02::chunk_009",
+        "HCE-DOC04::chunk_002",
+        "HCE-DOC07::chunk_004",
+        "HCE-DOC09::chunk_004",
+        "HCE-DOC04::chunk_003"
+      ],
+      "generation_used": false,
+      "answer": null,
+      "warnings": [
+        "Generation unavailable or not requested; pre-generation pipeline is complete.",
+        "Retrieved chunks share source word positions; repeated evidence may consume context space.",
+        "Sources supplied as context, not verified citations or proof every claim is supported.",
+        "Local generation is unavailable or not requested, but the retrieved academic evidence is shown below.",
+        "Similarity is not factual confidence; retrieved evidence and generated claims require inspection."
+      ],
+      "diagnostics": {
+        "routing_seconds": 2.8099981136620045e-05,
+        "rag": {
+          "requested_top_k": 5,
+          "retrieved_chunks": 5,
+          "included_chunks": 5,
+          "excluded_chunks": 0,
+          "context_characters": 3995,
+          "context_words": 574,
+          "source_count": 5,
+          "distinct_documents": 4,
+          "duplicate_document_blocks": 1,
+          "generation_status": "unavailable",
+          "model_labels": {
+            "mentioned_labels": [],
+            "valid_labels": [],
+            "invalid_labels": [],
+            "has_source_labels": false,
+            "occurrence_count": 0,
+            "status": "no_labels",
+            "scope": "Structural label validity only; claim support is not verified."
+          },
+          "overlap_pairs": [
+            {
+              "chunk_ids": [
+                "HCE-DOC04::chunk_002",
+                "HCE-DOC04::chunk_003"
+              ],
+              "shared_word_positions": 20
+            }
+          ],
+          "flags": [
+            "Generation unavailable or not requested; pre-generation pipeline is complete.",
+            "Retrieved chunks share source word positions; repeated evidence may consume context space."
+          ],
+          "scope": "Descriptive diagnostics, not correctness judgments."
+        },
+        "timings_seconds": {
+          "retrieval": 0.11112000001594424,
+          "context_and_prompt": 0.00013989998842589557,
+          "generation": 0.0,
+          "total": 0.11129270002129488
+        }
+      },
+      "evidence_checks": {},
+      "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+    },
+    {
+      "case_id": "FILTER",
+      "question": "Show Transformer questions from previous papers.",
+      "expected_capability": "question_papers",
+      "expected_type": "topic_filter",
+      "expected_topic": "transformers",
+      "expected_count": 8,
+      "evidence_patterns": [],
+      "actual_capability": "question_papers",
+      "routing_correct": true,
+      "routing": {
+        "capability": "question_papers",
+        "reason": "Historical-paper/filter/frequency intent has priority over revision intent.",
+        "matched_rules": [
+          "paper_request"
+        ],
+        "mode": "auto",
+        "fallback": false
+      },
+      "answer_type": "topic_filter",
+      "type_correct": true,
+      "actual_topic": "transformers",
+      "topic_correct": true,
+      "result_count": 8,
+      "count_correct": true,
+      "source_documents": [
+        "NLP-P01",
+        "NLP-P02",
+        "NLP-P03",
+        "NLP-P04"
+      ],
+      "source_chunks": [],
+      "generation_used": false,
+      "answer": "8 primary-topic questions matched transformers.",
+      "warnings": [
+        "These counts describe the four synthetic workshop papers and do not predict future examination questions.",
+        "9 questions remain unmatched by current deterministic taxonomy aliases; no model relabeling."
+      ],
+      "diagnostics": {
+        "routing_seconds": 2.710000262595713e-05,
+        "analyzer_seconds": 0.0007000000041443855
+      },
+      "evidence_checks": {},
+      "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+    },
+    {
+      "case_id": "COUNT",
+      "question": "How many Word2Vec questions appeared?",
+      "expected_capability": "question_papers",
+      "expected_type": "topic_count",
+      "expected_topic": "word2vec",
+      "expected_count": 4,
+      "evidence_patterns": [],
+      "actual_capability": "question_papers",
+      "routing_correct": true,
+      "routing": {
+        "capability": "question_papers",
+        "reason": "Historical-paper/filter/frequency intent has priority over revision intent.",
+        "matched_rules": [
+          "paper_request"
+        ],
+        "mode": "auto",
+        "fallback": false
+      },
+      "answer_type": "topic_count",
+      "type_correct": true,
+      "actual_topic": "word2vec",
+      "topic_correct": true,
+      "result_count": 4,
+      "count_correct": true,
+      "source_documents": [
+        "NLP-P01",
+        "NLP-P02",
+        "NLP-P03",
+        "NLP-P04"
+      ],
+      "source_chunks": [],
+      "generation_used": false,
+      "answer": "4 primary-topic questions matched word2vec.",
+      "warnings": [
+        "These counts describe the four synthetic workshop papers and do not predict future examination questions.",
+        "9 questions remain unmatched by current deterministic taxonomy aliases; no model relabeling."
+      ],
+      "diagnostics": {
+        "routing_seconds": 1.2300006346777081e-05,
+        "analyzer_seconds": 0.0004078999918419868
+      },
+      "evidence_checks": {},
+      "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+    },
+    {
+      "case_id": "RANK",
+      "question": "What are the most frequent topics in previous NLP papers?",
+      "expected_capability": "question_papers",
+      "expected_type": "topic_frequency",
+      "expected_topic": null,
+      "expected_count": null,
+      "evidence_patterns": [],
+      "actual_capability": "question_papers",
+      "routing_correct": true,
+      "routing": {
+        "capability": "question_papers",
+        "reason": "Historical-paper/filter/frequency intent has priority over revision intent.",
+        "matched_rules": [
+          "paper_request"
+        ],
+        "mode": "auto",
+        "fallback": false
+      },
+      "answer_type": "topic_frequency",
+      "type_correct": true,
+      "actual_topic": "UNMATCHED",
+      "topic_correct": null,
+      "result_count": null,
+      "count_correct": null,
+      "source_documents": [
+        "NLP-P01",
+        "NLP-P02",
+        "NLP-P03",
+        "NLP-P04"
+      ],
+      "source_chunks": [],
+      "generation_used": false,
+      "answer": "Observed primary-topic ranking.",
+      "warnings": [
+        "These counts describe the four synthetic workshop papers and do not predict future examination questions.",
+        "9 questions remain unmatched by current deterministic taxonomy aliases; no model relabeling."
+      ],
+      "diagnostics": {
+        "routing_seconds": 1.3499986380338669e-05,
+        "analyzer_seconds": 0.00042409999878145754
+      },
+      "evidence_checks": {},
+      "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed.",
+      "top_topic": {
+        "rank": 1,
+        "topic_id": "transformers",
+        "topic_name": "Transformers",
+        "count": 8
+      }
+    },
+    {
+      "case_id": "PAPERS",
+      "question": "Compare topics across previous papers.",
+      "expected_capability": "question_papers",
+      "expected_type": "paper_comparison",
+      "expected_topic": null,
+      "expected_count": null,
+      "evidence_patterns": [],
+      "actual_capability": "question_papers",
+      "routing_correct": true,
+      "routing": {
+        "capability": "question_papers",
+        "reason": "Historical-paper/filter/frequency intent has priority over revision intent.",
+        "matched_rules": [
+          "paper_request"
+        ],
+        "mode": "auto",
+        "fallback": false
+      },
+      "answer_type": "paper_comparison",
+      "type_correct": true,
+      "actual_topic": "UNMATCHED",
+      "topic_correct": null,
+      "result_count": null,
+      "count_correct": null,
+      "source_documents": [
+        "NLP-P01",
+        "NLP-P02",
+        "NLP-P03",
+        "NLP-P04"
+      ],
+      "source_chunks": [],
+      "generation_used": false,
+      "answer": "Observed primary-topic counts across papers.",
+      "warnings": [
+        "These counts describe the four synthetic workshop papers and do not predict future examination questions.",
+        "9 questions remain unmatched by current deterministic taxonomy aliases; no model relabeling."
+      ],
+      "diagnostics": {
+        "routing_seconds": 1.0600022505968809e-05,
+        "analyzer_seconds": 0.00038649997441098094
+      },
+      "evidence_checks": {},
+      "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed.",
+      "comparison_total": 48
+    },
+    {
+      "case_id": "AMBIG",
+      "question": "What Transformer topics should I revise from previous papers?",
+      "expected_capability": "question_papers",
+      "expected_type": "topic_filter",
+      "expected_topic": "transformers",
+      "expected_count": 8,
+      "evidence_patterns": [],
+      "actual_capability": "question_papers",
+      "routing_correct": true,
+      "routing": {
+        "capability": "question_papers",
+        "reason": "Historical-paper/filter/frequency intent has priority over revision intent.",
+        "matched_rules": [
+          "paper_request",
+          "study_request"
+        ],
+        "mode": "auto",
+        "fallback": false
+      },
+      "answer_type": "topic_filter",
+      "type_correct": true,
+      "actual_topic": "transformers",
+      "topic_correct": true,
+      "result_count": 8,
+      "count_correct": true,
+      "source_documents": [
+        "NLP-P01",
+        "NLP-P02",
+        "NLP-P03",
+        "NLP-P04"
+      ],
+      "source_chunks": [],
+      "generation_used": false,
+      "answer": "8 primary-topic questions matched transformers.",
+      "warnings": [
+        "These counts describe the four synthetic workshop papers and do not predict future examination questions.",
+        "9 questions remain unmatched by current deterministic taxonomy aliases; no model relabeling."
+      ],
+      "diagnostics": {
+        "routing_seconds": 1.3499986380338669e-05,
+        "analyzer_seconds": 0.00042740002390928566
+      },
+      "evidence_checks": {},
+      "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+    },
+    {
+      "case_id": "ALIAS",
+      "question": "Show self-attention questions.",
+      "expected_capability": "question_papers",
+      "expected_type": "topic_filter",
+      "expected_topic": "attention",
+      "expected_count": 3,
+      "evidence_patterns": [],
+      "actual_capability": "question_papers",
+      "routing_correct": true,
+      "routing": {
+        "capability": "question_papers",
+        "reason": "Historical-paper/filter/frequency intent has priority over revision intent.",
+        "matched_rules": [
+          "paper_request"
+        ],
+        "mode": "auto",
+        "fallback": false
+      },
+      "answer_type": "topic_filter",
+      "type_correct": true,
+      "actual_topic": "attention",
+      "topic_correct": true,
+      "result_count": 3,
+      "count_correct": true,
+      "source_documents": [
+        "NLP-P01",
+        "NLP-P02",
+        "NLP-P03"
+      ],
+      "source_chunks": [],
+      "generation_used": false,
+      "answer": "3 primary-topic questions matched attention.",
+      "warnings": [
+        "These counts describe the four synthetic workshop papers and do not predict future examination questions.",
+        "9 questions remain unmatched by current deterministic taxonomy aliases; no model relabeling."
+      ],
+      "diagnostics": {
+        "routing_seconds": 1.0399991879239678e-05,
+        "analyzer_seconds": 0.0003981000045314431
+      },
+      "evidence_checks": {},
+      "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+    },
+    {
+      "case_id": "GPT",
+      "question": "Show GPT questions.",
+      "expected_capability": "question_papers",
+      "expected_type": "topic_filter",
+      "expected_topic": "language_models",
+      "expected_count": 2,
+      "evidence_patterns": [],
+      "actual_capability": "question_papers",
+      "routing_correct": true,
+      "routing": {
+        "capability": "question_papers",
+        "reason": "Historical-paper/filter/frequency intent has priority over revision intent.",
+        "matched_rules": [
+          "paper_request"
+        ],
+        "mode": "auto",
+        "fallback": false
+      },
+      "answer_type": "topic_filter",
+      "type_correct": true,
+      "actual_topic": "language_models",
+      "topic_correct": true,
+      "result_count": 2,
+      "count_correct": true,
+      "source_documents": [
+        "NLP-P03",
+        "NLP-P04"
+      ],
+      "source_chunks": [],
+      "generation_used": false,
+      "answer": "2 primary-topic questions matched language_models.",
+      "warnings": [
+        "These counts describe the four synthetic workshop papers and do not predict future examination questions.",
+        "9 questions remain unmatched by current deterministic taxonomy aliases; no model relabeling."
+      ],
+      "diagnostics": {
+        "routing_seconds": 8.90000956133008e-06,
+        "analyzer_seconds": 0.0003704999980982393
+      },
+      "evidence_checks": {},
+      "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+    },
+    {
+      "case_id": "UNKNOWN",
+      "question": "Show quantum teleportation questions.",
+      "expected_capability": "question_papers",
+      "expected_type": "unsupported",
+      "expected_topic": "UNMATCHED",
+      "expected_count": null,
+      "evidence_patterns": [],
+      "actual_capability": "question_papers",
+      "routing_correct": true,
+      "routing": {
+        "capability": "question_papers",
+        "reason": "Historical-paper/filter/frequency intent has priority over revision intent.",
+        "matched_rules": [
+          "paper_request"
+        ],
+        "mode": "auto",
+        "fallback": false
+      },
+      "answer_type": "unsupported",
+      "type_correct": true,
+      "actual_topic": "UNMATCHED",
+      "topic_correct": true,
+      "result_count": null,
+      "count_correct": null,
+      "source_documents": [],
+      "source_chunks": [],
+      "generation_used": false,
+      "answer": "No supported topic matched. Try a canonical topic such as Transformers, self-attention, CBOW or GPT.",
+      "warnings": [
+        "These counts describe the four synthetic workshop papers and do not predict future examination questions.",
+        "9 questions remain unmatched by current deterministic taxonomy aliases; no model relabeling."
+      ],
+      "diagnostics": {
+        "routing_seconds": 1.0099989594891667e-05,
+        "analyzer_seconds": 0.00044170001638121903
+      },
+      "evidence_checks": {},
+      "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+    },
+    {
+      "case_id": "UNSUPPORTED",
+      "question": "What is the recipe for chocolate cake?",
+      "expected_capability": "academic_qa",
+      "expected_type": "retrieval_only",
+      "expected_topic": null,
+      "expected_count": null,
+      "evidence_patterns": [],
+      "actual_capability": "academic_qa",
+      "routing_correct": true,
+      "routing": {
+        "capability": "academic_qa",
+        "reason": "No specialized analyzer intent was detected, so this question is being handled through academic document retrieval.",
+        "matched_rules": [],
+        "mode": "auto",
+        "fallback": true
+      },
+      "answer_type": "retrieval_only",
+      "type_correct": true,
+      "actual_topic": null,
+      "topic_correct": null,
+      "result_count": null,
+      "count_correct": null,
+      "source_documents": [
+        "HCE-DOC06",
+        "HCE-DOC05",
+        "HCE-DOC14",
+        "HCE-DOC02"
+      ],
+      "source_chunks": [
+        "HCE-DOC06::chunk_000",
+        "HCE-DOC05::chunk_000",
+        "HCE-DOC14::chunk_003",
+        "HCE-DOC02::chunk_007",
+        "HCE-DOC02::chunk_012"
+      ],
+      "generation_used": false,
+      "answer": null,
+      "warnings": [
+        "Generation unavailable or not requested; pre-generation pipeline is complete.",
+        "Sources supplied as context, not verified citations or proof every claim is supported.",
+        "Local generation is unavailable or not requested, but the retrieved academic evidence is shown below.",
+        "Similarity is not factual confidence; retrieved evidence and generated claims require inspection."
+      ],
+      "diagnostics": {
+        "routing_seconds": 1.2400007108226418e-05,
+        "rag": {
+          "requested_top_k": 5,
+          "retrieved_chunks": 5,
+          "included_chunks": 5,
+          "excluded_chunks": 0,
+          "context_characters": 3503,
+          "context_words": 574,
+          "source_count": 5,
+          "distinct_documents": 4,
+          "duplicate_document_blocks": 1,
+          "generation_status": "unavailable",
+          "model_labels": {
+            "mentioned_labels": [],
+            "valid_labels": [],
+            "invalid_labels": [],
+            "has_source_labels": false,
+            "occurrence_count": 0,
+            "status": "no_labels",
+            "scope": "Structural label validity only; claim support is not verified."
+          },
+          "overlap_pairs": [],
+          "flags": [
+            "Generation unavailable or not requested; pre-generation pipeline is complete."
+          ],
+          "scope": "Descriptive diagnostics, not correctness judgments."
+        },
+        "timings_seconds": {
+          "retrieval": 0.11074200001894496,
+          "context_and_prompt": 0.00016900000628083944,
+          "generation": 0.0,
+          "total": 0.11095460000797175
+        }
+      },
+      "evidence_checks": {},
+      "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+    }
+  ]
+}

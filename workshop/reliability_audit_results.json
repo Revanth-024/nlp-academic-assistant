@@ -1,0 +1,4426 @@
+{
+  "environment": "Local CPU / network calls rejected",
+  "python_version": "3.11.17",
+  "utc": "2026-10-06T10:44:21.696930+00:00",
+  "test_summary": {
+    "scope": "Focused audit checks; full pytest recorded separately.",
+    "passed": 63,
+    "failed": 0,
+    "full_pytest": {
+      "3.11.17": {
+        "passed": 551,
+        "skipped": 0,
+        "warnings": 1,
+        "seconds": 122.41
+      },
+      "3.12.14": {
+        "passed": 551,
+        "skipped": 0,
+        "warnings": 1,
+        "seconds": 141.06
+      },
+      "new_tests": 29
+    }
+  },
+  "resource_summary": {
+    "python_version": "3.11.17",
+    "full_classroom": true,
+    "checks": [
+      {
+        "check": "Python",
+        "status": "PASS",
+        "detail": "3.11.17 / 64bit; workshop baseline 64-bit3.11, also validated3.12."
+      },
+      {
+        "check": "streamlit",
+        "status": "PASS",
+        "detail": "1.65.0"
+      },
+      {
+        "check": "pytest",
+        "status": "PASS",
+        "detail": "8.4.2"
+      },
+      {
+        "check": "nltk",
+        "status": "PASS",
+        "detail": "3.9.2"
+      },
+      {
+        "check": "scikit-learn",
+        "status": "PASS",
+        "detail": "1.7.2"
+      },
+      {
+        "check": "gensim",
+        "status": "PASS",
+        "detail": "4.4.0"
+      },
+      {
+        "check": "sentence-transformers",
+        "status": "PASS",
+        "detail": "5.1.2"
+      },
+      {
+        "check": "pypdf",
+        "status": "PASS",
+        "detail": "6.10.0"
+      },
+      {
+        "check": "torch",
+        "status": "PASS",
+        "detail": "2.14.1"
+      },
+      {
+        "check": "transformers",
+        "status": "PASS",
+        "detail": "4.57.6"
+      },
+      {
+        "check": "Academic data",
+        "status": "PASS",
+        "detail": "Canonical facts /14 academic files; run dataset tests for content consistency."
+      },
+      {
+        "check": "Question papers",
+        "status": "PASS",
+        "detail": "4/4 actual Markdown papers; restore supplied data if missing."
+      },
+      {
+        "check": "Course corpus",
+        "status": "PASS",
+        "detail": "data\\search_corpus\\course_descriptions.csv"
+      },
+      {
+        "check": "NLTK stopwords",
+        "status": "PASS",
+        "detail": "Verify python -m src.nltk_resources; explicit online setup adds --download."
+      },
+      {
+        "check": "NLTK wordnet",
+        "status": "PASS",
+        "detail": "Verify python -m src.nltk_resources; explicit online setup adds --download."
+      },
+      {
+        "check": "MiniLM cache",
+        "status": "PASS",
+        "detail": "Pinned local file inventory; preload: python -m src.sentence_resources --download. Verify: python -m src.sentence_resources."
+      },
+      {
+        "check": "Transformer sentiment",
+        "status": "PASS",
+        "detail": "Preload: python -m src.transformer_resources --download --task sentiment. Missing task models leave manual attention usable."
+      },
+      {
+        "check": "Transformer ner",
+        "status": "PASS",
+        "detail": "Preload: python -m src.transformer_resources --download --task ner. Missing task models leave manual attention usable."
+      },
+      {
+        "check": "Transformer qa",
+        "status": "PASS",
+        "detail": "Preload: python -m src.transformer_resources --download --task qa. Missing task models leave manual attention usable."
+      },
+      {
+        "check": "Qwen",
+        "status": "OPTIONAL",
+        "detail": "Cache present; generation remains optional."
+      }
+    ],
+    "passed": true,
+    "scope": "No network or downloads. Cache inventory does not prove successful loading; use --smoke for local runtime checks."
+  },
+  "offline_summary": {
+    "requests_rejected": true,
+    "downloads_rejected": true,
+    "all_checks_local": true,
+    "Qwen_requested": false,
+    "notebooks": [
+      {
+        "notebook": "01_preprocessing.ipynb",
+        "seconds": 5.0172116000030655,
+        "status": "PASS"
+      },
+      {
+        "notebook": "02_bow_ngrams.ipynb",
+        "seconds": 0.00909710000269115,
+        "status": "PASS"
+      },
+      {
+        "notebook": "03_tfidf.ipynb",
+        "seconds": 0.08655049998196773,
+        "status": "PASS"
+      },
+      {
+        "notebook": "04_word_embeddings.ipynb",
+        "seconds": 11.175429599999916,
+        "status": "PASS"
+      },
+      {
+        "notebook": "05_sentence_embeddings.ipynb",
+        "seconds": 16.569558599992888,
+        "status": "PASS"
+      },
+      {
+        "notebook": "06_semantic_search.ipynb",
+        "seconds": 6.354819200001657,
+        "status": "PASS"
+      },
+      {
+        "notebook": "07_transformers.ipynb",
+        "seconds": 1.2832434000156354,
+        "status": "PASS"
+      },
+      {
+        "notebook": "08_rag.ipynb",
+        "seconds": 49.842947600001935,
+        "status": "PASS",
+        "optional_generation": {
+          "available": true,
+          "status": "generated",
+          "answer": "According to the provided documentation, the minimum attendance required is 75%.",
+          "error": null,
+          "model": "Qwen/Qwen2.5-0.5B-Instruct"
+        },
+        "timings": {
+          "retrieval": 0.27082550001796335,
+          "context_and_prompt": 0.00025880002067424357,
+          "generation": 12.352763100003358,
+          "total": 12.625042300001951
+        }
+      }
+    ],
+    "preflight_smoke": "PASS: tokens, tiny Word2Vec, MiniLM, sentiment, NER and QA local inference; Qwen not required."
+  },
+  "page_render_summary": [
+    {
+      "page": "app.py",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "page": "01_Preprocessing_Lab.py",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "page": "02_BoW_NGrams_Lab.py",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "page": "03_TFIDF_Search_Lab.py",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "page": "04_Word_Embeddings_Lab.py",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "page": "05_Sentence_Embeddings_Lab.py",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "page": "06_Semantic_Search_Lab.py",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "page": "07_Transformer_Lab.py",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "page": "08_RAG_Lab.py",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "page": "09_Question_Paper_Analyzer.py",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "page": "10_Academic_Assistant.py",
+      "status": "PASS",
+      "errors": []
+    }
+  ],
+  "known_issue_summary": {
+    "short_queries": "Expected NLP prerequisites rank8/10 versus2 with full course-name question; wording/underspecification changes embedding geometry. No query expansion added.",
+    "unit_queries": "Exact unit identifiers weakly represented by MiniLM; generic/neighboring unit text ranks higher. Requested heading exists in chunks belowK5;100-word windows can split heading/body.",
+    "policy": "Assistant-only generation guard based on matching syllabus course scope and exact supplied Unit heading. No ranking or score change; no fabricated unit text. Missing/ambiguous evidence keeps retrieval visible and withholds Qwen."
+  },
+  "retrieval_reliability": {
+    "investigation": [
+      {
+        "query": "NLP prerequisites",
+        "expected_evidence": [
+          {
+            "rank": 8,
+            "chunk_id": "HCE-DOC13::chunk_013",
+            "score": 0.5140262810173271
+          },
+          {
+            "rank": 13,
+            "chunk_id": "HCE-DOC04::chunk_001",
+            "score": 0.4633723492004735
+          },
+          {
+            "rank": 23,
+            "chunk_id": "HCE-DOC13::chunk_012",
+            "score": 0.39382015117388897
+          },
+          {
+            "rank": 65,
+            "chunk_id": "HCE-DOC13::chunk_008",
+            "score": 0.2684224519919209
+          },
+          {
+            "rank": 96,
+            "chunk_id": "HCE-DOC13::chunk_009",
+            "score": 0.21153186966976287
+          },
+          {
+            "rank": 142,
+            "chunk_id": "HCE-DOC13::chunk_006",
+            "score": 0.12284246738784031
+          }
+        ],
+        "top5": [
+          {
+            "rank": 1,
+            "chunk_id": "HCE-DOC13::chunk_014",
+            "document_id": "HCE-DOC13",
+            "score": 0.6600609135787777,
+            "text": "Natural Language Processing as a corequisite. Information Retrieval is another Semester 6 subject; its relevance to language search does not make it an earlier prerequisite for NLP.\n\n## Deep Learning preparation\n\nDeep Learning (HCE-CSE701), Semester 7, requires Machine Learning (HCE-CSE502) and Linear Algebra for Computing (HCE-CSE404). Both must be retained when answering what to study beforehand. The linear algebra requirement remains explicit even though it is also part of Machine Learning's earlier preparation.\n\nDeep Learning Laboratory (HCE-CSE705) lists Machine Learning and Linear Algebra for Computing as earlier prerequisites and Deep Learning as the same-semester corequisite. NLP is a useful conceptual"
+          },
+          {
+            "rank": 2,
+            "chunk_id": "HCE-DOC13::chunk_015",
+            "document_id": "HCE-DOC13",
+            "score": 0.5681787376831134,
+            "text": "and Linear Algebra for Computing as earlier prerequisites and Deep Learning as the same-semester corequisite. NLP is a useful conceptual connection but is not a declared prerequisite for Deep Learning. The complete table remains authoritative when a short description mentions only the most prominent dependency.\n\n## Projects and interpreting missing relationships\n\nCapstone Project I follows Software Engineering Project and Research Methods Seminar. Capstone Project II follows Capstone Project I. These links preserve the project's staged preparation without supplying unlisted submission dates or project topics. For timing, consult the calendar's course-specific milestones.\n\nA response should distinguish what the contract requires from"
+          },
+          {
+            "rank": 3,
+            "chunk_id": "HCE-DOC02::chunk_016",
+            "document_id": "HCE-DOC02",
+            "score": 0.5659073109117972,
+            "text": "NLP studies language representations and processing. Computer Networks concerns communication between devices, whereas language courses concern representations of human communication. These contrasts make the curriculum useful for both direct lookup and meaning-based discovery."
+          },
+          {
+            "rank": 4,
+            "chunk_id": "HCE-DOC06::chunk_005",
+            "document_id": "HCE-DOC06",
+            "score": 0.5495527306578932,
+            "text": "kind of input and evaluation problem rather than assuming that every neural network architecture suits every observation.\n\n### Sequences and attention-based architectures\n\nRecurrent networks provide a way to carry information along a sequence. Attention-based architectures offer another view of relationships between positions. These themes connect with the contextual language representations encountered in NLP during Semester 6. NLP is not declared as a prerequisite for this course; its appearance earlier in the curriculum is a conceptual connection, not an extra registration rule. The comparison helps students explain why the same family of methods can appear in different application-oriented subjects.\n\n### Evaluation"
+          },
+          {
+            "rank": 5,
+            "chunk_id": "HCE-DOC02::chunk_015",
+            "document_id": "HCE-DOC02",
+            "score": 0.5475301649432862,
+            "text": "Detailed ML, NLP and Deep Learning content appears in the respective syllabus documents. The prerequisite register distinguishes earlier preparation from same-semester theory/lab pairing. An assigned faculty member appears only where the fact contract provides one; course availability does not imply that the dataset names every instructor.\n\nThe shared storyline runs from numerical preparation through predictive learning to language representations and deeper neural models. Related course names should not be interpreted as identical objectives. Information Retrieval studies relevance over collections, while NLP studies language representations and processing. Computer Networks concerns communication between devices, whereas language courses concern representations of human communication."
+          }
+        ],
+        "final_guard": {
+          "requested_units": [],
+          "generation_allowed": true,
+          "applied": false
+        },
+        "ranking_changed": false
+      },
+      {
+        "query": "What are the prerequisites for NLP?",
+        "expected_evidence": [
+          {
+            "rank": 10,
+            "chunk_id": "HCE-DOC13::chunk_013",
+            "score": 0.4554814562505039
+          },
+          {
+            "rank": 15,
+            "chunk_id": "HCE-DOC04::chunk_001",
+            "score": 0.42104376696538864
+          },
+          {
+            "rank": 29,
+            "chunk_id": "HCE-DOC13::chunk_012",
+            "score": 0.3426048082177687
+          },
+          {
+            "rank": 54,
+            "chunk_id": "HCE-DOC13::chunk_008",
+            "score": 0.2672241105699541
+          },
+          {
+            "rank": 83,
+            "chunk_id": "HCE-DOC13::chunk_009",
+            "score": 0.2133453843977054
+          },
+          {
+            "rank": 139,
+            "chunk_id": "HCE-DOC13::chunk_006",
+            "score": 0.12138090545601583
+          }
+        ],
+        "top5": [
+          {
+            "rank": 1,
+            "chunk_id": "HCE-DOC13::chunk_014",
+            "document_id": "HCE-DOC13",
+            "score": 0.601170392417175,
+            "text": "Natural Language Processing as a corequisite. Information Retrieval is another Semester 6 subject; its relevance to language search does not make it an earlier prerequisite for NLP.\n\n## Deep Learning preparation\n\nDeep Learning (HCE-CSE701), Semester 7, requires Machine Learning (HCE-CSE502) and Linear Algebra for Computing (HCE-CSE404). Both must be retained when answering what to study beforehand. The linear algebra requirement remains explicit even though it is also part of Machine Learning's earlier preparation.\n\nDeep Learning Laboratory (HCE-CSE705) lists Machine Learning and Linear Algebra for Computing as earlier prerequisites and Deep Learning as the same-semester corequisite. NLP is a useful conceptual"
+          },
+          {
+            "rank": 2,
+            "chunk_id": "HCE-DOC02::chunk_016",
+            "document_id": "HCE-DOC02",
+            "score": 0.5437271486789211,
+            "text": "NLP studies language representations and processing. Computer Networks concerns communication between devices, whereas language courses concern representations of human communication. These contrasts make the curriculum useful for both direct lookup and meaning-based discovery."
+          },
+          {
+            "rank": 3,
+            "chunk_id": "HCE-DOC06::chunk_005",
+            "document_id": "HCE-DOC06",
+            "score": 0.5141338364788476,
+            "text": "kind of input and evaluation problem rather than assuming that every neural network architecture suits every observation.\n\n### Sequences and attention-based architectures\n\nRecurrent networks provide a way to carry information along a sequence. Attention-based architectures offer another view of relationships between positions. These themes connect with the contextual language representations encountered in NLP during Semester 6. NLP is not declared as a prerequisite for this course; its appearance earlier in the curriculum is a conceptual connection, not an extra registration rule. The comparison helps students explain why the same family of methods can appear in different application-oriented subjects.\n\n### Evaluation"
+          },
+          {
+            "rank": 4,
+            "chunk_id": "HCE-DOC02::chunk_015",
+            "document_id": "HCE-DOC02",
+            "score": 0.48631065521960304,
+            "text": "Detailed ML, NLP and Deep Learning content appears in the respective syllabus documents. The prerequisite register distinguishes earlier preparation from same-semester theory/lab pairing. An assigned faculty member appears only where the fact contract provides one; course availability does not imply that the dataset names every instructor.\n\nThe shared storyline runs from numerical preparation through predictive learning to language representations and deeper neural models. Related course names should not be interpreted as identical objectives. Information Retrieval studies relevance over collections, while NLP studies language representations and processing. Computer Networks concerns communication between devices, whereas language courses concern representations of human communication."
+          },
+          {
+            "rank": 5,
+            "chunk_id": "HCE-DOC02::chunk_009",
+            "document_id": "HCE-DOC02",
+            "score": 0.48306878211655385,
+            "text": "Project | 2 | project |\n\nSemester credits: 20.\n\n### Semester 6\n\nThe sixth semester brings language-centered applications into focus. NLP uses earlier AI and ML foundations; Information Retrieval supplies a related view of relevance and ranking. Compiler Design, Responsible Computing and the research seminar broaden the context in which language and data systems are studied.\n\n| Course code | Course name | Credits | Type |\n| --- | --- | --- | --- |\n| HCE-CSE601 | Compiler Design | 4 | theory |\n| HCE-CSE602 | Information Retrieval | 4 | theory |\n| HCE-CSE603 | Natural"
+          }
+        ],
+        "final_guard": {
+          "requested_units": [],
+          "generation_allowed": true,
+          "applied": false
+        },
+        "ranking_changed": false
+      },
+      {
+        "query": "Which courses must a student complete before taking Natural Language Processing?",
+        "expected_evidence": [
+          {
+            "rank": 2,
+            "chunk_id": "HCE-DOC13::chunk_013",
+            "score": 0.6395784905046011
+          },
+          {
+            "rank": 8,
+            "chunk_id": "HCE-DOC04::chunk_001",
+            "score": 0.5354389078496243
+          },
+          {
+            "rank": 16,
+            "chunk_id": "HCE-DOC13::chunk_012",
+            "score": 0.4859298960037744
+          },
+          {
+            "rank": 91,
+            "chunk_id": "HCE-DOC13::chunk_008",
+            "score": 0.2979105488516984
+          },
+          {
+            "rank": 118,
+            "chunk_id": "HCE-DOC13::chunk_009",
+            "score": 0.2482474469103305
+          },
+          {
+            "rank": 145,
+            "chunk_id": "HCE-DOC13::chunk_006",
+            "score": 0.16470565535017406
+          }
+        ],
+        "top5": [
+          {
+            "rank": 1,
+            "chunk_id": "HCE-DOC13::chunk_014",
+            "document_id": "HCE-DOC13",
+            "score": 0.6407664797547838,
+            "text": "Natural Language Processing as a corequisite. Information Retrieval is another Semester 6 subject; its relevance to language search does not make it an earlier prerequisite for NLP.\n\n## Deep Learning preparation\n\nDeep Learning (HCE-CSE701), Semester 7, requires Machine Learning (HCE-CSE502) and Linear Algebra for Computing (HCE-CSE404). Both must be retained when answering what to study beforehand. The linear algebra requirement remains explicit even though it is also part of Machine Learning's earlier preparation.\n\nDeep Learning Laboratory (HCE-CSE705) lists Machine Learning and Linear Algebra for Computing as earlier prerequisites and Deep Learning as the same-semester corequisite. NLP is a useful conceptual"
+          },
+          {
+            "rank": 2,
+            "chunk_id": "HCE-DOC13::chunk_013",
+            "document_id": "HCE-DOC13",
+            "score": 0.6395784905046011,
+            "text": "laboratory's prerequisite list is not assumed to be identical to the theory course's list.\n\n## Natural Language Processing preparation\n\nNatural Language Processing (HCE-CSE603), Semester 6, requires Artificial Intelligence (HCE-CSE501) and Machine Learning (HCE-CSE502). The language course builds on those earlier subjects but does not require completion of Semester 7 Deep Learning. A conceptual connection to neural models should not be converted into an unlisted registration dependency.\n\nNatural Language Processing Laboratory (HCE-CSE605) requires the same two earlier courses and pairs with Natural Language Processing as a corequisite. Information Retrieval is another Semester 6 subject; its relevance to language search does not"
+          },
+          {
+            "rank": 3,
+            "chunk_id": "HCE-DOC04::chunk_000",
+            "document_id": "HCE-DOC04",
+            "score": 0.5781454069451157,
+            "text": "# Natural Language Processing Syllabus\n\n**Synthetic educational data created for NLP workshop purposes.**\n\nHindu College of Engineering is a completely fictional educational institution created only for this workshop.\n\n## Course information\n\n| Field | Value |\n| --- | --- |\n| Course code | HCE-CSE603 |\n| Course name | Natural Language Processing |\n| Semester | 6 |\n| Credits | 4 |\n| Delivery | theory |\n| Faculty | Dr. Nivora Pellin |\n| Academic year | 2026-2027 |\n\n## Course description\n\nComputational methods for processing, understanding and generating human language through symbolic, statistical and contextual"
+          },
+          {
+            "rank": 4,
+            "chunk_id": "HCE-DOC02::chunk_016",
+            "document_id": "HCE-DOC02",
+            "score": 0.5780234216869878,
+            "text": "NLP studies language representations and processing. Computer Networks concerns communication between devices, whereas language courses concern representations of human communication. These contrasts make the curriculum useful for both direct lookup and meaning-based discovery."
+          },
+          {
+            "rank": 5,
+            "chunk_id": "HCE-DOC02::chunk_015",
+            "document_id": "HCE-DOC02",
+            "score": 0.5753599676307254,
+            "text": "Detailed ML, NLP and Deep Learning content appears in the respective syllabus documents. The prerequisite register distinguishes earlier preparation from same-semester theory/lab pairing. An assigned faculty member appears only where the fact contract provides one; course availability does not imply that the dataset names every instructor.\n\nThe shared storyline runs from numerical preparation through predictive learning to language representations and deeper neural models. Related course names should not be interpreted as identical objectives. Information Retrieval studies relevance over collections, while NLP studies language representations and processing. Computer Networks concerns communication between devices, whereas language courses concern representations of human communication."
+          }
+        ],
+        "final_guard": {
+          "requested_units": [],
+          "generation_allowed": true,
+          "applied": false
+        },
+        "ranking_changed": false
+      },
+      {
+        "query": "NLP Unit 1",
+        "expected_evidence": [
+          {
+            "rank": 3,
+            "chunk_id": "HCE-DOC04::chunk_002",
+            "score": 0.45945840430465856
+          }
+        ],
+        "top5": [
+          {
+            "rank": 1,
+            "chunk_id": "HCE-DOC04::chunk_005",
+            "document_id": "HCE-DOC04",
+            "score": 0.4744015715167621,
+            "text": "ideas.\n\n### Unit 3 — Distributed Word Representation\n\nTopics: Embedding geometry; Distributional context; Word vector evaluation; Word Embeddings; Word2Vec; CBOW; Skip-Gram.\n\nDistributed word representations place vocabulary items in a dense numerical space rather than allocating an independent coordinate to every word. The unit connects Word Embeddings with patterns of distributional context. Word2Vec is considered through its two training directions: CBOW uses surrounding context to predict a target, while Skip-Gram starts with a target to predict nearby words. Vector geometry supports comparisons among learned words, but closeness does not automatically prove synonymy. Evaluation asks whether a representation captures useful relationships for"
+          },
+          {
+            "rank": 2,
+            "chunk_id": "HCE-DOC06::chunk_005",
+            "document_id": "HCE-DOC06",
+            "score": 0.4610700444050462,
+            "text": "kind of input and evaluation problem rather than assuming that every neural network architecture suits every observation.\n\n### Sequences and attention-based architectures\n\nRecurrent networks provide a way to carry information along a sequence. Attention-based architectures offer another view of relationships between positions. These themes connect with the contextual language representations encountered in NLP during Semester 6. NLP is not declared as a prerequisite for this course; its appearance earlier in the curriculum is a conceptual connection, not an extra registration rule. The comparison helps students explain why the same family of methods can appear in different application-oriented subjects.\n\n### Evaluation"
+          },
+          {
+            "rank": 3,
+            "chunk_id": "HCE-DOC04::chunk_002",
+            "document_id": "HCE-DOC04",
+            "score": 0.45945840430465856,
+            "text": "Construct count-based and weighted language representations.\n- Compare distributed word representations.\n- Explain sequence context, attention and Transformer representations.\n- Evaluate semantic similarity and retrieval experiments.\n\n## Unit structure\n\n### Unit 1 — Text Preparation\n\nTopics: Text normalization; Stop words; Stemming and lemmatization; Text Preprocessing; Tokenization.\n\nText preparation begins with the decisions that turn a raw string into a usable sequence. Students consider capitalization, punctuation and spacing alongside text normalization. Tokenization establishes the units that later representations count or encode. Stop words, stemming and lemmatization are examined as choices with consequences rather than operations that should be applied automatically. An"
+          },
+          {
+            "rank": 4,
+            "chunk_id": "HCE-DOC02::chunk_016",
+            "document_id": "HCE-DOC02",
+            "score": 0.4494094066155775,
+            "text": "NLP studies language representations and processing. Computer Networks concerns communication between devices, whereas language courses concern representations of human communication. These contrasts make the curriculum useful for both direct lookup and meaning-based discovery."
+          },
+          {
+            "rank": 5,
+            "chunk_id": "HCE-DOC02::chunk_009",
+            "document_id": "HCE-DOC02",
+            "score": 0.42812417811332304,
+            "text": "Project | 2 | project |\n\nSemester credits: 20.\n\n### Semester 6\n\nThe sixth semester brings language-centered applications into focus. NLP uses earlier AI and ML foundations; Information Retrieval supplies a related view of relevance and ranking. Compiler Design, Responsible Computing and the research seminar broaden the context in which language and data systems are studied.\n\n| Course code | Course name | Credits | Type |\n| --- | --- | --- | --- |\n| HCE-CSE601 | Compiler Design | 4 | theory |\n| HCE-CSE602 | Information Retrieval | 4 | theory |\n| HCE-CSE603 | Natural"
+          }
+        ],
+        "final_guard": {
+          "applied": true,
+          "requested_units": [
+            1
+          ],
+          "resolved_courses": [
+            "Natural Language Processing"
+          ],
+          "supplied_unit_headings": [
+            1,
+            3
+          ],
+          "missing_units": [],
+          "generation_allowed": true,
+          "policy": "Matching course and explicit unit heading required before generation; semantic scores/order unchanged.",
+          "limitation": "Heading presence does not establish complete or correct unit coverage."
+        },
+        "ranking_changed": false
+      },
+      {
+        "query": "NLP Unit 2",
+        "expected_evidence": [
+          {
+            "rank": 7,
+            "chunk_id": "HCE-DOC04::chunk_003",
+            "score": 0.43465692594469535
+          }
+        ],
+        "top5": [
+          {
+            "rank": 1,
+            "chunk_id": "HCE-DOC04::chunk_005",
+            "document_id": "HCE-DOC04",
+            "score": 0.5064670047937766,
+            "text": "ideas.\n\n### Unit 3 — Distributed Word Representation\n\nTopics: Embedding geometry; Distributional context; Word vector evaluation; Word Embeddings; Word2Vec; CBOW; Skip-Gram.\n\nDistributed word representations place vocabulary items in a dense numerical space rather than allocating an independent coordinate to every word. The unit connects Word Embeddings with patterns of distributional context. Word2Vec is considered through its two training directions: CBOW uses surrounding context to predict a target, while Skip-Gram starts with a target to predict nearby words. Vector geometry supports comparisons among learned words, but closeness does not automatically prove synonymy. Evaluation asks whether a representation captures useful relationships for"
+          },
+          {
+            "rank": 2,
+            "chunk_id": "HCE-DOC06::chunk_005",
+            "document_id": "HCE-DOC06",
+            "score": 0.478429218912279,
+            "text": "kind of input and evaluation problem rather than assuming that every neural network architecture suits every observation.\n\n### Sequences and attention-based architectures\n\nRecurrent networks provide a way to carry information along a sequence. Attention-based architectures offer another view of relationships between positions. These themes connect with the contextual language representations encountered in NLP during Semester 6. NLP is not declared as a prerequisite for this course; its appearance earlier in the curriculum is a conceptual connection, not an extra registration rule. The comparison helps students explain why the same family of methods can appear in different application-oriented subjects.\n\n### Evaluation"
+          },
+          {
+            "rank": 3,
+            "chunk_id": "HCE-DOC02::chunk_016",
+            "document_id": "HCE-DOC02",
+            "score": 0.4574644265757068,
+            "text": "NLP studies language representations and processing. Computer Networks concerns communication between devices, whereas language courses concern representations of human communication. These contrasts make the curriculum useful for both direct lookup and meaning-based discovery."
+          },
+          {
+            "rank": 4,
+            "chunk_id": "HCE-DOC04::chunk_002",
+            "document_id": "HCE-DOC04",
+            "score": 0.4526409151125871,
+            "text": "Construct count-based and weighted language representations.\n- Compare distributed word representations.\n- Explain sequence context, attention and Transformer representations.\n- Evaluate semantic similarity and retrieval experiments.\n\n## Unit structure\n\n### Unit 1 — Text Preparation\n\nTopics: Text normalization; Stop words; Stemming and lemmatization; Text Preprocessing; Tokenization.\n\nText preparation begins with the decisions that turn a raw string into a usable sequence. Students consider capitalization, punctuation and spacing alongside text normalization. Tokenization establishes the units that later representations count or encode. Stop words, stemming and lemmatization are examined as choices with consequences rather than operations that should be applied automatically. An"
+          },
+          {
+            "rank": 5,
+            "chunk_id": "HCE-DOC04::chunk_007",
+            "document_id": "HCE-DOC04",
+            "score": 0.4412158646410114,
+            "text": "point of comparison for contextual representations. Attention assigns differing relevance to parts of a sequence when constructing a representation; Transformers organize these operations into an architecture that can relate distant positions. BERT introduces an encoder-oriented contextual representation and masked language modeling. GPT provides the contrasting decoder-oriented, autoregressive / next-token language modeling approach used for text generation: successive tokens are predicted from preceding context. The unit distinguishes an architecture from a training objective and a pretrained model family. Language Models connect token prediction with the use of context, without assuming that fluent text guarantees factual correctness.\n\n### Unit 5 — Meaning"
+          }
+        ],
+        "final_guard": {
+          "applied": true,
+          "requested_units": [
+            2
+          ],
+          "resolved_courses": [
+            "Natural Language Processing"
+          ],
+          "supplied_unit_headings": [
+            1,
+            3,
+            5
+          ],
+          "missing_units": [
+            2
+          ],
+          "generation_allowed": false,
+          "policy": "Matching course and explicit unit heading required before generation; semantic scores/order unchanged.",
+          "limitation": "Heading presence does not establish complete or correct unit coverage."
+        },
+        "ranking_changed": false
+      },
+      {
+        "query": "NLP Unit 3",
+        "expected_evidence": [
+          {
+            "rank": 1,
+            "chunk_id": "HCE-DOC04::chunk_005",
+            "score": 0.48704209911865837
+          },
+          {
+            "rank": 8,
+            "chunk_id": "HCE-DOC04::chunk_004",
+            "score": 0.41028806730531286
+          }
+        ],
+        "top5": [
+          {
+            "rank": 1,
+            "chunk_id": "HCE-DOC04::chunk_005",
+            "document_id": "HCE-DOC04",
+            "score": 0.48704209911865837,
+            "text": "ideas.\n\n### Unit 3 — Distributed Word Representation\n\nTopics: Embedding geometry; Distributional context; Word vector evaluation; Word Embeddings; Word2Vec; CBOW; Skip-Gram.\n\nDistributed word representations place vocabulary items in a dense numerical space rather than allocating an independent coordinate to every word. The unit connects Word Embeddings with patterns of distributional context. Word2Vec is considered through its two training directions: CBOW uses surrounding context to predict a target, while Skip-Gram starts with a target to predict nearby words. Vector geometry supports comparisons among learned words, but closeness does not automatically prove synonymy. Evaluation asks whether a representation captures useful relationships for"
+          },
+          {
+            "rank": 2,
+            "chunk_id": "HCE-DOC06::chunk_005",
+            "document_id": "HCE-DOC06",
+            "score": 0.4720785976388158,
+            "text": "kind of input and evaluation problem rather than assuming that every neural network architecture suits every observation.\n\n### Sequences and attention-based architectures\n\nRecurrent networks provide a way to carry information along a sequence. Attention-based architectures offer another view of relationships between positions. These themes connect with the contextual language representations encountered in NLP during Semester 6. NLP is not declared as a prerequisite for this course; its appearance earlier in the curriculum is a conceptual connection, not an extra registration rule. The comparison helps students explain why the same family of methods can appear in different application-oriented subjects.\n\n### Evaluation"
+          },
+          {
+            "rank": 3,
+            "chunk_id": "HCE-DOC04::chunk_002",
+            "document_id": "HCE-DOC04",
+            "score": 0.444952183802939,
+            "text": "Construct count-based and weighted language representations.\n- Compare distributed word representations.\n- Explain sequence context, attention and Transformer representations.\n- Evaluate semantic similarity and retrieval experiments.\n\n## Unit structure\n\n### Unit 1 — Text Preparation\n\nTopics: Text normalization; Stop words; Stemming and lemmatization; Text Preprocessing; Tokenization.\n\nText preparation begins with the decisions that turn a raw string into a usable sequence. Students consider capitalization, punctuation and spacing alongside text normalization. Tokenization establishes the units that later representations count or encode. Stop words, stemming and lemmatization are examined as choices with consequences rather than operations that should be applied automatically. An"
+          },
+          {
+            "rank": 4,
+            "chunk_id": "HCE-DOC02::chunk_009",
+            "document_id": "HCE-DOC02",
+            "score": 0.43797214140208207,
+            "text": "Project | 2 | project |\n\nSemester credits: 20.\n\n### Semester 6\n\nThe sixth semester brings language-centered applications into focus. NLP uses earlier AI and ML foundations; Information Retrieval supplies a related view of relevance and ranking. Compiler Design, Responsible Computing and the research seminar broaden the context in which language and data systems are studied.\n\n| Course code | Course name | Credits | Type |\n| --- | --- | --- | --- |\n| HCE-CSE601 | Compiler Design | 4 | theory |\n| HCE-CSE602 | Information Retrieval | 4 | theory |\n| HCE-CSE603 | Natural"
+          },
+          {
+            "rank": 5,
+            "chunk_id": "HCE-DOC02::chunk_016",
+            "document_id": "HCE-DOC02",
+            "score": 0.43081426842794796,
+            "text": "NLP studies language representations and processing. Computer Networks concerns communication between devices, whereas language courses concern representations of human communication. These contrasts make the curriculum useful for both direct lookup and meaning-based discovery."
+          }
+        ],
+        "final_guard": {
+          "applied": true,
+          "requested_units": [
+            3
+          ],
+          "resolved_courses": [
+            "Natural Language Processing"
+          ],
+          "supplied_unit_headings": [
+            1,
+            3
+          ],
+          "missing_units": [],
+          "generation_allowed": true,
+          "policy": "Matching course and explicit unit heading required before generation; semantic scores/order unchanged.",
+          "limitation": "Heading presence does not establish complete or correct unit coverage."
+        },
+        "ranking_changed": false
+      },
+      {
+        "query": "NLP Unit 4",
+        "expected_evidence": [
+          {
+            "rank": 12,
+            "chunk_id": "HCE-DOC04::chunk_006",
+            "score": 0.37631908921524704
+          }
+        ],
+        "top5": [
+          {
+            "rank": 1,
+            "chunk_id": "HCE-DOC06::chunk_005",
+            "document_id": "HCE-DOC06",
+            "score": 0.47163394066220277,
+            "text": "kind of input and evaluation problem rather than assuming that every neural network architecture suits every observation.\n\n### Sequences and attention-based architectures\n\nRecurrent networks provide a way to carry information along a sequence. Attention-based architectures offer another view of relationships between positions. These themes connect with the contextual language representations encountered in NLP during Semester 6. NLP is not declared as a prerequisite for this course; its appearance earlier in the curriculum is a conceptual connection, not an extra registration rule. The comparison helps students explain why the same family of methods can appear in different application-oriented subjects.\n\n### Evaluation"
+          },
+          {
+            "rank": 2,
+            "chunk_id": "HCE-DOC04::chunk_005",
+            "document_id": "HCE-DOC04",
+            "score": 0.4710458714013932,
+            "text": "ideas.\n\n### Unit 3 — Distributed Word Representation\n\nTopics: Embedding geometry; Distributional context; Word vector evaluation; Word Embeddings; Word2Vec; CBOW; Skip-Gram.\n\nDistributed word representations place vocabulary items in a dense numerical space rather than allocating an independent coordinate to every word. The unit connects Word Embeddings with patterns of distributional context. Word2Vec is considered through its two training directions: CBOW uses surrounding context to predict a target, while Skip-Gram starts with a target to predict nearby words. Vector geometry supports comparisons among learned words, but closeness does not automatically prove synonymy. Evaluation asks whether a representation captures useful relationships for"
+          },
+          {
+            "rank": 3,
+            "chunk_id": "HCE-DOC02::chunk_009",
+            "document_id": "HCE-DOC02",
+            "score": 0.43934577267058306,
+            "text": "Project | 2 | project |\n\nSemester credits: 20.\n\n### Semester 6\n\nThe sixth semester brings language-centered applications into focus. NLP uses earlier AI and ML foundations; Information Retrieval supplies a related view of relevance and ranking. Compiler Design, Responsible Computing and the research seminar broaden the context in which language and data systems are studied.\n\n| Course code | Course name | Credits | Type |\n| --- | --- | --- | --- |\n| HCE-CSE601 | Compiler Design | 4 | theory |\n| HCE-CSE602 | Information Retrieval | 4 | theory |\n| HCE-CSE603 | Natural"
+          },
+          {
+            "rank": 4,
+            "chunk_id": "HCE-DOC04::chunk_002",
+            "document_id": "HCE-DOC04",
+            "score": 0.4379466072472203,
+            "text": "Construct count-based and weighted language representations.\n- Compare distributed word representations.\n- Explain sequence context, attention and Transformer representations.\n- Evaluate semantic similarity and retrieval experiments.\n\n## Unit structure\n\n### Unit 1 — Text Preparation\n\nTopics: Text normalization; Stop words; Stemming and lemmatization; Text Preprocessing; Tokenization.\n\nText preparation begins with the decisions that turn a raw string into a usable sequence. Students consider capitalization, punctuation and spacing alongside text normalization. Tokenization establishes the units that later representations count or encode. Stop words, stemming and lemmatization are examined as choices with consequences rather than operations that should be applied automatically. An"
+          },
+          {
+            "rank": 5,
+            "chunk_id": "HCE-DOC02::chunk_016",
+            "document_id": "HCE-DOC02",
+            "score": 0.4232094039232357,
+            "text": "NLP studies language representations and processing. Computer Networks concerns communication between devices, whereas language courses concern representations of human communication. These contrasts make the curriculum useful for both direct lookup and meaning-based discovery."
+          }
+        ],
+        "final_guard": {
+          "applied": true,
+          "requested_units": [
+            4
+          ],
+          "resolved_courses": [
+            "Natural Language Processing"
+          ],
+          "supplied_unit_headings": [
+            1,
+            3
+          ],
+          "missing_units": [
+            4
+          ],
+          "generation_allowed": false,
+          "policy": "Matching course and explicit unit heading required before generation; semantic scores/order unchanged.",
+          "limitation": "Heading presence does not establish complete or correct unit coverage."
+        },
+        "ranking_changed": false
+      },
+      {
+        "query": "NLP Unit 5",
+        "expected_evidence": [
+          {
+            "rank": 7,
+            "chunk_id": "HCE-DOC04::chunk_007",
+            "score": 0.43299148779345986
+          },
+          {
+            "rank": 10,
+            "chunk_id": "HCE-DOC04::chunk_008",
+            "score": 0.4003825762538192
+          }
+        ],
+        "top5": [
+          {
+            "rank": 1,
+            "chunk_id": "HCE-DOC06::chunk_005",
+            "document_id": "HCE-DOC06",
+            "score": 0.477784046630438,
+            "text": "kind of input and evaluation problem rather than assuming that every neural network architecture suits every observation.\n\n### Sequences and attention-based architectures\n\nRecurrent networks provide a way to carry information along a sequence. Attention-based architectures offer another view of relationships between positions. These themes connect with the contextual language representations encountered in NLP during Semester 6. NLP is not declared as a prerequisite for this course; its appearance earlier in the curriculum is a conceptual connection, not an extra registration rule. The comparison helps students explain why the same family of methods can appear in different application-oriented subjects.\n\n### Evaluation"
+          },
+          {
+            "rank": 2,
+            "chunk_id": "HCE-DOC04::chunk_005",
+            "document_id": "HCE-DOC04",
+            "score": 0.46641407532635115,
+            "text": "ideas.\n\n### Unit 3 — Distributed Word Representation\n\nTopics: Embedding geometry; Distributional context; Word vector evaluation; Word Embeddings; Word2Vec; CBOW; Skip-Gram.\n\nDistributed word representations place vocabulary items in a dense numerical space rather than allocating an independent coordinate to every word. The unit connects Word Embeddings with patterns of distributional context. Word2Vec is considered through its two training directions: CBOW uses surrounding context to predict a target, while Skip-Gram starts with a target to predict nearby words. Vector geometry supports comparisons among learned words, but closeness does not automatically prove synonymy. Evaluation asks whether a representation captures useful relationships for"
+          },
+          {
+            "rank": 3,
+            "chunk_id": "HCE-DOC04::chunk_002",
+            "document_id": "HCE-DOC04",
+            "score": 0.4600246770165169,
+            "text": "Construct count-based and weighted language representations.\n- Compare distributed word representations.\n- Explain sequence context, attention and Transformer representations.\n- Evaluate semantic similarity and retrieval experiments.\n\n## Unit structure\n\n### Unit 1 — Text Preparation\n\nTopics: Text normalization; Stop words; Stemming and lemmatization; Text Preprocessing; Tokenization.\n\nText preparation begins with the decisions that turn a raw string into a usable sequence. Students consider capitalization, punctuation and spacing alongside text normalization. Tokenization establishes the units that later representations count or encode. Stop words, stemming and lemmatization are examined as choices with consequences rather than operations that should be applied automatically. An"
+          },
+          {
+            "rank": 4,
+            "chunk_id": "HCE-DOC02::chunk_009",
+            "document_id": "HCE-DOC02",
+            "score": 0.4508071640192543,
+            "text": "Project | 2 | project |\n\nSemester credits: 20.\n\n### Semester 6\n\nThe sixth semester brings language-centered applications into focus. NLP uses earlier AI and ML foundations; Information Retrieval supplies a related view of relevance and ranking. Compiler Design, Responsible Computing and the research seminar broaden the context in which language and data systems are studied.\n\n| Course code | Course name | Credits | Type |\n| --- | --- | --- | --- |\n| HCE-CSE601 | Compiler Design | 4 | theory |\n| HCE-CSE602 | Information Retrieval | 4 | theory |\n| HCE-CSE603 | Natural"
+          },
+          {
+            "rank": 5,
+            "chunk_id": "HCE-DOC14::chunk_008",
+            "document_id": "HCE-DOC14",
+            "score": 0.44107492062861287,
+            "text": "not authorize assigning this instructor to all courses that discuss prediction.\n\nDr. Nivora Pellin teaches Information Retrieval, Natural Language Processing and the NLP laboratory in Semester 6. The specialization connects language processing with retrieval, but each course retains its own purpose and identifier. A query about who teaches NLP should return the named NLP assignment rather than selecting any faculty member whose specialization sounds related.\n\nDr. Arveth Solan teaches Deep Learning, Computer Vision and the Deep Learning laboratory in Semester 7. The neural and visual themes create useful comparison opportunities with the Semester 5 and 6 subjects. They do not"
+          }
+        ],
+        "final_guard": {
+          "applied": true,
+          "requested_units": [
+            5
+          ],
+          "resolved_courses": [
+            "Natural Language Processing"
+          ],
+          "supplied_unit_headings": [
+            1,
+            3
+          ],
+          "missing_units": [
+            5
+          ],
+          "generation_allowed": false,
+          "policy": "Matching course and explicit unit heading required before generation; semantic scores/order unchanged.",
+          "limitation": "Heading presence does not establish complete or correct unit coverage."
+        },
+        "ranking_changed": false
+      },
+      {
+        "query": "Summarize NLP Unit 4.",
+        "expected_evidence": [
+          {
+            "rank": 9,
+            "chunk_id": "HCE-DOC04::chunk_006",
+            "score": 0.4211387663334158
+          }
+        ],
+        "top5": [
+          {
+            "rank": 1,
+            "chunk_id": "HCE-DOC04::chunk_002",
+            "document_id": "HCE-DOC04",
+            "score": 0.5045296595248101,
+            "text": "Construct count-based and weighted language representations.\n- Compare distributed word representations.\n- Explain sequence context, attention and Transformer representations.\n- Evaluate semantic similarity and retrieval experiments.\n\n## Unit structure\n\n### Unit 1 — Text Preparation\n\nTopics: Text normalization; Stop words; Stemming and lemmatization; Text Preprocessing; Tokenization.\n\nText preparation begins with the decisions that turn a raw string into a usable sequence. Students consider capitalization, punctuation and spacing alongside text normalization. Tokenization establishes the units that later representations count or encode. Stop words, stemming and lemmatization are examined as choices with consequences rather than operations that should be applied automatically. An"
+          },
+          {
+            "rank": 2,
+            "chunk_id": "HCE-DOC04::chunk_005",
+            "document_id": "HCE-DOC04",
+            "score": 0.46522791247290524,
+            "text": "ideas.\n\n### Unit 3 — Distributed Word Representation\n\nTopics: Embedding geometry; Distributional context; Word vector evaluation; Word Embeddings; Word2Vec; CBOW; Skip-Gram.\n\nDistributed word representations place vocabulary items in a dense numerical space rather than allocating an independent coordinate to every word. The unit connects Word Embeddings with patterns of distributional context. Word2Vec is considered through its two training directions: CBOW uses surrounding context to predict a target, while Skip-Gram starts with a target to predict nearby words. Vector geometry supports comparisons among learned words, but closeness does not automatically prove synonymy. Evaluation asks whether a representation captures useful relationships for"
+          },
+          {
+            "rank": 3,
+            "chunk_id": "HCE-DOC04::chunk_004",
+            "document_id": "HCE-DOC04",
+            "score": 0.46134700512657106,
+            "text": "a collection. One-hot encoding identifies individual terms; Bag of Words counts their occurrences while setting aside order. N-Grams retain short sequences and therefore preserve some local context. Term frequency and document frequency support TF-IDF, where frequent words within one document are interpreted alongside their prevalence across the collection. Cosine Similarity compares vector direction rather than simply rewarding a long document. Students discuss what a count-based representation can capture and what it loses when two passages use different words for related ideas.\n\n### Unit 3 — Distributed Word Representation\n\nTopics: Embedding geometry; Distributional context; Word vector evaluation; Word Embeddings; Word2Vec; CBOW;"
+          },
+          {
+            "rank": 4,
+            "chunk_id": "HCE-DOC06::chunk_005",
+            "document_id": "HCE-DOC06",
+            "score": 0.4592734574776022,
+            "text": "kind of input and evaluation problem rather than assuming that every neural network architecture suits every observation.\n\n### Sequences and attention-based architectures\n\nRecurrent networks provide a way to carry information along a sequence. Attention-based architectures offer another view of relationships between positions. These themes connect with the contextual language representations encountered in NLP during Semester 6. NLP is not declared as a prerequisite for this course; its appearance earlier in the curriculum is a conceptual connection, not an extra registration rule. The comparison helps students explain why the same family of methods can appear in different application-oriented subjects.\n\n### Evaluation"
+          },
+          {
+            "rank": 5,
+            "chunk_id": "HCE-DOC04::chunk_003",
+            "document_id": "HCE-DOC04",
+            "score": 0.4553248218386129,
+            "text": "Stop words, stemming and lemmatization are examined as choices with consequences rather than operations that should be applied automatically. An abbreviated course notice and a complete sentence can lose different information when cleaned in the same way. The unit connects visible changes in the text to the task being attempted.\n\n### Unit 2 — Count-Based Language Representation\n\nTopics: Vocabulary; One-hot encoding; Term and document frequency; Bag of Words; N-Grams; TF-IDF; Cosine Similarity.\n\nA vocabulary supplies a shared coordinate system for a collection. One-hot encoding identifies individual terms; Bag of Words counts their occurrences while setting aside order. N-Grams retain short"
+          }
+        ],
+        "final_guard": {
+          "applied": true,
+          "requested_units": [
+            4
+          ],
+          "resolved_courses": [
+            "Natural Language Processing"
+          ],
+          "supplied_unit_headings": [
+            1,
+            2,
+            3
+          ],
+          "missing_units": [
+            4
+          ],
+          "generation_allowed": false,
+          "policy": "Matching course and explicit unit heading required before generation; semantic scores/order unchanged.",
+          "limitation": "Heading presence does not establish complete or correct unit coverage."
+        },
+        "ranking_changed": false
+      },
+      {
+        "query": "What topics are covered in NLP Unit 4?",
+        "expected_evidence": [
+          {
+            "rank": 36,
+            "chunk_id": "HCE-DOC04::chunk_006",
+            "score": 0.34335608562312253
+          }
+        ],
+        "top5": [
+          {
+            "rank": 1,
+            "chunk_id": "HCE-DOC02::chunk_016",
+            "document_id": "HCE-DOC02",
+            "score": 0.5289795057165588,
+            "text": "NLP studies language representations and processing. Computer Networks concerns communication between devices, whereas language courses concern representations of human communication. These contrasts make the curriculum useful for both direct lookup and meaning-based discovery."
+          },
+          {
+            "rank": 2,
+            "chunk_id": "HCE-DOC02::chunk_009",
+            "document_id": "HCE-DOC02",
+            "score": 0.5208501916071601,
+            "text": "Project | 2 | project |\n\nSemester credits: 20.\n\n### Semester 6\n\nThe sixth semester brings language-centered applications into focus. NLP uses earlier AI and ML foundations; Information Retrieval supplies a related view of relevance and ranking. Compiler Design, Responsible Computing and the research seminar broaden the context in which language and data systems are studied.\n\n| Course code | Course name | Credits | Type |\n| --- | --- | --- | --- |\n| HCE-CSE601 | Compiler Design | 4 | theory |\n| HCE-CSE602 | Information Retrieval | 4 | theory |\n| HCE-CSE603 | Natural"
+          },
+          {
+            "rank": 3,
+            "chunk_id": "HCE-DOC06::chunk_005",
+            "document_id": "HCE-DOC06",
+            "score": 0.506370234764877,
+            "text": "kind of input and evaluation problem rather than assuming that every neural network architecture suits every observation.\n\n### Sequences and attention-based architectures\n\nRecurrent networks provide a way to carry information along a sequence. Attention-based architectures offer another view of relationships between positions. These themes connect with the contextual language representations encountered in NLP during Semester 6. NLP is not declared as a prerequisite for this course; its appearance earlier in the curriculum is a conceptual connection, not an extra registration rule. The comparison helps students explain why the same family of methods can appear in different application-oriented subjects.\n\n### Evaluation"
+          },
+          {
+            "rank": 4,
+            "chunk_id": "HCE-DOC02::chunk_015",
+            "document_id": "HCE-DOC02",
+            "score": 0.5038414964561274,
+            "text": "Detailed ML, NLP and Deep Learning content appears in the respective syllabus documents. The prerequisite register distinguishes earlier preparation from same-semester theory/lab pairing. An assigned faculty member appears only where the fact contract provides one; course availability does not imply that the dataset names every instructor.\n\nThe shared storyline runs from numerical preparation through predictive learning to language representations and deeper neural models. Related course names should not be interpreted as identical objectives. Information Retrieval studies relevance over collections, while NLP studies language representations and processing. Computer Networks concerns communication between devices, whereas language courses concern representations of human communication."
+          },
+          {
+            "rank": 5,
+            "chunk_id": "HCE-DOC13::chunk_014",
+            "document_id": "HCE-DOC13",
+            "score": 0.4833310306618911,
+            "text": "Natural Language Processing as a corequisite. Information Retrieval is another Semester 6 subject; its relevance to language search does not make it an earlier prerequisite for NLP.\n\n## Deep Learning preparation\n\nDeep Learning (HCE-CSE701), Semester 7, requires Machine Learning (HCE-CSE502) and Linear Algebra for Computing (HCE-CSE404). Both must be retained when answering what to study beforehand. The linear algebra requirement remains explicit even though it is also part of Machine Learning's earlier preparation.\n\nDeep Learning Laboratory (HCE-CSE705) lists Machine Learning and Linear Algebra for Computing as earlier prerequisites and Deep Learning as the same-semester corequisite. NLP is a useful conceptual"
+          }
+        ],
+        "final_guard": {
+          "applied": true,
+          "requested_units": [
+            4
+          ],
+          "resolved_courses": [],
+          "supplied_unit_headings": [],
+          "missing_units": [
+            4
+          ],
+          "generation_allowed": false,
+          "policy": "Matching course and explicit unit heading required before generation; semantic scores/order unchanged.",
+          "limitation": "Heading presence does not establish complete or correct unit coverage."
+        },
+        "ranking_changed": false
+      },
+      {
+        "query": "Create revision questions for NLP Unit 4.",
+        "expected_evidence": [
+          {
+            "rank": 29,
+            "chunk_id": "HCE-DOC04::chunk_006",
+            "score": 0.2888563898712475
+          }
+        ],
+        "top5": [
+          {
+            "rank": 1,
+            "chunk_id": "HCE-DOC02::chunk_009",
+            "document_id": "HCE-DOC02",
+            "score": 0.413407608520725,
+            "text": "Project | 2 | project |\n\nSemester credits: 20.\n\n### Semester 6\n\nThe sixth semester brings language-centered applications into focus. NLP uses earlier AI and ML foundations; Information Retrieval supplies a related view of relevance and ranking. Compiler Design, Responsible Computing and the research seminar broaden the context in which language and data systems are studied.\n\n| Course code | Course name | Credits | Type |\n| --- | --- | --- | --- |\n| HCE-CSE601 | Compiler Design | 4 | theory |\n| HCE-CSE602 | Information Retrieval | 4 | theory |\n| HCE-CSE603 | Natural"
+          },
+          {
+            "rank": 2,
+            "chunk_id": "HCE-DOC07::chunk_004",
+            "document_id": "HCE-DOC07",
+            "score": 0.3977501705871475,
+            "text": "2027-04-23 |\n| Internal examinations | 2027-03-01 | 2027-03-05 |\n| Laboratory examinations | 2027-04-26 | 2027-04-30 |\n| End-semester examinations | 2027-05-03 | 2027-05-14 |\n| Semester break | 2027-05-15 | 2027-07-18 |\n\n### Academic milestones\n\n| Milestone | Date | Course scope |\n| --- | --- | --- |\n| Course registration closes | 2027-01-15 | Term-wide |\n| Capstone Project II progress review | 2027-03-19 | HCE-CSE805 |\n| Laboratory records and coursework due | 2027-04-23 | Term-wide |\n\n## Specific NLP examination\n\nNatural Language Processing (HCE-CSE603), Semester 6, has its end-semester examination on 2027-05-07. This"
+          },
+          {
+            "rank": 3,
+            "chunk_id": "HCE-DOC04::chunk_002",
+            "document_id": "HCE-DOC04",
+            "score": 0.3960985529641141,
+            "text": "Construct count-based and weighted language representations.\n- Compare distributed word representations.\n- Explain sequence context, attention and Transformer representations.\n- Evaluate semantic similarity and retrieval experiments.\n\n## Unit structure\n\n### Unit 1 — Text Preparation\n\nTopics: Text normalization; Stop words; Stemming and lemmatization; Text Preprocessing; Tokenization.\n\nText preparation begins with the decisions that turn a raw string into a usable sequence. Students consider capitalization, punctuation and spacing alongside text normalization. Tokenization establishes the units that later representations count or encode. Stop words, stemming and lemmatization are examined as choices with consequences rather than operations that should be applied automatically. An"
+          },
+          {
+            "rank": 4,
+            "chunk_id": "HCE-DOC09::chunk_004",
+            "document_id": "HCE-DOC09",
+            "score": 0.39021028066413704,
+            "text": "they do not replace it.\n\n## Evidence used in different course types\n\nTheory courses use a written midterm, coursework and a written end-semester examination. Laboratories use a midterm practical, continuous records and experiments, and an end-semester practical demonstration with viva. Projects and seminars use progress review and a continuous portfolio, followed by a final demonstration or viva. These delivery-specific modes explain how a learner presents work; they do not create different mark totals or pass conditions.\n\nThe NLP previous-paper collection contains four synthetic 60-mark end-semester papers. Each has twelve five-mark questions with all questions compulsory. Those paper marks represent the"
+          },
+          {
+            "rank": 5,
+            "chunk_id": "HCE-DOC04::chunk_003",
+            "document_id": "HCE-DOC04",
+            "score": 0.38646011443665135,
+            "text": "Stop words, stemming and lemmatization are examined as choices with consequences rather than operations that should be applied automatically. An abbreviated course notice and a complete sentence can lose different information when cleaned in the same way. The unit connects visible changes in the text to the task being attempted.\n\n### Unit 2 — Count-Based Language Representation\n\nTopics: Vocabulary; One-hot encoding; Term and document frequency; Bag of Words; N-Grams; TF-IDF; Cosine Similarity.\n\nA vocabulary supplies a shared coordinate system for a collection. One-hot encoding identifies individual terms; Bag of Words counts their occurrences while setting aside order. N-Grams retain short"
+          }
+        ],
+        "final_guard": {
+          "applied": true,
+          "requested_units": [
+            4
+          ],
+          "resolved_courses": [
+            "Natural Language Processing"
+          ],
+          "supplied_unit_headings": [
+            1,
+            2
+          ],
+          "missing_units": [
+            4
+          ],
+          "generation_allowed": false,
+          "policy": "Matching course and explicit unit heading required before generation; semantic scores/order unchanged.",
+          "limitation": "Heading presence does not establish complete or correct unit coverage."
+        },
+        "ranking_changed": false
+      }
+    ],
+    "Task12": {
+      "metrics": {
+        "count": 14,
+        "query_ids": [
+          "RET-01",
+          "RET-02",
+          "RET-03",
+          "RET-05",
+          "RET-06",
+          "RET-10",
+          "RET-11",
+          "RET-15",
+          "CHUNK-D01",
+          "CHUNK-D02",
+          "CHUNK-D03",
+          "CHUNK-D04",
+          "CHUNK-D05",
+          "CHUNK-P03"
+        ],
+        "document_hit_at_1": 0.5714285714285714,
+        "document_hit_at_3": 0.7857142857142857,
+        "document_hit_at_5": 0.8571428571428571,
+        "mrr": 0.6947767145135567
+      },
+      "comparison": [
+        {
+          "query_id": "RET-01",
+          "top5_unchanged": true,
+          "expected_rank_unchanged": true
+        },
+        {
+          "query_id": "RET-02",
+          "top5_unchanged": true,
+          "expected_rank_unchanged": true
+        },
+        {
+          "query_id": "RET-03",
+          "top5_unchanged": true,
+          "expected_rank_unchanged": true
+        },
+        {
+          "query_id": "RET-04",
+          "top5_unchanged": true,
+          "expected_rank_unchanged": true
+        },
+        {
+          "query_id": "RET-05",
+          "top5_unchanged": true,
+          "expected_rank_unchanged": true
+        },
+        {
+          "query_id": "RET-06",
+          "top5_unchanged": true,
+          "expected_rank_unchanged": true
+        },
+        {
+          "query_id": "RET-07",
+          "top5_unchanged": true,
+          "expected_rank_unchanged": true
+        },
+        {
+          "query_id": "RET-08",
+          "top5_unchanged": true,
+          "expected_rank_unchanged": true
+        },
+        {
+          "query_id": "RET-09",
+          "top5_unchanged": true,
+          "expected_rank_unchanged": true
+        },
+        {
+          "query_id": "RET-10",
+          "top5_unchanged": true,
+          "expected_rank_unchanged": true
+        },
+        {
+          "query_id": "RET-11",
+          "top5_unchanged": true,
+          "expected_rank_unchanged": true
+        },
+        {
+          "query_id": "RET-12",
+          "top5_unchanged": true,
+          "expected_rank_unchanged": true
+        },
+        {
+          "query_id": "RET-13",
+          "top5_unchanged": true,
+          "expected_rank_unchanged": true
+        },
+        {
+          "query_id": "RET-15",
+          "top5_unchanged": true,
+          "expected_rank_unchanged": true
+        },
+        {
+          "query_id": "RET-16",
+          "top5_unchanged": true,
+          "expected_rank_unchanged": true
+        },
+        {
+          "query_id": "RET-17",
+          "top5_unchanged": true,
+          "expected_rank_unchanged": true
+        },
+        {
+          "query_id": "CHUNK-D01",
+          "top5_unchanged": true,
+          "expected_rank_unchanged": true
+        },
+        {
+          "query_id": "CHUNK-D02",
+          "top5_unchanged": true,
+          "expected_rank_unchanged": true
+        },
+        {
+          "query_id": "CHUNK-D03",
+          "top5_unchanged": true,
+          "expected_rank_unchanged": true
+        },
+        {
+          "query_id": "CHUNK-D04",
+          "top5_unchanged": true,
+          "expected_rank_unchanged": true
+        },
+        {
+          "query_id": "CHUNK-D05",
+          "top5_unchanged": true,
+          "expected_rank_unchanged": true
+        },
+        {
+          "query_id": "CHUNK-P01",
+          "top5_unchanged": true,
+          "expected_rank_unchanged": true
+        },
+        {
+          "query_id": "CHUNK-P02",
+          "top5_unchanged": true,
+          "expected_rank_unchanged": true
+        },
+        {
+          "query_id": "CHUNK-P03",
+          "top5_unchanged": true,
+          "expected_rank_unchanged": true
+        },
+        {
+          "query_id": "CHUNK-M01",
+          "top5_unchanged": true,
+          "expected_rank_unchanged": true
+        },
+        {
+          "query_id": "CHUNK-C01",
+          "top5_unchanged": true,
+          "expected_rank_unchanged": true
+        },
+        {
+          "query_id": "CHUNK-U01",
+          "top5_unchanged": true,
+          "expected_rank_unchanged": true
+        }
+      ]
+    },
+    "Task14": {
+      "comparison": [
+        {
+          "case_id": "ATT-K1",
+          "topK_unchanged": true,
+          "context_chunks_unchanged": true,
+          "prompt_unchanged": true,
+          "context_evidence": {
+            "classification": "insufficient",
+            "required_evidence_available": false,
+            "preferred_document_coverage": 0.0,
+            "preferred_document_retrieved": false,
+            "scope": "Curated source/text checks, not general semantic or factual evaluation."
+          }
+        },
+        {
+          "case_id": "ATT-K3",
+          "topK_unchanged": true,
+          "context_chunks_unchanged": true,
+          "prompt_unchanged": true,
+          "context_evidence": {
+            "classification": "direct_support",
+            "required_evidence_available": true,
+            "preferred_document_coverage": 1.0,
+            "preferred_document_retrieved": true,
+            "scope": "Curated source/text checks, not general semantic or factual evaluation."
+          }
+        },
+        {
+          "case_id": "ATT-K5",
+          "topK_unchanged": true,
+          "context_chunks_unchanged": true,
+          "prompt_unchanged": true,
+          "context_evidence": {
+            "classification": "direct_support",
+            "required_evidence_available": true,
+            "preferred_document_coverage": 1.0,
+            "preferred_document_retrieved": true,
+            "scope": "Curated source/text checks, not general semantic or factual evaluation."
+          }
+        },
+        {
+          "case_id": "EXAM",
+          "topK_unchanged": true,
+          "context_chunks_unchanged": true,
+          "prompt_unchanged": true,
+          "context_evidence": {
+            "classification": "direct_support",
+            "required_evidence_available": true,
+            "preferred_document_coverage": 1.0,
+            "preferred_document_retrieved": true,
+            "scope": "Curated source/text checks, not general semantic or factual evaluation."
+          }
+        },
+        {
+          "case_id": "SEMESTER",
+          "topK_unchanged": true,
+          "context_chunks_unchanged": true,
+          "prompt_unchanged": true,
+          "context_evidence": {
+            "classification": "direct_support",
+            "required_evidence_available": true,
+            "preferred_document_coverage": 1.0,
+            "preferred_document_retrieved": true,
+            "scope": "Curated source/text checks, not general semantic or factual evaluation."
+          }
+        },
+        {
+          "case_id": "PREREQUISITES",
+          "topK_unchanged": true,
+          "context_chunks_unchanged": true,
+          "prompt_unchanged": true,
+          "context_evidence": {
+            "classification": "direct_support",
+            "required_evidence_available": true,
+            "preferred_document_coverage": 0.5,
+            "preferred_document_retrieved": true,
+            "scope": "Curated source/text checks, not general semantic or factual evaluation."
+          }
+        },
+        {
+          "case_id": "CREDITS",
+          "topK_unchanged": true,
+          "context_chunks_unchanged": true,
+          "prompt_unchanged": true,
+          "context_evidence": {
+            "classification": "indirect_support",
+            "required_evidence_available": true,
+            "preferred_document_coverage": 0.0,
+            "preferred_document_retrieved": false,
+            "scope": "Curated source/text checks, not general semantic or factual evaluation."
+          }
+        },
+        {
+          "case_id": "MULTI",
+          "topK_unchanged": true,
+          "context_chunks_unchanged": true,
+          "prompt_unchanged": true,
+          "context_evidence": {
+            "classification": "direct_support",
+            "required_evidence_available": true,
+            "preferred_document_coverage": 1.0,
+            "preferred_document_retrieved": true,
+            "scope": "Curated source/text checks, not general semantic or factual evaluation."
+          }
+        },
+        {
+          "case_id": "CAKE",
+          "topK_unchanged": true,
+          "context_chunks_unchanged": true,
+          "prompt_unchanged": true,
+          "context_evidence": {
+            "classification": "insufficient",
+            "required_evidence_available": false,
+            "preferred_document_coverage": null,
+            "preferred_document_retrieved": false,
+            "scope": "Curated source/text checks, not general semantic or factual evaluation."
+          }
+        },
+        {
+          "case_id": "RET-06",
+          "topK_unchanged": true,
+          "context_chunks_unchanged": true,
+          "prompt_unchanged": true,
+          "context_evidence": {
+            "classification": "direct_support",
+            "required_evidence_available": true,
+            "preferred_document_coverage": 1.0,
+            "preferred_document_retrieved": true,
+            "scope": "Curated source/text checks, not general semantic or factual evaluation."
+          }
+        },
+        {
+          "case_id": "COMPARE",
+          "topK_unchanged": true,
+          "context_chunks_unchanged": true,
+          "prompt_unchanged": true,
+          "context_evidence": {
+            "classification": "direct_support",
+            "required_evidence_available": true,
+            "preferred_document_coverage": 1.0,
+            "preferred_document_retrieved": true,
+            "scope": "Curated source/text checks, not general semantic or factual evaluation."
+          }
+        },
+        {
+          "case_id": "BUDGET",
+          "topK_unchanged": true,
+          "context_chunks_unchanged": true,
+          "prompt_unchanged": true,
+          "context_evidence": {
+            "classification": "insufficient",
+            "required_evidence_available": false,
+            "preferred_document_coverage": 0.0,
+            "preferred_document_retrieved": false,
+            "scope": "Curated source/text checks, not general semantic or factual evaluation."
+          }
+        }
+      ],
+      "generation_scope": "Historical failures retained; no prompt/model/RAG algorithm changes. Optional generation is separate."
+    },
+    "Task16": {
+      "task": 16,
+      "created_utc": "2026-10-06T10:45:44.766164+00:00",
+      "python": "3.11.17",
+      "generation_requested": false,
+      "initialization_seconds": 10.697475599998143,
+      "case_count": 20,
+      "metrics": {
+        "routing": {
+          "passed": 20,
+          "total": 20,
+          "fraction": 1.0
+        },
+        "paper_intent": {
+          "passed": 8,
+          "total": 8,
+          "fraction": 1.0
+        },
+        "paper_topic": {
+          "passed": 6,
+          "total": 6,
+          "fraction": 1.0
+        },
+        "paper_count": {
+          "passed": 5,
+          "total": 5,
+          "fraction": 1.0
+        },
+        "supplied_evidence_phrase_checks": {
+          "passed": 8,
+          "total": 11
+        }
+      },
+      "scope": "Curated integration checks, not general routing/model accuracy. No metadata or expectations enter production.",
+      "results": [
+        {
+          "case_id": "ATT",
+          "question": "What is the minimum attendance required?",
+          "expected_capability": "academic_qa",
+          "expected_type": "retrieval_only",
+          "expected_topic": null,
+          "expected_count": null,
+          "evidence_patterns": [
+            "75%"
+          ],
+          "actual_capability": "academic_qa",
+          "routing_correct": true,
+          "routing": {
+            "capability": "academic_qa",
+            "reason": "Academic rules or course/curriculum navigation request.",
+            "matched_rules": [
+              "academic_or_navigation"
+            ],
+            "mode": "auto",
+            "fallback": false
+          },
+          "answer_type": "retrieval_only",
+          "type_correct": true,
+          "actual_topic": null,
+          "topic_correct": null,
+          "result_count": null,
+          "count_correct": null,
+          "source_documents": [
+            "HCE-DOC09",
+            "HCE-DOC08"
+          ],
+          "source_chunks": [
+            "HCE-DOC09::chunk_002",
+            "HCE-DOC08::chunk_000",
+            "HCE-DOC08::chunk_003",
+            "HCE-DOC08::chunk_001",
+            "HCE-DOC08::chunk_004"
+          ],
+          "generation_used": false,
+          "answer": null,
+          "warnings": [
+            "Generation unavailable or not requested; pre-generation pipeline is complete.",
+            "Retrieved chunks share source word positions; repeated evidence may consume context space.",
+            "Sources supplied as context, not verified citations or proof every claim is supported.",
+            "Local generation is unavailable or not requested, but the retrieved academic evidence is shown below.",
+            "Similarity is not factual confidence; retrieved evidence and generated claims require inspection."
+          ],
+          "diagnostics": {
+            "routing_seconds": 7.470001582987607e-05,
+            "unit_evidence": {
+              "requested_units": [],
+              "generation_allowed": true,
+              "applied": false
+            },
+            "original_query": "What is the minimum attendance required?",
+            "retrieval_query": "What is the minimum attendance required?",
+            "rag": {
+              "requested_top_k": 5,
+              "retrieved_chunks": 5,
+              "included_chunks": 5,
+              "excluded_chunks": 0,
+              "context_characters": 4098,
+              "context_words": 569,
+              "source_count": 5,
+              "distinct_documents": 2,
+              "duplicate_document_blocks": 3,
+              "generation_status": "unavailable",
+              "model_labels": {
+                "mentioned_labels": [],
+                "valid_labels": [],
+                "invalid_labels": [],
+                "has_source_labels": false,
+                "occurrence_count": 0,
+                "status": "no_labels",
+                "scope": "Structural label validity only; claim support is not verified."
+              },
+              "overlap_pairs": [
+                {
+                  "chunk_ids": [
+                    "HCE-DOC08::chunk_000",
+                    "HCE-DOC08::chunk_001"
+                  ],
+                  "shared_word_positions": 20
+                },
+                {
+                  "chunk_ids": [
+                    "HCE-DOC08::chunk_003",
+                    "HCE-DOC08::chunk_004"
+                  ],
+                  "shared_word_positions": 20
+                }
+              ],
+              "flags": [
+                "Generation unavailable or not requested; pre-generation pipeline is complete.",
+                "Retrieved chunks share source word positions; repeated evidence may consume context space."
+              ],
+              "scope": "Descriptive diagnostics, not correctness judgments."
+            },
+            "timings_seconds": {
+              "retrieval": 0.28125030000228435,
+              "context_and_prompt": 0.00022899999748915434,
+              "generation": 0.0,
+              "total": 0.2815365999995265
+            }
+          },
+          "evidence_checks": {
+            "75%": true
+          },
+          "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+        },
+        {
+          "case_id": "EXAM",
+          "question": "What marks are required to pass?",
+          "expected_capability": "academic_qa",
+          "expected_type": "retrieval_only",
+          "expected_topic": null,
+          "expected_count": null,
+          "evidence_patterns": [
+            "50",
+            "24"
+          ],
+          "actual_capability": "academic_qa",
+          "routing_correct": true,
+          "routing": {
+            "capability": "academic_qa",
+            "reason": "Academic rules or course/curriculum navigation request.",
+            "matched_rules": [
+              "academic_or_navigation"
+            ],
+            "mode": "auto",
+            "fallback": false
+          },
+          "answer_type": "retrieval_only",
+          "type_correct": true,
+          "actual_topic": null,
+          "topic_correct": null,
+          "result_count": null,
+          "count_correct": null,
+          "source_documents": [
+            "HCE-DOC06",
+            "HCE-DOC12",
+            "HCE-DOC09",
+            "HCE-DOC10",
+            "HCE-DOC05"
+          ],
+          "source_chunks": [
+            "HCE-DOC06::chunk_008",
+            "HCE-DOC12::chunk_004",
+            "HCE-DOC09::chunk_005",
+            "HCE-DOC10::chunk_006",
+            "HCE-DOC05::chunk_009"
+          ],
+          "generation_used": false,
+          "answer": null,
+          "warnings": [
+            "Generation unavailable or not requested; pre-generation pipeline is complete.",
+            "Sources supplied as context, not verified citations or proof every claim is supported.",
+            "Local generation is unavailable or not requested, but the retrieved academic evidence is shown below.",
+            "Similarity is not factual confidence; retrieved evidence and generated claims require inspection."
+          ],
+          "diagnostics": {
+            "routing_seconds": 2.7000001864507794e-05,
+            "unit_evidence": {
+              "requested_units": [],
+              "generation_allowed": true,
+              "applied": false
+            },
+            "original_query": "What marks are required to pass?",
+            "retrieval_query": "What marks are required to pass?",
+            "rag": {
+              "requested_top_k": 5,
+              "retrieved_chunks": 5,
+              "included_chunks": 5,
+              "excluded_chunks": 0,
+              "context_characters": 3555,
+              "context_words": 508,
+              "source_count": 5,
+              "distinct_documents": 5,
+              "duplicate_document_blocks": 0,
+              "generation_status": "unavailable",
+              "model_labels": {
+                "mentioned_labels": [],
+                "valid_labels": [],
+                "invalid_labels": [],
+                "has_source_labels": false,
+                "occurrence_count": 0,
+                "status": "no_labels",
+                "scope": "Structural label validity only; claim support is not verified."
+              },
+              "overlap_pairs": [],
+              "flags": [
+                "Generation unavailable or not requested; pre-generation pipeline is complete."
+              ],
+              "scope": "Descriptive diagnostics, not correctness judgments."
+            },
+            "timings_seconds": {
+              "retrieval": 0.2777481999946758,
+              "context_and_prompt": 0.00024980001035146415,
+              "generation": 0.0,
+              "total": 0.27804989999276586
+            }
+          },
+          "evidence_checks": {
+            "50": true,
+            "24": true
+          },
+          "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+        },
+        {
+          "case_id": "SEM",
+          "question": "In which semester is NLP offered?",
+          "expected_capability": "academic_qa",
+          "expected_type": "retrieval_only",
+          "expected_topic": null,
+          "expected_count": null,
+          "evidence_patterns": [
+            "HCE-CSE603",
+            "Semester\\s*[:|]?\\s*6"
+          ],
+          "actual_capability": "academic_qa",
+          "routing_correct": true,
+          "routing": {
+            "capability": "academic_qa",
+            "reason": "Academic rules or course/curriculum navigation request.",
+            "matched_rules": [
+              "academic_or_navigation"
+            ],
+            "mode": "auto",
+            "fallback": false
+          },
+          "answer_type": "retrieval_only",
+          "type_correct": true,
+          "actual_topic": null,
+          "topic_correct": null,
+          "result_count": null,
+          "count_correct": null,
+          "source_documents": [
+            "HCE-DOC12",
+            "HCE-DOC07",
+            "HCE-DOC02",
+            "HCE-DOC01"
+          ],
+          "source_chunks": [
+            "HCE-DOC12::chunk_006",
+            "HCE-DOC07::chunk_005",
+            "HCE-DOC07::chunk_004",
+            "HCE-DOC02::chunk_009",
+            "HCE-DOC01::chunk_003"
+          ],
+          "generation_used": false,
+          "answer": null,
+          "warnings": [
+            "Generation unavailable or not requested; pre-generation pipeline is complete.",
+            "Retrieved chunks share source word positions; repeated evidence may consume context space.",
+            "Sources supplied as context, not verified citations or proof every claim is supported.",
+            "Local generation is unavailable or not requested, but the retrieved academic evidence is shown below.",
+            "Similarity is not factual confidence; retrieved evidence and generated claims require inspection."
+          ],
+          "diagnostics": {
+            "routing_seconds": 2.7900008717551827e-05,
+            "unit_evidence": {
+              "requested_units": [],
+              "generation_allowed": true,
+              "applied": false
+            },
+            "original_query": "In which semester is NLP offered?",
+            "retrieval_query": "In which semester is NLP offered?",
+            "rag": {
+              "requested_top_k": 5,
+              "retrieved_chunks": 5,
+              "included_chunks": 5,
+              "excluded_chunks": 0,
+              "context_characters": 3865,
+              "context_words": 571,
+              "source_count": 5,
+              "distinct_documents": 4,
+              "duplicate_document_blocks": 1,
+              "generation_status": "unavailable",
+              "model_labels": {
+                "mentioned_labels": [],
+                "valid_labels": [],
+                "invalid_labels": [],
+                "has_source_labels": false,
+                "occurrence_count": 0,
+                "status": "no_labels",
+                "scope": "Structural label validity only; claim support is not verified."
+              },
+              "overlap_pairs": [
+                {
+                  "chunk_ids": [
+                    "HCE-DOC07::chunk_005",
+                    "HCE-DOC07::chunk_004"
+                  ],
+                  "shared_word_positions": 20
+                }
+              ],
+              "flags": [
+                "Generation unavailable or not requested; pre-generation pipeline is complete.",
+                "Retrieved chunks share source word positions; repeated evidence may consume context space."
+              ],
+              "scope": "Descriptive diagnostics, not correctness judgments."
+            },
+            "timings_seconds": {
+              "retrieval": 0.29330280001158826,
+              "context_and_prompt": 0.00022119999630376697,
+              "generation": 0.0,
+              "total": 0.29357459998573177
+            }
+          },
+          "evidence_checks": {
+            "HCE-CSE603": true,
+            "Semester\\s*[:|]?\\s*6": true
+          },
+          "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+        },
+        {
+          "case_id": "PRE",
+          "question": "What are the prerequisites for NLP?",
+          "expected_capability": "academic_qa",
+          "expected_type": "retrieval_only",
+          "expected_topic": null,
+          "expected_count": null,
+          "evidence_patterns": [
+            "Artificial Intelligence",
+            "Machine Learning"
+          ],
+          "actual_capability": "academic_qa",
+          "routing_correct": true,
+          "routing": {
+            "capability": "academic_qa",
+            "reason": "Academic rules or course/curriculum navigation request.",
+            "matched_rules": [
+              "academic_or_navigation"
+            ],
+            "mode": "auto",
+            "fallback": false
+          },
+          "answer_type": "retrieval_only",
+          "type_correct": true,
+          "actual_topic": null,
+          "topic_correct": null,
+          "result_count": null,
+          "count_correct": null,
+          "source_documents": [
+            "HCE-DOC13",
+            "HCE-DOC02",
+            "HCE-DOC06"
+          ],
+          "source_chunks": [
+            "HCE-DOC13::chunk_014",
+            "HCE-DOC02::chunk_016",
+            "HCE-DOC06::chunk_005",
+            "HCE-DOC02::chunk_015",
+            "HCE-DOC02::chunk_009"
+          ],
+          "generation_used": false,
+          "answer": null,
+          "warnings": [
+            "Generation unavailable or not requested; pre-generation pipeline is complete.",
+            "Retrieved chunks share source word positions; repeated evidence may consume context space.",
+            "Sources supplied as context, not verified citations or proof every claim is supported.",
+            "Local generation is unavailable or not requested, but the retrieved academic evidence is shown below.",
+            "Similarity is not factual confidence; retrieved evidence and generated claims require inspection."
+          ],
+          "diagnostics": {
+            "routing_seconds": 2.9999995604157448e-05,
+            "unit_evidence": {
+              "requested_units": [],
+              "generation_allowed": true,
+              "applied": false
+            },
+            "original_query": "What are the prerequisites for NLP?",
+            "retrieval_query": "What are the prerequisites for NLP?",
+            "rag": {
+              "requested_top_k": 5,
+              "retrieved_chunks": 5,
+              "included_chunks": 5,
+              "excluded_chunks": 0,
+              "context_characters": 3661,
+              "context_words": 506,
+              "source_count": 5,
+              "distinct_documents": 3,
+              "duplicate_document_blocks": 2,
+              "generation_status": "unavailable",
+              "model_labels": {
+                "mentioned_labels": [],
+                "valid_labels": [],
+                "invalid_labels": [],
+                "has_source_labels": false,
+                "occurrence_count": 0,
+                "status": "no_labels",
+                "scope": "Structural label validity only; claim support is not verified."
+              },
+              "overlap_pairs": [
+                {
+                  "chunk_ids": [
+                    "HCE-DOC02::chunk_016",
+                    "HCE-DOC02::chunk_015"
+                  ],
+                  "shared_word_positions": 20
+                }
+              ],
+              "flags": [
+                "Generation unavailable or not requested; pre-generation pipeline is complete.",
+                "Retrieved chunks share source word positions; repeated evidence may consume context space."
+              ],
+              "scope": "Descriptive diagnostics, not correctness judgments."
+            },
+            "timings_seconds": {
+              "retrieval": 0.2800707000133116,
+              "context_and_prompt": 0.00022489999537356198,
+              "generation": 0.0,
+              "total": 0.2803483000025153
+            }
+          },
+          "evidence_checks": {
+            "Artificial Intelligence": false,
+            "Machine Learning": true
+          },
+          "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+        },
+        {
+          "case_id": "DATE",
+          "question": "When is the NLP end-semester examination?",
+          "expected_capability": "academic_qa",
+          "expected_type": "retrieval_only",
+          "expected_topic": null,
+          "expected_count": null,
+          "evidence_patterns": [
+            "2027-05-07"
+          ],
+          "actual_capability": "academic_qa",
+          "routing_correct": true,
+          "routing": {
+            "capability": "academic_qa",
+            "reason": "Academic rules or course/curriculum navigation request.",
+            "matched_rules": [
+              "academic_or_navigation"
+            ],
+            "mode": "auto",
+            "fallback": false
+          },
+          "answer_type": "retrieval_only",
+          "type_correct": true,
+          "actual_topic": null,
+          "topic_correct": null,
+          "result_count": null,
+          "count_correct": null,
+          "source_documents": [
+            "HCE-DOC12",
+            "HCE-DOC07",
+            "HCE-DOC09"
+          ],
+          "source_chunks": [
+            "HCE-DOC12::chunk_006",
+            "HCE-DOC07::chunk_004",
+            "HCE-DOC07::chunk_005",
+            "HCE-DOC09::chunk_007",
+            "HCE-DOC07::chunk_008"
+          ],
+          "generation_used": false,
+          "answer": null,
+          "warnings": [
+            "Generation unavailable or not requested; pre-generation pipeline is complete.",
+            "Retrieved chunks share source word positions; repeated evidence may consume context space.",
+            "Sources supplied as context, not verified citations or proof every claim is supported.",
+            "Local generation is unavailable or not requested, but the retrieved academic evidence is shown below.",
+            "Similarity is not factual confidence; retrieved evidence and generated claims require inspection."
+          ],
+          "diagnostics": {
+            "routing_seconds": 3.270001616328955e-05,
+            "unit_evidence": {
+              "requested_units": [],
+              "generation_allowed": true,
+              "applied": false
+            },
+            "original_query": "When is the NLP end-semester examination?",
+            "retrieval_query": "When is the NLP end-semester examination?",
+            "rag": {
+              "requested_top_k": 5,
+              "retrieved_chunks": 5,
+              "included_chunks": 5,
+              "excluded_chunks": 0,
+              "context_characters": 3989,
+              "context_words": 568,
+              "source_count": 5,
+              "distinct_documents": 3,
+              "duplicate_document_blocks": 2,
+              "generation_status": "unavailable",
+              "model_labels": {
+                "mentioned_labels": [],
+                "valid_labels": [],
+                "invalid_labels": [],
+                "has_source_labels": false,
+                "occurrence_count": 0,
+                "status": "no_labels",
+                "scope": "Structural label validity only; claim support is not verified."
+              },
+              "overlap_pairs": [
+                {
+                  "chunk_ids": [
+                    "HCE-DOC07::chunk_004",
+                    "HCE-DOC07::chunk_005"
+                  ],
+                  "shared_word_positions": 20
+                }
+              ],
+              "flags": [
+                "Generation unavailable or not requested; pre-generation pipeline is complete.",
+                "Retrieved chunks share source word positions; repeated evidence may consume context space."
+              ],
+              "scope": "Descriptive diagnostics, not correctness judgments."
+            },
+            "timings_seconds": {
+              "retrieval": 0.2876197000150569,
+              "context_and_prompt": 0.0002198000147473067,
+              "generation": 0.0,
+              "total": 0.2878905000106897
+            }
+          },
+          "evidence_checks": {
+            "2027-05-07": true
+          },
+          "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+        },
+        {
+          "case_id": "PARA",
+          "question": "Where do connected devices learn the rules for exchanging messages?",
+          "expected_capability": "academic_qa",
+          "expected_type": "retrieval_only",
+          "expected_topic": null,
+          "expected_count": null,
+          "evidence_patterns": [
+            "Computer Networks"
+          ],
+          "actual_capability": "academic_qa",
+          "routing_correct": true,
+          "routing": {
+            "capability": "academic_qa",
+            "reason": "No specialized analyzer intent was detected, so this question is being handled through academic document retrieval.",
+            "matched_rules": [],
+            "mode": "auto",
+            "fallback": true
+          },
+          "answer_type": "retrieval_only",
+          "type_correct": true,
+          "actual_topic": null,
+          "topic_correct": null,
+          "result_count": null,
+          "count_correct": null,
+          "source_documents": [
+            "HCE-DOC02",
+            "HCE-DOC09"
+          ],
+          "source_chunks": [
+            "HCE-DOC02::chunk_013",
+            "HCE-DOC02::chunk_016",
+            "HCE-DOC09::chunk_008",
+            "HCE-DOC02::chunk_014",
+            "HCE-DOC02::chunk_003"
+          ],
+          "generation_used": false,
+          "answer": null,
+          "warnings": [
+            "Generation unavailable or not requested; pre-generation pipeline is complete.",
+            "Retrieved chunks share source word positions; repeated evidence may consume context space.",
+            "Sources supplied as context, not verified citations or proof every claim is supported.",
+            "Local generation is unavailable or not requested, but the retrieved academic evidence is shown below.",
+            "Similarity is not factual confidence; retrieved evidence and generated claims require inspection."
+          ],
+          "diagnostics": {
+            "routing_seconds": 3.949998063035309e-05,
+            "unit_evidence": {
+              "requested_units": [],
+              "generation_allowed": true,
+              "applied": false
+            },
+            "original_query": "Where do connected devices learn the rules for exchanging messages?",
+            "retrieval_query": "Where do connected devices learn the rules for exchanging messages?",
+            "rag": {
+              "requested_top_k": 5,
+              "retrieved_chunks": 5,
+              "included_chunks": 5,
+              "excluded_chunks": 0,
+              "context_characters": 2972,
+              "context_words": 427,
+              "source_count": 5,
+              "distinct_documents": 2,
+              "duplicate_document_blocks": 3,
+              "generation_status": "unavailable",
+              "model_labels": {
+                "mentioned_labels": [],
+                "valid_labels": [],
+                "invalid_labels": [],
+                "has_source_labels": false,
+                "occurrence_count": 0,
+                "status": "no_labels",
+                "scope": "Structural label validity only; claim support is not verified."
+              },
+              "overlap_pairs": [
+                {
+                  "chunk_ids": [
+                    "HCE-DOC02::chunk_013",
+                    "HCE-DOC02::chunk_014"
+                  ],
+                  "shared_word_positions": 20
+                }
+              ],
+              "flags": [
+                "Generation unavailable or not requested; pre-generation pipeline is complete.",
+                "Retrieved chunks share source word positions; repeated evidence may consume context space."
+              ],
+              "scope": "Descriptive diagnostics, not correctness judgments."
+            },
+            "timings_seconds": {
+              "retrieval": 0.2792634999786969,
+              "context_and_prompt": 0.0002046999870799482,
+              "generation": 0.0,
+              "total": 0.27951919997576624
+            }
+          },
+          "evidence_checks": {
+            "Computer Networks": true
+          },
+          "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+        },
+        {
+          "case_id": "MULTI",
+          "question": "What do I need to successfully complete NLP?",
+          "expected_capability": "academic_qa",
+          "expected_type": "retrieval_only",
+          "expected_topic": null,
+          "expected_count": null,
+          "evidence_patterns": [],
+          "actual_capability": "academic_qa",
+          "routing_correct": true,
+          "routing": {
+            "capability": "academic_qa",
+            "reason": "No specialized analyzer intent was detected, so this question is being handled through academic document retrieval.",
+            "matched_rules": [],
+            "mode": "auto",
+            "fallback": true
+          },
+          "answer_type": "retrieval_only",
+          "type_correct": true,
+          "actual_topic": null,
+          "topic_correct": null,
+          "result_count": null,
+          "count_correct": null,
+          "source_documents": [
+            "HCE-DOC13",
+            "HCE-DOC02",
+            "HCE-DOC04",
+            "HCE-DOC06"
+          ],
+          "source_chunks": [
+            "HCE-DOC13::chunk_014",
+            "HCE-DOC02::chunk_016",
+            "HCE-DOC02::chunk_009",
+            "HCE-DOC04::chunk_002",
+            "HCE-DOC06::chunk_005"
+          ],
+          "generation_used": false,
+          "answer": null,
+          "warnings": [
+            "Generation unavailable or not requested; pre-generation pipeline is complete.",
+            "Sources supplied as context, not verified citations or proof every claim is supported.",
+            "Local generation is unavailable or not requested, but the retrieved academic evidence is shown below.",
+            "Similarity is not factual confidence; retrieved evidence and generated claims require inspection."
+          ],
+          "diagnostics": {
+            "routing_seconds": 3.2400013878941536e-05,
+            "unit_evidence": {
+              "requested_units": [],
+              "generation_allowed": true,
+              "applied": false
+            },
+            "original_query": "What do I need to successfully complete NLP?",
+            "retrieval_query": "What do I need to successfully complete NLP?",
+            "rag": {
+              "requested_top_k": 5,
+              "retrieved_chunks": 5,
+              "included_chunks": 5,
+              "excluded_chunks": 0,
+              "context_characters": 3668,
+              "context_words": 507,
+              "source_count": 5,
+              "distinct_documents": 4,
+              "duplicate_document_blocks": 1,
+              "generation_status": "unavailable",
+              "model_labels": {
+                "mentioned_labels": [],
+                "valid_labels": [],
+                "invalid_labels": [],
+                "has_source_labels": false,
+                "occurrence_count": 0,
+                "status": "no_labels",
+                "scope": "Structural label validity only; claim support is not verified."
+              },
+              "overlap_pairs": [],
+              "flags": [
+                "Generation unavailable or not requested; pre-generation pipeline is complete."
+              ],
+              "scope": "Descriptive diagnostics, not correctness judgments."
+            },
+            "timings_seconds": {
+              "retrieval": 0.25171350000891834,
+              "context_and_prompt": 0.00024270001449622214,
+              "generation": 0.0,
+              "total": 0.2520055999921169
+            }
+          },
+          "evidence_checks": {},
+          "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+        },
+        {
+          "case_id": "COMPARE",
+          "question": "Compare Machine Learning and Deep Learning.",
+          "expected_capability": "academic_qa",
+          "expected_type": "retrieval_only",
+          "expected_topic": null,
+          "expected_count": null,
+          "evidence_patterns": [],
+          "actual_capability": "academic_qa",
+          "routing_correct": true,
+          "routing": {
+            "capability": "academic_qa",
+            "reason": "No specialized analyzer intent was detected, so this question is being handled through academic document retrieval.",
+            "matched_rules": [],
+            "mode": "auto",
+            "fallback": true
+          },
+          "answer_type": "retrieval_only",
+          "type_correct": true,
+          "actual_topic": null,
+          "topic_correct": null,
+          "result_count": null,
+          "count_correct": null,
+          "source_documents": [
+            "HCE-DOC06",
+            "HCE-DOC05",
+            "HCE-DOC02"
+          ],
+          "source_chunks": [
+            "HCE-DOC06::chunk_004",
+            "HCE-DOC05::chunk_007",
+            "HCE-DOC06::chunk_001",
+            "HCE-DOC02::chunk_014",
+            "HCE-DOC06::chunk_002"
+          ],
+          "generation_used": false,
+          "answer": null,
+          "warnings": [
+            "Generation unavailable or not requested; pre-generation pipeline is complete.",
+            "Retrieved chunks share source word positions; repeated evidence may consume context space.",
+            "Sources supplied as context, not verified citations or proof every claim is supported.",
+            "Local generation is unavailable or not requested, but the retrieved academic evidence is shown below.",
+            "Similarity is not factual confidence; retrieved evidence and generated claims require inspection."
+          ],
+          "diagnostics": {
+            "routing_seconds": 3.1100003980100155e-05,
+            "unit_evidence": {
+              "requested_units": [],
+              "generation_allowed": true,
+              "applied": false
+            },
+            "original_query": "Compare Machine Learning and Deep Learning.",
+            "retrieval_query": "Compare Machine Learning and Deep Learning.",
+            "rag": {
+              "requested_top_k": 5,
+              "retrieved_chunks": 5,
+              "included_chunks": 5,
+              "excluded_chunks": 0,
+              "context_characters": 4514,
+              "context_words": 574,
+              "source_count": 5,
+              "distinct_documents": 3,
+              "duplicate_document_blocks": 2,
+              "generation_status": "unavailable",
+              "model_labels": {
+                "mentioned_labels": [],
+                "valid_labels": [],
+                "invalid_labels": [],
+                "has_source_labels": false,
+                "occurrence_count": 0,
+                "status": "no_labels",
+                "scope": "Structural label validity only; claim support is not verified."
+              },
+              "overlap_pairs": [
+                {
+                  "chunk_ids": [
+                    "HCE-DOC06::chunk_001",
+                    "HCE-DOC06::chunk_002"
+                  ],
+                  "shared_word_positions": 20
+                }
+              ],
+              "flags": [
+                "Generation unavailable or not requested; pre-generation pipeline is complete.",
+                "Retrieved chunks share source word positions; repeated evidence may consume context space."
+              ],
+              "scope": "Descriptive diagnostics, not correctness judgments."
+            },
+            "timings_seconds": {
+              "retrieval": 0.2601676999765914,
+              "context_and_prompt": 0.00022489999537356198,
+              "generation": 0.0,
+              "total": 0.2604439999850001
+            }
+          },
+          "evidence_checks": {},
+          "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+        },
+        {
+          "case_id": "SUMMARY",
+          "question": "Summarize NLP Unit 4.",
+          "expected_capability": "study_support",
+          "expected_type": "retrieval_only",
+          "expected_topic": null,
+          "expected_count": null,
+          "evidence_patterns": [
+            "GPT",
+            "BERT"
+          ],
+          "actual_capability": "study_support",
+          "routing_correct": true,
+          "routing": {
+            "capability": "study_support",
+            "reason": "Summary or revision request will use retrieved academic evidence.",
+            "matched_rules": [
+              "study_request"
+            ],
+            "mode": "auto",
+            "fallback": false
+          },
+          "answer_type": "retrieval_only",
+          "type_correct": true,
+          "actual_topic": null,
+          "topic_correct": null,
+          "result_count": null,
+          "count_correct": null,
+          "source_documents": [
+            "HCE-DOC04",
+            "HCE-DOC06"
+          ],
+          "source_chunks": [
+            "HCE-DOC04::chunk_002",
+            "HCE-DOC04::chunk_005",
+            "HCE-DOC04::chunk_004",
+            "HCE-DOC06::chunk_005",
+            "HCE-DOC04::chunk_003"
+          ],
+          "generation_used": false,
+          "answer": null,
+          "warnings": [
+            "Requested unit evidence is missing or course scope is ambiguous. Generation withheld; inspect the syllabus and use its full course name. Retrieved evidence remains visible.",
+            "Short queries can retrieve incomplete evidence. Try a complete question with the full course name; inspect all requirements rather than assuming the first result is sufficient.",
+            "Generation unavailable or not requested; pre-generation pipeline is complete.",
+            "Retrieved chunks share source word positions; repeated evidence may consume context space.",
+            "Sources supplied as context, not verified citations or proof every claim is supported.",
+            "Local generation is unavailable or not requested, but the retrieved academic evidence is shown below.",
+            "Similarity is not factual confidence; retrieved evidence and generated claims require inspection."
+          ],
+          "diagnostics": {
+            "routing_seconds": 2.7000001864507794e-05,
+            "unit_evidence": {
+              "applied": true,
+              "requested_units": [
+                4
+              ],
+              "resolved_courses": [
+                "Natural Language Processing"
+              ],
+              "supplied_unit_headings": [
+                1,
+                2,
+                3
+              ],
+              "missing_units": [
+                4
+              ],
+              "generation_allowed": false,
+              "policy": "Matching course and explicit unit heading required before generation; semantic scores/order unchanged.",
+              "limitation": "Heading presence does not establish complete or correct unit coverage."
+            },
+            "original_query": "Summarize NLP Unit 4.",
+            "retrieval_query": "Summarize NLP Unit 4.",
+            "rag": {
+              "requested_top_k": 5,
+              "retrieved_chunks": 5,
+              "included_chunks": 5,
+              "excluded_chunks": 0,
+              "context_characters": 4342,
+              "context_words": 578,
+              "source_count": 5,
+              "distinct_documents": 2,
+              "duplicate_document_blocks": 3,
+              "generation_status": "unavailable",
+              "model_labels": {
+                "mentioned_labels": [],
+                "valid_labels": [],
+                "invalid_labels": [],
+                "has_source_labels": false,
+                "occurrence_count": 0,
+                "status": "no_labels",
+                "scope": "Structural label validity only; claim support is not verified."
+              },
+              "overlap_pairs": [
+                {
+                  "chunk_ids": [
+                    "HCE-DOC04::chunk_002",
+                    "HCE-DOC04::chunk_003"
+                  ],
+                  "shared_word_positions": 20
+                },
+                {
+                  "chunk_ids": [
+                    "HCE-DOC04::chunk_005",
+                    "HCE-DOC04::chunk_004"
+                  ],
+                  "shared_word_positions": 20
+                },
+                {
+                  "chunk_ids": [
+                    "HCE-DOC04::chunk_004",
+                    "HCE-DOC04::chunk_003"
+                  ],
+                  "shared_word_positions": 20
+                }
+              ],
+              "flags": [
+                "Generation unavailable or not requested; pre-generation pipeline is complete.",
+                "Retrieved chunks share source word positions; repeated evidence may consume context space."
+              ],
+              "scope": "Descriptive diagnostics, not correctness judgments."
+            },
+            "timings_seconds": {
+              "retrieval": 0.24889029999030754,
+              "context_and_prompt": 0.0002528000040911138,
+              "generation": 0.0,
+              "total": 0.24919420000514947
+            }
+          },
+          "evidence_checks": {
+            "GPT": false,
+            "BERT": false
+          },
+          "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+        },
+        {
+          "case_id": "REVISE",
+          "question": "What should I revise for Attention?",
+          "expected_capability": "study_support",
+          "expected_type": "retrieval_only",
+          "expected_topic": null,
+          "expected_count": null,
+          "evidence_patterns": [],
+          "actual_capability": "study_support",
+          "routing_correct": true,
+          "routing": {
+            "capability": "study_support",
+            "reason": "Summary or revision request will use retrieved academic evidence.",
+            "matched_rules": [
+              "study_request"
+            ],
+            "mode": "auto",
+            "fallback": false
+          },
+          "answer_type": "retrieval_only",
+          "type_correct": true,
+          "actual_topic": null,
+          "topic_correct": null,
+          "result_count": null,
+          "count_correct": null,
+          "source_documents": [
+            "HCE-DOC06",
+            "HCE-DOC04"
+          ],
+          "source_chunks": [
+            "HCE-DOC06::chunk_005",
+            "HCE-DOC04::chunk_006",
+            "HCE-DOC06::chunk_007",
+            "HCE-DOC06::chunk_003",
+            "HCE-DOC04::chunk_002"
+          ],
+          "generation_used": false,
+          "answer": null,
+          "warnings": [
+            "Generation unavailable or not requested; pre-generation pipeline is complete.",
+            "Sources supplied as context, not verified citations or proof every claim is supported.",
+            "Local generation is unavailable or not requested, but the retrieved academic evidence is shown below.",
+            "Similarity is not factual confidence; retrieved evidence and generated claims require inspection."
+          ],
+          "diagnostics": {
+            "routing_seconds": 3.0099996365606785e-05,
+            "unit_evidence": {
+              "requested_units": [],
+              "generation_allowed": true,
+              "applied": false
+            },
+            "original_query": "What should I revise for Attention?",
+            "retrieval_query": "What should I revise for Attention?",
+            "rag": {
+              "requested_top_k": 5,
+              "retrieved_chunks": 5,
+              "included_chunks": 5,
+              "excluded_chunks": 0,
+              "context_characters": 4379,
+              "context_words": 576,
+              "source_count": 5,
+              "distinct_documents": 2,
+              "duplicate_document_blocks": 3,
+              "generation_status": "unavailable",
+              "model_labels": {
+                "mentioned_labels": [],
+                "valid_labels": [],
+                "invalid_labels": [],
+                "has_source_labels": false,
+                "occurrence_count": 0,
+                "status": "no_labels",
+                "scope": "Structural label validity only; claim support is not verified."
+              },
+              "overlap_pairs": [],
+              "flags": [
+                "Generation unavailable or not requested; pre-generation pipeline is complete."
+              ],
+              "scope": "Descriptive diagnostics, not correctness judgments."
+            },
+            "timings_seconds": {
+              "retrieval": 0.2873651999980211,
+              "context_and_prompt": 0.000252999976510182,
+              "generation": 0.0,
+              "total": 0.28766910001286305
+            }
+          },
+          "evidence_checks": {},
+          "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+        },
+        {
+          "case_id": "CREATE",
+          "question": "Create five revision questions for NLP Unit 4.",
+          "expected_capability": "study_support",
+          "expected_type": "retrieval_only",
+          "expected_topic": null,
+          "expected_count": null,
+          "evidence_patterns": [],
+          "actual_capability": "study_support",
+          "routing_correct": true,
+          "routing": {
+            "capability": "study_support",
+            "reason": "Summary or revision request will use retrieved academic evidence.",
+            "matched_rules": [
+              "study_request"
+            ],
+            "mode": "auto",
+            "fallback": false
+          },
+          "answer_type": "retrieval_only",
+          "type_correct": true,
+          "actual_topic": null,
+          "topic_correct": null,
+          "result_count": null,
+          "count_correct": null,
+          "source_documents": [
+            "HCE-DOC02",
+            "HCE-DOC04",
+            "HCE-DOC07",
+            "HCE-DOC09"
+          ],
+          "source_chunks": [
+            "HCE-DOC02::chunk_009",
+            "HCE-DOC04::chunk_002",
+            "HCE-DOC07::chunk_004",
+            "HCE-DOC09::chunk_004",
+            "HCE-DOC04::chunk_003"
+          ],
+          "generation_used": false,
+          "answer": null,
+          "warnings": [
+            "Requested unit evidence is missing or course scope is ambiguous. Generation withheld; inspect the syllabus and use its full course name. Retrieved evidence remains visible.",
+            "Generation unavailable or not requested; pre-generation pipeline is complete.",
+            "Retrieved chunks share source word positions; repeated evidence may consume context space.",
+            "Sources supplied as context, not verified citations or proof every claim is supported.",
+            "Local generation is unavailable or not requested, but the retrieved academic evidence is shown below.",
+            "Similarity is not factual confidence; retrieved evidence and generated claims require inspection."
+          ],
+          "diagnostics": {
+            "routing_seconds": 3.2899988582357764e-05,
+            "unit_evidence": {
+              "applied": true,
+              "requested_units": [
+                4
+              ],
+              "resolved_courses": [
+                "Natural Language Processing"
+              ],
+              "supplied_unit_headings": [
+                1,
+                2
+              ],
+              "missing_units": [
+                4
+              ],
+              "generation_allowed": false,
+              "policy": "Matching course and explicit unit heading required before generation; semantic scores/order unchanged.",
+              "limitation": "Heading presence does not establish complete or correct unit coverage."
+            },
+            "original_query": "Create five revision questions for NLP Unit 4.",
+            "retrieval_query": "Create five revision questions for NLP Unit 4.",
+            "rag": {
+              "requested_top_k": 5,
+              "retrieved_chunks": 5,
+              "included_chunks": 5,
+              "excluded_chunks": 0,
+              "context_characters": 3995,
+              "context_words": 574,
+              "source_count": 5,
+              "distinct_documents": 4,
+              "duplicate_document_blocks": 1,
+              "generation_status": "unavailable",
+              "model_labels": {
+                "mentioned_labels": [],
+                "valid_labels": [],
+                "invalid_labels": [],
+                "has_source_labels": false,
+                "occurrence_count": 0,
+                "status": "no_labels",
+                "scope": "Structural label validity only; claim support is not verified."
+              },
+              "overlap_pairs": [
+                {
+                  "chunk_ids": [
+                    "HCE-DOC04::chunk_002",
+                    "HCE-DOC04::chunk_003"
+                  ],
+                  "shared_word_positions": 20
+                }
+              ],
+              "flags": [
+                "Generation unavailable or not requested; pre-generation pipeline is complete.",
+                "Retrieved chunks share source word positions; repeated evidence may consume context space."
+              ],
+              "scope": "Descriptive diagnostics, not correctness judgments."
+            },
+            "timings_seconds": {
+              "retrieval": 0.33998109999811277,
+              "context_and_prompt": 0.0002631999959703535,
+              "generation": 0.0,
+              "total": 0.34031070000492036
+            }
+          },
+          "evidence_checks": {},
+          "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+        },
+        {
+          "case_id": "FILTER",
+          "question": "Show Transformer questions from previous papers.",
+          "expected_capability": "question_papers",
+          "expected_type": "topic_filter",
+          "expected_topic": "transformers",
+          "expected_count": 8,
+          "evidence_patterns": [],
+          "actual_capability": "question_papers",
+          "routing_correct": true,
+          "routing": {
+            "capability": "question_papers",
+            "reason": "Historical-paper/filter/frequency intent has priority over revision intent.",
+            "matched_rules": [
+              "paper_request"
+            ],
+            "mode": "auto",
+            "fallback": false
+          },
+          "answer_type": "topic_filter",
+          "type_correct": true,
+          "actual_topic": "transformers",
+          "topic_correct": true,
+          "result_count": 8,
+          "count_correct": true,
+          "source_documents": [
+            "NLP-P01",
+            "NLP-P02",
+            "NLP-P03",
+            "NLP-P04"
+          ],
+          "source_chunks": [],
+          "generation_used": false,
+          "answer": "8 primary-topic questions matched transformers.",
+          "warnings": [
+            "These counts describe the four synthetic workshop papers and do not predict future examination questions.",
+            "9 questions remain unmatched by current deterministic taxonomy aliases; no model relabeling."
+          ],
+          "diagnostics": {
+            "routing_seconds": 3.500000457279384e-05,
+            "analyzer_seconds": 0.0013544000103138387
+          },
+          "evidence_checks": {},
+          "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+        },
+        {
+          "case_id": "COUNT",
+          "question": "How many Word2Vec questions appeared?",
+          "expected_capability": "question_papers",
+          "expected_type": "topic_count",
+          "expected_topic": "word2vec",
+          "expected_count": 4,
+          "evidence_patterns": [],
+          "actual_capability": "question_papers",
+          "routing_correct": true,
+          "routing": {
+            "capability": "question_papers",
+            "reason": "Historical-paper/filter/frequency intent has priority over revision intent.",
+            "matched_rules": [
+              "paper_request"
+            ],
+            "mode": "auto",
+            "fallback": false
+          },
+          "answer_type": "topic_count",
+          "type_correct": true,
+          "actual_topic": "word2vec",
+          "topic_correct": true,
+          "result_count": 4,
+          "count_correct": true,
+          "source_documents": [
+            "NLP-P01",
+            "NLP-P02",
+            "NLP-P03",
+            "NLP-P04"
+          ],
+          "source_chunks": [],
+          "generation_used": false,
+          "answer": "4 primary-topic questions matched word2vec.",
+          "warnings": [
+            "These counts describe the four synthetic workshop papers and do not predict future examination questions.",
+            "9 questions remain unmatched by current deterministic taxonomy aliases; no model relabeling."
+          ],
+          "diagnostics": {
+            "routing_seconds": 4.5199994929134846e-05,
+            "analyzer_seconds": 0.0012898999848403037
+          },
+          "evidence_checks": {},
+          "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+        },
+        {
+          "case_id": "RANK",
+          "question": "What are the most frequent topics in previous NLP papers?",
+          "expected_capability": "question_papers",
+          "expected_type": "topic_frequency",
+          "expected_topic": null,
+          "expected_count": null,
+          "evidence_patterns": [],
+          "actual_capability": "question_papers",
+          "routing_correct": true,
+          "routing": {
+            "capability": "question_papers",
+            "reason": "Historical-paper/filter/frequency intent has priority over revision intent.",
+            "matched_rules": [
+              "paper_request"
+            ],
+            "mode": "auto",
+            "fallback": false
+          },
+          "answer_type": "topic_frequency",
+          "type_correct": true,
+          "actual_topic": "UNMATCHED",
+          "topic_correct": null,
+          "result_count": null,
+          "count_correct": null,
+          "source_documents": [
+            "NLP-P01",
+            "NLP-P02",
+            "NLP-P03",
+            "NLP-P04"
+          ],
+          "source_chunks": [],
+          "generation_used": false,
+          "answer": "Observed primary-topic ranking.",
+          "warnings": [
+            "These counts describe the four synthetic workshop papers and do not predict future examination questions.",
+            "9 questions remain unmatched by current deterministic taxonomy aliases; no model relabeling."
+          ],
+          "diagnostics": {
+            "routing_seconds": 3.4199998481199145e-05,
+            "analyzer_seconds": 0.0009487000061199069
+          },
+          "evidence_checks": {},
+          "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed.",
+          "top_topic": {
+            "rank": 1,
+            "topic_id": "transformers",
+            "topic_name": "Transformers",
+            "count": 8
+          }
+        },
+        {
+          "case_id": "PAPERS",
+          "question": "Compare topics across previous papers.",
+          "expected_capability": "question_papers",
+          "expected_type": "paper_comparison",
+          "expected_topic": null,
+          "expected_count": null,
+          "evidence_patterns": [],
+          "actual_capability": "question_papers",
+          "routing_correct": true,
+          "routing": {
+            "capability": "question_papers",
+            "reason": "Historical-paper/filter/frequency intent has priority over revision intent.",
+            "matched_rules": [
+              "paper_request"
+            ],
+            "mode": "auto",
+            "fallback": false
+          },
+          "answer_type": "paper_comparison",
+          "type_correct": true,
+          "actual_topic": "UNMATCHED",
+          "topic_correct": null,
+          "result_count": null,
+          "count_correct": null,
+          "source_documents": [
+            "NLP-P01",
+            "NLP-P02",
+            "NLP-P03",
+            "NLP-P04"
+          ],
+          "source_chunks": [],
+          "generation_used": false,
+          "answer": "Observed primary-topic counts across papers.",
+          "warnings": [
+            "These counts describe the four synthetic workshop papers and do not predict future examination questions.",
+            "9 questions remain unmatched by current deterministic taxonomy aliases; no model relabeling."
+          ],
+          "diagnostics": {
+            "routing_seconds": 2.4300010409206152e-05,
+            "analyzer_seconds": 0.000824799994006753
+          },
+          "evidence_checks": {},
+          "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed.",
+          "comparison_total": 48
+        },
+        {
+          "case_id": "AMBIG",
+          "question": "What Transformer topics should I revise from previous papers?",
+          "expected_capability": "question_papers",
+          "expected_type": "topic_filter",
+          "expected_topic": "transformers",
+          "expected_count": 8,
+          "evidence_patterns": [],
+          "actual_capability": "question_papers",
+          "routing_correct": true,
+          "routing": {
+            "capability": "question_papers",
+            "reason": "Historical-paper/filter/frequency intent has priority over revision intent.",
+            "matched_rules": [
+              "paper_request",
+              "study_request"
+            ],
+            "mode": "auto",
+            "fallback": false
+          },
+          "answer_type": "topic_filter",
+          "type_correct": true,
+          "actual_topic": "transformers",
+          "topic_correct": true,
+          "result_count": 8,
+          "count_correct": true,
+          "source_documents": [
+            "NLP-P01",
+            "NLP-P02",
+            "NLP-P03",
+            "NLP-P04"
+          ],
+          "source_chunks": [],
+          "generation_used": false,
+          "answer": "8 primary-topic questions matched transformers.",
+          "warnings": [
+            "These counts describe the four synthetic workshop papers and do not predict future examination questions.",
+            "9 questions remain unmatched by current deterministic taxonomy aliases; no model relabeling."
+          ],
+          "diagnostics": {
+            "routing_seconds": 2.9499991796910763e-05,
+            "analyzer_seconds": 0.0009274000185541809
+          },
+          "evidence_checks": {},
+          "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+        },
+        {
+          "case_id": "ALIAS",
+          "question": "Show self-attention questions.",
+          "expected_capability": "question_papers",
+          "expected_type": "topic_filter",
+          "expected_topic": "attention",
+          "expected_count": 3,
+          "evidence_patterns": [],
+          "actual_capability": "question_papers",
+          "routing_correct": true,
+          "routing": {
+            "capability": "question_papers",
+            "reason": "Historical-paper/filter/frequency intent has priority over revision intent.",
+            "matched_rules": [
+              "paper_request"
+            ],
+            "mode": "auto",
+            "fallback": false
+          },
+          "answer_type": "topic_filter",
+          "type_correct": true,
+          "actual_topic": "attention",
+          "topic_correct": true,
+          "result_count": 3,
+          "count_correct": true,
+          "source_documents": [
+            "NLP-P01",
+            "NLP-P02",
+            "NLP-P03"
+          ],
+          "source_chunks": [],
+          "generation_used": false,
+          "answer": "3 primary-topic questions matched attention.",
+          "warnings": [
+            "These counts describe the four synthetic workshop papers and do not predict future examination questions.",
+            "9 questions remain unmatched by current deterministic taxonomy aliases; no model relabeling."
+          ],
+          "diagnostics": {
+            "routing_seconds": 2.2599997464567423e-05,
+            "analyzer_seconds": 0.0008270000107586384
+          },
+          "evidence_checks": {},
+          "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+        },
+        {
+          "case_id": "GPT",
+          "question": "Show GPT questions.",
+          "expected_capability": "question_papers",
+          "expected_type": "topic_filter",
+          "expected_topic": "language_models",
+          "expected_count": 2,
+          "evidence_patterns": [],
+          "actual_capability": "question_papers",
+          "routing_correct": true,
+          "routing": {
+            "capability": "question_papers",
+            "reason": "Historical-paper/filter/frequency intent has priority over revision intent.",
+            "matched_rules": [
+              "paper_request"
+            ],
+            "mode": "auto",
+            "fallback": false
+          },
+          "answer_type": "topic_filter",
+          "type_correct": true,
+          "actual_topic": "language_models",
+          "topic_correct": true,
+          "result_count": 2,
+          "count_correct": true,
+          "source_documents": [
+            "NLP-P03",
+            "NLP-P04"
+          ],
+          "source_chunks": [],
+          "generation_used": false,
+          "answer": "2 primary-topic questions matched language_models.",
+          "warnings": [
+            "These counts describe the four synthetic workshop papers and do not predict future examination questions.",
+            "9 questions remain unmatched by current deterministic taxonomy aliases; no model relabeling."
+          ],
+          "diagnostics": {
+            "routing_seconds": 1.8999999156221747e-05,
+            "analyzer_seconds": 0.0007839000027161092
+          },
+          "evidence_checks": {},
+          "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+        },
+        {
+          "case_id": "UNKNOWN",
+          "question": "Show quantum teleportation questions.",
+          "expected_capability": "question_papers",
+          "expected_type": "unsupported",
+          "expected_topic": "UNMATCHED",
+          "expected_count": null,
+          "evidence_patterns": [],
+          "actual_capability": "question_papers",
+          "routing_correct": true,
+          "routing": {
+            "capability": "question_papers",
+            "reason": "Historical-paper/filter/frequency intent has priority over revision intent.",
+            "matched_rules": [
+              "paper_request"
+            ],
+            "mode": "auto",
+            "fallback": false
+          },
+          "answer_type": "unsupported",
+          "type_correct": true,
+          "actual_topic": "UNMATCHED",
+          "topic_correct": true,
+          "result_count": null,
+          "count_correct": null,
+          "source_documents": [],
+          "source_chunks": [],
+          "generation_used": false,
+          "answer": "No supported topic matched. Try a canonical topic such as Transformers, self-attention, CBOW or GPT.",
+          "warnings": [
+            "These counts describe the four synthetic workshop papers and do not predict future examination questions.",
+            "9 questions remain unmatched by current deterministic taxonomy aliases; no model relabeling."
+          ],
+          "diagnostics": {
+            "routing_seconds": 2.220002352260053e-05,
+            "analyzer_seconds": 0.0008212999964598566
+          },
+          "evidence_checks": {},
+          "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+        },
+        {
+          "case_id": "UNSUPPORTED",
+          "question": "What is the recipe for chocolate cake?",
+          "expected_capability": "academic_qa",
+          "expected_type": "retrieval_only",
+          "expected_topic": null,
+          "expected_count": null,
+          "evidence_patterns": [],
+          "actual_capability": "academic_qa",
+          "routing_correct": true,
+          "routing": {
+            "capability": "academic_qa",
+            "reason": "No specialized analyzer intent was detected, so this question is being handled through academic document retrieval.",
+            "matched_rules": [],
+            "mode": "auto",
+            "fallback": true
+          },
+          "answer_type": "retrieval_only",
+          "type_correct": true,
+          "actual_topic": null,
+          "topic_correct": null,
+          "result_count": null,
+          "count_correct": null,
+          "source_documents": [
+            "HCE-DOC06",
+            "HCE-DOC05",
+            "HCE-DOC14",
+            "HCE-DOC02"
+          ],
+          "source_chunks": [
+            "HCE-DOC06::chunk_000",
+            "HCE-DOC05::chunk_000",
+            "HCE-DOC14::chunk_003",
+            "HCE-DOC02::chunk_007",
+            "HCE-DOC02::chunk_012"
+          ],
+          "generation_used": false,
+          "answer": null,
+          "warnings": [
+            "Generation unavailable or not requested; pre-generation pipeline is complete.",
+            "Sources supplied as context, not verified citations or proof every claim is supported.",
+            "Local generation is unavailable or not requested, but the retrieved academic evidence is shown below.",
+            "Similarity is not factual confidence; retrieved evidence and generated claims require inspection."
+          ],
+          "diagnostics": {
+            "routing_seconds": 2.6599998818710446e-05,
+            "unit_evidence": {
+              "requested_units": [],
+              "generation_allowed": true,
+              "applied": false
+            },
+            "original_query": "What is the recipe for chocolate cake?",
+            "retrieval_query": "What is the recipe for chocolate cake?",
+            "rag": {
+              "requested_top_k": 5,
+              "retrieved_chunks": 5,
+              "included_chunks": 5,
+              "excluded_chunks": 0,
+              "context_characters": 3503,
+              "context_words": 574,
+              "source_count": 5,
+              "distinct_documents": 4,
+              "duplicate_document_blocks": 1,
+              "generation_status": "unavailable",
+              "model_labels": {
+                "mentioned_labels": [],
+                "valid_labels": [],
+                "invalid_labels": [],
+                "has_source_labels": false,
+                "occurrence_count": 0,
+                "status": "no_labels",
+                "scope": "Structural label validity only; claim support is not verified."
+              },
+              "overlap_pairs": [],
+              "flags": [
+                "Generation unavailable or not requested; pre-generation pipeline is complete."
+              ],
+              "scope": "Descriptive diagnostics, not correctness judgments."
+            },
+            "timings_seconds": {
+              "retrieval": 0.26285159998224117,
+              "context_and_prompt": 0.00024289998691529036,
+              "generation": 0.0,
+              "total": 0.26314309998997487
+            }
+          },
+          "evidence_checks": {},
+          "notes": "Evidence checks inspect supplied context only, not answer correctness. Unsupported questions still receive nearest evidence; relevance/abstention is not guaranteed."
+        }
+      ]
+    }
+  },
+  "cache_summary": {
+    "MiniLM_same_object": true,
+    "Transformer_sentiment_same_object": true,
+    "Transformer_ner_same_object": true,
+    "Transformer_qa_same_object": true,
+    "UI_regression_tests": {
+      "passed": 8,
+      "checks": [
+        "Word2Vec widget changes reuse training; settings retrain",
+        "Sentence pair similarity reused for unrelated widget changes",
+        "Query changes reuse course embeddings; in-memory corpus edit invalidates",
+        "RAG query/Top-K/budget reuse corpus; size/overlap changes invalidate",
+        "Assistant query/mode/Top-K/generation changes clear old result",
+        "RAG blank input clears saved result/identity"
+      ],
+      "models": "Pinned MiniLM revision is now an explicit low-level and UI cache key; no model changed."
+    }
+  },
+  "todo_consistency": {
+    "IDs": [
+      "1.1",
+      "1.2",
+      "1.3",
+      "1.4",
+      "1.5",
+      "1.6",
+      "1.7",
+      "2.1",
+      "2.2",
+      "2.3",
+      "2.4",
+      "3.1",
+      "3.2",
+      "3.3",
+      "3.4",
+      "3.5",
+      "4.1",
+      "4.2",
+      "4.3",
+      "5.1",
+      "5.2",
+      "5.3",
+      "5.4",
+      "5.5",
+      "6.1",
+      "6.2",
+      "7.1",
+      "7.2",
+      "7.3",
+      "7.4",
+      "8.1",
+      "8.2",
+      "8.3",
+      "10.1",
+      "10.2",
+      "10.3",
+      "10.4",
+      "11.1",
+      "11.2",
+      "11.3",
+      "11.4",
+      "12.1",
+      "12.2",
+      "12.3",
+      "14.1",
+      "14.2",
+      "14.3",
+      "14.4",
+      "14.5"
+    ],
+    "unique_count": 49,
+    "duplicate_IDs": 0,
+    "core_regions": 50,
+    "note": "1.7 has two labelled subregions under one exercise ID; no implementations stripped.",
+    "guides_and_index": "49 index rows and both guides match49 unique boundary IDs;50 BEGIN/END regions, two labelled parts for1.7."
+  },
+  "data_consistency": {
+    "derived_PDFs": [
+      {
+        "filename": "sample_pdfs/04_nlp_syllabus.pdf",
+        "pages": 3,
+        "disclaimer": true,
+        "fictional": true,
+        "source_hash_matches": true
+      },
+      {
+        "filename": "sample_pdfs/08_attendance_policy.pdf",
+        "pages": 2,
+        "disclaimer": true,
+        "fictional": true,
+        "source_hash_matches": true
+      },
+      {
+        "filename": "sample_pdfs/09_examination_regulations.pdf",
+        "pages": 2,
+        "disclaimer": true,
+        "fictional": true,
+        "source_hash_matches": true
+      }
+    ],
+    "canonical_document_disclaimers": true,
+    "canonical_content_modified": false,
+    "existing_consistency_suites": "Passed on both Python versions, including facts/documents/CSV/papers/benchmarks/derived PDFs."
+  },
+  "performance_summary": {
+    "Preprocessing": 0.010000499984016642,
+    "BoW": 1.610000617802143e-05,
+    "TF-IDF": 0.00014940000255592167,
+    "Word2Vec": 1.889999839477241e-05,
+    "encoder_and_chunk_initialization": 29.36411359999329,
+    "Sentence Embeddings": 0.024436700012302026,
+    "Semantic Search": 0.019604900007834658,
+    "Transformers sentiment": 0.04658169997856021,
+    "Transformers ner": 0.04716790001839399,
+    "Transformers qa": 0.04486439999891445,
+    "Analyzer": 0.0013309000059962273,
+    "Chunk Retrieval": 0.36284049999085255,
+    "RAG": 0.3307364000065718,
+    "Assistant": 0.3616405000211671
+  },
+  "warnings": [
+    "No query expansion or structural reranking was added. Pure retrieval misses remain measured.",
+    "Unit heading presence is necessary but insufficient for complete coverage; mixed-unit requests are withheld.",
+    "Optional generation remains slow and factually unreliable. Historical source labels were absent; sources are not verified citations.",
+    "Narrower-than1280 browser verification remains pending because viewport overrides did not apply in this browser provider."
+  ],
+  "matrix": [
+    {
+      "area": "Preprocessing",
+      "scenario": "normal",
+      "status": "PASS",
+      "seconds": 4.803499600006035,
+      "detail": "['student', 'learning', 'language']"
+    },
+    {
+      "area": "Preprocessing",
+      "scenario": "empty",
+      "status": "PASS",
+      "seconds": 1.789999078027904e-05,
+      "detail": "[]"
+    },
+    {
+      "area": "Preprocessing",
+      "scenario": "invalid",
+      "status": "PASS",
+      "seconds": 9.099981980398297e-06,
+      "detail": "Expected a text string."
+    },
+    {
+      "area": "Preprocessing",
+      "scenario": "warm",
+      "status": "PASS",
+      "seconds": 0.010000499984016642,
+      "detail": "['student', 'learning', 'language']"
+    },
+    {
+      "area": "BoW",
+      "scenario": "normal",
+      "status": "PASS",
+      "seconds": 3.5999983083456755e-05,
+      "detail": "[1, 2, 1]"
+    },
+    {
+      "area": "BoW",
+      "scenario": "empty",
+      "status": "PASS",
+      "seconds": 8.300004992634058e-06,
+      "detail": "[]"
+    },
+    {
+      "area": "BoW",
+      "scenario": "invalid",
+      "status": "PASS",
+      "seconds": 1.0399991879239678e-05,
+      "detail": "n must be a positive integer (1, 2, 3, ...)."
+    },
+    {
+      "area": "BoW",
+      "scenario": "warm",
+      "status": "PASS",
+      "seconds": 1.610000617802143e-05,
+      "detail": "[1, 2, 1]"
+    },
+    {
+      "area": "TF-IDF",
+      "scenario": "normal",
+      "status": "PASS",
+      "seconds": 0.00017100002150982618,
+      "detail": "[{'document_id': 'A', 'text': 'natural language processing', 'score': 0.5773502691896257}, {'document_id': 'B', 'text': 'database records', 'score': 0.0}]"
+    },
+    {
+      "area": "TF-IDF",
+      "scenario": "empty",
+      "status": "PASS",
+      "seconds": 0.0001407999952789396,
+      "detail": "[{'document_id': 'A', 'text': 'natural language processing', 'score': 0.0}, {'document_id': 'B', 'text': 'database records', 'score': 0.0}]"
+    },
+    {
+      "area": "TF-IDF",
+      "scenario": "OOV",
+      "status": "PASS",
+      "seconds": 0.00014869999722577631,
+      "detail": "[{'document_id': 'A', 'text': 'natural language processing', 'score': 0.0}, {'document_id': 'B', 'text': 'database records', 'score': 0.0}]"
+    },
+    {
+      "area": "TF-IDF",
+      "scenario": "warm",
+      "status": "PASS",
+      "seconds": 0.00014940000255592167,
+      "detail": "[{'document_id': 'A', 'text': 'natural language processing', 'score': 0.5773502691896257}, {'document_id': 'B', 'text': 'database records', 'score': 0.0}]"
+    },
+    {
+      "area": "TF-IDF",
+      "scenario": "invalid",
+      "status": "PASS",
+      "seconds": 0.00013710002531297505,
+      "detail": "top_k must be a non-negative integer."
+    },
+    {
+      "area": "Word2Vec",
+      "scenario": "normal",
+      "status": "PASS",
+      "seconds": 4.680000711232424e-05,
+      "detail": "[-0.7230625152587891, 1.1701186895370483, -2.0161378383636475, 0.8860244750976562]"
+    },
+    {
+      "area": "Word2Vec",
+      "scenario": "empty",
+      "status": "PASS",
+      "seconds": 1.5199999324977398e-05,
+      "detail": "[]"
+    },
+    {
+      "area": "Word2Vec",
+      "scenario": "invalid",
+      "status": "PASS",
+      "seconds": 5.440000677481294e-05,
+      "detail": "Training needs at least two retained vocabulary words. Add sentences or lower min_count."
+    },
+    {
+      "area": "Word2Vec",
+      "scenario": "missing vocabulary",
+      "status": "PASS",
+      "seconds": 9.800016414374113e-06,
+      "detail": "Word 'zzunknown' is outside this model's vocabulary. Select a known word; case is significant."
+    },
+    {
+      "area": "Word2Vec",
+      "scenario": "warm",
+      "status": "PASS",
+      "seconds": 1.889999839477241e-05,
+      "detail": "[-0.7230625152587891, 1.1701186895370483, -2.0161378383636475, 0.8860244750976562]"
+    },
+    {
+      "area": "Sentence Embeddings",
+      "scenario": "normal",
+      "status": "PASS",
+      "seconds": 0.02506449999054894,
+      "detail": "(1, 384)"
+    },
+    {
+      "area": "Sentence Embeddings",
+      "scenario": "empty",
+      "status": "PASS",
+      "seconds": 3.710002056322992e-05,
+      "detail": "(0, 384)"
+    },
+    {
+      "area": "Sentence Embeddings",
+      "scenario": "invalid",
+      "status": "PASS",
+      "seconds": 2.0800012862309813e-05,
+      "detail": "Blank sentences have no useful meaning; enter non-empty text."
+    },
+    {
+      "area": "Sentence Embeddings",
+      "scenario": "missing resource",
+      "status": "PASS",
+      "seconds": 0.0020343000069260597,
+      "detail": "Cannot load sentence-transformers/all-MiniLM-L6-v2 from .cache\\nonexistent-audit-resource. From the repository root, run python -m src.sentence_"
+    },
+    {
+      "area": "Sentence Embeddings",
+      "scenario": "warm",
+      "status": "PASS",
+      "seconds": 0.024436700012302026,
+      "detail": "0.8550915876198412"
+    },
+    {
+      "area": "Sentence Embeddings",
+      "scenario": "long input",
+      "status": "PASS",
+      "seconds": 0.1250202000082936,
+      "detail": "{'model_tokens': 1002, 'vector_shape': [1, 384], 'truncation': 'Explicit UI warning; encoder retains original256-token behavior.'}"
+    },
+    {
+      "area": "Semantic Search",
+      "scenario": "normal",
+      "status": "PASS",
+      "seconds": 0.019807199976639822,
+      "detail": "[{'document_id': 'NLP', 'text': 'Computational methods for human language.', 'score': 0.6893103959618045}, {'document_id': 'NET', 'text': 'Devices exchange pack"
+    },
+    {
+      "area": "Semantic Search",
+      "scenario": "warm",
+      "status": "PASS",
+      "seconds": 0.019604900007834658,
+      "detail": "[{'document_id': 'NLP', 'text': 'Computational methods for human language.', 'score': 0.6893103959618045}, {'document_id': 'NET', 'text': 'Devices exchange pack"
+    },
+    {
+      "area": "Semantic Search",
+      "scenario": "empty",
+      "status": "PASS",
+      "seconds": 4.2100000428035855e-05,
+      "detail": "Enter a non-empty search query before encoding."
+    },
+    {
+      "area": "Semantic Search",
+      "scenario": "invalid",
+      "status": "PASS",
+      "seconds": 2.4200009647756815e-05,
+      "detail": "top_k must be a non-negative integer."
+    },
+    {
+      "area": "Transformers sentiment",
+      "scenario": "normal",
+      "status": "PASS",
+      "seconds": 0.08434450000640936,
+      "detail": "{'label': 'POSITIVE', 'score': 0.9990077614784241}"
+    },
+    {
+      "area": "Transformers sentiment",
+      "scenario": "warm",
+      "status": "PASS",
+      "seconds": 0.04658169997856021,
+      "detail": "{'label': 'POSITIVE', 'score': 0.9990077614784241}"
+    },
+    {
+      "area": "Transformers sentiment",
+      "scenario": "empty",
+      "status": "PASS",
+      "seconds": 1.170000177808106e-05,
+      "detail": "Sentiment input must be non-empty text."
+    },
+    {
+      "area": "Transformers ner",
+      "scenario": "normal",
+      "status": "PASS",
+      "seconds": 0.4701896000187844,
+      "detail": "[{'text': 'Riya', 'label': 'PER', 'score': 0.9721973538398743, 'start': 0, 'end': 4}, {'text': 'London', 'label': 'LOC', 'score': 0.9936103224754333, 'start': 1"
+    },
+    {
+      "area": "Transformers ner",
+      "scenario": "warm",
+      "status": "PASS",
+      "seconds": 0.04716790001839399,
+      "detail": "[{'text': 'Riya', 'label': 'PER', 'score': 0.9721973538398743, 'start': 0, 'end': 4}, {'text': 'London', 'label': 'LOC', 'score': 0.9936103224754333, 'start': 1"
+    },
+    {
+      "area": "Transformers ner",
+      "scenario": "empty",
+      "status": "PASS",
+      "seconds": 1.0099989594891667e-05,
+      "detail": "Sentiment input must be non-empty text."
+    },
+    {
+      "area": "Transformers qa",
+      "scenario": "normal",
+      "status": "PASS",
+      "seconds": 0.5531323000031989,
+      "detail": "{'answer': 'Semester6', 'score': 0.9834561597526772, 'start': 18, 'end': 27}"
+    },
+    {
+      "area": "Transformers qa",
+      "scenario": "warm",
+      "status": "PASS",
+      "seconds": 0.04486439999891445,
+      "detail": "{'answer': 'Semester6', 'score': 0.9834561597526772, 'start': 18, 'end': 27}"
+    },
+    {
+      "area": "Transformers qa",
+      "scenario": "empty",
+      "status": "PASS",
+      "seconds": 9.200011845678091e-06,
+      "detail": "Sentiment input must be non-empty text."
+    },
+    {
+      "area": "Transformers",
+      "scenario": "missing resource",
+      "status": "PASS",
+      "seconds": 0.0009554999996908009,
+      "detail": "Cannot load distilbert/distilbert-base-uncased-finetuned-sst-2-english from .cache\\nonexistent-audit-resource\\sentiment\\714eb0fa89d2f80546fda750"
+    },
+    {
+      "area": "Transformers",
+      "scenario": "invalid",
+      "status": "PASS",
+      "seconds": 8.300004992634058e-06,
+      "detail": "Choose sentiment, ner or qa."
+    },
+    {
+      "area": "Analyzer",
+      "scenario": "normal",
+      "status": "PASS",
+      "seconds": 0.004011399985756725,
+      "detail": "topic_filter"
+    },
+    {
+      "area": "Analyzer",
+      "scenario": "warm",
+      "status": "PASS",
+      "seconds": 0.0013309000059962273,
+      "detail": "topic_frequency"
+    },
+    {
+      "area": "Analyzer",
+      "scenario": "empty",
+      "status": "PASS",
+      "seconds": 0.00026440000510774553,
+      "detail": "unsupported"
+    },
+    {
+      "area": "Analyzer",
+      "scenario": "unknown topic",
+      "status": "PASS",
+      "seconds": 0.0013804000045638531,
+      "detail": "unsupported"
+    },
+    {
+      "area": "Analyzer",
+      "scenario": "missing data",
+      "status": "PASS",
+      "seconds": 0.0003696999920066446,
+      "detail": "[Errno 2] No such file or directory: 'C:\\\\Users\\\\91807\\\\Documents\\\\Codex\\\\2026-10-05\\\\hey-i-want-to-build-an\\\\outputs\\\\nlp-academic-assistant\\\\.cache\\\\nonexistent-audit-resource\\\\data\\\\university_facts.json'"
+    },
+    {
+      "area": "Chunk Retrieval",
+      "scenario": "warm",
+      "status": "PASS",
+      "seconds": 0.36284049999085255,
+      "detail": "HCE-DOC08::chunk_000"
+    },
+    {
+      "area": "Chunk Retrieval",
+      "scenario": "empty",
+      "status": "PASS",
+      "seconds": 0.001565500017022714,
+      "detail": "Enter a non-empty search query before encoding."
+    },
+    {
+      "area": "Chunk Retrieval",
+      "scenario": "large Top-K",
+      "status": "PASS",
+      "seconds": 0.3558249000052456,
+      "detail": "152"
+    },
+    {
+      "area": "RAG",
+      "scenario": "normal",
+      "status": "PASS",
+      "seconds": 0.31311940000159666,
+      "detail": "unavailable"
+    },
+    {
+      "area": "RAG",
+      "scenario": "warm",
+      "status": "PASS",
+      "seconds": 0.3307364000065718,
+      "detail": "unavailable"
+    },
+    {
+      "area": "RAG",
+      "scenario": "empty",
+      "status": "PASS",
+      "seconds": 1.3999990187585354e-05,
+      "detail": "Enter a non-empty question."
+    },
+    {
+      "area": "RAG",
+      "scenario": "invalid",
+      "status": "PASS",
+      "seconds": 5.600013537332416e-06,
+      "detail": "top_k must be a non-negative integer."
+    },
+    {
+      "area": "Assistant",
+      "scenario": "normal",
+      "status": "PASS",
+      "seconds": 0.44004519999725744,
+      "detail": "retrieval_only"
+    },
+    {
+      "area": "Assistant",
+      "scenario": "warm",
+      "status": "PASS",
+      "seconds": 0.3616405000211671,
+      "detail": "retrieval_only"
+    },
+    {
+      "area": "Assistant",
+      "scenario": "empty",
+      "status": "PASS",
+      "seconds": 3.600001218728721e-05,
+      "detail": "unsupported"
+    },
+    {
+      "area": "Assistant",
+      "scenario": "unknown topic",
+      "status": "PASS",
+      "seconds": 0.001608500024303794,
+      "detail": "unsupported"
+    },
+    {
+      "area": "Assistant",
+      "scenario": "invalid mode",
+      "status": "PASS",
+      "seconds": 2.5999994250014424e-05,
+      "detail": "Select Auto, Academic Q&A, Previous Papers or Study Support."
+    },
+    {
+      "area": "Assistant",
+      "scenario": "missing MiniLM",
+      "status": "PASS",
+      "seconds": 0.0017356000025756657,
+      "detail": "8"
+    },
+    {
+      "area": "RAG",
+      "scenario": "missing Qwen",
+      "status": "PASS",
+      "seconds": 0.36162680000416003,
+      "detail": "retrieval_only"
+    },
+    {
+      "area": "PDF",
+      "scenario": "malformed",
+      "status": "PASS",
+      "seconds": 0.0019210000173188746,
+      "detail": "Cannot extract this PDF. Use a valid, unencrypted text-based PDF. Detail: PdfStreamError: Stream has ended unexpectedly"
+    },
+    {
+      "area": "PDF",
+      "scenario": "scanned/blank",
+      "status": "PASS",
+      "seconds": 0.003875399997923523,
+      "detail": "This workshop currently supports text-based PDFs. No extractable text was found. OCR is outside the workshop scope."
+    },
+    {
+      "area": "PDF",
+      "scenario": "oversized",
+      "status": "PASS",
+      "seconds": 0.1057843999878969,
+      "detail": "PDF exceeds the 10 MiB workshop limit."
+    },
+    {
+      "area": "PDF",
+      "scenario": "encrypted",
+      "status": "PASS",
+      "seconds": 0.017541099980007857,
+      "detail": "Use an unencrypted text-based PDF for this lab."
+    },
+    {
+      "area": "PDF",
+      "scenario": "over50pages",
+      "status": "PASS",
+      "seconds": 0.011276999983238056,
+      "detail": "Use a PDF with at most 50 pages for this lab."
+    }
+  ],
+  "analyzer_regression": {
+    "usage": "Measured evaluation only. User-facing counts/predictions come from production paper text, never this artifact.",
+    "utc_time": "2026-10-06T10:45:44.832760+00:00",
+    "python": "3.11.17",
+    "taxonomy_source": "data/university_facts.json#/nlp_topic_taxonomy",
+    "taxonomy_schema_version": "1.0.0",
+    "topic_count": 16,
+    "specificity_policy": {
+      "cbow": 2,
+      "skip_gram": 2,
+      "bert": 2,
+      "word2vec": 1,
+      "attention": 1
+    },
+    "rule_scope": "Canonical names/aliases; separator normalization, word boundaries, limited final-word singular/plural variation. Related IDs are never propagated. No new synonyms/question-specific hacks.",
+    "paper_ids": [
+      "NLP-P01",
+      "NLP-P02",
+      "NLP-P03",
+      "NLP-P04"
+    ],
+    "questions_per_paper": {
+      "NLP-P01": 12,
+      "NLP-P02": 12,
+      "NLP-P03": 12,
+      "NLP-P04": 12
+    },
+    "paper_marks": {
+      "NLP-P01": 60,
+      "NLP-P02": 60,
+      "NLP-P03": 60,
+      "NLP-P04": 60
+    },
+    "total_questions": 48,
+    "correct": 39,
+    "incorrect": 9,
+    "unmatched": 9,
+    "matched_but_incorrect": 0,
+    "accuracy": 0.8125,
+    "ambiguous": 0,
+    "observed_frequencies": {
+      "text_preprocessing": 2,
+      "tokenization": 1,
+      "bag_of_words": 2,
+      "n_grams": 2,
+      "tf_idf": 4,
+      "cosine_similarity": 1,
+      "word_embeddings": 4,
+      "word2vec": 4,
+      "cbow": 1,
+      "skip_gram": 1,
+      "attention": 3,
+      "transformers": 8,
+      "bert": 3,
+      "language_models": 2,
+      "semantic_similarity": 0,
+      "semantic_search": 1,
+      "UNMATCHED": 9
+    },
+    "ground_truth_frequencies": {
+      "text_preprocessing": 2,
+      "tokenization": 2,
+      "bag_of_words": 2,
+      "n_grams": 2,
+      "tf_idf": 7,
+      "cosine_similarity": 2,
+      "word_embeddings": 5,
+      "word2vec": 4,
+      "cbow": 1,
+      "skip_gram": 1,
+      "attention": 5,
+      "transformers": 8,
+      "bert": 3,
+      "language_models": 2,
+      "semantic_similarity": 1,
+      "semantic_search": 1
+    },
+    "frequency_differences": {
+      "text_preprocessing": 0,
+      "tokenization": -1,
+      "bag_of_words": 0,
+      "n_grams": 0,
+      "tf_idf": -3,
+      "cosine_similarity": -1,
+      "word_embeddings": -1,
+      "word2vec": 0,
+      "cbow": 0,
+      "skip_gram": 0,
+      "attention": -2,
+      "transformers": 0,
+      "bert": 0,
+      "language_models": 0,
+      "semantic_similarity": -1,
+      "semantic_search": 0
+    },
+    "ranking": [
+      {
+        "rank": 1,
+        "topic_id": "transformers",
+        "topic_name": "Transformers",
+        "count": 8
+      },
+      {
+        "rank": 2,
+        "topic_id": "tf_idf",
+        "topic_name": "TF-IDF",
+        "count": 4
+      },
+      {
+        "rank": 3,
+        "topic_id": "word_embeddings",
+        "topic_name": "Word Embeddings",
+        "count": 4
+      },
+      {
+        "rank": 4,
+        "topic_id": "word2vec",
+        "topic_name": "Word2Vec",
+        "count": 4
+      },
+      {
+        "rank": 5,
+        "topic_id": "attention",
+        "topic_name": "Attention",
+        "count": 3
+      },
+      {
+        "rank": 6,
+        "topic_id": "bert",
+        "topic_name": "BERT",
+        "count": 3
+      },
+      {
+        "rank": 7,
+        "topic_id": "text_preprocessing",
+        "topic_name": "Text Preprocessing",
+        "count": 2
+      },
+      {
+        "rank": 8,
+        "topic_id": "bag_of_words",
+        "topic_name": "Bag of Words",
+        "count": 2
+      },
+      {
+        "rank": 9,
+        "topic_id": "n_grams",
+        "topic_name": "N-Grams",
+        "count": 2
+      },
+      {
+        "rank": 10,
+        "topic_id": "language_models",
+        "topic_name": "Language Models",
+        "count": 2
+      },
+      {
+        "rank": 11,
+        "topic_id": "tokenization",
+        "topic_name": "Tokenization",
+        "count": 1
+      },
+      {
+        "rank": 12,
+        "topic_id": "cosine_similarity",
+        "topic_name": "Cosine Similarity",
+        "count": 1
+      },
+      {
+        "rank": 13,
+        "topic_id": "cbow",
+        "topic_name": "CBOW",
+        "count": 1
+      },
+      {
+        "rank": 14,
+        "topic_id": "skip_gram",
+        "topic_name": "Skip-Gram",
+        "count": 1
+      },
+      {
+        "rank": 15,
+        "topic_id": "semantic_search",
+        "topic_name": "Semantic Search",
+        "count": 1
+      },
+      {
+        "rank": 16,
+        "topic_id": "semantic_similarity",
+        "topic_name": "Semantic Similarity",
+        "count": 0
+      }
+    ],
+    "macro_f1": 0.8562184343434344,
+    "confusion_pairs": [
+      {
+        "actual": "attention",
+        "predicted": "UNMATCHED",
+        "count": 2
+      },
+      {
+        "actual": "cosine_similarity",
+        "predicted": "UNMATCHED",
+        "count": 1
+      },
+      {
+        "actual": "semantic_similarity",
+        "predicted": "UNMATCHED",
+        "count": 1
+      },
+      {
+        "actual": "tf_idf",
+        "predicted": "UNMATCHED",
+        "count": 3
+      },
+      {
+        "actual": "tokenization",
+        "predicted": "UNMATCHED",
+        "count": 1
+      },
+      {
+        "actual": "word_embeddings",
+        "predicted": "UNMATCHED",
+        "count": 1
+      }
+    ],
+    "transformer_filter": [
+      {
+        "paper_id": "NLP-P01",
+        "question_id": "Q1",
+        "question_number": 1,
+        "marks": 5,
+        "text": "Describe the encoder and decoder roles in a Transformer architecture, emphasizing how information passes between its main components.",
+        "source_path": "data/question_papers/nlp_question_paper_01.md",
+        "source_char_start": 1029,
+        "source_char_end": 1165,
+        "normalized_text": "describe the encoder and decoder roles in a transformer architecture emphasizing how information passes between its main components",
+        "primary_topic": "transformers",
+        "primary_match": {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "transformer architecture",
+          "normalized_alias": "transformer architecture",
+          "match_type": "alias",
+          "phrase_words": 2,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformer architecture",
+          "start": 44,
+          "end": 68
+        },
+        "matched_topics": [
+          "transformers"
+        ],
+        "matches": [
+          {
+            "topic_id": "transformers",
+            "topic_name": "Transformers",
+            "alias_phrase": "transformer architecture",
+            "normalized_alias": "transformer architecture",
+            "match_type": "alias",
+            "phrase_words": 2,
+            "specificity": 0,
+            "taxonomy_order": 11,
+            "matched_phrase": "transformer architecture",
+            "start": 44,
+            "end": 68
+          },
+          {
+            "topic_id": "transformers",
+            "topic_name": "Transformers",
+            "alias_phrase": "Transformers",
+            "normalized_alias": "transformers",
+            "match_type": "canonical",
+            "phrase_words": 1,
+            "specificity": 0,
+            "taxonomy_order": 11,
+            "matched_phrase": "transformer",
+            "start": 44,
+            "end": 55
+          }
+        ],
+        "ambiguous_candidates": [],
+        "is_ambiguous": false,
+        "reason": "Selected transformers: specificity 0, 2 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated."
+      },
+      {
+        "paper_id": "NLP-P01",
+        "question_id": "Q7",
+        "question_number": 7,
+        "marks": 5,
+        "text": "Explain why positional information is needed in a Transformer when token representations are processed without a recurrent chain.",
+        "source_path": "data/question_papers/nlp_question_paper_01.md",
+        "source_char_start": 1868,
+        "source_char_end": 2000,
+        "normalized_text": "explain why positional information is needed in a transformer when token representations are processed without a recurrent chain",
+        "primary_topic": "transformers",
+        "primary_match": {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "Transformers",
+          "normalized_alias": "transformers",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformer",
+          "start": 50,
+          "end": 61
+        },
+        "matched_topics": [
+          "transformers"
+        ],
+        "matches": [
+          {
+            "topic_id": "transformers",
+            "topic_name": "Transformers",
+            "alias_phrase": "Transformers",
+            "normalized_alias": "transformers",
+            "match_type": "canonical",
+            "phrase_words": 1,
+            "specificity": 0,
+            "taxonomy_order": 11,
+            "matched_phrase": "transformer",
+            "start": 50,
+            "end": 61
+          }
+        ],
+        "ambiguous_candidates": [],
+        "is_ambiguous": false,
+        "reason": "Selected transformers: specificity 0, 1 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated."
+      },
+      {
+        "paper_id": "NLP-P02",
+        "question_id": "Q1",
+        "question_number": 1,
+        "marks": 5,
+        "text": "Compare Transformer processing with recurrent processing in terms of token relationships and opportunities for parallel computation.",
+        "source_path": "data/question_papers/nlp_question_paper_02.md",
+        "source_char_start": 1029,
+        "source_char_end": 1164,
+        "normalized_text": "compare transformer processing with recurrent processing in terms of token relationships and opportunities for parallel computation",
+        "primary_topic": "transformers",
+        "primary_match": {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "Transformers",
+          "normalized_alias": "transformers",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformer",
+          "start": 8,
+          "end": 19
+        },
+        "matched_topics": [
+          "transformers"
+        ],
+        "matches": [
+          {
+            "topic_id": "transformers",
+            "topic_name": "Transformers",
+            "alias_phrase": "Transformers",
+            "normalized_alias": "transformers",
+            "match_type": "canonical",
+            "phrase_words": 1,
+            "specificity": 0,
+            "taxonomy_order": 11,
+            "matched_phrase": "transformer",
+            "start": 8,
+            "end": 19
+          }
+        ],
+        "ambiguous_candidates": [],
+        "is_ambiguous": false,
+        "reason": "Selected transformers: specificity 0, 1 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated."
+      },
+      {
+        "paper_id": "NLP-P02",
+        "question_id": "Q7",
+        "question_number": 7,
+        "marks": 5,
+        "text": "Illustrate the role of residual connections and feed-forward blocks in a Transformer layer.",
+        "source_path": "data/question_papers/nlp_question_paper_02.md",
+        "source_char_start": 1872,
+        "source_char_end": 1966,
+        "normalized_text": "illustrate the role of residual connections and feed forward blocks in a transformer layer",
+        "primary_topic": "transformers",
+        "primary_match": {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "Transformers",
+          "normalized_alias": "transformers",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformer",
+          "start": 73,
+          "end": 84
+        },
+        "matched_topics": [
+          "transformers"
+        ],
+        "matches": [
+          {
+            "topic_id": "transformers",
+            "topic_name": "Transformers",
+            "alias_phrase": "Transformers",
+            "normalized_alias": "transformers",
+            "match_type": "canonical",
+            "phrase_words": 1,
+            "specificity": 0,
+            "taxonomy_order": 11,
+            "matched_phrase": "transformer",
+            "start": 73,
+            "end": 84
+          }
+        ],
+        "ambiguous_candidates": [],
+        "is_ambiguous": false,
+        "reason": "Selected transformers: specificity 0, 1 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated."
+      },
+      {
+        "paper_id": "NLP-P03",
+        "question_id": "Q1",
+        "question_number": 1,
+        "marks": 5,
+        "text": "Discuss how an encoder-decoder Transformer connects an input sequence with an output sequence while retaining distinct component roles.",
+        "source_path": "data/question_papers/nlp_question_paper_03.md",
+        "source_char_start": 1029,
+        "source_char_end": 1167,
+        "normalized_text": "discuss how an encoder decoder transformer connects an input sequence with an output sequence while retaining distinct component roles",
+        "primary_topic": "transformers",
+        "primary_match": {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "Transformers",
+          "normalized_alias": "transformers",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformer",
+          "start": 31,
+          "end": 42
+        },
+        "matched_topics": [
+          "transformers"
+        ],
+        "matches": [
+          {
+            "topic_id": "transformers",
+            "topic_name": "Transformers",
+            "alias_phrase": "Transformers",
+            "normalized_alias": "transformers",
+            "match_type": "canonical",
+            "phrase_words": 1,
+            "specificity": 0,
+            "taxonomy_order": 11,
+            "matched_phrase": "transformer",
+            "start": 31,
+            "end": 42
+          }
+        ],
+        "ambiguous_candidates": [],
+        "is_ambiguous": false,
+        "reason": "Selected transformers: specificity 0, 1 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated."
+      },
+      {
+        "paper_id": "NLP-P03",
+        "question_id": "Q7",
+        "question_number": 7,
+        "marks": 5,
+        "text": "Analyze the architectural purpose of multiple representation layers in a Transformer without equating layer count with guaranteed accuracy.",
+        "source_path": "data/question_papers/nlp_question_paper_03.md",
+        "source_char_start": 1854,
+        "source_char_end": 1996,
+        "normalized_text": "analyze the architectural purpose of multiple representation layers in a transformer without equating layer count with guaranteed accuracy",
+        "primary_topic": "transformers",
+        "primary_match": {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "Transformers",
+          "normalized_alias": "transformers",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformer",
+          "start": 73,
+          "end": 84
+        },
+        "matched_topics": [
+          "transformers"
+        ],
+        "matches": [
+          {
+            "topic_id": "transformers",
+            "topic_name": "Transformers",
+            "alias_phrase": "Transformers",
+            "normalized_alias": "transformers",
+            "match_type": "canonical",
+            "phrase_words": 1,
+            "specificity": 0,
+            "taxonomy_order": 11,
+            "matched_phrase": "transformer",
+            "start": 73,
+            "end": 84
+          }
+        ],
+        "ambiguous_candidates": [],
+        "is_ambiguous": false,
+        "reason": "Selected transformers: specificity 0, 1 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated."
+      },
+      {
+        "paper_id": "NLP-P04",
+        "question_id": "Q1",
+        "question_number": 1,
+        "marks": 5,
+        "text": "Differentiate an encoder-only Transformer from an encoder-decoder arrangement in terms of how each uses the input representation.",
+        "source_path": "data/question_papers/nlp_question_paper_04.md",
+        "source_char_start": 1029,
+        "source_char_end": 1161,
+        "normalized_text": "differentiate an encoder only transformer from an encoder decoder arrangement in terms of how each uses the input representation",
+        "primary_topic": "transformers",
+        "primary_match": {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "Transformers",
+          "normalized_alias": "transformers",
+          "match_type": "canonical",
+          "phrase_words": 1,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformer",
+          "start": 30,
+          "end": 41
+        },
+        "matched_topics": [
+          "transformers"
+        ],
+        "matches": [
+          {
+            "topic_id": "transformers",
+            "topic_name": "Transformers",
+            "alias_phrase": "Transformers",
+            "normalized_alias": "transformers",
+            "match_type": "canonical",
+            "phrase_words": 1,
+            "specificity": 0,
+            "taxonomy_order": 11,
+            "matched_phrase": "transformer",
+            "start": 30,
+            "end": 41
+          }
+        ],
+        "ambiguous_candidates": [],
+        "is_ambiguous": false,
+        "reason": "Selected transformers: specificity 0, 1 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated."
+      },
+      {
+        "paper_id": "NLP-P04",
+        "question_id": "Q7",
+        "question_number": 7,
+        "marks": 5,
+        "text": "Describe how the Transformer model combines positional information with interactions among tokens to represent a sentence.",
+        "source_path": "data/question_papers/nlp_question_paper_04.md",
+        "source_char_start": 1900,
+        "source_char_end": 2025,
+        "normalized_text": "describe how the transformer model combines positional information with interactions among tokens to represent a sentence",
+        "primary_topic": "transformers",
+        "primary_match": {
+          "topic_id": "transformers",
+          "topic_name": "Transformers",
+          "alias_phrase": "transformer model",
+          "normalized_alias": "transformer model",
+          "match_type": "alias",
+          "phrase_words": 2,
+          "specificity": 0,
+          "taxonomy_order": 11,
+          "matched_phrase": "transformer model",
+          "start": 17,
+          "end": 34
+        },
+        "matched_topics": [
+          "transformers"
+        ],
+        "matches": [
+          {
+            "topic_id": "transformers",
+            "topic_name": "Transformers",
+            "alias_phrase": "transformer model",
+            "normalized_alias": "transformer model",
+            "match_type": "alias",
+            "phrase_words": 2,
+            "specificity": 0,
+            "taxonomy_order": 11,
+            "matched_phrase": "transformer model",
+            "start": 17,
+            "end": 34
+          },
+          {
+            "topic_id": "transformers",
+            "topic_name": "Transformers",
+            "alias_phrase": "Transformers",
+            "normalized_alias": "transformers",
+            "match_type": "canonical",
+            "phrase_words": 1,
+            "specificity": 0,
+            "taxonomy_order": 11,
+            "matched_phrase": "transformer",
+            "start": 17,
+            "end": 28
+          }
+        ],
+        "ambiguous_candidates": [],
+        "is_ambiguous": false,
+        "reason": "Selected transformers: specificity 0, 2 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated."
+      }
+    ],
+    "attention_filter": [
+      {
+        "paper_id": "NLP-P01",
+        "question_id": "Q4",
+        "question_number": 4,
+        "marks": 5,
+        "text": "Explain how self-attention assigns different relevance to tokens when constructing a contextual representation.",
+        "source_path": "data/question_papers/nlp_question_paper_01.md",
+        "source_char_start": 1453,
+        "source_char_end": 1567,
+        "normalized_text": "explain how self attention assigns different relevance to tokens when constructing a contextual representation",
+        "primary_topic": "attention",
+        "primary_match": {
+          "topic_id": "attention",
+          "topic_name": "Attention",
+          "alias_phrase": "self-attention",
+          "normalized_alias": "self attention",
+          "match_type": "alias",
+          "phrase_words": 2,
+          "specificity": 1,
+          "taxonomy_order": 10,
+          "matched_phrase": "self attention",
+          "start": 12,
+          "end": 26
+        },
+        "matched_topics": [
+          "attention"
+        ],
+        "matches": [
+          {
+            "topic_id": "attention",
+            "topic_name": "Attention",
+            "alias_phrase": "self-attention",
+            "normalized_alias": "self attention",
+            "match_type": "alias",
+            "phrase_words": 2,
+            "specificity": 1,
+            "taxonomy_order": 10,
+            "matched_phrase": "self attention",
+            "start": 12,
+            "end": 26
+          },
+          {
+            "topic_id": "attention",
+            "topic_name": "Attention",
+            "alias_phrase": "Attention",
+            "normalized_alias": "attention",
+            "match_type": "canonical",
+            "phrase_words": 1,
+            "specificity": 1,
+            "taxonomy_order": 10,
+            "matched_phrase": "attention",
+            "start": 17,
+            "end": 26
+          }
+        ],
+        "ambiguous_candidates": [],
+        "is_ambiguous": false,
+        "reason": "Selected attention: specificity 1, 2 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated."
+      },
+      {
+        "paper_id": "NLP-P02",
+        "question_id": "Q9",
+        "question_number": 9,
+        "marks": 5,
+        "text": "Illustrate the roles of queries, keys and values in an attention mechanism for a short sequence.",
+        "source_path": "data/question_papers/nlp_question_paper_02.md",
+        "source_char_start": 2133,
+        "source_char_end": 2232,
+        "normalized_text": "illustrate the roles of queries keys and values in an attention mechanism for a short sequence",
+        "primary_topic": "attention",
+        "primary_match": {
+          "topic_id": "attention",
+          "topic_name": "Attention",
+          "alias_phrase": "attention mechanism",
+          "normalized_alias": "attention mechanism",
+          "match_type": "alias",
+          "phrase_words": 2,
+          "specificity": 1,
+          "taxonomy_order": 10,
+          "matched_phrase": "attention mechanism",
+          "start": 54,
+          "end": 73
+        },
+        "matched_topics": [
+          "attention"
+        ],
+        "matches": [
+          {
+            "topic_id": "attention",
+            "topic_name": "Attention",
+            "alias_phrase": "attention mechanism",
+            "normalized_alias": "attention mechanism",
+            "match_type": "alias",
+            "phrase_words": 2,
+            "specificity": 1,
+            "taxonomy_order": 10,
+            "matched_phrase": "attention mechanism",
+            "start": 54,
+            "end": 73
+          },
+          {
+            "topic_id": "attention",
+            "topic_name": "Attention",
+            "alias_phrase": "Attention",
+            "normalized_alias": "attention",
+            "match_type": "canonical",
+            "phrase_words": 1,
+            "specificity": 1,
+            "taxonomy_order": 10,
+            "matched_phrase": "attention",
+            "start": 54,
+            "end": 63
+          }
+        ],
+        "ambiguous_candidates": [],
+        "is_ambiguous": false,
+        "reason": "Selected attention: specificity 1, 2 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated."
+      },
+      {
+        "paper_id": "NLP-P03",
+        "question_id": "Q9",
+        "question_number": 9,
+        "marks": 5,
+        "text": "Compare a single attention head with multi-head attention in terms of the relationships represented.",
+        "source_path": "data/question_papers/nlp_question_paper_03.md",
+        "source_char_start": 2171,
+        "source_char_end": 2274,
+        "normalized_text": "compare a single attention head with multi head attention in terms of the relationships represented",
+        "primary_topic": "attention",
+        "primary_match": {
+          "topic_id": "attention",
+          "topic_name": "Attention",
+          "alias_phrase": "multi-head attention",
+          "normalized_alias": "multi head attention",
+          "match_type": "alias",
+          "phrase_words": 3,
+          "specificity": 1,
+          "taxonomy_order": 10,
+          "matched_phrase": "multi head attention",
+          "start": 37,
+          "end": 57
+        },
+        "matched_topics": [
+          "attention"
+        ],
+        "matches": [
+          {
+            "topic_id": "attention",
+            "topic_name": "Attention",
+            "alias_phrase": "multi-head attention",
+            "normalized_alias": "multi head attention",
+            "match_type": "alias",
+            "phrase_words": 3,
+            "specificity": 1,
+            "taxonomy_order": 10,
+            "matched_phrase": "multi head attention",
+            "start": 37,
+            "end": 57
+          },
+          {
+            "topic_id": "attention",
+            "topic_name": "Attention",
+            "alias_phrase": "Attention",
+            "normalized_alias": "attention",
+            "match_type": "canonical",
+            "phrase_words": 1,
+            "specificity": 1,
+            "taxonomy_order": 10,
+            "matched_phrase": "attention",
+            "start": 17,
+            "end": 26
+          },
+          {
+            "topic_id": "attention",
+            "topic_name": "Attention",
+            "alias_phrase": "Attention",
+            "normalized_alias": "attention",
+            "match_type": "canonical",
+            "phrase_words": 1,
+            "specificity": 1,
+            "taxonomy_order": 10,
+            "matched_phrase": "attention",
+            "start": 48,
+            "end": 57
+          }
+        ],
+        "ambiguous_candidates": [],
+        "is_ambiguous": false,
+        "reason": "Selected attention: specificity 1, 3 phrase words; taxonomy order breaks equally specific/long matches. Related topics are not propagated."
+      }
+    ],
+    "timings_seconds": {
+      "extraction": 0.002742999990005046,
+      "classification": 0.053415700007462874,
+      "aggregation_and_ranking": 7.579999510198832e-05
+    },
+    "source_sha256": {
+      "data/question_papers/nlp_question_paper_01.md": "ac5fb29bffb184daebf53966ad24d0231547b3dbe5643f333f55c7a5e6724b2a",
+      "data/question_papers/nlp_question_paper_02.md": "0b62b26ec501510c7698aba8ab97106fac15bb4588b16823111ec221fc3603f6",
+      "data/question_papers/nlp_question_paper_03.md": "001a0906d647a73798f2470e62a0d611ddf0cd740c972241e42c2bfeb15902ab",
+      "data/question_papers/nlp_question_paper_04.md": "a5b11100be438c8fa822a158ba784f6160738ff8aa4cdd735c77a8da90920b73"
+    },
+    "taxonomy_contract_sha256": "10921826b20a5c336e431492ae565dbc6b158b10efd4d01515de87d35e7d8aba",
+    "ground_truth_sha256": "af4a0f555c7e5c50826eb11877e9e513a59bda6a189ad69aade7008fb4f63944",
+    "interpretation": "Unmatched paraphrases/components are honest taxonomy-coverage limits. Accuracy is measured on four synthetic papers, not general unseen-paper performance or exam prediction."
+  },
+  "browser_summary": {
+    "all_ten_pages_and_home": "Verified in live local browser run-through",
+    "scenarios": [
+      "Custom preprocessing cats→cat count2",
+      "BoW/N-Gram matrix and library comparison",
+      "Human-communication lexical mismatch DS0.3135 /NLP0.1727",
+      "Word2Vec language/text manual/Gensim0.4753",
+      "Sentence pair cosine0.601510",
+      "Course semantic search NLP first0.392357 /DS0.382454",
+      "Sentiment POSITIVE0.9997",
+      "RAG retrieval-only and actual optional Qwen75% attendance",
+      "Analyzer Transformers primary filter8",
+      "Assistant attendance, Unit4 generation withheld and historical Transformer filter8",
+      "Fault-injected missing task model retains manual attention",
+      "Fault-injected missing MiniLM/Qwen keeps papers available"
+    ],
+    "viewport": {
+      "verified_width": 1280,
+      "observed_heights": [
+        800,
+        720
+      ],
+      "document_horizontal_overflow_at_1280": false,
+      "attempted_width": 1024,
+      "override_applied": false,
+      "limitation": "In-app browser retained1280px in existing and fresh tabs. Narrower responsive layout verification remains open; no false1024px coverage claim."
+    }
+  },
+  "source_dependency_summary": "AST test confirms no src Streamlit imports; all8 notebooks import src and do not redefine shared algorithms.",
+  "terminology_summary": "Retrieval cosine is labelled similarity, never factual confidence. Retrieved/supplied sources are not verified citations; classifier scores remain contextual model estimates. Checkpoint labels now follow overall0–9 roadmap.",
+  "repository_hygiene": "Models/.cache/.nltk_data/__pycache__/.pytest_cache/.env ignored; .env.example retained. No uploads persisted, canonical data regenerated, dependency added, or secrets introduced. Git remains uncommitted/untracked; publishing is outsideTask17."
+}
