@@ -1,6 +1,6 @@
 """Exercise 1 reference implementation, reusable without Streamlit.
 
-STUDENT TODO BOUNDARY markers identify completed educational cores that a
+STUDENT TODO markers identify completed educational cores that a
 later starter checkpoint will remove. Validation and resource handling stay.
 Operations remain separate. Stem and lemma are parallel alternatives applied
 to the same tokens, never a stem-then-lemmatize chain.
@@ -42,13 +42,14 @@ def lowercase_text(text: str) -> str:
     """
     _validate_text(text)
     # ============================================================
-    # STUDENT TODO BOUNDARY 1.1 — Lowercase Normalization
-    # Difficulty: ★ Guided | Complete working reference below.
+    # STUDENT TODO 1.1 — Lowercase Normalization
+    # Difficulty: ★ Guided | Student scaffold.
     # Goal: Make capitalization consistent without other cleaning.
     # Expected: A string of the same text with lowercase letters.
     # Hint: Strings provide a built-in case conversion method.
     # ============================================================
     # BEGIN STUDENT CORE 1.1
+    # Implement only this educational core; surrounding setup stays provided.
     return text.lower()
     # END STUDENT CORE 1.1
 
@@ -62,13 +63,14 @@ def remove_punctuation(text: str) -> str:
     """
     _validate_text(text)
     # ============================================================
-    # STUDENT TODO BOUNDARY 1.2 — Punctuation Handling
-    # Difficulty: ★ Guided | Complete working reference below.
+    # STUDENT TODO 1.2 — Punctuation Handling
+    # Difficulty: ★ Guided | Student scaffold.
     # Goal: Replace punctuation, keeping neighbouring words separate.
     # Expected: A string; punctuation becomes spaces, not merged text.
     # Hint: Use the provided _is_punctuation helper on each character.
     # ============================================================
     # BEGIN STUDENT CORE 1.2
+    # Implement only this educational core; surrounding setup stays provided.
     characters = []
     for character in text:
         characters.append(" " if _is_punctuation(character) else character)
@@ -85,13 +87,14 @@ def tokenize_words(text: str) -> list[str]:
     """
     _validate_text(text)
     # ============================================================
-    # STUDENT TODO BOUNDARY 1.3 — Word Tokenization
-    # Difficulty: ★ Guided | Complete working reference below.
+    # STUDENT TODO 1.3 — Word Tokenization
+    # Difficulty: ★ Guided | Student scaffold.
     # Goal: Apply the provided library tokenizer, not its internals.
     # Expected: An ordered list of tokens, retaining repetitions.
     # Hint: wordpunct_tokenize accepts a text string.
     # ============================================================
     # BEGIN STUDENT CORE 1.3
+    # Implement only this educational core; surrounding setup stays provided.
     return wordpunct_tokenize(text)
     # END STUDENT CORE 1.3
 
@@ -114,13 +117,14 @@ def remove_stopwords(
         raise TypeError("Stopwords must be a collection of strings, not one string.")
     stopword_set = {word.lower() for word in stopword_set}
     # ============================================================
-    # STUDENT TODO BOUNDARY 1.4 — Stopword Removal
-    # Difficulty: ★ Guided | Complete working reference below.
+    # STUDENT TODO 1.4 — Stopword Removal
+    # Difficulty: ★ Guided | Student scaffold.
     # Goal: Retain tokens absent from the supplied stopword set.
     # Expected: A new ordered list; the input list is not modified.
     # Hint: Filter by membership, comparing a lowercase token.
     # ============================================================
     # BEGIN STUDENT CORE 1.4
+    # Implement only this educational core; surrounding setup stays provided.
     return [token for token in tokens if token.lower() not in stopword_set]
     # END STUDENT CORE 1.4
 
@@ -134,13 +138,14 @@ def stem_words(tokens: Sequence[str]) -> list[str]:
     _validate_tokens(tokens)
     stemmer = PorterStemmer()
     # ============================================================
-    # STUDENT TODO BOUNDARY 1.5 — Stemming
-    # Difficulty: ★ Guided | Complete working reference below.
+    # STUDENT TODO 1.5 — Stemming
+    # Difficulty: ★ Guided | Student scaffold.
     # Goal: Apply a standard stemmer to each token.
     # Expected: A list of stems; keep order and repeated tokens.
     # Hint: The provided stemmer has a stem method.
     # ============================================================
     # BEGIN STUDENT CORE 1.5
+    # Implement only this educational core; surrounding setup stays provided.
     return [stemmer.stem(token) for token in tokens]
     # END STUDENT CORE 1.5
 
@@ -161,15 +166,16 @@ def lemmatize_words(tokens: Sequence[str], pos: str = "n") -> list[str]:
     require_resource("wordnet")
     lemmatizer = WordNetLemmatizer()
     # ============================================================
-    # STUDENT TODO BOUNDARY 1.6 — Lemmatization
-    # Difficulty: ★ Guided | Complete working reference below.
+    # STUDENT TODO 1.6 — Lemmatization
+    # Difficulty: ★ Guided | Student scaffold.
     # Goal: Apply the provided lemmatizer using the supplied POS.
     # Expected: A list of lemmas; some tokens may remain unchanged.
     # Hint: lemmatize accepts a token and a pos argument.
     # ============================================================
     try:
         # BEGIN STUDENT CORE 1.6
-        return [lemmatizer.lemmatize(token, pos=pos) for token in tokens]
+        # Implement only this educational core; surrounding setup stays provided.
+        return [lemmatizer.lemmatize(token.lower(), pos=pos) for token in tokens]
         # END STUDENT CORE 1.6
     except LookupError as error:
         raise NLTKResourceError(
@@ -186,13 +192,14 @@ def build_vocabulary(tokens: Sequence[str]) -> list[str]:
     """
     _validate_tokens(tokens)
     # ============================================================
-    # STUDENT TODO BOUNDARY 1.7 — Vocabulary and Word Frequency
-    # Difficulty: ★★ Core | Complete working reference below.
+    # STUDENT TODO 1.7 — Vocabulary and Word Frequency
+    # Difficulty: ★★ Core | Student scaffold.
     # Goal: Vocabulary is the unique token set of the chosen representation.
     # Expected: A sorted list, with each token appearing exactly once.
     # Hint: Deduplicate first, then choose deterministic ordering.
     # ============================================================
     # BEGIN STUDENT CORE 1.7 — vocabulary
+    # Implement only this educational core; surrounding setup stays provided.
     return sorted(set(tokens))
     # END STUDENT CORE 1.7 — vocabulary
 
@@ -206,17 +213,18 @@ def calculate_word_frequencies(tokens: Sequence[str]) -> dict[str, int]:
     _validate_tokens(tokens)
     # ============================================================
     # STUDENT TODO PART 1.7 — Word Frequency (paired with vocabulary above)
-    # Difficulty: ★★ Core | Complete working reference below.
+    # Difficulty: ★★ Core | Student scaffold.
     # Goal: Count how often each token occurs, without removing repeats.
     # Formula: frequency(t) = number of tokens equal to t.
     # Expected: Token-to-count mapping; counts sum to len(tokens).
     # Hint: Initialize unseen tokens, then increment their count.
     # ============================================================
     # BEGIN STUDENT CORE 1.7 — frequency
-    counts = {}
+    # Implement only this educational core; surrounding setup stays provided.
+    frequencies: dict[str, int] = {}
     for token in tokens:
-        counts[token] = counts.get(token, 0) + 1
-    return dict(sorted(counts.items()))
+        frequencies[token] = frequencies.get(token, 0) + 1
+    return dict(sorted(frequencies.items()))
     # END STUDENT CORE 1.7 — frequency
 
 
